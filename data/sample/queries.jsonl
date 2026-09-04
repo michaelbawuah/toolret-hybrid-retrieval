@@ -1,0 +1,5 @@
+{"id": "q_weather", "query": "What will the temperature be in Ithaca tomorrow?", "labels": [{"id": "tool_weather", "relevance": 1}]}
+{"id": "q_growth", "query": "Given 500 bacteria and a growth rate, estimate the population after 45 minutes.", "labels": [{"id": "tool_growth", "relevance": 1}]}
+{"id": "q_stock", "query": "Find Apple's historical share price on a particular date.", "labels": [{"id": "tool_stock", "relevance": 1}]}
+{"id": "q_translate", "query": "Convert this English sentence into French.", "labels": [{"id": "tool_translate", "relevance": 1}]}
+{"id": "q_distance", "query": "How long is the drive from Ithaca to New York City?", "labels": [{"id": "tool_distance", "relevance": 1}]}
