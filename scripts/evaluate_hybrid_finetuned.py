@@ -53,14 +53,16 @@ def main():
 
     args = parser.parse_args()
 
+    split_name = "test" if "test" in str(args.queries).lower() else "validation"
+
     print("Loading corpus...")
     corpus = load_corpus(args.corpus)
 
-    print("Loading validation queries...")
+    print(f"Loading {split_name} queries...")
     queries = load_queries(args.queries)
 
     print(f"Loaded {len(corpus)} documents.")
-    print(f"Loaded {len(queries)} validation queries.")
+    print(f"Loaded {len(queries)} {split_name} queries.")
 
     document_ids = list(corpus.keys())
 
@@ -182,7 +184,7 @@ def main():
     )
 
     result = {
-        "split": "validation",
+       "split": split_name,
         "retriever": "bm25_plus_finetuned_dense_weighted_rrf",
         "fine_tuned_model": args.fine_tuned_model,
         "num_documents": len(document_ids),
@@ -208,7 +210,7 @@ def main():
         json.dump(result, f, indent=2)
 
     print(
-        f"\nSaved hybrid validation results "
+        f"\nSaved hybrid {split_name} results "
         f"to {args.output}"
     )
 
