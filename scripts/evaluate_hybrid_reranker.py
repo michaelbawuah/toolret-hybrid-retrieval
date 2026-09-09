@@ -308,7 +308,7 @@ def main():
     )
 
     result = {
-        "split": "validation",
+        "split": "test" if "test" in str(args.queries).lower() else "validation",
         "retriever": (
             "bm25_plus_finetuned_dense_weighted_rrf"
             "_plus_cross_encoder"
