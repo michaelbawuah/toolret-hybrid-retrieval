@@ -12,6 +12,7 @@ dependencies = []
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
 dense = ["sentence-transformers>=3.0", "torch>=2.1"]
+viz = ["matplotlib>=3.8"]
 
 [project.scripts]
 toolret-baseline = "toolret_research.cli:main"
