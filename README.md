@@ -400,16 +400,87 @@ The frozen test set is not used for post-hoc hyperparameter selection.
 ---
 
 ## Limitations
+## Limitations and Failure Analysis
 
-The current experiments have several important limitations.
+Although the experiments show substantial improvements over the original sparse and dense baselines, several limitations are important when interpreting the results.
 
-The validation and test subsets are small, containing **15 and 16 queries** respectively. Consequently, metric estimates can have substantial variance and should not be interpreted as definitive benchmark-wide performance.
+### Small Evaluation Sets
 
-The dense retrieval implementation is also optimized for experimental clarity rather than production-scale approximate nearest-neighbor search.
+The validation and frozen test subsets contain only **15 and 16 queries**, respectively. Because these evaluation sets are small, individual queries can have a large effect on aggregate metrics such as MRR and nDCG.
 
-The reranker results demonstrate that stronger validation performance does not necessarily translate into stronger held-out performance.
+The reported results should therefore be interpreted as evidence about the behavior of the proposed retrieval pipeline rather than definitive benchmark-wide performance estimates. A larger evaluation would provide more stable estimates and stronger statistical confidence.
 
-Future work should evaluate larger query sets, multiple random seeds or folds, improved negative sampling, approximate nearest-neighbor indexing, and more robust reranker training.
+### Hybrid Retrieval Is Not Universally Better
+
+The weighted BM25 + fine-tuned dense retrieval system achieved the strongest frozen-test performance before reranking, increasing MRR from **0.499 to 0.515** and Recall@10 from **0.552 to 0.604** relative to the hard-negative dense retriever.
+
+However, per-query analysis shows that fusion does not improve every query. Relative to the fine-tuned dense retriever, hybrid fusion improved the rank of the first relevant tool on **4 test queries** while hurting it on **6**.
+
+This apparent discrepancy is possible because MRR is sensitive not only to how many queries improve, but also to the magnitude and location of those rank changes. A small number of improvements near the top of the ranking can outweigh several smaller regressions.
+
+### Reranker Generalization
+
+The cross-encoder produced the strongest validation result, improving hybrid validation MRR from **0.667 to 0.711**. This improvement did not generalize to the frozen test set, where MRR decreased from **0.515 to 0.473**.
+
+A descriptive analysis of the 16 frozen test queries showed:
+
+| Reranker effect | Number of queries |
+|---|---:|
+| Improved relevant-tool rank | 2 |
+| Hurt relevant-tool rank | 3 |
+| Unchanged | 11 |
+
+The two successful cases promoted a relevant tool from **rank 2 to rank 1**.
+
+In contrast, the reranker made several costly top-rank mistakes. For one reservation query, a relevant tool moved from **rank 1 to rank 3**. For two additional queries, the first relevant result moved from **rank 1 to rank 2**.
+
+These errors were sufficient to outweigh the two successful promotions and explain the reduction in test MRR.
+
+### Candidate Recall vs. Ranking Quality
+
+The reranker operates only on the **top 3 candidates** returned by the hybrid retriever. It reorders those candidates and then preserves the remainder of the fused ranking.
+
+Consequently, test Recall@10 remained unchanged at **0.604** before and after reranking even though MRR decreased.
+
+This distinction is important: the reranker's test regression is primarily a **ranking-quality failure**, not a candidate-recall failure. The relevant tools were already being retrieved; the cross-encoder sometimes placed them in worse positions.
+
+### Experimental Retrieval Efficiency
+
+The current dense retrieval implementation performs exact similarity search across the corpus of **37,292 tools**. This design is useful for controlled experimentation and keeps the implementation transparent, but it is not intended to represent a production-scale retrieval architecture.
+
+A deployed system would likely use an approximate nearest-neighbor index such as HNSW or another vector-search backend to reduce retrieval latency as the corpus grows.
+
+### Limited Reranker Supervision
+
+The reranker was trained using a relatively small hard-negative training set. The difference between its validation and frozen-test behavior suggests that the cross-encoder may be more sensitive to the limited supervision than the first-stage dense retriever.
+
+In contrast, hard-negative fine-tuning of the dense retriever produced the most consistent improvement in the project, substantially outperforming the base MiniLM model on both validation and test data.
+
+This makes hard-negative dense training the strongest robust result of the current experiments, while the reranker should be considered a promising but less stable component.
+
+### Test-Set Integrity
+
+All model choices and retrieval hyperparameters were selected using the validation split before final test evaluation.
+
+The test set was then frozen. The per-query failure analysis reported above was performed **only after the final test results were obtained** and is strictly descriptive.
+
+No model, fusion weight, candidate depth, RRF constant, reranking depth, or other configuration was changed in response to test-set performance.
+
+This separation is important for preventing test-set leakage and preserving the validity of the held-out evaluation.
+
+### Future Work
+
+Several extensions could strengthen the conclusions of this project:
+
+- evaluate on substantially larger query sets and additional ToolRet domains;
+- repeat experiments across multiple random seeds or cross-validation folds;
+- investigate stronger hard-negative mining strategies;
+- evaluate approximate nearest-neighbor indexing for production-scale retrieval;
+- train the reranker with substantially more diverse supervision;
+- analyze query categories to determine when sparse, dense, or hybrid retrieval is most effective;
+- evaluate statistical uncertainty and significance of differences between retrieval stages.
+
+These extensions are intentionally left as future work rather than being optimized against the current frozen test set.
 
 ---
 
@@ -417,14 +488,13 @@ Future work should evaluate larger query sets, multiple random seeds or folds, i
 
 Planned extensions include:
 
-- larger-scale evaluation
-- retrieval failure analysis
+- larger-scale evaluation across additional ToolRet domains
 - query-category breakdowns
-- confidence intervals / repeated splits
+- confidence intervals and repeated evaluation splits
 - approximate nearest-neighbor indexing
 - memory and index-size measurements
-- reranker generalization analysis
-- additional hard-negative strategies
+- additional hard-negative mining strategies
+- more diverse reranker training data
 - full technical report
 
 ---

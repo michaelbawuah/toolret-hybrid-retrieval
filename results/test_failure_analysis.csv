@@ -1,0 +1,17 @@
+query_id,query,relevant_ids,bm25_rank,dense_rank,hybrid_rank,reranked_rank,bm25_rr,dense_rr,hybrid_rr,reranked_rr,hybrid_vs_dense,reranker_effect
+apibank_query_14,"Can you help me check if there is a reservation for the Design Team Meeting on March 26, 2023 from 11:00AM to 1:00PM at Design Studio?","apibank_tool_0,apibank_tool_12",,1,1,3,0.0,1.0,1.0,0.3333333333333333,unchanged,hurt
+apibank_query_69,Can you please query the Morning Routine scene for me?,apibank_tool_67,2,1,1,2,0.5,1.0,1.0,0.5,unchanged,hurt
+apibank_query_94,Can you help me set an alarm for 8 am tomorrow?,"apibank_tool_0,apibank_tool_18",26,1,1,2,0.038461538461538464,1.0,1.0,0.5,unchanged,hurt
+apibank_query_3,Can you help me register on this app?,apibank_tool_1,140,2,2,1,0.007142857142857143,0.5,0.5,1.0,unchanged,improved
+apibank_query_4,Can you delete my alarm at 7:00 a.m. on March 16th?,"apibank_tool_0,apibank_tool_19,apibank_tool_13",9,3,2,1,0.1111111111111111,0.3333333333333333,0.5,1.0,improved,improved
+apibank_query_11,"Can you check the registration for Alice Chen on June 15, 2023 with Dr. Wang?","apibank_tool_56,apibank_tool_61,apibank_tool_62",187,7,11,11,0.0053475935828877,0.14285714285714285,0.09090909090909091,0.09090909090909091,hurt,unchanged
+apibank_query_13,"Hi, can you help me check my alarm for March 20th, 2023 at 6:30AM?","apibank_tool_21,apibank_tool_0",41,1,2,2,0.024390243902439025,1.0,0.5,0.5,hurt,unchanged
+apibank_query_17,"Can you translate ""Hello, how are you?"" to French?",apibank_tool_41,,18,30,30,0.0,0.05555555555555555,0.03333333333333333,0.03333333333333333,hurt,unchanged
+apibank_query_28,"Can you play the music ""Shape of You""?",apibank_tool_71,13,1,1,1,0.07692307692307693,1.0,1.0,1.0,unchanged,unchanged
+apibank_query_31,Can you help me open a new bank account?,apibank_tool_25,1,1,1,1,1.0,1.0,1.0,1.0,unchanged,unchanged
+apibank_query_35,Can you help me with a health issue?,"apibank_tool_57,apibank_tool_60",,36,62,62,0.0,0.027777777777777776,0.016129032258064516,0.016129032258064516,hurt,unchanged
+apibank_query_54,Can you change my appointment?,"apibank_tool_57,apibank_tool_60",32,12,8,8,0.03125,0.08333333333333333,0.125,0.125,improved,unchanged
+apibank_query_75,"Can you tell me about my history for today, please?",apibank_tool_33,93,16,19,19,0.010752688172043012,0.0625,0.05263157894736842,0.05263157894736842,hurt,unchanged
+apibank_query_81,Can you switch off my smart bulb at 10 pm tonight? Today is 2022-03-01.,apibank_tool_68,2,16,1,1,0.5,0.0625,1.0,1.0,improved,unchanged
+apibank_query_86,"Can you please help me query a reminder for ""Attend meeting"" on March 18th, 2023 at 10:30am?","apibank_tool_0,apibank_tool_8",112,1,3,3,0.008928571428571428,1.0,0.3333333333333333,0.3333333333333333,hurt,unchanged
+apibank_query_98,Can you help me change my appointment?,apibank_tool_60,44,14,12,12,0.022727272727272728,0.07142857142857142,0.08333333333333333,0.08333333333333333,improved,unchanged
