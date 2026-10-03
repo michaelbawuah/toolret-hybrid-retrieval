@@ -1,0 +1,53 @@
+{
+  "created_before_quality_scoring": true,
+  "created_at_utc": "2026-10-03T18:08:22.450896+00:00",
+  "router_sha256": "f24613a552d36737f4a17797b94f0c9348a67072a97cfc3cb471ae4bd25c159c",
+  "protocol_sha256": "d33ceee4741679c5027b7b55cc96f5535f98aef0c2160292d8e0c948abd076bc",
+  "protocol_frozen_commit": "3e813e1af650104f33aaf77febce5a8c1a3f1213",
+  "predictions_sha256": "d2dd099e3db31009bc5de3f92e5b89445516bbd2d2972307679dce6fc55e37b2",
+  "cache_sha256": "e8eaab43968c191fa73ad50ea0b80b52ca64e9799e43fea1aed58fa89c4ef7ad",
+  "queries_sha256": "0aa1f8921c13e44997f7b4018198db513a6d67a0258a550c6fafc16c705cc701",
+  "corpus_sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f",
+  "data_manifest_sha256": "45d68454ecc950c56b2ecf9fd436cb4a6dafc780e4e64d3e154ef81fc304b2ea",
+  "cache_manifest_sha256": "cfadbc419a7fd84412e0d5f8fd9980c50c9c7c71a2b2490041a09913585c78a3",
+  "evaluation_source_sha256": {
+    "scripts/evaluate_confirmation_study.py": "493395c68dc45e83c7425d99667d18ec164a531fa96060b22ada0785cbd3fa9f",
+    "src/toolret_research/confirmation.py": "768ae8c24cdf657c1158d7b1438dc253b474ada9d38c77136f2202b2a8a15899",
+    "src/toolret_research/selective.py": "34dfc5e27a398026e88d226d0fdf0cec1195e2a283c7047063e1197a36be2636",
+    "src/toolret_research/metrics.py": "255039320bb6f23e10c826057b5ace949f49069df56884a0f30e2aa96ed3028d",
+    "src/toolret_research/utility_router.py": "2075d901571a5692e4297f3e998a867fd9fc67776ade5440a7ed422c36797ad2",
+    "src/toolret_research/fusion.py": "677d1e0a751813cfed9411c63a9ae421c3bd7c33e5e55bf4b34cdb0bbb162d54"
+  },
+  "split_disjointness": {
+    "disjoint_query_ids": true,
+    "disjoint_positive_tools": true,
+    "disjoint_positive_tool_components": true,
+    "disjoint_normalized_query_texts": true,
+    "partitions": [
+      {
+        "partition": 0,
+        "queries": 300,
+        "ids": 300,
+        "components": 252,
+        "positive_tools": 491,
+        "normalized_texts": 300
+      },
+      {
+        "partition": 1,
+        "queries": 300,
+        "ids": 300,
+        "components": 249,
+        "positive_tools": 425,
+        "normalized_texts": 300
+      },
+      {
+        "partition": 2,
+        "queries": 1500,
+        "ids": 1500,
+        "components": 1174,
+        "positive_tools": 2086,
+        "normalized_texts": 1500
+      }
+    ]
+  }
+}

@@ -13,6 +13,7 @@ dependencies = []
 dev = ["pytest>=8.0"]
 dense = ["sentence-transformers>=3.0", "torch>=2.1"]
 viz = ["matplotlib>=3.8"]
+report = ["matplotlib>=3.8", "reportlab>=4.0"]
 research = ["sentence-transformers>=6.1,<6.2", "torch>=2.2", "pyarrow>=25,<26", "httpx[socks]>=0.28,<0.29", "pytest>=9,<10"]
 
 [project.scripts]

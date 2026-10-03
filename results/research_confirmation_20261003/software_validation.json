@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-10-03T18:40:59.801245+00:00",
+  "unit_tests": {
+    "command": ".venv/bin/python -m pytest -q",
+    "passed": 231,
+    "exit_code": 0,
+    "elapsed_seconds": 0.78,
+    "scope": "collected Python regression tests; real model and timing execution are separate evidence"
+  },
+  "report_optional_dependencies_parse_valid": true,
+  "study_completion_sha256": "e6522e27612d32ddffd806a061c04f1bbad0efc5a6a239f1d68bc551aa25e300",
+  "independent_audit_sha256": "3ca05098a331e9f06c1b6443eed9746bde826a39147b794f5f9ce16eaf5520ef",
+  "real_execution_and_latency_verified": true,
+  "source_reconstruction_and_cached_replay_receipt": "results/research_confirmation_20261003/reproduction_validation.json"
+}

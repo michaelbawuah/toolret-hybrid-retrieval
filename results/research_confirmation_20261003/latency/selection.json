@@ -1,0 +1,6585 @@
+{
+  "cache_sha256": "e8eaab43968c191fa73ad50ea0b80b52ca64e9799e43fea1aed58fa89c4ef7ad",
+  "per_domain": 30,
+  "query_ids": [
+    "apigen_query_14",
+    "apigen_query_532",
+    "apigen_query_895",
+    "apigen_query_515",
+    "apigen_query_591",
+    "apigen_query_243",
+    "apigen_query_185",
+    "apigen_query_313",
+    "apigen_query_159",
+    "apigen_query_288",
+    "apigen_query_700",
+    "apigen_query_408",
+    "apigen_query_841",
+    "apigen_query_555",
+    "apigen_query_151",
+    "apigen_query_380",
+    "apigen_query_443",
+    "apigen_query_142",
+    "apigen_query_207",
+    "apigen_query_844",
+    "apigen_query_818",
+    "apigen_query_131",
+    "apigen_query_710",
+    "apigen_query_517",
+    "apigen_query_240",
+    "apigen_query_985",
+    "apigen_query_358",
+    "apigen_query_578",
+    "apigen_query_797",
+    "apigen_query_597",
+    "toolACE_query_114",
+    "toolACE_query_816",
+    "toolACE_query_201",
+    "toolACE_query_547",
+    "toolACE_query_593",
+    "toolACE_query_118",
+    "toolACE_query_137",
+    "toolACE_query_692",
+    "toolACE_query_592",
+    "toolACE_query_573",
+    "toolACE_query_272",
+    "toolACE_query_785",
+    "toolACE_query_198",
+    "toolACE_query_724",
+    "toolACE_query_508",
+    "toolACE_query_173",
+    "toolACE_query_2",
+    "toolACE_query_338",
+    "toolACE_query_418",
+    "toolACE_query_461",
+    "toolACE_query_241",
+    "toolACE_query_501",
+    "toolACE_query_426",
+    "toolACE_query_450",
+    "toolACE_query_743",
+    "toolACE_query_788",
+    "toolACE_query_64",
+    "toolACE_query_403",
+    "toolACE_query_825",
+    "toolACE_query_925",
+    "toolbench_query_541",
+    "toolbench_query_170",
+    "toolbench_query_513",
+    "toolbench_query_469",
+    "toolbench_query_790",
+    "toolbench_query_234",
+    "toolbench_query_285",
+    "toolbench_query_235",
+    "toolbench_query_967",
+    "toolbench_query_7",
+    "toolbench_query_552",
+    "toolbench_query_245",
+    "toolbench_query_336",
+    "toolbench_query_963",
+    "toolbench_query_223",
+    "toolbench_query_14",
+    "toolbench_query_123",
+    "toolbench_query_496",
+    "toolbench_query_312",
+    "toolbench_query_195",
+    "toolbench_query_81",
+    "toolbench_query_192",
+    "toolbench_query_393",
+    "toolbench_query_376",
+    "toolbench_query_350",
+    "toolbench_query_254",
+    "toolbench_query_218",
+    "toolbench_query_829",
+    "toolbench_query_330",
+    "toolbench_query_110"
+  ],
+  "schedule": [
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_403",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_403",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_403",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_403",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_788",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_788",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_788",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_788",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_710",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_710",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_710",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_710",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_700",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_700",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_700",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_700",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_591",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_591",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_591",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_591",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_151",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_151",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_151",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_151",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_241",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_241",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_241",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_241",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_123",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_123",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_123",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_123",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_170",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_170",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_170",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_170",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolbench_query_336",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_336",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_336",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_336",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_240",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_240",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_240",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_240",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_825",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_825",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_825",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_825",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_573",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_573",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_573",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_573",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_816",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_816",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_816",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_816",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_501",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_501",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_501",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_501",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_114",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_114",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_114",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_114",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_2",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_2",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_2",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_2",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_118",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_118",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_118",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_118",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_829",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_829",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_829",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_829",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_272",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_272",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_272",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_272",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_393",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_393",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_393",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_393",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_578",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_578",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_578",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_578",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_81",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_81",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_81",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_81",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_376",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_376",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_376",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_376",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_532",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_532",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_532",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_532",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_142",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_142",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_142",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_142",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_358",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_358",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_358",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_358",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_925",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_925",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_925",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_925",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_110",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_110",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_110",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_110",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_743",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_743",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_743",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_743",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_7",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_7",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_7",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_7",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_593",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_593",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_593",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_593",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_963",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_963",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_963",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_963",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolbench_query_790",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_790",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_790",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_790",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_198",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_198",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_198",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_198",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_288",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_288",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_288",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_288",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_985",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_985",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_985",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_985",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_173",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_173",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_173",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_173",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_547",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_547",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_547",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_547",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_159",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_159",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_159",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_159",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_192",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_192",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_192",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_192",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolbench_query_552",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_552",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_552",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_552",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_844",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_844",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_844",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_844",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_330",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_330",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_330",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_330",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_692",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_692",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_692",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_692",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_426",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_426",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_426",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_426",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_350",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_350",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_350",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_350",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_243",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_243",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_243",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_243",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_841",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_841",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_841",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_841",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_450",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_450",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_450",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_450",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_517",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_517",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_517",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_517",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_967",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_967",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_967",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_967",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_818",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_818",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_818",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_818",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolbench_query_223",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_223",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_223",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_223",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_338",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_338",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_338",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_338",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_508",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_508",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_508",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_508",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_64",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_64",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_64",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_64",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_201",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_201",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_201",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_201",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_408",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_408",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_408",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_408",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_245",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_245",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_245",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_245",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_14",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_14",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_14",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_14",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_131",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_131",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_131",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_131",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_785",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_785",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_785",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_785",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_218",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_218",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_218",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_218",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_496",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_496",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_496",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_496",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_597",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_597",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_597",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_597",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_254",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_254",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_254",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_254",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_513",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_513",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_513",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_513",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_797",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_797",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_797",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_797",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_313",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_313",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_313",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_313",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_234",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_234",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_234",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_234",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_443",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_443",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_443",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_443",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_380",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_380",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_380",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_380",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_418",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_418",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_418",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_418",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_541",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_541",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_541",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_541",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_895",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_895",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_895",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_895",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_185",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_185",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_185",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_185",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_592",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_592",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_592",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_592",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_285",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_285",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_285",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_285",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_461",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_461",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_461",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_461",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_195",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_195",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_195",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_195",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_555",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_555",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_555",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_555",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_235",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_235",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_235",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_235",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_137",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_137",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_137",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_137",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_469",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_469",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_469",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_469",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_207",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_207",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_207",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_207",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_724",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_724",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_724",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_724",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_14",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_14",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_14",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_14",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_312",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_312",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_312",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_312",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_515",
+      "repetition": 0
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_515",
+      "repetition": 0
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_515",
+      "repetition": 0
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_515",
+      "repetition": 0
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_418",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_418",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_418",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_418",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_235",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_235",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_235",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_235",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_403",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_403",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_403",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_403",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_240",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_240",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_240",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_240",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_844",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_844",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_844",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_844",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_223",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_223",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_223",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_223",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_118",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_118",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_118",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_118",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_218",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_218",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_218",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_218",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_137",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_137",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_137",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_137",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_593",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_593",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_593",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_593",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_358",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_358",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_358",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_358",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_724",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_724",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_724",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_724",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_338",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_338",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_338",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_338",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_234",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_234",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_234",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_234",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_376",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_376",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_376",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_376",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_578",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_578",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_578",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_578",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_426",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_426",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_426",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_426",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_114",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_114",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_114",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_114",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_350",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_350",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_350",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_350",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_14",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_14",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_14",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_14",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_501",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_501",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_501",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_501",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_142",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_142",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_142",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_142",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_573",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_573",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_573",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_573",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_201",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_201",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_201",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_201",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_591",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_591",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_591",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_591",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_245",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_245",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_245",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_245",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_743",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_743",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_743",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_743",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_7",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_7",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_7",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_7",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_313",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_313",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_313",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_313",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_173",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_173",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_173",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_173",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_592",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_592",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_592",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_592",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_508",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_508",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_508",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_508",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolbench_query_170",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_170",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_170",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_170",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_151",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_151",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_151",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_151",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_597",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_597",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_597",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_597",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_272",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_272",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_272",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_272",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_788",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_788",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_788",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_788",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_2",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_2",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_2",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_2",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_692",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_692",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_692",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_692",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_14",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_14",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_14",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_14",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolbench_query_123",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_123",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_123",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_123",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_336",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_336",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_336",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_336",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_532",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_532",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_532",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_532",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_254",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_254",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_254",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_254",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_243",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_243",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_243",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_243",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_552",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_552",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_552",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_552",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_963",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_963",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_963",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_963",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_159",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_159",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_159",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_159",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_207",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_207",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_207",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_207",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_818",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_818",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_818",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_818",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_408",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_408",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_408",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_408",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_841",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_841",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_841",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_841",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_925",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_925",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_925",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_925",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_461",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_461",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_461",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_461",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_710",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_710",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_710",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_710",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_541",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_541",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_541",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_541",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolbench_query_110",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_110",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_110",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_110",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_825",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_825",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_825",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_825",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_829",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_829",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_829",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_829",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_380",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_380",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_380",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_380",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_198",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_198",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_198",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_198",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_515",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_515",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_515",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_515",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_312",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_312",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_312",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_312",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_393",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_393",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_393",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_393",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolbench_query_496",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_496",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_496",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_496",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_241",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_241",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_241",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_241",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_285",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_285",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_285",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_285",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_700",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_700",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_700",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_700",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolbench_query_195",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_195",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_195",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_195",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_443",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_443",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_443",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_443",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_288",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_288",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_288",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_288",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_967",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_967",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_967",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_967",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolbench_query_790",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_790",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_790",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_790",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_192",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_192",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_192",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_192",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_330",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_330",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_330",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_330",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_547",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_547",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_547",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_547",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_555",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_555",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_555",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_555",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_513",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_513",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_513",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_513",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_64",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_64",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_64",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_64",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_517",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_517",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_517",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_517",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_816",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_816",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_816",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_816",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_450",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_450",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_450",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_450",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_985",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_985",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_985",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_985",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_469",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_469",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_469",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_469",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_797",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_797",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_797",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_797",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_81",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_81",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_81",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_81",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_185",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_185",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_185",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_185",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_785",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_785",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_785",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_785",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_895",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_895",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_895",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_895",
+      "repetition": 1
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_131",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_131",
+      "repetition": 1
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_131",
+      "repetition": 1
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_131",
+      "repetition": 1
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_403",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_403",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_403",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_403",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_541",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_541",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_541",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_541",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_501",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_501",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_501",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_501",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_597",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_597",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_597",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_597",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_985",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_985",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_985",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_985",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_272",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_272",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_272",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_272",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_201",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_201",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_201",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_201",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_517",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_517",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_517",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_517",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_967",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_967",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_967",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_967",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_443",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_443",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_443",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_443",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_508",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_508",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_508",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_508",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_710",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_710",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_710",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_710",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_114",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_114",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_114",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_114",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_123",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_123",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_123",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_123",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolbench_query_336",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_336",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_336",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_336",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_81",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_81",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_81",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_81",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_408",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_408",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_408",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_408",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_358",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_358",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_358",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_358",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_700",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_700",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_700",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_700",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_243",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_243",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_243",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_243",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_173",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_173",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_173",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_173",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_724",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_724",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_724",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_724",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_14",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_14",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_14",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_14",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_552",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_552",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_552",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_552",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_450",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_450",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_450",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_450",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_963",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_963",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_963",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_963",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_743",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_743",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_743",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_743",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_137",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_137",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_137",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_137",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_235",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_235",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_235",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_235",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_192",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_192",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_192",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_192",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_207",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_207",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_207",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_207",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_895",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_895",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_895",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_895",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_790",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_790",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_790",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_790",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_350",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_350",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_350",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_350",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_692",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_692",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_692",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_692",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_218",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_218",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_218",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_218",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_288",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_288",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_288",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_288",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_338",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_338",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_338",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_338",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_925",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_925",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_925",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_925",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_592",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_592",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_592",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_592",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_151",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_151",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_151",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_151",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_426",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_426",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_426",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_426",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_532",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_532",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_532",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_532",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_818",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_818",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_818",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_818",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_515",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_515",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_515",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_515",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_240",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_240",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_240",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_240",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_142",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_142",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_142",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_142",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_170",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_170",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_170",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_170",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_591",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_591",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_591",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_591",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_2",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_2",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_2",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_2",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_555",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_555",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_555",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_555",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_245",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_245",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_245",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_245",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_330",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_330",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_330",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_330",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_844",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_844",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_844",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_844",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolbench_query_393",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_393",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_393",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_393",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_195",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_195",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_195",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_195",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_547",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_547",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_547",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_547",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_513",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_513",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_513",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_513",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_816",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_816",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_816",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_816",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_785",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_785",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_785",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_785",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_593",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_593",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_593",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_593",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_469",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_469",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_469",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_469",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolbench_query_14",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolbench_query_14",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolbench_query_14",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolbench_query_14",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "apigen_query_159",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "apigen_query_159",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "apigen_query_159",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "apigen_query_159",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_829",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_829",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_829",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_829",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolbench_query_234",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolbench_query_234",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolbench_query_234",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolbench_query_234",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_797",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_797",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_797",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_797",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_223",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_223",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_223",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_223",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "apigen_query_841",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "apigen_query_841",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "apigen_query_841",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "apigen_query_841",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_198",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_198",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_198",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_198",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_578",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_578",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_578",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_578",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_7",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_7",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_7",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_7",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_241",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_241",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_241",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_241",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_185",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_185",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_185",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_185",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_380",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_380",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_380",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_380",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_110",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_110",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_110",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_110",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_376",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_376",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_376",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_376",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_64",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_64",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_64",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_64",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_118",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_118",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_118",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_118",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_312",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_312",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_312",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_312",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_496",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_496",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_496",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_496",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_418",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_418",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_418",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_418",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "apigen_query_131",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "apigen_query_131",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "apigen_query_131",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "apigen_query_131",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolACE_query_788",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolACE_query_788",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolACE_query_788",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolACE_query_788",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolACE_query_573",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolACE_query_573",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolACE_query_573",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolACE_query_573",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "toolACE_query_461",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "toolACE_query_461",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "toolACE_query_461",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "toolACE_query_461",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 0,
+      "query_id": "toolACE_query_825",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 1,
+      "query_id": "toolACE_query_825",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 2,
+      "query_id": "toolACE_query_825",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 3,
+      "query_id": "toolACE_query_825",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 0,
+      "query_id": "toolbench_query_285",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 1,
+      "query_id": "toolbench_query_285",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 2,
+      "query_id": "toolbench_query_285",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 3,
+      "query_id": "toolbench_query_285",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 0,
+      "query_id": "toolbench_query_254",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 1,
+      "query_id": "toolbench_query_254",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 2,
+      "query_id": "toolbench_query_254",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 3,
+      "query_id": "toolbench_query_254",
+      "repetition": 2
+    },
+    {
+      "policy": "utility_75",
+      "policy_position": 0,
+      "query_id": "apigen_query_313",
+      "repetition": 2
+    },
+    {
+      "policy": "hybrid",
+      "policy_position": 1,
+      "query_id": "apigen_query_313",
+      "repetition": 2
+    },
+    {
+      "policy": "fixed_disagreement",
+      "policy_position": 2,
+      "query_id": "apigen_query_313",
+      "repetition": 2
+    },
+    {
+      "policy": "always",
+      "policy_position": 3,
+      "query_id": "apigen_query_313",
+      "repetition": 2
+    }
+  ],
+  "selection": "SHA256(seed NUL query_id), source-balanced; no metric or timing inspection",
+  "selection_seed": "latency-confirmation-20261003",
+  "source_domain_counts": {
+    "apigen": 30,
+    "toolace": 30,
+    "toolbench": 30
+  }
+}

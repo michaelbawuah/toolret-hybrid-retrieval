@@ -1,0 +1,471 @@
+{
+  "all_actual_rankings_match_cache": true,
+  "base_commit": "14e48c4f8b94ac4d7d3acd42f81e866405e31f03",
+  "bootstrap": {
+    "independent_units": 90,
+    "method": "paired percentile bootstrap, query means as clusters, stratified by source domain",
+    "repetitions_per_unit": 3,
+    "resamples": 10000,
+    "seed": 20261003
+  },
+  "corpus_documents": 37292,
+  "embedding_provenance": {
+    "all_finite": true,
+    "all_unit_norm_atol_1e-5": true,
+    "identity": {
+      "corpus_sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f",
+      "document_ids_sha256": "1fad866af50d7531f9fd3dda694ede5d2333547c780060c55e5093243c6f5dad",
+      "dtype": "float32",
+      "max_sequence_length": 256,
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "normalized": true,
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "serialization": "flatten_tool(id,text) at script/source SHA256",
+      "shard_size": 1024,
+      "text_source_sha256": "70bd54a54acf7da4c13d8a5c2e5b379f81b64f19f248681973951c79b99f0750"
+    },
+    "shards": [
+      {
+        "file": "shard_000000.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "dda8f56ec57be61a56b1623c78cfeaf81dc2db633fdba20ef056afd1862583b6"
+      },
+      {
+        "file": "shard_001024.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "bd452b7a9627aeaef01c9f818db4282809961d6f1c285084c7a8872fff745e40"
+      },
+      {
+        "file": "shard_002048.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999999403953552,
+        "rows": 1024,
+        "sha256": "cfd4eff72b0a05b1e98ea8b9878cac7287635e3af8251e36f3680382fb730ebe"
+      },
+      {
+        "file": "shard_003072.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "afef5e805549c6e732c133f0c53b2e2774694413f2b86ef4675ff437a723707f"
+      },
+      {
+        "file": "shard_004096.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "6732df99da556cbbabcefcdfbadf4457ef30531c9b5a0048b39907ed76da3d8c"
+      },
+      {
+        "file": "shard_005120.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "a86002c79c3be6db210237541cfb518b8b65982b335e79e05e11f73f615e38df"
+      },
+      {
+        "file": "shard_006144.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "1edca8b165d96a3e8b70d40aa487495c9ad8a134e6a8698675e133101fc72cb8"
+      },
+      {
+        "file": "shard_007168.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "3c1056e9ac92dd9c3aaebd2acf7b6c5af3508853aacba70109d204a6854d1964"
+      },
+      {
+        "file": "shard_008192.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "0712e3c75d4504488922d007fa4292186a80299acf95ed19522e9930e13f8bf2"
+      },
+      {
+        "file": "shard_009216.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "20c78c10f73dd816e71b9bb1260e3946786cd913b14859a13eb929357c48bc43"
+      },
+      {
+        "file": "shard_010240.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "8cbf059bea2d9eae828b0b1c1f74250f1a3887c7ee3c3cd798489fd217a6893b"
+      },
+      {
+        "file": "shard_011264.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "2531ac6d340babc1eb1e2bea907854151130a0307c989512a008c7573c2b17ea"
+      },
+      {
+        "file": "shard_012288.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "e0110914a44c68cceb3d711916f6856686397f5a42fbef55b54575038f162c24"
+      },
+      {
+        "file": "shard_013312.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "e18d36b48770996de317bb8351d7e1af84c6c8c31e638e96f2711a48ebfbd6ea"
+      },
+      {
+        "file": "shard_014336.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "340c137634375cc0121236f1be67e55d9ce47adfb001fb3ba864b55c8f0ea027"
+      },
+      {
+        "file": "shard_015360.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "c523e70c525269c1baf84d374a0a3d4e844c49cfdcb69bdd921b98e46b63e796"
+      },
+      {
+        "file": "shard_016384.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "63420862d55d0900ada2ff370cbb2b29cc33c06678b788d18db76905854866a6"
+      },
+      {
+        "file": "shard_017408.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "8bb53f9176641fcfd2e56d101758784c1625cb740693b5c3c4a7bdf476a496a0"
+      },
+      {
+        "file": "shard_018432.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "423d76dc32270f4a608e66a9e6f4d6fa2d5e4ee64206d9cd3ea7e57b61ff6600"
+      },
+      {
+        "file": "shard_019456.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "4430712127fffd54adb067c4f35a9a25f43934aa9fe4cd358de295cf9da0a84d"
+      },
+      {
+        "file": "shard_020480.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "cc73e221273a7d8f55be488e6a34da8c373c7bce32d189bf9b3b6a8540acdc23"
+      },
+      {
+        "file": "shard_021504.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "4b515c7d459981e6401dbda27601ec6766f7c298f4396c673c9ed8a2def522c0"
+      },
+      {
+        "file": "shard_022528.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "a5d21d8938cea2c4d2bd33f2902a7d7c7b9261e0a0f0fd155dc32d5599fd7b35"
+      },
+      {
+        "file": "shard_023552.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "298573e5207c18587a9a956be6e5a321173052fa3217e8fb9144f246d0e47366"
+      },
+      {
+        "file": "shard_024576.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "b0f62094c16860dd76d141c6bea00877645d8f9c80927ad29bd3a8c1de0a95d1"
+      },
+      {
+        "file": "shard_025600.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "0eb0675075f34a7f9f3576d087f59dab780618b20a28113fede1ac4ff269d4bf"
+      },
+      {
+        "file": "shard_026624.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "1a66f936ee2f2b7892e41c9efd09f43651a99108e0775f7567819720c3a9eba3"
+      },
+      {
+        "file": "shard_027648.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "96eb73fcceb8885f98f082c8165a5b957248e7f06d214fc2705f4237050f2f97"
+      },
+      {
+        "file": "shard_028672.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "7bb479814322c9a549d2856070054d16d9aa614129d8db245d471548bb4febee"
+      },
+      {
+        "file": "shard_029696.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "f7952015267b59c7350bb607885e7890883ccdffc6fd4c6648cd180de7dd040c"
+      },
+      {
+        "file": "shard_030720.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "51711f4c18b2aaf40cc1cbd883b569df90bc15167bf9d7013dd2e0d8a0f9a1de"
+      },
+      {
+        "file": "shard_031744.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "e4666b69329e0aa75f7762516345a6c774c6787abbdc1ec26bffa284e0b08510"
+      },
+      {
+        "file": "shard_032768.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999999403953552,
+        "rows": 1024,
+        "sha256": "bec4f8476a820463cddf7183910dea5330eacb250ea151910b8691043380804e"
+      },
+      {
+        "file": "shard_033792.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "536dbbc31f949c986a575c1a64a71fbffd84ee03fffbdce2f7006d128afcc7f6"
+      },
+      {
+        "file": "shard_034816.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "7dc3815cda12c331cd9e79d1ccd28cb3435eb5810f359175a4b494d4cfa6da29"
+      },
+      {
+        "file": "shard_035840.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 1024,
+        "sha256": "ee342c37af7f8dc8e88f9d08b7419e6260a4b186e68cc270b1e3210e429738c5"
+      },
+      {
+        "file": "shard_036864.npy",
+        "norm_max": 1.0000001192092896,
+        "norm_min": 0.9999998807907104,
+        "rows": 428,
+        "sha256": "28580ecdfca40ca871f738756e28724c251c33570089bbc0d23a6fae7dfa2f00"
+      }
+    ]
+  },
+  "environment": {
+    "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+    "device": "cpu",
+    "logical_cpus": 9,
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "python": "3.12.14",
+    "torch_interop_threads": 1,
+    "torch_threads": 4
+  },
+  "events_sha256": "17968b8fc184fe1830cea7c77679040f7dd04375a7e2e360c6d5248d0190d74c",
+  "excluded": [
+    "model/corpus/index loading",
+    "corpus embedding",
+    "input and output validation",
+    "model warmup",
+    "network",
+    "service queueing",
+    "concurrency"
+  ],
+  "inputs_sha256": {
+    "cache": "e8eaab43968c191fa73ad50ea0b80b52ca64e9799e43fea1aed58fa89c4ef7ad",
+    "corpus": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f",
+    "manifest": "cfadbc419a7fd84412e0d5f8fd9980c50c9c7c71a2b2490041a09913585c78a3",
+    "protocol": "d33ceee4741679c5027b7b55cc96f5535f98aef0c2160292d8e0c948abd076bc",
+    "queries": "0aa1f8921c13e44997f7b4018198db513a6d67a0258a550c6fafc16c705cc701",
+    "router_model": "f24613a552d36737f4a17797b94f0c9348a67072a97cfc3cb471ae4bd25c159c"
+  },
+  "limitations": [
+    "Single machine and CPU thread setting; results do not establish GPU/server behavior.",
+    "90-query default source-balanced latency subsample; quality results belong to the larger confirmation cohort.",
+    "Warm sequential requests exclude network, queueing and concurrent service load."
+  ],
+  "measurement_boundary": "query text to final ranking: BM25 + dense encode + exact full-corpus search/sort + RRF + routing + conditional CE/prefix sort",
+  "model_configuration": {
+    "batch_size": 64,
+    "candidate_k": 100,
+    "dense_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "dense_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "max_sequence_length": 256,
+    "rerank_k": 20,
+    "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+    "rrf_k": 60,
+    "rrf_weights": [
+      1.0,
+      1.0
+    ],
+    "threads": 4
+  },
+  "order_seed": 20261003,
+  "packages": {
+    "numpy": "2.5.3",
+    "sentence-transformers": "6.1.0",
+    "torch": "2.14.1+cpu",
+    "transformers": "5.18.0"
+  },
+  "paired_comparisons": {
+    "fixed_disagreement_vs_always": {
+      "delta_ci95_ms": [
+        -207.79232205027782,
+        -89.64402638305559
+      ],
+      "mean_delta_ms": -148.2063536851852,
+      "mean_latency_reduction_fraction": 0.16096753470481784,
+      "reduction_ci95_fraction": [
+        0.0981402414398238,
+        0.22518770997445914
+      ]
+    },
+    "hybrid_vs_always": {
+      "delta_ci95_ms": [
+        -671.4740490737963,
+        -626.0830954041667
+      ],
+      "mean_delta_ms": -649.5748765814815,
+      "mean_latency_reduction_fraction": 0.7055059644177674,
+      "reduction_ci95_fraction": [
+        0.6698604437981427,
+        0.7317228218366022
+      ]
+    },
+    "utility_75_vs_always": {
+      "delta_ci95_ms": [
+        -189.38765680314813,
+        -73.89289526009259
+      ],
+      "mean_delta_ms": -129.28509431481478,
+      "mean_latency_reduction_fraction": 0.1404170765184667,
+      "reduction_ci95_fraction": [
+        0.0823387232321717,
+        0.20035523842338743
+      ]
+    }
+  },
+  "policies": {
+    "always": {
+      "actual_cross_encoder_calls": 270,
+      "actual_cross_encoder_pairs": 5400,
+      "component_means_ms": {
+        "bm25": 244.4639479851852,
+        "cross_encoder": 648.073906711111,
+        "dense": 27.97060282962963,
+        "routing": 0.0031736333333333335,
+        "rrf": 0.21038869999999998
+      },
+      "mean_ms": 920.7220198592593,
+      "p50_event_ms": 892.7384669999999,
+      "p50_query_mean_ms": 906.976667,
+      "p95_event_ms": 1236.4456402499998,
+      "p95_query_mean_ms": 1172.2824641333332,
+      "requests": 270
+    },
+    "fixed_disagreement": {
+      "actual_cross_encoder_calls": 210,
+      "actual_cross_encoder_pairs": 4200,
+      "component_means_ms": {
+        "bm25": 245.4917283222222,
+        "cross_encoder": 499.44948423333335,
+        "dense": 27.355213055555556,
+        "routing": 0.004184848148148147,
+        "rrf": 0.2150557148148148
+      },
+      "mean_ms": 772.515666174074,
+      "p50_event_ms": 839.3579245000001,
+      "p50_query_mean_ms": 847.6812523333333,
+      "p95_event_ms": 1188.7539811499987,
+      "p95_query_mean_ms": 1137.2873768166664,
+      "requests": 270
+    },
+    "hybrid": {
+      "actual_cross_encoder_calls": 0,
+      "actual_cross_encoder_pairs": 0,
+      "component_means_ms": {
+        "bm25": 243.9433129740741,
+        "cross_encoder": 0.0,
+        "dense": 26.989601166666663,
+        "routing": 0.004517525925925926,
+        "rrf": 0.2097116111111111
+      },
+      "mean_ms": 271.1471432777778,
+      "p50_event_ms": 239.3729635,
+      "p50_query_mean_ms": 242.08122133333336,
+      "p95_event_ms": 403.45872829999985,
+      "p95_query_mean_ms": 378.3779861333333,
+      "requests": 270
+    },
+    "utility_75": {
+      "actual_cross_encoder_calls": 219,
+      "actual_cross_encoder_pairs": 4380,
+      "component_means_ms": {
+        "bm25": 244.7314052925926,
+        "cross_encoder": 518.3774351074075,
+        "dense": 27.884993714814815,
+        "routing": 0.23268275185185186,
+        "rrf": 0.2104086777777778
+      },
+      "mean_ms": 791.4369255444444,
+      "p50_event_ms": 837.2295215,
+      "p50_query_mean_ms": 850.8748493333333,
+      "p95_event_ms": 1151.5033655,
+      "p95_query_mean_ms": 1083.6731336833334,
+      "requests": 270
+    }
+  },
+  "policy_order": "query order shuffled per repetition; random base policy order with cyclic position balancing",
+  "queries": 90,
+  "repetitions": 3,
+  "scope": "actual repeated warm-service sequential CPU end-to-end retrieval benchmark",
+  "source_domain_counts": {
+    "apigen": 30,
+    "toolace": 30,
+    "toolbench": 30
+  },
+  "source_sha256": {
+    "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/scripts/benchmark_selective_latency.py": "760d87f2825083dd2fb8994e730c4f7d736e008d2b02814a84e78c6e2825779b",
+    "src/toolret_research/bm25.py": "2ea2de25924e2f740f0f6fe561643fc8dd4d68300d6492200780db6c70252377",
+    "src/toolret_research/fusion.py": "677d1e0a751813cfed9411c63a9ae421c3bd7c33e5e55bf4b34cdb0bbb162d54",
+    "src/toolret_research/text.py": "70bd54a54acf7da4c13d8a5c2e5b379f81b64f19f248681973951c79b99f0750",
+    "src/toolret_research/utility_router.py": "2075d901571a5692e4297f3e998a867fd9fc67776ade5440a7ed422c36797ad2"
+  },
+  "warmup": "one full request per policy on non-benchmark query 'weather forecast'"
+}

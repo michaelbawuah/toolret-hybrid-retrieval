@@ -1,0 +1,3563 @@
+{
+  "cases": [
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "apigen_query_215",
+      "delta_ndcg10": -1.0,
+      "descriptive_note": "Labeled positive(s) leave top 10. CE top 1 is unjudged and comes from another corpus source.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": true,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 54,
+          "hybrid_rank": 1,
+          "name": "science",
+          "pair_tokenization": {
+            "document_tokens": 54,
+            "document_truncated": false,
+            "full_pair_tokens": 68,
+            "pair_truncated": false,
+            "query_tokens": 11,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 54,
+            "retained_query_tokens": 11
+          },
+          "reranked_rank": 15,
+          "tool_id": "apigen_tool_342",
+          "transition": "left_top10"
+        }
+      ],
+      "gold_transitions": {
+        "left_top10": 1
+      },
+      "hybrid_ndcg10": 1.0,
+      "mean_positive_document_tokens": 54.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "loss",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 0,
+      "prefix_positive_count": 1,
+      "query_excerpt": "Retrieve science news articles in Spanish for Spain and Mexico.",
+      "query_id": "apigen_query_215",
+      "query_tokens": 11,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.0,
+      "reranked_top1": {
+        "hybrid_rank": 7,
+        "is_positive_label": false,
+        "name": "CoinTelegraph News API",
+        "pair_tokenization": {
+          "document_tokens": 101,
+          "document_truncated": false,
+          "full_pair_tokens": 115,
+          "pair_truncated": false,
+          "query_tokens": 11,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 101,
+          "retained_query_tokens": 11
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_12575"
+      },
+      "source_domain": "apigen",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "apigen_query_85",
+      "delta_ndcg10": -0.6845351232142712,
+      "descriptive_note": "CE top 1 is unjudged and comes from another corpus source.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": false,
+        "utility_25": false,
+        "utility_50": false,
+        "utility_75": false
+      },
+      "gate_selected": false,
+      "gold_tools": [
+        {
+          "document_tokens": 68,
+          "hybrid_rank": 1,
+          "name": "vin_decoder",
+          "pair_tokenization": {
+            "document_tokens": 68,
+            "document_truncated": false,
+            "full_pair_tokens": 151,
+            "pair_truncated": false,
+            "query_tokens": 80,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 68,
+            "retained_query_tokens": 80
+          },
+          "reranked_rank": 8,
+          "tool_id": "apigen_tool_431",
+          "transition": "demoted_within_top10"
+        }
+      ],
+      "gold_transitions": {
+        "demoted_within_top10": 1
+      },
+      "hybrid_ndcg10": 1.0,
+      "mean_positive_document_tokens": 68.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "loss",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 2,
+      "prefix_positive_count": 1,
+      "query_excerpt": "Decode the VIN numbers 'WAUZZZ8V5BN066654', 'WBA3B9C58EN176718', '1HGCM82633A073743', and '1GKS2JKY1J5126157' to find out the car model, maker, and year, and the engine details.",
+      "query_id": "apigen_query_85",
+      "query_tokens": 80,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.31546487678572877,
+      "reranked_top1": {
+        "hybrid_rank": 13,
+        "is_positive_label": false,
+        "name": "AU Decode",
+        "pair_tokenization": {
+          "document_tokens": 61,
+          "document_truncated": false,
+          "full_pair_tokens": 144,
+          "pair_truncated": false,
+          "query_tokens": 80,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 61,
+          "retained_query_tokens": 80
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_7993"
+      },
+      "source_domain": "apigen",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "apigen_query_560",
+      "delta_ndcg10": -0.6131471927654584,
+      "descriptive_note": "CE top 1 is unjudged and comes from another corpus source.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 134,
+          "hybrid_rank": 1,
+          "name": "stock_get_stock_quote_type_data",
+          "pair_tokenization": {
+            "document_tokens": 134,
+            "document_truncated": false,
+            "full_pair_tokens": 157,
+            "pair_truncated": false,
+            "query_tokens": 20,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 134,
+            "retained_query_tokens": 20
+          },
+          "reranked_rank": 5,
+          "tool_id": "apigen_tool_1817",
+          "transition": "demoted_within_top10"
+        }
+      ],
+      "gold_transitions": {
+        "demoted_within_top10": 1
+      },
+      "hybrid_ndcg10": 1.0,
+      "mean_positive_document_tokens": 134.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "loss",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 1,
+      "prefix_positive_count": 1,
+      "query_excerpt": "What is the current stock quote for Tesla in the US market and for Volkswagen in the German market?",
+      "query_id": "apigen_query_560",
+      "query_tokens": 20,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.38685280723454163,
+      "reranked_top1": {
+        "hybrid_rank": 3,
+        "is_positive_label": false,
+        "name": "Get Live Equity Quote",
+        "pair_tokenization": {
+          "document_tokens": 94,
+          "document_truncated": false,
+          "full_pair_tokens": 117,
+          "pair_truncated": false,
+          "query_tokens": 20,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 94,
+          "retained_query_tokens": 20
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_7416"
+      },
+      "source_domain": "apigen",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "apigen_query_883",
+      "delta_ndcg10": -0.6131471927654584,
+      "descriptive_note": "Ordering changes within the fixed scored prefix.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": true,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 47,
+          "hybrid_rank": 1,
+          "name": "fetch_by_region",
+          "pair_tokenization": {
+            "document_tokens": 47,
+            "document_truncated": false,
+            "full_pair_tokens": 60,
+            "pair_truncated": false,
+            "query_tokens": 10,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 47,
+            "retained_query_tokens": 10
+          },
+          "reranked_rank": 5,
+          "tool_id": "apigen_tool_445",
+          "transition": "demoted_within_top10"
+        }
+      ],
+      "gold_transitions": {
+        "demoted_within_top10": 1
+      },
+      "hybrid_ndcg10": 1.0,
+      "mean_positive_document_tokens": 47.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "loss",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 0,
+      "prefix_positive_count": 1,
+      "query_excerpt": "Retrieve 15 records from the 'Birmingham' region.",
+      "query_id": "apigen_query_883",
+      "query_tokens": 10,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.38685280723454163,
+      "reranked_top1": {
+        "hybrid_rank": 15,
+        "is_positive_label": false,
+        "name": "shows_id_episodes",
+        "pair_tokenization": {
+          "document_tokens": 233,
+          "document_truncated": false,
+          "full_pair_tokens": 246,
+          "pair_truncated": false,
+          "query_tokens": 10,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 233,
+          "retained_query_tokens": 10
+        },
+        "source_domain": "apigen",
+        "tool_id": "apigen_tool_2180"
+      },
+      "source_domain": "apigen",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 0.5,
+      "component_id": "apigen_query_82",
+      "delta_ndcg10": -0.6131471927654584,
+      "descriptive_note": "Labeled positive(s) leave top 10. Some positive labels are absent from the scored prefix. CE top 1 is unjudged and comes from another corpus source.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": false,
+        "utility_25": true,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": false,
+      "gold_tools": [
+        {
+          "document_tokens": 113,
+          "hybrid_rank": 1,
+          "name": "ufc_fight_night_vettori_vs_cannonier_june_17_2023",
+          "pair_tokenization": {
+            "document_tokens": 113,
+            "document_truncated": false,
+            "full_pair_tokens": 156,
+            "pair_truncated": false,
+            "query_tokens": 40,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 113,
+            "retained_query_tokens": 40
+          },
+          "reranked_rank": 11,
+          "tool_id": "apigen_tool_2468",
+          "transition": "left_top10"
+        },
+        {
+          "document_tokens": 185,
+          "hybrid_rank": null,
+          "name": "list",
+          "pair_tokenization": null,
+          "reranked_rank": null,
+          "tool_id": "apigen_tool_680",
+          "transition": "absent_from_fused_candidates"
+        }
+      ],
+      "gold_transitions": {
+        "absent_from_fused_candidates": 1,
+        "left_top10": 1
+      },
+      "hybrid_ndcg10": 0.6131471927654584,
+      "mean_positive_document_tokens": 149.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "loss",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 0,
+      "prefix_positive_count": 1,
+      "query_excerpt": "List all surebets from bookmakers 'Unibet' and '10Bet', and get detailed stats for the first 20 fighters in the UFC Fight Night on June 17, 2023.",
+      "query_id": "apigen_query_892",
+      "query_tokens": 40,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.0,
+      "reranked_top1": {
+        "hybrid_rank": 18,
+        "is_positive_label": false,
+        "name": "Get All UFC Fighters",
+        "pair_tokenization": {
+          "document_tokens": 54,
+          "document_truncated": false,
+          "full_pair_tokens": 97,
+          "pair_truncated": false,
+          "query_tokens": 40,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 54,
+          "retained_query_tokens": 40
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_13853"
+      },
+      "source_domain": "apigen",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "apigen_query_295",
+      "delta_ndcg10": 1.0,
+      "descriptive_note": "Labeled positive(s) enter top 10.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": false,
+        "utility_25": false,
+        "utility_50": false,
+        "utility_75": true
+      },
+      "gate_selected": false,
+      "gold_tools": [
+        {
+          "document_tokens": 52,
+          "hybrid_rank": 12,
+          "name": "fan_rating",
+          "pair_tokenization": {
+            "document_tokens": 52,
+            "document_truncated": false,
+            "full_pair_tokens": 82,
+            "pair_truncated": false,
+            "query_tokens": 27,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 52,
+            "retained_query_tokens": 27
+          },
+          "reranked_rank": 1,
+          "tool_id": "apigen_tool_2610",
+          "transition": "entered_top10"
+        }
+      ],
+      "gold_transitions": {
+        "entered_top10": 1
+      },
+      "hybrid_ndcg10": 0.0,
+      "mean_positive_document_tokens": 52.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "win",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 0,
+      "prefix_positive_count": 1,
+      "query_excerpt": "Get the fan ratings for two different events: a basketball game with ID 67890 and a tennis match with ID 54321.",
+      "query_id": "apigen_query_295",
+      "query_tokens": 27,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 1.0,
+      "reranked_top1": {
+        "hybrid_rank": 12,
+        "is_positive_label": true,
+        "name": "fan_rating",
+        "pair_tokenization": {
+          "document_tokens": 52,
+          "document_truncated": false,
+          "full_pair_tokens": 82,
+          "pair_truncated": false,
+          "query_tokens": 27,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 52,
+          "retained_query_tokens": 27
+        },
+        "source_domain": "apigen",
+        "tool_id": "apigen_tool_2610"
+      },
+      "source_domain": "apigen",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "apigen_query_129",
+      "delta_ndcg10": 1.0,
+      "descriptive_note": "Labeled positive(s) enter top 10.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": true,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 46,
+          "hybrid_rank": 11,
+          "name": "latest",
+          "pair_tokenization": {
+            "document_tokens": 46,
+            "document_truncated": false,
+            "full_pair_tokens": 60,
+            "pair_truncated": false,
+            "query_tokens": 11,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 46,
+            "retained_query_tokens": 11
+          },
+          "reranked_rank": 1,
+          "tool_id": "apigen_tool_195",
+          "transition": "entered_top10"
+        }
+      ],
+      "gold_transitions": {
+        "entered_top10": 1
+      },
+      "hybrid_ndcg10": 0.0,
+      "mean_positive_document_tokens": 46.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "win",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 0,
+      "prefix_positive_count": 1,
+      "query_excerpt": "Fetch the latest news in English from the United States.",
+      "query_id": "apigen_query_424",
+      "query_tokens": 11,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 1.0,
+      "reranked_top1": {
+        "hybrid_rank": 11,
+        "is_positive_label": true,
+        "name": "latest",
+        "pair_tokenization": {
+          "document_tokens": 46,
+          "document_truncated": false,
+          "full_pair_tokens": 60,
+          "pair_truncated": false,
+          "query_tokens": 11,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 46,
+          "retained_query_tokens": 11
+        },
+        "source_domain": "apigen",
+        "tool_id": "apigen_tool_195"
+      },
+      "source_domain": "apigen",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "apigen_query_662",
+      "delta_ndcg10": 1.0,
+      "descriptive_note": "Labeled positive(s) enter top 10.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": true,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 56,
+          "hybrid_rank": 13,
+          "name": "straddle",
+          "pair_tokenization": {
+            "document_tokens": 56,
+            "document_truncated": false,
+            "full_pair_tokens": 83,
+            "pair_truncated": false,
+            "query_tokens": 24,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 56,
+            "retained_query_tokens": 24
+          },
+          "reranked_rank": 1,
+          "tool_id": "apigen_tool_2016",
+          "transition": "entered_top10"
+        }
+      ],
+      "gold_transitions": {
+        "entered_top10": 1
+      },
+      "hybrid_ndcg10": 0.0,
+      "mean_positive_document_tokens": 56.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "win",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 4,
+      "prefix_positive_count": 1,
+      "query_excerpt": "Can you fetch the straddle options data for Tesla (TSLA) and Amazon (AMZN) stocks?",
+      "query_id": "apigen_query_662",
+      "query_tokens": 24,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 1.0,
+      "reranked_top1": {
+        "hybrid_rank": 13,
+        "is_positive_label": true,
+        "name": "straddle",
+        "pair_tokenization": {
+          "document_tokens": 56,
+          "document_truncated": false,
+          "full_pair_tokens": 83,
+          "pair_truncated": false,
+          "query_tokens": 24,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 56,
+          "retained_query_tokens": 24
+        },
+        "source_domain": "apigen",
+        "tool_id": "apigen_tool_2016"
+      },
+      "source_domain": "apigen",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "apigen_query_372",
+      "delta_ndcg10": 1.0,
+      "descriptive_note": "Labeled positive(s) enter top 10.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 44,
+          "hybrid_rank": 18,
+          "name": "simulate_query_database",
+          "pair_tokenization": {
+            "document_tokens": 44,
+            "document_truncated": false,
+            "full_pair_tokens": 78,
+            "pair_truncated": false,
+            "query_tokens": 31,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 44,
+            "retained_query_tokens": 31
+          },
+          "reranked_rank": 1,
+          "tool_id": "apigen_tool_28",
+          "transition": "entered_top10"
+        }
+      ],
+      "gold_transitions": {
+        "entered_top10": 1
+      },
+      "hybrid_ndcg10": 0.0,
+      "mean_positive_document_tokens": 44.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "win",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 5,
+      "prefix_positive_count": 1,
+      "query_excerpt": "Simulate a database query on a 'products' table with conditions {'price': '<100', 'category': 'electronics'}.",
+      "query_id": "apigen_query_67",
+      "query_tokens": 31,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 1.0,
+      "reranked_top1": {
+        "hybrid_rank": 18,
+        "is_positive_label": true,
+        "name": "simulate_query_database",
+        "pair_tokenization": {
+          "document_tokens": 44,
+          "document_truncated": false,
+          "full_pair_tokens": 78,
+          "pair_truncated": false,
+          "query_tokens": 31,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 44,
+          "retained_query_tokens": 31
+        },
+        "source_domain": "apigen",
+        "tool_id": "apigen_tool_28"
+      },
+      "source_domain": "apigen",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "apigen_query_690",
+      "delta_ndcg10": 0.7351450923686194,
+      "descriptive_note": "Labeled positive(s) enter top 10.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": true,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 55,
+          "hybrid_rank": 9,
+          "name": "difficulty",
+          "pair_tokenization": {
+            "document_tokens": 55,
+            "document_truncated": false,
+            "full_pair_tokens": 75,
+            "pair_truncated": false,
+            "query_tokens": 17,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 55,
+            "retained_query_tokens": 17
+          },
+          "reranked_rank": 1,
+          "tool_id": "apigen_tool_156",
+          "transition": "promoted_within_top10"
+        },
+        {
+          "document_tokens": 54,
+          "hybrid_rank": 11,
+          "name": "obd2_code",
+          "pair_tokenization": {
+            "document_tokens": 54,
+            "document_truncated": false,
+            "full_pair_tokens": 74,
+            "pair_truncated": false,
+            "query_tokens": 17,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 54,
+            "retained_query_tokens": 17
+          },
+          "reranked_rank": 3,
+          "tool_id": "apigen_tool_157",
+          "transition": "entered_top10"
+        }
+      ],
+      "gold_transitions": {
+        "entered_top10": 1,
+        "promoted_within_top10": 1
+      },
+      "hybrid_ndcg10": 0.18457569677956817,
+      "mean_positive_document_tokens": 54.5,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "win",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 0,
+      "prefix_positive_count": 2,
+      "query_excerpt": "Describe the characteristics of easy weed strains and the OBD2 code P0100.",
+      "query_id": "apigen_query_690",
+      "query_tokens": 17,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.9197207891481876,
+      "reranked_top1": {
+        "hybrid_rank": 9,
+        "is_positive_label": true,
+        "name": "difficulty",
+        "pair_tokenization": {
+          "document_tokens": 55,
+          "document_truncated": false,
+          "full_pair_tokens": 75,
+          "pair_truncated": false,
+          "query_tokens": 17,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 55,
+          "retained_query_tokens": 17
+        },
+        "source_domain": "apigen",
+        "tool_id": "apigen_tool_156"
+      },
+      "source_domain": "apigen",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolACE_query_24",
+      "delta_ndcg10": -1.0,
+      "descriptive_note": "Labeled positive(s) leave top 10. CE top 1 is unjudged and comes from another corpus source.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 45,
+          "hybrid_rank": 1,
+          "name": "dropTable",
+          "pair_tokenization": {
+            "document_tokens": 45,
+            "document_truncated": false,
+            "full_pair_tokens": 70,
+            "pair_truncated": false,
+            "query_tokens": 22,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 45,
+            "retained_query_tokens": 22
+          },
+          "reranked_rank": 13,
+          "tool_id": "toolACE_tool_12211",
+          "transition": "left_top10"
+        }
+      ],
+      "gold_transitions": {
+        "left_top10": 1
+      },
+      "hybrid_ndcg10": 1.0,
+      "mean_positive_document_tokens": 45.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "loss",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 2,
+      "prefix_positive_count": 1,
+      "query_excerpt": "user:I need to remove an outdated inventory table from our main database. Can you handle that for me?\n",
+      "query_id": "toolACE_query_24",
+      "query_tokens": 22,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.0,
+      "reranked_top1": {
+        "hybrid_rank": 9,
+        "is_positive_label": false,
+        "name": "ask_to_user",
+        "pair_tokenization": {
+          "document_tokens": 54,
+          "document_truncated": false,
+          "full_pair_tokens": 79,
+          "pair_truncated": false,
+          "query_tokens": 22,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 54,
+          "retained_query_tokens": 22
+        },
+        "source_domain": "rotbench",
+        "tool_id": "rotbench_tool_6"
+      },
+      "source_domain": "toolace",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolACE_query_345",
+      "delta_ndcg10": -1.0,
+      "descriptive_note": "Labeled positive(s) leave top 10.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 56,
+          "hybrid_rank": 1,
+          "name": "Get Tournaments Rounds",
+          "pair_tokenization": {
+            "document_tokens": 56,
+            "document_truncated": false,
+            "full_pair_tokens": 88,
+            "pair_truncated": false,
+            "query_tokens": 29,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 56,
+            "retained_query_tokens": 29
+          },
+          "reranked_rank": 12,
+          "tool_id": "toolACE_tool_10311",
+          "transition": "left_top10"
+        }
+      ],
+      "gold_transitions": {
+        "left_top10": 1
+      },
+      "hybrid_ndcg10": 1.0,
+      "mean_positive_document_tokens": 56.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "loss",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 1,
+      "prefix_positive_count": 1,
+      "query_excerpt": "user:I need to check the rounds for the tournaments with ids 125, 327, and 871 for the season with id 2022.\n",
+      "query_id": "toolACE_query_345",
+      "query_tokens": 29,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.0,
+      "reranked_top1": {
+        "hybrid_rank": 2,
+        "is_positive_label": false,
+        "name": "Get League Rounds",
+        "pair_tokenization": {
+          "document_tokens": 71,
+          "document_truncated": false,
+          "full_pair_tokens": 103,
+          "pair_truncated": false,
+          "query_tokens": 29,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 71,
+          "retained_query_tokens": 29
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_12218"
+      },
+      "source_domain": "toolace",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolACE_query_54",
+      "delta_ndcg10": -1.0,
+      "descriptive_note": "Labeled positive(s) leave top 10.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 71,
+          "hybrid_rank": 1,
+          "name": "Generate UUID",
+          "pair_tokenization": {
+            "document_tokens": 71,
+            "document_truncated": false,
+            "full_pair_tokens": 101,
+            "pair_truncated": false,
+            "query_tokens": 27,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 71,
+            "retained_query_tokens": 27
+          },
+          "reranked_rank": 13,
+          "tool_id": "toolACE_tool_3752",
+          "transition": "left_top10"
+        }
+      ],
+      "gold_transitions": {
+        "left_top10": 1
+      },
+      "hybrid_ndcg10": 1.0,
+      "mean_positive_document_tokens": 71.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "loss",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 3,
+      "prefix_positive_count": 1,
+      "query_excerpt": "user:Could you please generate a unique identifier for a new project I am starting? I would prefer it without dashes.\n",
+      "query_id": "toolACE_query_54",
+      "query_tokens": 27,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.0,
+      "reranked_top1": {
+        "hybrid_rank": 10,
+        "is_positive_label": false,
+        "name": "addTask",
+        "pair_tokenization": {
+          "document_tokens": 120,
+          "document_truncated": false,
+          "full_pair_tokens": 150,
+          "pair_truncated": false,
+          "query_tokens": 27,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 120,
+          "retained_query_tokens": 27
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_13159"
+      },
+      "source_domain": "toolace",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolACE_query_17",
+      "delta_ndcg10": -0.7109351736821121,
+      "descriptive_note": "CE top 1 is unjudged and comes from another corpus source.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": false,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 136,
+          "hybrid_rank": 1,
+          "name": "Convert Web Page to PDF",
+          "pair_tokenization": {
+            "document_tokens": 136,
+            "document_truncated": false,
+            "full_pair_tokens": 195,
+            "pair_truncated": false,
+            "query_tokens": 56,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 136,
+            "retained_query_tokens": 56
+          },
+          "reranked_rank": 10,
+          "tool_id": "toolACE_tool_10920",
+          "transition": "demoted_within_top10"
+        }
+      ],
+      "gold_transitions": {
+        "demoted_within_top10": 1
+      },
+      "hybrid_ndcg10": 1.0,
+      "mean_positive_document_tokens": 136.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "loss",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 12,
+      "prefix_positive_count": 1,
+      "query_excerpt": "user:Hey there, darling virtual assistant! Could you work some of your digital magic and transform this page I\u2019m stalking into a snazzy PDF for me? Here\u2019s the URL: https://www.example.com/amazing-web-page\n",
+      "query_id": "toolACE_query_575",
+      "query_tokens": 56,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.2890648263178879,
+      "reranked_top1": {
+        "hybrid_rank": 11,
+        "is_positive_label": false,
+        "name": "PragmavantApi_web_pdf",
+        "pair_tokenization": {
+          "document_tokens": 43,
+          "document_truncated": false,
+          "full_pair_tokens": 102,
+          "pair_truncated": false,
+          "query_tokens": 56,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 43,
+          "retained_query_tokens": 56
+        },
+        "source_domain": "toolbench",
+        "tool_id": "toolbench_tool_7025"
+      },
+      "source_domain": "toolace",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolACE_query_923",
+      "delta_ndcg10": -0.7109351736821121,
+      "descriptive_note": "Ordering changes within the fixed scored prefix.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": false,
+        "utility_75": false
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 85,
+          "hybrid_rank": 1,
+          "name": "GetPageSoundAnnotations",
+          "pair_tokenization": {
+            "document_tokens": 85,
+            "document_truncated": false,
+            "full_pair_tokens": 210,
+            "pair_truncated": false,
+            "query_tokens": 122,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 85,
+            "retained_query_tokens": 122
+          },
+          "reranked_rank": 10,
+          "tool_id": "toolACE_tool_6639",
+          "transition": "demoted_within_top10"
+        }
+      ],
+      "gold_transitions": {
+        "demoted_within_top10": 1
+      },
+      "hybrid_ndcg10": 1.0,
+      "mean_positive_document_tokens": 85.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "loss",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 0,
+      "prefix_positive_count": 1,
+      "query_excerpt": "user:Hi there, I am curious if you have any capabilities related to document management, specifically PDF files?\n\nassistant:Of course, in terms of managing PDF documents, I can retrieve sound annotations from a specific page of a PDF...",
+      "query_id": "toolACE_query_923",
+      "query_tokens": 122,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.2890648263178879,
+      "reranked_top1": {
+        "hybrid_rank": 5,
+        "is_positive_label": false,
+        "name": "GetComboBoxField",
+        "pair_tokenization": {
+          "document_tokens": 79,
+          "document_truncated": false,
+          "full_pair_tokens": 204,
+          "pair_truncated": false,
+          "query_tokens": 122,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 79,
+          "retained_query_tokens": 122
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_13460"
+      },
+      "source_domain": "toolace",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolACE_query_26",
+      "delta_ndcg10": 1.0,
+      "descriptive_note": "Labeled positive(s) enter top 10.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": false,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 35,
+          "hybrid_rank": 14,
+          "name": "getDataSize",
+          "pair_tokenization": {
+            "document_tokens": 35,
+            "document_truncated": false,
+            "full_pair_tokens": 98,
+            "pair_truncated": false,
+            "query_tokens": 60,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 35,
+            "retained_query_tokens": 60
+          },
+          "reranked_rank": 1,
+          "tool_id": "toolACE_tool_2046",
+          "transition": "entered_top10"
+        }
+      ],
+      "gold_transitions": {
+        "entered_top10": 1
+      },
+      "hybrid_ndcg10": 0.0,
+      "mean_positive_document_tokens": 35.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "win",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 0,
+      "prefix_positive_count": 1,
+      "query_excerpt": "user:I need to check the size of a recent dataset we compiled for the new project. Could you assist with that?\n\nassistant:Could you please specify which dataset you are referring to?\n\nuser:It's the dataset named \"October2021_ProjectX_Data.\"",
+      "query_id": "toolACE_query_26",
+      "query_tokens": 60,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 1.0,
+      "reranked_top1": {
+        "hybrid_rank": 14,
+        "is_positive_label": true,
+        "name": "getDataSize",
+        "pair_tokenization": {
+          "document_tokens": 35,
+          "document_truncated": false,
+          "full_pair_tokens": 98,
+          "pair_truncated": false,
+          "query_tokens": 60,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 35,
+          "retained_query_tokens": 60
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_2046"
+      },
+      "source_domain": "toolace",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolACE_query_436",
+      "delta_ndcg10": 1.0,
+      "descriptive_note": "Labeled positive(s) enter top 10.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": false,
+        "utility_75": false
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 56,
+          "hybrid_rank": 19,
+          "name": "TikTok Hashtag Generator",
+          "pair_tokenization": {
+            "document_tokens": 56,
+            "document_truncated": false,
+            "full_pair_tokens": 608,
+            "pair_truncated": true,
+            "query_tokens": 549,
+            "query_truncated": true,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 56,
+            "retained_query_tokens": 197
+          },
+          "reranked_rank": 1,
+          "tool_id": "toolACE_tool_743",
+          "transition": "entered_top10"
+        }
+      ],
+      "gold_transitions": {
+        "entered_top10": 1
+      },
+      "hybrid_ndcg10": 0.0,
+      "mean_positive_document_tokens": 56.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "win",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 1,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 20,
+      "prefix_positive_count": 1,
+      "query_excerpt": "user:Could you generate some relevant hashtags for my latest TikTok video? The topic is cooking.\nassistant:Here are some relevant hashtags for your latest TikTok video on cooking:\n\n- #cooking\n- #food\n- #recipe\n- #homecooking\n-...",
+      "query_id": "toolACE_query_436",
+      "query_tokens": 549,
+      "query_truncated_pairs": 20,
+      "reranked_ndcg10": 1.0,
+      "reranked_top1": {
+        "hybrid_rank": 19,
+        "is_positive_label": true,
+        "name": "TikTok Hashtag Generator",
+        "pair_tokenization": {
+          "document_tokens": 56,
+          "document_truncated": false,
+          "full_pair_tokens": 608,
+          "pair_truncated": true,
+          "query_tokens": 549,
+          "query_truncated": true,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 56,
+          "retained_query_tokens": 197
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_743"
+      },
+      "source_domain": "toolace",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolACE_query_476",
+      "delta_ndcg10": 1.0,
+      "descriptive_note": "Labeled positive(s) enter top 10.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": true,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 29,
+          "hybrid_rank": 12,
+          "name": "timer",
+          "pair_tokenization": {
+            "document_tokens": 29,
+            "document_truncated": false,
+            "full_pair_tokens": 50,
+            "pair_truncated": false,
+            "query_tokens": 18,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 29,
+            "retained_query_tokens": 18
+          },
+          "reranked_rank": 1,
+          "tool_id": "toolACE_tool_13058",
+          "transition": "entered_top10"
+        }
+      ],
+      "gold_transitions": {
+        "entered_top10": 1
+      },
+      "hybrid_ndcg10": 0.0,
+      "mean_positive_document_tokens": 29.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "win",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 3,
+      "prefix_positive_count": 1,
+      "query_excerpt": "user:I need two timers: one for 5 minutes and another for 10 minutes.\n",
+      "query_id": "toolACE_query_476",
+      "query_tokens": 18,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 1.0,
+      "reranked_top1": {
+        "hybrid_rank": 12,
+        "is_positive_label": true,
+        "name": "timer",
+        "pair_tokenization": {
+          "document_tokens": 29,
+          "document_truncated": false,
+          "full_pair_tokens": 50,
+          "pair_truncated": false,
+          "query_tokens": 18,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 29,
+          "retained_query_tokens": 18
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_13058"
+      },
+      "source_domain": "toolace",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolACE_query_547",
+      "delta_ndcg10": 1.0,
+      "descriptive_note": "Labeled positive(s) enter top 10.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 181,
+          "hybrid_rank": 11,
+          "name": "CategoryPerformanceTracker.fetchPerformanceMetrics",
+          "pair_tokenization": {
+            "document_tokens": 181,
+            "document_truncated": false,
+            "full_pair_tokens": 215,
+            "pair_truncated": false,
+            "query_tokens": 31,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 181,
+            "retained_query_tokens": 31
+          },
+          "reranked_rank": 1,
+          "tool_id": "toolACE_tool_13705",
+          "transition": "entered_top10"
+        }
+      ],
+      "gold_transitions": {
+        "entered_top10": 1
+      },
+      "hybrid_ndcg10": 0.0,
+      "mean_positive_document_tokens": 181.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "win",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 0,
+      "prefix_positive_count": 1,
+      "query_excerpt": "user:I want to analyze the performance of the electronics category, specifically for the first quarter of 2023. Can you fetch me the performance metrics?\n",
+      "query_id": "toolACE_query_547",
+      "query_tokens": 31,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 1.0,
+      "reranked_top1": {
+        "hybrid_rank": 11,
+        "is_positive_label": true,
+        "name": "CategoryPerformanceTracker.fetchPerformanceMetrics",
+        "pair_tokenization": {
+          "document_tokens": 181,
+          "document_truncated": false,
+          "full_pair_tokens": 215,
+          "pair_truncated": false,
+          "query_tokens": 31,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 181,
+          "retained_query_tokens": 31
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_13705"
+      },
+      "source_domain": "toolace",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolACE_query_984",
+      "delta_ndcg10": 1.0,
+      "descriptive_note": "Labeled positive(s) enter top 10.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 20,
+          "hybrid_rank": 13,
+          "name": "Get Fighter",
+          "pair_tokenization": {
+            "document_tokens": 20,
+            "document_truncated": false,
+            "full_pair_tokens": 50,
+            "pair_truncated": false,
+            "query_tokens": 27,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 20,
+            "retained_query_tokens": 27
+          },
+          "reranked_rank": 1,
+          "tool_id": "toolACE_tool_7682",
+          "transition": "entered_top10"
+        }
+      ],
+      "gold_transitions": {
+        "entered_top10": 1
+      },
+      "hybrid_ndcg10": 0.0,
+      "mean_positive_document_tokens": 20.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "win",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 2,
+      "prefix_positive_count": 1,
+      "query_excerpt": "user:I want to know about the fighters with the IDs 102, 256 and 345. Can you get the information for me?\n",
+      "query_id": "toolACE_query_984",
+      "query_tokens": 27,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 1.0,
+      "reranked_top1": {
+        "hybrid_rank": 13,
+        "is_positive_label": true,
+        "name": "Get Fighter",
+        "pair_tokenization": {
+          "document_tokens": 20,
+          "document_truncated": false,
+          "full_pair_tokens": 50,
+          "pair_truncated": false,
+          "query_tokens": 27,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 20,
+          "retained_query_tokens": 27
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_7682"
+      },
+      "source_domain": "toolace",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolbench_query_81",
+      "delta_ndcg10": -0.7359318774274091,
+      "descriptive_note": "Labeled positive(s) leave top 10. CE top 1 is unjudged and comes from another corpus source. CE top 1 has a name-counterpart hint; equivalence is unverified.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": false,
+        "fixed_disagreement": false,
+        "utility_25": false,
+        "utility_50": false,
+        "utility_75": false
+      },
+      "gate_selected": false,
+      "gold_tools": [
+        {
+          "document_tokens": 140,
+          "hybrid_rank": 1,
+          "name": "Token_Forwarding_Get_token_forwarding_transactions",
+          "pair_tokenization": {
+            "document_tokens": 140,
+            "document_truncated": false,
+            "full_pair_tokens": 209,
+            "pair_truncated": false,
+            "query_tokens": 66,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 140,
+            "retained_query_tokens": 66
+          },
+          "reranked_rank": 4,
+          "tool_id": "toolbench_tool_238",
+          "transition": "demoted_within_top10"
+        },
+        {
+          "document_tokens": 53,
+          "hybrid_rank": 2,
+          "name": "Token_Forwarding_Get_usage_quota_for_the_current_month",
+          "pair_tokenization": {
+            "document_tokens": 53,
+            "document_truncated": false,
+            "full_pair_tokens": 122,
+            "pair_truncated": false,
+            "query_tokens": 66,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 53,
+            "retained_query_tokens": 66
+          },
+          "reranked_rank": 15,
+          "tool_id": "toolbench_tool_239",
+          "transition": "left_top10"
+        }
+      ],
+      "gold_transitions": {
+        "demoted_within_top10": 1,
+        "left_top10": 1
+      },
+      "hybrid_ndcg10": 1.0,
+      "mean_positive_document_tokens": 96.5,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "loss",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 5,
+      "prefix_positive_count": 2,
+      "query_excerpt": "I need to keep track of the token forwarding transactions for my company. Please retrieve the token forwarding transactions, including the offset, limit, total count, and the list of token forwarding transactions. Additionally, I want...",
+      "query_id": "toolbench_query_81",
+      "query_tokens": 66,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.2640681225725909,
+      "reranked_top1": {
+        "hybrid_rank": 3,
+        "is_positive_label": false,
+        "name": "Get Token Forwarding Transactions",
+        "pair_tokenization": {
+          "document_tokens": 109,
+          "document_truncated": false,
+          "full_pair_tokens": 178,
+          "pair_truncated": false,
+          "query_tokens": 66,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 109,
+          "retained_query_tokens": 66
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_8266"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [
+        "toolbench_tool_238"
+      ],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolbench_query_306",
+      "delta_ndcg10": -0.6556526665755966,
+      "descriptive_note": "Labeled positive(s) leave top 10. CE top 1 is unjudged and comes from another corpus source.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": false,
+        "utility_25": false,
+        "utility_50": false,
+        "utility_75": false
+      },
+      "gate_selected": false,
+      "gold_tools": [
+        {
+          "document_tokens": 63,
+          "hybrid_rank": 3,
+          "name": "Funds_v1GetFundLatestPrice",
+          "pair_tokenization": {
+            "document_tokens": 63,
+            "document_truncated": false,
+            "full_pair_tokens": 124,
+            "pair_truncated": false,
+            "query_tokens": 58,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 63,
+            "retained_query_tokens": 58
+          },
+          "reranked_rank": 11,
+          "tool_id": "toolbench_tool_2311",
+          "transition": "left_top10"
+        },
+        {
+          "document_tokens": 109,
+          "hybrid_rank": 1,
+          "name": "Funds_v1GetFundHistoricalPrices",
+          "pair_tokenization": {
+            "document_tokens": 109,
+            "document_truncated": false,
+            "full_pair_tokens": 170,
+            "pair_truncated": false,
+            "query_tokens": 58,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 109,
+            "retained_query_tokens": 58
+          },
+          "reranked_rank": 4,
+          "tool_id": "toolbench_tool_2312",
+          "transition": "demoted_within_top10"
+        }
+      ],
+      "gold_transitions": {
+        "demoted_within_top10": 1,
+        "left_top10": 1
+      },
+      "hybrid_ndcg10": 0.9197207891481876,
+      "mean_positive_document_tokens": 86.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "loss",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 1,
+      "prefix_positive_count": 2,
+      "query_excerpt": "I need to analyze the performance of a mutual fund. Could you fetch the latest price and historical prices of the fund with ISIN LU0690375182? It would be great if you could provide the prices from 2015-01-25 to 2020-12-31.",
+      "query_id": "toolbench_query_306",
+      "query_tokens": 58,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.2640681225725909,
+      "reranked_top1": {
+        "hybrid_rank": 2,
+        "is_positive_label": false,
+        "name": "v1getfundlatestprice",
+        "pair_tokenization": {
+          "document_tokens": 48,
+          "document_truncated": false,
+          "full_pair_tokens": 109,
+          "pair_truncated": false,
+          "query_tokens": 58,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 48,
+          "retained_query_tokens": 58
+        },
+        "source_domain": "apigen",
+        "tool_id": "apigen_tool_1992"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolbench_query_24",
+      "delta_ndcg10": -0.6364391809889587,
+      "descriptive_note": "Labeled positive(s) leave top 10. CE top 1 is unjudged and comes from another corpus source.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": false,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 50,
+          "hybrid_rank": 1,
+          "name": "Dad_Jokes_v2_dad_jokes_joke_of_the_day",
+          "pair_tokenization": {
+            "document_tokens": 50,
+            "document_truncated": false,
+            "full_pair_tokens": 132,
+            "pair_truncated": false,
+            "query_tokens": 79,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 50,
+            "retained_query_tokens": 79
+          },
+          "reranked_rank": 5,
+          "tool_id": "toolbench_tool_4554",
+          "transition": "demoted_within_top10"
+        },
+        {
+          "document_tokens": 23,
+          "hybrid_rank": 5,
+          "name": "Dad_Jokes_v2_dad_jokes_random",
+          "pair_tokenization": {
+            "document_tokens": 23,
+            "document_truncated": false,
+            "full_pair_tokens": 105,
+            "pair_truncated": false,
+            "query_tokens": 79,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 23,
+            "retained_query_tokens": 79
+          },
+          "reranked_rank": 15,
+          "tool_id": "toolbench_tool_4556",
+          "transition": "left_top10"
+        },
+        {
+          "document_tokens": 32,
+          "hybrid_rank": 6,
+          "name": "Dad_Jokes_v2_dad_jokes_health",
+          "pair_tokenization": {
+            "document_tokens": 32,
+            "document_truncated": false,
+            "full_pair_tokens": 114,
+            "pair_truncated": false,
+            "query_tokens": 79,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 32,
+            "retained_query_tokens": 79
+          },
+          "reranked_rank": 20,
+          "tool_id": "toolbench_tool_4557",
+          "transition": "left_top10"
+        }
+      ],
+      "gold_transitions": {
+        "demoted_within_top10": 1,
+        "left_top10": 2
+      },
+      "hybrid_ndcg10": 0.8179809735263114,
+      "mean_positive_document_tokens": 35.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "loss",
+      "positive_count": 3,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 0,
+      "prefix_positive_count": 3,
+      "query_excerpt": "I'm planning a joke-themed party for my friends and I need some fresh material. Can you provide me with the joke of the day? Also, it would be great if you could give me a random joke to add some variety to the party. Finally, I'd like...",
+      "query_id": "toolbench_query_24",
+      "query_tokens": 79,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.18154179253735267,
+      "reranked_top1": {
+        "hybrid_rank": 16,
+        "is_positive_label": false,
+        "name": "Get Joke of the Day By Category",
+        "pair_tokenization": {
+          "document_tokens": 59,
+          "document_truncated": false,
+          "full_pair_tokens": 141,
+          "pair_truncated": false,
+          "query_tokens": 79,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 59,
+          "retained_query_tokens": 79
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_5396"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 0.5,
+      "component_id": "toolbench_query_143",
+      "delta_ndcg10": -0.6131471927654584,
+      "descriptive_note": "Labeled positive(s) leave top 10. Some positive labels are absent from the scored prefix.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 50,
+          "hybrid_rank": 128,
+          "name": "YH_Finance_Complete_Stock_Price",
+          "pair_tokenization": null,
+          "reranked_rank": 128,
+          "tool_id": "toolbench_tool_2056",
+          "transition": "outside_top10"
+        },
+        {
+          "document_tokens": 144,
+          "hybrid_rank": 1,
+          "name": "YH_Finance_Complete_Currency_Converter",
+          "pair_tokenization": {
+            "document_tokens": 144,
+            "document_truncated": false,
+            "full_pair_tokens": 179,
+            "pair_truncated": false,
+            "query_tokens": 32,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 144,
+            "retained_query_tokens": 32
+          },
+          "reranked_rank": 11,
+          "tool_id": "toolbench_tool_2057",
+          "transition": "left_top10"
+        }
+      ],
+      "gold_transitions": {
+        "left_top10": 1,
+        "outside_top10": 1
+      },
+      "hybrid_ndcg10": 0.6131471927654584,
+      "mean_positive_document_tokens": 97.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "loss",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 6,
+      "prefix_positive_count": 1,
+      "query_excerpt": "Can you retrieve the stock price and details for the symbol GOOGL? Also, fetch the conversion rate from USD to JPY for an amount of 1254.",
+      "query_id": "toolbench_query_143",
+      "query_tokens": 32,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.0,
+      "reranked_top1": {
+        "hybrid_rank": 9,
+        "is_positive_label": false,
+        "name": "Yahoo_Finance_price",
+        "pair_tokenization": {
+          "document_tokens": 587,
+          "document_truncated": true,
+          "full_pair_tokens": 622,
+          "pair_truncated": true,
+          "query_tokens": 32,
+          "query_truncated": false,
+          "removed_document_tokens": 366,
+          "retained_document_tokens": 221,
+          "retained_query_tokens": 32
+        },
+        "source_domain": "toolbench",
+        "tool_id": "toolbench_tool_7537"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 0.5,
+      "component_id": "toolbench_query_416",
+      "delta_ndcg10": -0.6131471927654584,
+      "descriptive_note": "Labeled positive(s) leave top 10. Some positive labels are absent from the scored prefix.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 195,
+          "hybrid_rank": 60,
+          "name": "List_Movies_v3_Movie_Suggestions",
+          "pair_tokenization": null,
+          "reranked_rank": 60,
+          "tool_id": "toolbench_tool_2541",
+          "transition": "outside_top10"
+        },
+        {
+          "document_tokens": 57,
+          "hybrid_rank": 1,
+          "name": "Python_Libraries_tst_View_User_List",
+          "pair_tokenization": {
+            "document_tokens": 57,
+            "document_truncated": false,
+            "full_pair_tokens": 106,
+            "pair_truncated": false,
+            "query_tokens": 46,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 57,
+            "retained_query_tokens": 46
+          },
+          "reranked_rank": 20,
+          "tool_id": "toolbench_tool_9261",
+          "transition": "left_top10"
+        }
+      ],
+      "gold_transitions": {
+        "left_top10": 1,
+        "outside_top10": 1
+      },
+      "hybrid_ndcg10": 0.6131471927654584,
+      "mean_positive_document_tokens": 126.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "loss",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 1,
+      "prefix_positive_count": 1,
+      "query_excerpt": "I'm hosting a movie-themed party and I want to display movie suggestions. Can you suggest four related movies for the party? Also, fetch the list of favorite libraries for user 1 from the Python Libraries tst API.",
+      "query_id": "toolbench_query_416",
+      "query_tokens": 46,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.0,
+      "reranked_top1": {
+        "hybrid_rank": 5,
+        "is_positive_label": false,
+        "name": "YTS_am_Torrent_Movie_Suggestions_XML",
+        "pair_tokenization": {
+          "document_tokens": 41,
+          "document_truncated": false,
+          "full_pair_tokens": 90,
+          "pair_truncated": false,
+          "query_tokens": 46,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 41,
+          "retained_query_tokens": 46
+        },
+        "source_domain": "toolbench",
+        "tool_id": "toolbench_tool_10572"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 0.6666666666666666,
+      "component_id": "toolbench_query_622",
+      "delta_ndcg10": 0.7653606369886217,
+      "descriptive_note": "Labeled positive(s) enter top 10. Some positive labels are absent from the scored prefix.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": false,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 48,
+          "hybrid_rank": 15,
+          "name": "Nexweave_GetAllTemplates",
+          "pair_tokenization": {
+            "document_tokens": 48,
+            "document_truncated": false,
+            "full_pair_tokens": 105,
+            "pair_truncated": false,
+            "query_tokens": 54,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 48,
+            "retained_query_tokens": 54
+          },
+          "reranked_rank": 1,
+          "tool_id": "toolbench_tool_5717",
+          "transition": "entered_top10"
+        },
+        {
+          "document_tokens": 50,
+          "hybrid_rank": 13,
+          "name": "Nexweave_GetTemplateDetails",
+          "pair_tokenization": {
+            "document_tokens": 50,
+            "document_truncated": false,
+            "full_pair_tokens": 107,
+            "pair_truncated": false,
+            "query_tokens": 54,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 50,
+            "retained_query_tokens": 54
+          },
+          "reranked_rank": 2,
+          "tool_id": "toolbench_tool_5718",
+          "transition": "entered_top10"
+        },
+        {
+          "document_tokens": 184,
+          "hybrid_rank": null,
+          "name": "Unofficial_Icons8_Search_Search",
+          "pair_tokenization": null,
+          "reranked_rank": null,
+          "tool_id": "toolbench_tool_9005",
+          "transition": "absent_from_fused_candidates"
+        }
+      ],
+      "gold_transitions": {
+        "absent_from_fused_candidates": 1,
+        "entered_top10": 2
+      },
+      "hybrid_ndcg10": 0.0,
+      "mean_positive_document_tokens": 94.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "win",
+      "positive_count": 3,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 6,
+      "prefix_positive_count": 2,
+      "query_excerpt": "I'm planning a surprise birthday party for my sister and I want to create personalized invitations. Can you provide me with some templates and their details from Nexweave? Additionally, I need icons related to birthdays and celebrations...",
+      "query_id": "toolbench_query_716",
+      "query_tokens": 54,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.7653606369886217,
+      "reranked_top1": {
+        "hybrid_rank": 15,
+        "is_positive_label": true,
+        "name": "Nexweave_GetAllTemplates",
+        "pair_tokenization": {
+          "document_tokens": 48,
+          "document_truncated": false,
+          "full_pair_tokens": 105,
+          "pair_truncated": false,
+          "query_tokens": 54,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 48,
+          "retained_query_tokens": 54
+        },
+        "source_domain": "toolbench",
+        "tool_id": "toolbench_tool_5717"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolbench_query_207",
+      "delta_ndcg10": 0.6042964859277558,
+      "descriptive_note": "Labeled positive(s) enter top 10.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 119,
+          "hybrid_rank": 14,
+          "name": "Stock_Analysis_Earnings_History",
+          "pair_tokenization": {
+            "document_tokens": 119,
+            "document_truncated": false,
+            "full_pair_tokens": 163,
+            "pair_truncated": false,
+            "query_tokens": 41,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 119,
+            "retained_query_tokens": 41
+          },
+          "reranked_rank": 1,
+          "tool_id": "toolbench_tool_2095",
+          "transition": "entered_top10"
+        },
+        {
+          "document_tokens": 141,
+          "hybrid_rank": 8,
+          "name": "Stock_Analysis_Earnings_Estimate",
+          "pair_tokenization": {
+            "document_tokens": 141,
+            "document_truncated": false,
+            "full_pair_tokens": 185,
+            "pair_truncated": false,
+            "query_tokens": 41,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 141,
+            "retained_query_tokens": 41
+          },
+          "reranked_rank": 9,
+          "tool_id": "toolbench_tool_2096",
+          "transition": "demoted_within_top10"
+        }
+      ],
+      "gold_transitions": {
+        "demoted_within_top10": 1,
+        "entered_top10": 1
+      },
+      "hybrid_ndcg10": 0.19342640361727081,
+      "mean_positive_document_tokens": 130.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "win",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 0,
+      "prefix_positive_count": 2,
+      "query_excerpt": "I work for a finance company and we need to analyze the earnings history and estimate for a particular stock. Can you provide us with the earnings history and estimate for the ticker symbol 'AAPL'?",
+      "query_id": "toolbench_query_207",
+      "query_tokens": 41,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.7977228895450266,
+      "reranked_top1": {
+        "hybrid_rank": 14,
+        "is_positive_label": true,
+        "name": "Stock_Analysis_Earnings_History",
+        "pair_tokenization": {
+          "document_tokens": 119,
+          "document_truncated": false,
+          "full_pair_tokens": 163,
+          "pair_truncated": false,
+          "query_tokens": 41,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 119,
+          "retained_query_tokens": 41
+        },
+        "source_domain": "toolbench",
+        "tool_id": "toolbench_tool_2095"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolbench_query_192",
+      "delta_ndcg10": 0.5,
+      "descriptive_note": "Ordering changes within the fixed scored prefix.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": false,
+        "utility_25": false,
+        "utility_50": false,
+        "utility_75": true
+      },
+      "gate_selected": false,
+      "gold_tools": [
+        {
+          "document_tokens": 61,
+          "hybrid_rank": 3,
+          "name": "BIN_IIN_Lookup_BIN_IIN_Lookup",
+          "pair_tokenization": {
+            "document_tokens": 61,
+            "document_truncated": false,
+            "full_pair_tokens": 114,
+            "pair_truncated": false,
+            "query_tokens": 50,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 61,
+            "retained_query_tokens": 50
+          },
+          "reranked_rank": 1,
+          "tool_id": "toolbench_tool_8967",
+          "transition": "promoted_within_top10"
+        }
+      ],
+      "gold_transitions": {
+        "promoted_within_top10": 1
+      },
+      "hybrid_ndcg10": 0.5,
+      "mean_positive_document_tokens": 61.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "win",
+      "positive_count": 1,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 2,
+      "prefix_positive_count": 1,
+      "query_excerpt": "Help me find the issuer card information by entering the first 6 digits of a credit/debit card using the BIN/IIN Lookup API. I would like to know the details for a card with the BIN '470886'.",
+      "query_id": "toolbench_query_192",
+      "query_tokens": 50,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 1.0,
+      "reranked_top1": {
+        "hybrid_rank": 3,
+        "is_positive_label": true,
+        "name": "BIN_IIN_Lookup_BIN_IIN_Lookup",
+        "pair_tokenization": {
+          "document_tokens": 61,
+          "document_truncated": false,
+          "full_pair_tokens": 114,
+          "pair_truncated": false,
+          "query_tokens": 50,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 61,
+          "retained_query_tokens": 50
+        },
+        "source_domain": "toolbench",
+        "tool_id": "toolbench_tool_8967"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "component_id": "toolbench_query_37",
+      "delta_ndcg10": 0.4911492931622974,
+      "descriptive_note": "Labeled positive(s) enter top 10. CE top 1 is unjudged and comes from another corpus source.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 46,
+          "hybrid_rank": 14,
+          "name": "asdfadsf_Get_Products_in_Category",
+          "pair_tokenization": {
+            "document_tokens": 46,
+            "document_truncated": false,
+            "full_pair_tokens": 79,
+            "pair_truncated": false,
+            "query_tokens": 30,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 46,
+            "retained_query_tokens": 30
+          },
+          "reranked_rank": 3,
+          "tool_id": "toolbench_tool_3065",
+          "transition": "entered_top10"
+        },
+        {
+          "document_tokens": 28,
+          "hybrid_rank": 17,
+          "name": "asdfadsf_Get_Categories",
+          "pair_tokenization": {
+            "document_tokens": 28,
+            "document_truncated": false,
+            "full_pair_tokens": 61,
+            "pair_truncated": false,
+            "query_tokens": 30,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 28,
+            "retained_query_tokens": 30
+          },
+          "reranked_rank": 9,
+          "tool_id": "toolbench_tool_3068",
+          "transition": "entered_top10"
+        }
+      ],
+      "gold_transitions": {
+        "entered_top10": 2
+      },
+      "hybrid_ndcg10": 0.0,
+      "mean_positive_document_tokens": 37.0,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "win",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 1,
+      "prefix_positive_count": 2,
+      "query_excerpt": "I want to know the list of categories available in the advertising tool. Also, get the product details for the products in the 'Electronics' category.",
+      "query_id": "toolbench_query_37",
+      "query_tokens": 30,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.4911492931622974,
+      "reranked_top1": {
+        "hybrid_rank": 6,
+        "is_positive_label": false,
+        "name": "shopping.compare_products",
+        "pair_tokenization": {
+          "document_tokens": 168,
+          "document_truncated": false,
+          "full_pair_tokens": 201,
+          "pair_truncated": false,
+          "query_tokens": 30,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 168,
+          "retained_query_tokens": 30
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_5719"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 0.6666666666666666,
+      "component_id": "toolbench_query_71",
+      "delta_ndcg10": 0.4760527086458601,
+      "descriptive_note": "Labeled positive(s) enter top 10. Some positive labels are absent from the scored prefix.",
+      "frozen_rerank_decisions": {
+        "cheap_jaccard": true,
+        "fixed_disagreement": true,
+        "utility_25": false,
+        "utility_50": true,
+        "utility_75": true
+      },
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 176,
+          "hybrid_rank": 19,
+          "name": "Whatsapp_Scraper_Fetch_profile_picture",
+          "pair_tokenization": {
+            "document_tokens": 176,
+            "document_truncated": true,
+            "full_pair_tokens": 280,
+            "pair_truncated": true,
+            "query_tokens": 101,
+            "query_truncated": false,
+            "removed_document_tokens": 24,
+            "retained_document_tokens": 152,
+            "retained_query_tokens": 101
+          },
+          "reranked_rank": 1,
+          "tool_id": "toolbench_tool_3822",
+          "transition": "entered_top10"
+        },
+        {
+          "document_tokens": 135,
+          "hybrid_rank": 9,
+          "name": "Whatsapp_Scraper_Fetch_business_info",
+          "pair_tokenization": {
+            "document_tokens": 135,
+            "document_truncated": false,
+            "full_pair_tokens": 239,
+            "pair_truncated": false,
+            "query_tokens": 101,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 135,
+            "retained_query_tokens": 101
+          },
+          "reranked_rank": 8,
+          "tool_id": "toolbench_tool_3824",
+          "transition": "promoted_within_top10"
+        },
+        {
+          "document_tokens": 113,
+          "hybrid_rank": 26,
+          "name": "Whatsapp_Scraper_Is_registered_on_whatsapp",
+          "pair_tokenization": null,
+          "reranked_rank": 26,
+          "tool_id": "toolbench_tool_3825",
+          "transition": "outside_top10"
+        }
+      ],
+      "gold_transitions": {
+        "entered_top10": 1,
+        "outside_top10": 1,
+        "promoted_within_top10": 1
+      },
+      "hybrid_ndcg10": 0.14126697285982898,
+      "mean_positive_document_tokens": 141.33333333333334,
+      "note_type": "automatic_rank_and_name_observation_not_causal_annotation",
+      "outcome": "win",
+      "positive_count": 3,
+      "positive_prefix_pairs_truncated": 1,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 5,
+      "prefix_positive_count": 2,
+      "query_excerpt": "My company is interested in partnering with a business on WhatsApp. Can you help us determine if the phone number +1 555-555-5555 is registered on WhatsApp? Additionally, we would like to fetch the profile picture of this number in low...",
+      "query_id": "toolbench_query_71",
+      "query_tokens": 101,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.617319681505689,
+      "reranked_top1": {
+        "hybrid_rank": 19,
+        "is_positive_label": true,
+        "name": "Whatsapp_Scraper_Fetch_profile_picture",
+        "pair_tokenization": {
+          "document_tokens": 176,
+          "document_truncated": true,
+          "full_pair_tokens": 280,
+          "pair_truncated": true,
+          "query_tokens": 101,
+          "query_truncated": false,
+          "removed_document_tokens": 24,
+          "retained_document_tokens": 152,
+          "retained_query_tokens": 101
+        },
+        "source_domain": "toolbench",
+        "tool_id": "toolbench_tool_3822"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    }
+  ],
+  "groups": {
+    "by_any_positive_prefix_truncation": {
+      "no": {
+        "hybrid_ndcg10": 0.5076240322954637,
+        "mean_candidate_label_recall20": 0.70610086100861,
+        "mean_delta_ndcg10": 0.004168472715864357,
+        "mean_positive_document_tokens": 89.76001757160428,
+        "mean_query_tokens": 51.07822878228782,
+        "outcomes": {
+          "loss": 344,
+          "unchanged": 690,
+          "win": 321
+        },
+        "positive_labels": 2220,
+        "positive_labels_entered_top10": 91,
+        "positive_labels_in_prefix20": 1400,
+        "positive_labels_left_top10": 115,
+        "positive_prefix_pairs_truncated": 0,
+        "prefix_pairs": 27100,
+        "prefix_pairs_truncated": 4014,
+        "queries": 1355,
+        "queries_with_all_labels_in_prefix20": 846,
+        "queries_with_query_truncation": 40,
+        "queries_without_positive_in_prefix20": 282,
+        "query_truncated_pairs": 618,
+        "reranked_ndcg10": 0.5117925050113281,
+        "top1_possible_name_counterpart_queries": 107,
+        "top1_unjudged_cross_source_queries": 601
+      },
+      "yes": {
+        "hybrid_ndcg10": 0.6441410153526249,
+        "mean_candidate_label_recall20": 0.8370114942528735,
+        "mean_delta_ndcg10": -0.005484511900240841,
+        "mean_positive_document_tokens": 233.5732183908046,
+        "mean_query_tokens": 111.58620689655173,
+        "outcomes": {
+          "loss": 53,
+          "unchanged": 49,
+          "win": 43
+        },
+        "positive_labels": 278,
+        "positive_labels_entered_top10": 16,
+        "positive_labels_in_prefix20": 207,
+        "positive_labels_left_top10": 21,
+        "positive_prefix_pairs_truncated": 174,
+        "prefix_pairs": 2900,
+        "prefix_pairs_truncated": 1463,
+        "queries": 145,
+        "queries_with_all_labels_in_prefix20": 102,
+        "queries_with_query_truncation": 49,
+        "queries_without_positive_in_prefix20": 0,
+        "query_truncated_pairs": 803,
+        "reranked_ndcg10": 0.6386565034523841,
+        "top1_possible_name_counterpart_queries": 5,
+        "top1_unjudged_cross_source_queries": 39
+      }
+    },
+    "by_candidate_label_coverage20": {
+      "all": {
+        "hybrid_ndcg10": 0.7324339031720052,
+        "mean_candidate_label_recall20": 1.0,
+        "mean_delta_ndcg10": 0.008871804897378136,
+        "mean_positive_document_tokens": 91.7301511954993,
+        "mean_query_tokens": 49.5337552742616,
+        "outcomes": {
+          "loss": 287,
+          "unchanged": 390,
+          "win": 271
+        },
+        "positive_labels": 1278,
+        "positive_labels_entered_top10": 63,
+        "positive_labels_in_prefix20": 1278,
+        "positive_labels_left_top10": 84,
+        "positive_prefix_pairs_truncated": 130,
+        "prefix_pairs": 18960,
+        "prefix_pairs_truncated": 3182,
+        "queries": 948,
+        "queries_with_all_labels_in_prefix20": 948,
+        "queries_with_query_truncation": 47,
+        "queries_without_positive_in_prefix20": 0,
+        "query_truncated_pairs": 720,
+        "reranked_ndcg10": 0.7413057080693833,
+        "top1_possible_name_counterpart_queries": 68,
+        "top1_unjudged_cross_source_queries": 271
+      },
+      "none": {
+        "hybrid_ndcg10": 0.0,
+        "mean_candidate_label_recall20": 0.0,
+        "mean_delta_ndcg10": 0.0,
+        "mean_positive_document_tokens": 144.99210570753124,
+        "mean_query_tokens": 76.9290780141844,
+        "outcomes": {
+          "unchanged": 282
+        },
+        "positive_labels": 527,
+        "positive_labels_entered_top10": 0,
+        "positive_labels_in_prefix20": 0,
+        "positive_labels_left_top10": 0,
+        "positive_prefix_pairs_truncated": 0,
+        "prefix_pairs": 5640,
+        "prefix_pairs_truncated": 1283,
+        "queries": 282,
+        "queries_with_all_labels_in_prefix20": 0,
+        "queries_with_query_truncation": 26,
+        "queries_without_positive_in_prefix20": 282,
+        "query_truncated_pairs": 472,
+        "reranked_ndcg10": 0.0,
+        "top1_possible_name_counterpart_queries": 14,
+        "top1_unjudged_cross_source_queries": 209
+      },
+      "partial": {
+        "hybrid_ndcg10": 0.3217913732571224,
+        "mean_candidate_label_recall20": 0.4819753086419753,
+        "mean_delta_ndcg10": -0.0131757212527896,
+        "mean_positive_document_tokens": 102.38882716049383,
+        "mean_query_tokens": 61.99629629629629,
+        "outcomes": {
+          "loss": 110,
+          "unchanged": 67,
+          "win": 93
+        },
+        "positive_labels": 693,
+        "positive_labels_entered_top10": 44,
+        "positive_labels_in_prefix20": 329,
+        "positive_labels_left_top10": 52,
+        "positive_prefix_pairs_truncated": 44,
+        "prefix_pairs": 5400,
+        "prefix_pairs_truncated": 1012,
+        "queries": 270,
+        "queries_with_all_labels_in_prefix20": 0,
+        "queries_with_query_truncation": 16,
+        "queries_without_positive_in_prefix20": 0,
+        "query_truncated_pairs": 229,
+        "reranked_ndcg10": 0.3086156520043329,
+        "top1_possible_name_counterpart_queries": 30,
+        "top1_unjudged_cross_source_queries": 160
+      }
+    },
+    "by_gate_selection": {
+      "bypassed": {
+        "hybrid_ndcg10": 0.7870112785925182,
+        "mean_candidate_label_recall20": 0.9101260835303389,
+        "mean_delta_ndcg10": -0.02594235967728052,
+        "mean_positive_document_tokens": 96.23179669030733,
+        "mean_query_tokens": 54.42316784869976,
+        "outcomes": {
+          "loss": 95,
+          "unchanged": 270,
+          "win": 58
+        },
+        "positive_labels": 594,
+        "positive_labels_entered_top10": 13,
+        "positive_labels_in_prefix20": 519,
+        "positive_labels_left_top10": 28,
+        "positive_prefix_pairs_truncated": 62,
+        "prefix_pairs": 8460,
+        "prefix_pairs_truncated": 1567,
+        "queries": 423,
+        "queries_with_all_labels_in_prefix20": 362,
+        "queries_with_query_truncation": 30,
+        "queries_without_positive_in_prefix20": 15,
+        "query_truncated_pairs": 461,
+        "reranked_ndcg10": 0.7610689189152376,
+        "top1_possible_name_counterpart_queries": 32,
+        "top1_unjudged_cross_source_queries": 111
+      },
+      "selected": {
+        "hybrid_ndcg10": 0.4162722749692189,
+        "mean_candidate_label_recall20": 0.6435933147632312,
+        "mean_delta_ndcg10": 0.014695120193083512,
+        "mean_positive_document_tokens": 106.58021399831985,
+        "mean_query_tokens": 57.910863509749305,
+        "outcomes": {
+          "loss": 302,
+          "unchanged": 469,
+          "win": 306
+        },
+        "positive_labels": 1904,
+        "positive_labels_entered_top10": 94,
+        "positive_labels_in_prefix20": 1088,
+        "positive_labels_left_top10": 108,
+        "positive_prefix_pairs_truncated": 112,
+        "prefix_pairs": 21540,
+        "prefix_pairs_truncated": 3910,
+        "queries": 1077,
+        "queries_with_all_labels_in_prefix20": 586,
+        "queries_with_query_truncation": 59,
+        "queries_without_positive_in_prefix20": 267,
+        "query_truncated_pairs": 960,
+        "reranked_ndcg10": 0.4309673951623025,
+        "top1_possible_name_counterpart_queries": 80,
+        "top1_unjudged_cross_source_queries": 529
+      }
+    },
+    "by_mean_positive_document_tokens": {
+      "0-127": {
+        "hybrid_ndcg10": 0.5294084398188482,
+        "mean_candidate_label_recall20": 0.7388425153032833,
+        "mean_delta_ndcg10": 0.0033625211518159676,
+        "mean_positive_document_tokens": 64.6140988949837,
+        "mean_query_tokens": 53.030884808013354,
+        "outcomes": {
+          "loss": 328,
+          "unchanged": 572,
+          "win": 298
+        },
+        "positive_labels": 1964,
+        "positive_labels_entered_top10": 91,
+        "positive_labels_in_prefix20": 1316,
+        "positive_labels_left_top10": 113,
+        "positive_prefix_pairs_truncated": 26,
+        "prefix_pairs": 23960,
+        "prefix_pairs_truncated": 3610,
+        "queries": 1198,
+        "queries_with_all_labels_in_prefix20": 787,
+        "queries_with_query_truncation": 56,
+        "queries_without_positive_in_prefix20": 209,
+        "query_truncated_pairs": 846,
+        "reranked_ndcg10": 0.5327709609706642,
+        "top1_possible_name_counterpart_queries": 95,
+        "top1_unjudged_cross_source_queries": 514
+      },
+      "128-255": {
+        "hybrid_ndcg10": 0.559921788530655,
+        "mean_candidate_label_recall20": 0.7175716440422323,
+        "mean_delta_ndcg10": -0.002076852243729466,
+        "mean_positive_document_tokens": 169.58031674208144,
+        "mean_query_tokens": 75.76470588235294,
+        "outcomes": {
+          "loss": 57,
+          "unchanged": 113,
+          "win": 51
+        },
+        "positive_labels": 376,
+        "positive_labels_entered_top10": 11,
+        "positive_labels_in_prefix20": 238,
+        "positive_labels_left_top10": 20,
+        "positive_prefix_pairs_truncated": 110,
+        "prefix_pairs": 4420,
+        "prefix_pairs_truncated": 1426,
+        "queries": 221,
+        "queries_with_all_labels_in_prefix20": 134,
+        "queries_with_query_truncation": 30,
+        "queries_without_positive_in_prefix20": 35,
+        "query_truncated_pairs": 515,
+        "reranked_ndcg10": 0.5578449362869254,
+        "top1_possible_name_counterpart_queries": 9,
+        "top1_unjudged_cross_source_queries": 82
+      },
+      "256+": {
+        "hybrid_ndcg10": 0.28712326936085236,
+        "mean_candidate_label_recall20": 0.42489711934156377,
+        "mean_delta_ndcg10": 0.015848275437653873,
+        "mean_positive_document_tokens": 501.3333333333333,
+        "mean_query_tokens": 63.160493827160494,
+        "outcomes": {
+          "loss": 12,
+          "unchanged": 54,
+          "win": 15
+        },
+        "positive_labels": 158,
+        "positive_labels_entered_top10": 5,
+        "positive_labels_in_prefix20": 53,
+        "positive_labels_left_top10": 3,
+        "positive_prefix_pairs_truncated": 38,
+        "prefix_pairs": 1620,
+        "prefix_pairs_truncated": 441,
+        "queries": 81,
+        "queries_with_all_labels_in_prefix20": 27,
+        "queries_with_query_truncation": 3,
+        "queries_without_positive_in_prefix20": 38,
+        "query_truncated_pairs": 60,
+        "reranked_ndcg10": 0.3029715447985063,
+        "top1_possible_name_counterpart_queries": 8,
+        "top1_unjudged_cross_source_queries": 44
+      }
+    },
+    "by_positive_count": {
+      "1": {
+        "hybrid_ndcg10": 0.6386673271410497,
+        "mean_candidate_label_recall20": 0.8464467005076142,
+        "mean_delta_ndcg10": 0.029492617344495174,
+        "mean_positive_document_tokens": 88.04568527918782,
+        "mean_query_tokens": 50.140862944162436,
+        "outcomes": {
+          "loss": 138,
+          "unchanged": 472,
+          "win": 178
+        },
+        "positive_labels": 788,
+        "positive_labels_entered_top10": 28,
+        "positive_labels_in_prefix20": 667,
+        "positive_labels_left_top10": 13,
+        "positive_prefix_pairs_truncated": 55,
+        "prefix_pairs": 15760,
+        "prefix_pairs_truncated": 2628,
+        "queries": 788,
+        "queries_with_all_labels_in_prefix20": 667,
+        "queries_with_query_truncation": 45,
+        "queries_without_positive_in_prefix20": 121,
+        "query_truncated_pairs": 764,
+        "reranked_ndcg10": 0.6681599444855448,
+        "top1_possible_name_counterpart_queries": 39,
+        "top1_unjudged_cross_source_queries": 234
+      },
+      "2": {
+        "hybrid_ndcg10": 0.4336597497133594,
+        "mean_candidate_label_recall20": 0.6347992351816444,
+        "mean_delta_ndcg10": -0.02943188230111044,
+        "mean_positive_document_tokens": 117.60994263862332,
+        "mean_query_tokens": 60.74569789674952,
+        "outcomes": {
+          "loss": 191,
+          "unchanged": 195,
+          "win": 137
+        },
+        "positive_labels": 1046,
+        "positive_labels_entered_top10": 46,
+        "positive_labels_in_prefix20": 664,
+        "positive_labels_left_top10": 74,
+        "positive_prefix_pairs_truncated": 91,
+        "prefix_pairs": 10460,
+        "prefix_pairs_truncated": 1997,
+        "queries": 523,
+        "queries_with_all_labels_in_prefix20": 246,
+        "queries_with_query_truncation": 26,
+        "queries_without_positive_in_prefix20": 105,
+        "query_truncated_pairs": 414,
+        "reranked_ndcg10": 0.404227867412249,
+        "top1_possible_name_counterpart_queries": 55,
+        "top1_unjudged_cross_source_queries": 289
+      },
+      "3+": {
+        "hybrid_ndcg10": 0.27067252962566046,
+        "mean_candidate_label_recall20": 0.41869488536155197,
+        "mean_delta_ndcg10": -0.015842760420741557,
+        "mean_positive_document_tokens": 130.17428823381204,
+        "mean_query_tokens": 74.65608465608466,
+        "outcomes": {
+          "loss": 68,
+          "unchanged": 72,
+          "win": 49
+        },
+        "positive_labels": 664,
+        "positive_labels_entered_top10": 33,
+        "positive_labels_in_prefix20": 276,
+        "positive_labels_left_top10": 49,
+        "positive_prefix_pairs_truncated": 28,
+        "prefix_pairs": 3780,
+        "prefix_pairs_truncated": 852,
+        "queries": 189,
+        "queries_with_all_labels_in_prefix20": 35,
+        "queries_with_query_truncation": 18,
+        "queries_without_positive_in_prefix20": 56,
+        "query_truncated_pairs": 243,
+        "reranked_ndcg10": 0.2548297692049189,
+        "top1_possible_name_counterpart_queries": 18,
+        "top1_unjudged_cross_source_queries": 117
+      }
+    },
+    "by_query_tokens": {
+      "0-31": {
+        "hybrid_ndcg10": 0.5601059163796616,
+        "mean_candidate_label_recall20": 0.7923228346456693,
+        "mean_delta_ndcg10": 0.03688194485291725,
+        "mean_positive_document_tokens": 71.08070866141732,
+        "mean_query_tokens": 20.492125984251967,
+        "outcomes": {
+          "loss": 95,
+          "unchanged": 282,
+          "win": 131
+        },
+        "positive_labels": 588,
+        "positive_labels_entered_top10": 32,
+        "positive_labels_in_prefix20": 446,
+        "positive_labels_left_top10": 14,
+        "positive_prefix_pairs_truncated": 10,
+        "prefix_pairs": 10160,
+        "prefix_pairs_truncated": 729,
+        "queries": 508,
+        "queries_with_all_labels_in_prefix20": 384,
+        "queries_with_query_truncation": 0,
+        "queries_without_positive_in_prefix20": 87,
+        "query_truncated_pairs": 0,
+        "reranked_ndcg10": 0.5969878612325789,
+        "top1_possible_name_counterpart_queries": 31,
+        "top1_unjudged_cross_source_queries": 188
+      },
+      "32-63": {
+        "hybrid_ndcg10": 0.4694464726278932,
+        "mean_candidate_label_recall20": 0.6671074380165289,
+        "mean_delta_ndcg10": -0.01174730592054997,
+        "mean_positive_document_tokens": 117.23812672176308,
+        "mean_query_tokens": 47.33553719008265,
+        "outcomes": {
+          "loss": 182,
+          "unchanged": 279,
+          "win": 144
+        },
+        "positive_labels": 1131,
+        "positive_labels_entered_top10": 47,
+        "positive_labels_in_prefix20": 690,
+        "positive_labels_left_top10": 75,
+        "positive_prefix_pairs_truncated": 48,
+        "prefix_pairs": 12100,
+        "prefix_pairs_truncated": 1838,
+        "queries": 605,
+        "queries_with_all_labels_in_prefix20": 331,
+        "queries_with_query_truncation": 0,
+        "queries_without_positive_in_prefix20": 124,
+        "query_truncated_pairs": 0,
+        "reranked_ndcg10": 0.45769916670734323,
+        "top1_possible_name_counterpart_queries": 54,
+        "top1_unjudged_cross_source_queries": 305
+      },
+      "64+": {
+        "hybrid_ndcg10": 0.549566122805531,
+        "mean_candidate_label_recall20": 0.7029285099052541,
+        "mean_delta_ndcg10": -0.017508737981622613,
+        "mean_positive_document_tokens": 125.20639227267134,
+        "mean_query_tokens": 119.74935400516796,
+        "outcomes": {
+          "loss": 120,
+          "unchanged": 178,
+          "win": 89
+        },
+        "positive_labels": 779,
+        "positive_labels_entered_top10": 28,
+        "positive_labels_in_prefix20": 471,
+        "positive_labels_left_top10": 47,
+        "positive_prefix_pairs_truncated": 116,
+        "prefix_pairs": 7740,
+        "prefix_pairs_truncated": 2910,
+        "queries": 387,
+        "queries_with_all_labels_in_prefix20": 233,
+        "queries_with_query_truncation": 89,
+        "queries_without_positive_in_prefix20": 71,
+        "query_truncated_pairs": 1421,
+        "reranked_ndcg10": 0.5320573848239084,
+        "top1_possible_name_counterpart_queries": 27,
+        "top1_unjudged_cross_source_queries": 147
+      }
+    },
+    "by_source_domain": {
+      "apigen": {
+        "hybrid_ndcg10": 0.5850896818660872,
+        "mean_candidate_label_recall20": 0.801,
+        "mean_delta_ndcg10": 0.029409180578336948,
+        "mean_positive_document_tokens": 77.96483333333333,
+        "mean_query_tokens": 26.416,
+        "outcomes": {
+          "loss": 106,
+          "unchanged": 264,
+          "win": 130
+        },
+        "positive_labels": 640,
+        "positive_labels_entered_top10": 35,
+        "positive_labels_in_prefix20": 481,
+        "positive_labels_left_top10": 23,
+        "positive_prefix_pairs_truncated": 17,
+        "prefix_pairs": 10000,
+        "prefix_pairs_truncated": 921,
+        "queries": 500,
+        "queries_with_all_labels_in_prefix20": 367,
+        "queries_with_query_truncation": 1,
+        "queries_without_positive_in_prefix20": 65,
+        "query_truncated_pairs": 17,
+        "reranked_ndcg10": 0.6144988624444242,
+        "top1_possible_name_counterpart_queries": 37,
+        "top1_unjudged_cross_source_queries": 187
+      },
+      "toolace": {
+        "hybrid_ndcg10": 0.6185516681905581,
+        "mean_candidate_label_recall20": 0.7882,
+        "mean_delta_ndcg10": 0.018693333694856984,
+        "mean_positive_document_tokens": 91.45978095238095,
+        "mean_query_tokens": 86.612,
+        "outcomes": {
+          "loss": 107,
+          "unchanged": 275,
+          "win": 118
+        },
+        "positive_labels": 698,
+        "positive_labels_entered_top10": 25,
+        "positive_labels_in_prefix20": 489,
+        "positive_labels_left_top10": 19,
+        "positive_prefix_pairs_truncated": 87,
+        "prefix_pairs": 10000,
+        "prefix_pairs_truncated": 2804,
+        "queries": 500,
+        "queries_with_all_labels_in_prefix20": 379,
+        "queries_with_query_truncation": 86,
+        "queries_without_positive_in_prefix20": 85,
+        "query_truncated_pairs": 1391,
+        "reranked_ndcg10": 0.637245001885415,
+        "top1_possible_name_counterpart_queries": 14,
+        "top1_unjudged_cross_source_queries": 123
+      },
+      "toolbench": {
+        "hybrid_ndcg10": 0.35882067191632266,
+        "mean_candidate_label_recall20": 0.5670666666666667,
+        "mean_delta_ndcg10": -0.038396461664271374,
+        "mean_positive_document_tokens": 141.56126666666665,
+        "mean_query_tokens": 57.754,
+        "outcomes": {
+          "loss": 184,
+          "unchanged": 200,
+          "win": 116
+        },
+        "positive_labels": 1160,
+        "positive_labels_entered_top10": 47,
+        "positive_labels_in_prefix20": 637,
+        "positive_labels_left_top10": 94,
+        "positive_prefix_pairs_truncated": 70,
+        "prefix_pairs": 10000,
+        "prefix_pairs_truncated": 1752,
+        "queries": 500,
+        "queries_with_all_labels_in_prefix20": 202,
+        "queries_with_query_truncation": 2,
+        "queries_without_positive_in_prefix20": 132,
+        "query_truncated_pairs": 13,
+        "reranked_ndcg10": 0.3204242102520513,
+        "top1_possible_name_counterpart_queries": 61,
+        "top1_unjudged_cross_source_queries": 330
+      }
+    },
+    "toolbench_by_any_positive_prefix_truncation": {
+      "no": {
+        "hybrid_ndcg10": 0.34228060689522494,
+        "mean_candidate_label_recall20": 0.5449472096530921,
+        "mean_delta_ndcg10": -0.03531343799102616,
+        "mean_positive_document_tokens": 122.62352941176471,
+        "mean_query_tokens": 56.98868778280543,
+        "outcomes": {
+          "loss": 152,
+          "unchanged": 192,
+          "win": 98
+        },
+        "positive_labels": 1025,
+        "positive_labels_entered_top10": 40,
+        "positive_labels_in_prefix20": 542,
+        "positive_labels_left_top10": 77,
+        "positive_prefix_pairs_truncated": 0,
+        "prefix_pairs": 8840,
+        "prefix_pairs_truncated": 1389,
+        "queries": 442,
+        "queries_with_all_labels_in_prefix20": 173,
+        "queries_with_query_truncation": 1,
+        "queries_without_positive_in_prefix20": 132,
+        "query_truncated_pairs": 8,
+        "reranked_ndcg10": 0.3069671689041988,
+        "top1_possible_name_counterpart_queries": 56,
+        "top1_unjudged_cross_source_queries": 302
+      },
+      "yes": {
+        "hybrid_ndcg10": 0.4848673743184811,
+        "mean_candidate_label_recall20": 0.735632183908046,
+        "mean_delta_ndcg10": -0.0618912282776228,
+        "mean_positive_document_tokens": 285.87988505747126,
+        "mean_query_tokens": 63.58620689655172,
+        "outcomes": {
+          "loss": 32,
+          "unchanged": 8,
+          "win": 18
+        },
+        "positive_labels": 135,
+        "positive_labels_entered_top10": 7,
+        "positive_labels_in_prefix20": 95,
+        "positive_labels_left_top10": 17,
+        "positive_prefix_pairs_truncated": 70,
+        "prefix_pairs": 1160,
+        "prefix_pairs_truncated": 363,
+        "queries": 58,
+        "queries_with_all_labels_in_prefix20": 29,
+        "queries_with_query_truncation": 1,
+        "queries_without_positive_in_prefix20": 0,
+        "query_truncated_pairs": 5,
+        "reranked_ndcg10": 0.4229761460408583,
+        "top1_possible_name_counterpart_queries": 5,
+        "top1_unjudged_cross_source_queries": 28
+      }
+    },
+    "toolbench_by_outcome": {
+      "loss": {
+        "hybrid_ndcg10": 0.587625864964705,
+        "mean_candidate_label_recall20": 0.7996376811594202,
+        "mean_delta_ndcg10": -0.22018066351349128,
+        "mean_positive_document_tokens": 97.70932971014493,
+        "mean_query_tokens": 60.02173913043478,
+        "outcomes": {
+          "loss": 184
+        },
+        "positive_labels": 431,
+        "positive_labels_entered_top10": 3,
+        "positive_labels_in_prefix20": 333,
+        "positive_labels_left_top10": 82,
+        "positive_prefix_pairs_truncated": 40,
+        "prefix_pairs": 3680,
+        "prefix_pairs_truncated": 632,
+        "queries": 184,
+        "queries_with_all_labels_in_prefix20": 113,
+        "queries_with_query_truncation": 1,
+        "queries_without_positive_in_prefix20": 0,
+        "query_truncated_pairs": 5,
+        "reranked_ndcg10": 0.3674452014512138,
+        "top1_possible_name_counterpart_queries": 31,
+        "top1_unjudged_cross_source_queries": 133
+      },
+      "unchanged": {
+        "hybrid_ndcg10": 0.1511641367088646,
+        "mean_candidate_label_recall20": 0.2320833333333333,
+        "mean_delta_ndcg10": 0.0,
+        "mean_positive_document_tokens": 180.51633333333336,
+        "mean_query_tokens": 55.83,
+        "outcomes": {
+          "unchanged": 200
+        },
+        "positive_labels": 454,
+        "positive_labels_entered_top10": 2,
+        "positive_labels_in_prefix20": 94,
+        "positive_labels_left_top10": 2,
+        "positive_prefix_pairs_truncated": 9,
+        "prefix_pairs": 4000,
+        "prefix_pairs_truncated": 739,
+        "queries": 200,
+        "queries_with_all_labels_in_prefix20": 26,
+        "queries_with_query_truncation": 0,
+        "queries_without_positive_in_prefix20": 132,
+        "query_truncated_pairs": 0,
+        "reranked_ndcg10": 0.1511641367088646,
+        "top1_possible_name_counterpart_queries": 12,
+        "top1_unjudged_cross_source_queries": 141
+      },
+      "win": {
+        "hybrid_ndcg10": 0.3539168057145059,
+        "mean_candidate_label_recall20": 0.7757183908045977,
+        "mean_delta_ndcg10": 0.18375009702023026,
+        "mean_positive_document_tokens": 143.95560344827584,
+        "mean_query_tokens": 57.474137931034484,
+        "outcomes": {
+          "win": 116
+        },
+        "positive_labels": 275,
+        "positive_labels_entered_top10": 42,
+        "positive_labels_in_prefix20": 210,
+        "positive_labels_left_top10": 10,
+        "positive_prefix_pairs_truncated": 21,
+        "prefix_pairs": 2320,
+        "prefix_pairs_truncated": 381,
+        "queries": 116,
+        "queries_with_all_labels_in_prefix20": 63,
+        "queries_with_query_truncation": 1,
+        "queries_without_positive_in_prefix20": 0,
+        "query_truncated_pairs": 8,
+        "reranked_ndcg10": 0.5376669027347362,
+        "top1_possible_name_counterpart_queries": 18,
+        "top1_unjudged_cross_source_queries": 56
+      }
+    }
+  },
+  "integrity_checks": {
+    "exact_confirmation_cohort_and_source_counts_verified": true,
+    "frozen_prediction_provenance_matches_summary": true,
+    "independent_ndcg_and_policy_invocation_counts_match": true,
+    "input_hashes_match_frozen_evaluation": true
+  },
+  "limitations": [
+    "Exploratory post-freeze descriptive analysis; no causal identification.",
+    "Exact-ID judgments do not establish tool equivalence or execution success.",
+    "Deterministic largest-delta examples are not representative frequency estimates.",
+    "Required call counts do not substitute for actual runtime verification."
+  ],
+  "policy_failure_summary": {
+    "cheap_jaccard": {
+      "by_source_domain": {
+        "apigen": {
+          "bypassed_outcomes_of_always_vs_hybrid": {
+            "loss": 10,
+            "unchanged": 26,
+            "win": 14
+          },
+          "bypassed_queries": 50,
+          "mean_delta_vs_always_ndcg10": -0.0030891865584273684,
+          "mean_delta_vs_hybrid_ndcg10": 0.02631999401990958,
+          "ndcg10": 0.6114096758859968,
+          "queries": 500,
+          "reranker_invocations": 450,
+          "selected_outcomes_of_always_vs_hybrid": {
+            "loss": 96,
+            "unchanged": 238,
+            "win": 116
+          },
+          "total_gain_forgone_by_bypass": 4.269152165832497,
+          "total_harm_avoided_by_bypass": 2.7245588866188126
+        },
+        "toolace": {
+          "bypassed_outcomes_of_always_vs_hybrid": {
+            "loss": 4,
+            "unchanged": 13,
+            "win": 6
+          },
+          "bypassed_queries": 23,
+          "mean_delta_vs_always_ndcg10": -0.0032088870511537645,
+          "mean_delta_vs_hybrid_ndcg10": 0.01548444664370322,
+          "ndcg10": 0.6340361148342613,
+          "queries": 500,
+          "reranker_invocations": 477,
+          "selected_outcomes_of_always_vs_hybrid": {
+            "loss": 103,
+            "unchanged": 262,
+            "win": 112
+          },
+          "total_gain_forgone_by_bypass": 2.6556127261833895,
+          "total_harm_avoided_by_bypass": 1.0511692006065072
+        },
+        "toolbench": {
+          "bypassed_outcomes_of_always_vs_hybrid": {
+            "loss": 19,
+            "unchanged": 8,
+            "win": 9
+          },
+          "bypassed_queries": 36,
+          "mean_delta_vs_always_ndcg10": 0.005919529094414806,
+          "mean_delta_vs_hybrid_ndcg10": -0.032476932569856565,
+          "ndcg10": 0.3263437393464661,
+          "queries": 500,
+          "reranker_invocations": 464,
+          "selected_outcomes_of_always_vs_hybrid": {
+            "loss": 165,
+            "unchanged": 192,
+            "win": 107
+          },
+          "total_gain_forgone_by_bypass": 1.3428535743359504,
+          "total_harm_avoided_by_bypass": 4.302618121543353
+        }
+      },
+      "bypassed_outcomes_of_always_vs_hybrid": {
+        "loss": 33,
+        "unchanged": 47,
+        "win": 29
+      },
+      "bypassed_queries": 109,
+      "mean_delta_vs_always_ndcg10": -0.00012618150505544254,
+      "mean_delta_vs_hybrid_ndcg10": 0.0031091693645854115,
+      "ndcg10": 0.5239298433555747,
+      "queries": 1500,
+      "reranker_invocations": 1391,
+      "selected_outcomes_of_always_vs_hybrid": {
+        "loss": 364,
+        "unchanged": 692,
+        "win": 335
+      },
+      "total_gain_forgone_by_bypass": 8.267618466351836,
+      "total_harm_avoided_by_bypass": 8.078346208768673
+    },
+    "fixed_disagreement": {
+      "by_source_domain": {
+        "apigen": {
+          "bypassed_outcomes_of_always_vs_hybrid": {
+            "loss": 26,
+            "unchanged": 116,
+            "win": 17
+          },
+          "bypassed_queries": 159,
+          "mean_delta_vs_always_ndcg10": 0.007958118743234143,
+          "mean_delta_vs_hybrid_ndcg10": 0.03736729932157109,
+          "ndcg10": 0.6224569811876582,
+          "queries": 500,
+          "reranker_invocations": 341,
+          "selected_outcomes_of_always_vs_hybrid": {
+            "loss": 80,
+            "unchanged": 148,
+            "win": 113
+          },
+          "total_gain_forgone_by_bypass": 4.1467282338982265,
+          "total_harm_avoided_by_bypass": 8.125787605515299
+        },
+        "toolace": {
+          "bypassed_outcomes_of_always_vs_hybrid": {
+            "loss": 23,
+            "unchanged": 124,
+            "win": 19
+          },
+          "bypassed_queries": 166,
+          "mean_delta_vs_always_ndcg10": 0.0010683512044226862,
+          "mean_delta_vs_hybrid_ndcg10": 0.019761684899279673,
+          "ndcg10": 0.6383133530898377,
+          "queries": 500,
+          "reranker_invocations": 334,
+          "selected_outcomes_of_always_vs_hybrid": {
+            "loss": 84,
+            "unchanged": 151,
+            "win": 99
+          },
+          "total_gain_forgone_by_bypass": 5.619404300262171,
+          "total_harm_avoided_by_bypass": 6.153579902473514
+        },
+        "toolbench": {
+          "bypassed_outcomes_of_always_vs_hybrid": {
+            "loss": 46,
+            "unchanged": 30,
+            "win": 22
+          },
+          "bypassed_queries": 98,
+          "mean_delta_vs_always_ndcg10": 0.012920766339322492,
+          "mean_delta_vs_hybrid_ndcg10": -0.02547569532494888,
+          "ndcg10": 0.3333449765913738,
+          "queries": 500,
+          "reranker_invocations": 402,
+          "selected_outcomes_of_always_vs_hybrid": {
+            "loss": 138,
+            "unchanged": 170,
+            "win": 94
+          },
+          "total_gain_forgone_by_bypass": 3.562767948157549,
+          "total_harm_avoided_by_bypass": 10.023151117818795
+        }
+      },
+      "bypassed_outcomes_of_always_vs_hybrid": {
+        "loss": 95,
+        "unchanged": 270,
+        "win": 58
+      },
+      "bypassed_queries": 423,
+      "mean_delta_vs_always_ndcg10": 0.007315745428993108,
+      "mean_delta_vs_hybrid_ndcg10": 0.01055109629863396,
+      "ndcg10": 0.5313717702896232,
+      "queries": 1500,
+      "reranker_invocations": 1077,
+      "selected_outcomes_of_always_vs_hybrid": {
+        "loss": 302,
+        "unchanged": 469,
+        "win": 306
+      },
+      "total_gain_forgone_by_bypass": 13.328900482317946,
+      "total_harm_avoided_by_bypass": 24.302518625807608
+    },
+    "utility_25": {
+      "by_source_domain": {
+        "apigen": {
+          "bypassed_outcomes_of_always_vs_hybrid": {
+            "loss": 43,
+            "unchanged": 132,
+            "win": 52
+          },
+          "bypassed_queries": 227,
+          "mean_delta_vs_always_ndcg10": -0.0081651693917553,
+          "mean_delta_vs_hybrid_ndcg10": 0.02124401118658165,
+          "ndcg10": 0.6063336930526687,
+          "queries": 500,
+          "reranker_invocations": 273,
+          "selected_outcomes_of_always_vs_hybrid": {
+            "loss": 63,
+            "unchanged": 132,
+            "win": 78
+          },
+          "total_gain_forgone_by_bypass": 15.662657777172427,
+          "total_harm_avoided_by_bypass": 11.580073081294778
+        },
+        "toolace": {
+          "bypassed_outcomes_of_always_vs_hybrid": {
+            "loss": 83,
+            "unchanged": 233,
+            "win": 93
+          },
+          "bypassed_queries": 409,
+          "mean_delta_vs_always_ndcg10": -0.014242916996195119,
+          "mean_delta_vs_hybrid_ndcg10": 0.004450416698661867,
+          "ndcg10": 0.6230020848892199,
+          "queries": 500,
+          "reranker_invocations": 91,
+          "selected_outcomes_of_always_vs_hybrid": {
+            "loss": 24,
+            "unchanged": 42,
+            "win": 25
+          },
+          "total_gain_forgone_by_bypass": 32.427757566345754,
+          "total_harm_avoided_by_bypass": 25.306299068248194
+        },
+        "toolbench": {
+          "bypassed_outcomes_of_always_vs_hybrid": {
+            "loss": 159,
+            "unchanged": 191,
+            "win": 105
+          },
+          "bypassed_queries": 455,
+          "mean_delta_vs_always_ndcg10": 0.03094369455191751,
+          "mean_delta_vs_hybrid_ndcg10": -0.007452767112353862,
+          "ndcg10": 0.35136790480396884,
+          "queries": 500,
+          "reranker_invocations": 45,
+          "selected_outcomes_of_always_vs_hybrid": {
+            "loss": 25,
+            "unchanged": 9,
+            "win": 11
+          },
+          "total_gain_forgone_by_bypass": 19.849601537447597,
+          "total_harm_avoided_by_bypass": 35.32144881340635
+        }
+      },
+      "bypassed_outcomes_of_always_vs_hybrid": {
+        "loss": 285,
+        "unchanged": 556,
+        "win": 250
+      },
+      "bypassed_queries": 1091,
+      "mean_delta_vs_always_ndcg10": 0.0028452027213223628,
+      "mean_delta_vs_hybrid_ndcg10": 0.006080553590963217,
+      "ndcg10": 0.5269012275819526,
+      "queries": 1500,
+      "reranker_invocations": 409,
+      "selected_outcomes_of_always_vs_hybrid": {
+        "loss": 112,
+        "unchanged": 183,
+        "win": 114
+      },
+      "total_gain_forgone_by_bypass": 67.94001688096577,
+      "total_harm_avoided_by_bypass": 72.20782096294933
+    },
+    "utility_50": {
+      "by_source_domain": {
+        "apigen": {
+          "bypassed_outcomes_of_always_vs_hybrid": {
+            "loss": 16,
+            "unchanged": 54,
+            "win": 11
+          },
+          "bypassed_queries": 81,
+          "mean_delta_vs_always_ndcg10": 0.0020917400235573045,
+          "mean_delta_vs_hybrid_ndcg10": 0.03150092060189425,
+          "ndcg10": 0.6165906024679814,
+          "queries": 500,
+          "reranker_invocations": 419,
+          "selected_outcomes_of_always_vs_hybrid": {
+            "loss": 90,
+            "unchanged": 210,
+            "win": 119
+          },
+          "total_gain_forgone_by_bypass": 3.621827201128065,
+          "total_harm_avoided_by_bypass": 4.667697212906717
+        },
+        "toolace": {
+          "bypassed_outcomes_of_always_vs_hybrid": {
+            "loss": 55,
+            "unchanged": 173,
+            "win": 55
+          },
+          "bypassed_queries": 283,
+          "mean_delta_vs_always_ndcg10": -0.007540078061593416,
+          "mean_delta_vs_hybrid_ndcg10": 0.011153255633263569,
+          "ndcg10": 0.6297049238238217,
+          "queries": 500,
+          "reranker_invocations": 217,
+          "selected_outcomes_of_always_vs_hybrid": {
+            "loss": 52,
+            "unchanged": 102,
+            "win": 63
+          },
+          "total_gain_forgone_by_bypass": 18.315760899003905,
+          "total_harm_avoided_by_bypass": 14.545721868207197
+        },
+        "toolbench": {
+          "bypassed_outcomes_of_always_vs_hybrid": {
+            "loss": 109,
+            "unchanged": 135,
+            "win": 63
+          },
+          "bypassed_queries": 307,
+          "mean_delta_vs_always_ndcg10": 0.024855546678400245,
+          "mean_delta_vs_hybrid_ndcg10": -0.013540914985871125,
+          "ndcg10": 0.34527975693045154,
+          "queries": 500,
+          "reranker_invocations": 193,
+          "selected_outcomes_of_always_vs_hybrid": {
+            "loss": 75,
+            "unchanged": 65,
+            "win": 53
+          },
+          "total_gain_forgone_by_bypass": 11.735911471403833,
+          "total_harm_avoided_by_bypass": 24.163684810603954
+        }
+      },
+      "bypassed_outcomes_of_always_vs_hybrid": {
+        "loss": 180,
+        "unchanged": 362,
+        "win": 129
+      },
+      "bypassed_queries": 671,
+      "mean_delta_vs_always_ndcg10": 0.006469069546788044,
+      "mean_delta_vs_hybrid_ndcg10": 0.009704420416428898,
+      "ndcg10": 0.5305250944074182,
+      "queries": 1500,
+      "reranker_invocations": 829,
+      "selected_outcomes_of_always_vs_hybrid": {
+        "loss": 217,
+        "unchanged": 377,
+        "win": 235
+      },
+      "total_gain_forgone_by_bypass": 33.6734995715358,
+      "total_harm_avoided_by_bypass": 43.377103891717866
+    },
+    "utility_75": {
+      "by_source_domain": {
+        "apigen": {
+          "bypassed_outcomes_of_always_vs_hybrid": {
+            "loss": 6,
+            "unchanged": 19,
+            "win": 3
+          },
+          "bypassed_queries": 28,
+          "mean_delta_vs_always_ndcg10": 0.002391082259248623,
+          "mean_delta_vs_hybrid_ndcg10": 0.03180026283758557,
+          "ndcg10": 0.6168899447036728,
+          "queries": 500,
+          "reranker_invocations": 472,
+          "selected_outcomes_of_always_vs_hybrid": {
+            "loss": 100,
+            "unchanged": 245,
+            "win": 127
+          },
+          "total_gain_forgone_by_bypass": 0.4131906407579631,
+          "total_harm_avoided_by_bypass": 1.6087317703822746
+        },
+        "toolace": {
+          "bypassed_outcomes_of_always_vs_hybrid": {
+            "loss": 36,
+            "unchanged": 129,
+            "win": 32
+          },
+          "bypassed_queries": 197,
+          "mean_delta_vs_always_ndcg10": -0.00247313174910906,
+          "mean_delta_vs_hybrid_ndcg10": 0.016220201945747924,
+          "ndcg10": 0.634771870136306,
+          "queries": 500,
+          "reranker_invocations": 303,
+          "selected_outcomes_of_always_vs_hybrid": {
+            "loss": 71,
+            "unchanged": 146,
+            "win": 86
+          },
+          "total_gain_forgone_by_bypass": 10.421717190724223,
+          "total_harm_avoided_by_bypass": 9.185151316169692
+        },
+        "toolbench": {
+          "bypassed_outcomes_of_always_vs_hybrid": {
+            "loss": 45,
+            "unchanged": 56,
+            "win": 25
+          },
+          "bypassed_queries": 126,
+          "mean_delta_vs_always_ndcg10": 0.009686151590089535,
+          "mean_delta_vs_hybrid_ndcg10": -0.028710310074181837,
+          "ndcg10": 0.3301103618421408,
+          "queries": 500,
+          "reranker_invocations": 374,
+          "selected_outcomes_of_always_vs_hybrid": {
+            "loss": 139,
+            "unchanged": 144,
+            "win": 91
+          },
+          "total_gain_forgone_by_bypass": 4.905309665353168,
+          "total_harm_avoided_by_bypass": 9.748385460397936
+        }
+      },
+      "bypassed_outcomes_of_always_vs_hybrid": {
+        "loss": 87,
+        "unchanged": 204,
+        "win": 60
+      },
+      "bypassed_queries": 351,
+      "mean_delta_vs_always_ndcg10": 0.003201367366743033,
+      "mean_delta_vs_hybrid_ndcg10": 0.0064367182363838866,
+      "ndcg10": 0.5272573922273732,
+      "queries": 1500,
+      "reranker_invocations": 1149,
+      "selected_outcomes_of_always_vs_hybrid": {
+        "loss": 310,
+        "unchanged": 535,
+        "win": 304
+      },
+      "total_gain_forgone_by_bypass": 15.740217496835355,
+      "total_harm_avoided_by_bypass": 20.542268546949902
+    }
+  },
+  "provenance": {
+    "analysis_modifies_rankings_or_router": false,
+    "cache_manifest_sha256": "cfadbc419a7fd84412e0d5f8fd9980c50c9c7c71a2b2490041a09913585c78a3",
+    "cache_sha256": "e8eaab43968c191fa73ad50ea0b80b52ca64e9799e43fea1aed58fa89c4ef7ad",
+    "corpus_sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f",
+    "created_after_frozen_predictions": true,
+    "data_manifest_sha256": "45d68454ecc950c56b2ecf9fd436cb4a6dafc780e4e64d3e154ef81fc304b2ea",
+    "declared_predictions_created_before_quality_scoring": true,
+    "evaluation_summary_sha256": "fda5bd3e67a6990c2e95076779c4f3dedf8faaa9ab7a7325eb6dfc5fee6f55d3",
+    "labels_altered": false,
+    "prediction_provenance_sha256": "84c8d52236daccb850d9cb125bf83db10f19d6c1f30343e9a24207a5f0beacae",
+    "predictions_sha256": "d2dd099e3db31009bc5de3f92e5b89445516bbd2d2972307679dce6fc55e37b2",
+    "protocol_frozen_commit": "3e813e1af650104f33aaf77febce5a8c1a3f1213",
+    "protocol_sha256": "d33ceee4741679c5027b7b55cc96f5535f98aef0c2160292d8e0c948abd076bc",
+    "queries_sha256": "0aa1f8921c13e44997f7b4018198db513a6d67a0258a550c6fafc16c705cc701",
+    "reused_analysis_script_sha256": "d5bbd736aa59c226832f427b34c3d3b2cb0741ac59dd58afeccbb69d8bf11688",
+    "router_sha256": "f24613a552d36737f4a17797b94f0c9348a67072a97cfc3cb471ae4bd25c159c",
+    "script_sha256": "430532f568238c915aa335e1ea31edad47dd3d25a751c2687d73d0e7d9ceb513",
+    "text_serialization_sha256": "70bd54a54acf7da4c13d8a5c2e5b379f81b64f19f248681973951c79b99f0750"
+  },
+  "schema_version": "toolret-confirmation-failure-analysis-v1",
+  "scope": "exploratory_confirmation_failure_analysis_after_frozen_predictions",
+  "summary": {
+    "hybrid_ndcg10": 0.5208206739909893,
+    "mean_candidate_label_recall20": 0.7187555555555556,
+    "mean_delta_ndcg10": 0.003235350869640854,
+    "mean_positive_document_tokens": 103.66196031746031,
+    "mean_query_tokens": 56.92733333333333,
+    "outcomes": {
+      "loss": 397,
+      "unchanged": 739,
+      "win": 364
+    },
+    "positive_labels": 2498,
+    "positive_labels_entered_top10": 107,
+    "positive_labels_in_prefix20": 1607,
+    "positive_labels_left_top10": 136,
+    "positive_prefix_pairs_truncated": 174,
+    "prefix_pairs": 30000,
+    "prefix_pairs_truncated": 5477,
+    "queries": 1500,
+    "queries_with_all_labels_in_prefix20": 948,
+    "queries_with_query_truncation": 89,
+    "queries_without_positive_in_prefix20": 282,
+    "query_truncated_pairs": 1421,
+    "reranked_ndcg10": 0.5240560248606302,
+    "top1_possible_name_counterpart_queries": 112,
+    "top1_unjudged_cross_source_queries": 640
+  },
+  "tokenizer": {
+    "max_length": 256,
+    "model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+    "truncation": "longest_first",
+    "truncation_side": "right"
+  }
+}

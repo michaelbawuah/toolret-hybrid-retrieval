@@ -1,0 +1,562 @@
+{
+  "cache_provenance": {
+    "base_commit": "f7e07b3e3938fea9765151da1445c89fc8186b0b",
+    "corpus_documents": 37292,
+    "partition": "calibration",
+    "protocol": {
+      "batch_size": 64,
+      "bootstrap": {
+        "component": "Within each source, sample its gold-tool connected components with replacement, retaining all component members and paired policy outcomes. For each source compute the ratio of summed query scores to resampled query count, then macro-average the three source ratios with weights 1/3. Resampled query counts may vary.",
+        "interval": "Two-sided percentile 95%, endpoints 2.5 and 97.5 percentiles.",
+        "multiple_comparisons": "Only utility_75 vs always is the primary quality/compute hypothesis. All other budgets, baselines, random comparisons, source results, feature associations, and failure cases are exploratory and do not replace the primary policy.",
+        "pairing": "Use identical resample draws for all policy comparisons of a given bootstrap type.",
+        "query": "Within each source, resample its 500 confirmation queries with replacement, retaining paired policy outcomes; average source query means with weights 1/3."
+      },
+      "bootstrap_resamples": 10000,
+      "bootstrap_seed": 20261003,
+      "calibration": {
+        "allowed_use": "First-stage features and frozen-model predictions only to set routing-score quantiles. No calibration qrels, cross-encoder scores, reranking outcomes, or quality metrics enter model fitting, threshold choice, feature selection, or policy choice.",
+        "component_count": 249,
+        "component_counts_per_source": {
+          "apigen": 78,
+          "toolace": 96,
+          "toolbench": 75
+        },
+        "queries": 300,
+        "queries_path": "data/research_confirmation_20261003/calibration_queries.jsonl",
+        "queries_per_source": 100,
+        "queries_sha256": "261f271ebd1e332de0488df722a80caee9dc5c241f40fdbe798f9f2d745462e4"
+      },
+      "candidate_k": 100,
+      "cheap_jaccard_gate": "Rerank iff top10 BM25/dense Jaccard overlap is strictly less than 0.5; no calibration or tuning.",
+      "completion_criteria": [
+        "Freeze this protocol and hash-linked split manifests in Git before new ranking generation.",
+        "Fit and serialize the router using old development labels only and calibration features only, before confirmation quality inspection.",
+        "Evaluate all 1,500 confirmation queries and publish every prespecified policy, source result, and uncertainty interval whether positive or negative.",
+        "Verify primary real conditional CE execution and rank equality on all 1,500 queries; publish required and actual call counts with clear scope.",
+        "Finish the repeated 90-query actual CPU end-to-end benchmark with raw timing events and runtime invariants.",
+        "Publish provenance, raw per-query results, model artifact, tests, independent audit, reproduction commands, and a technical report with limitations.",
+        "Update the resume to reflect only verified findings; a negative or inconclusive primary result does not make the scoped empirical study unfinished."
+      ],
+      "component_assignments": "results/research_confirmation_20261003/component_assignments.json",
+      "component_assignments_sha256": "b6bfd850e892f1e8cf8036d32d60c386e9bb475a44d3e612e3a8d897a6fa410e",
+      "compute_metrics": [
+        "Required CE query invocations",
+        "Required CE query-document pairs",
+        "Actual conditional CE invocations in full-cohort primary runtime verification",
+        "Measured warm CPU query-to-ranking latency on the predefined subset"
+      ],
+      "confirmation": {
+        "allowed_use": "Apply frozen policies once; compute all prespecified results and diagnostic analyses without modifying model, features, thresholds, primary comparison, or tolerance.",
+        "component_count": 1174,
+        "component_counts_per_source": {
+          "apigen": 353,
+          "toolace": 480,
+          "toolbench": 341
+        },
+        "queries": 1500,
+        "queries_path": "data/research_confirmation_20261003/confirmation_queries.jsonl",
+        "queries_per_source": 500,
+        "queries_sha256": "0aa1f8921c13e44997f7b4018198db513a6d67a0258a550c6fafc16c705cc701"
+      },
+      "contribution_scope": "Empirical transfer and reproducible evaluation of known learned reranker gating to tool retrieval, with component-disjoint supervised-router holdout, measured runtime, and failure analysis; no new gating algorithm or first-of-kind claim.",
+      "corpus_config": "web",
+      "corpus_documents": 37292,
+      "corpus_sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f",
+      "data_audit": "results/research_confirmation_20261003/data_audit.json",
+      "data_audit_sha256": "d6bf7912574729924157266c37f859fad2709de146528160cf5b52d454350e97",
+      "dense_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "dense_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "dense_search": "Exact normalized float32 dense search over all 37,292 documents; score-descending, ID-ascending ties.",
+      "development": {
+        "allowed_use": "Previously observed pilot; sole supervised router training cohort and sole cohort for fitting feature means and standard deviations. Never counted as confirmation evidence.",
+        "annotated_queries_path": "data/research_confirmation_20261003/development_queries.jsonl",
+        "annotated_queries_sha256": "3916a8779cb182d3cd85b9312024a0592da2e90bdebed059e542ab018cc7c9ff",
+        "component_count": 252,
+        "queries": 300,
+        "queries_path": "data/research_20261003/queries.jsonl",
+        "queries_per_source": 100,
+        "queries_sha256": "ff727e5ce10933e0332acd1ad18f0556a8c03353325ce7074ccd6fb11857e9bd"
+      },
+      "experiment": "toolret-component-disjoint-confirmation-20261003",
+      "failure_diagnostics": {
+        "candidate_scope": "Report fixed-prefix gold coverage and reranking promotion/demotion to distinguish candidate-generation limitations from within-prefix ranking changes.",
+        "case_selection": "Any qualitative examples must disclose deterministic selection rules and query IDs; do not present selected examples as representative prevalence estimates.",
+        "scope": "Exploratory benchmark-qrel failure analysis; no model/policy repair using confirmation labels.",
+        "skip_outcomes": "Harmful skip means true per-query nDCG(always)-nDCG(hybrid)>0 and the policy skips; beneficial skip means delta<0 and skips; unchanged means delta=0. Report counts and summed quality losses/gains, not proven tool-execution failures."
+      },
+      "fixed_disagreement_gate": "Rerank iff BM25 top-1 differs from dense top-1.",
+      "interop_threads": 1,
+      "latency_benchmark": {
+        "bootstrap_resamples": 10000,
+        "bootstrap_seed": 20261003,
+        "excluded": [
+          "Model/corpus/index loading",
+          "Corpus embeddings",
+          "Input/output validation",
+          "Warmup",
+          "Network",
+          "Queueing",
+          "Concurrent service load"
+        ],
+        "execution_condition": "Run without concurrent corpus/ranking generation or other heavy model workloads on the same machine; report machine/library versions and thread configuration.",
+        "measurement_boundary": "perf_counter_ns sequential query text to final ranking: BM25, dense query encoding, exact full-corpus dense search/sort, RRF, actual routing features/prediction, and conditional CE/prefix sort.",
+        "order_seed": 20261003,
+        "policies": [
+          "hybrid",
+          "always",
+          "fixed_disagreement",
+          "utility_75"
+        ],
+        "primary_distributions": "Mean, p50 and p95 of per-query latency means over three repetitions; repetitions are not independent query observations.",
+        "queries": 90,
+        "queries_per_source": 30,
+        "repetitions": 3,
+        "runtime_validation": "After timing, validate every actual first-stage and final ranking against frozen cache expectations, and log actual CE calls and pairs.",
+        "schedule": "Shuffle query order and a base policy permutation for each repetition; cyclically rotate policy order by query position modulo four to balance ordinal positions.",
+        "secondary_distribution": "P50/p95 across all timing events explicitly labeled as event-level distributions.",
+        "selection": "Within each source select ascending SHA256(selection_seed + NUL + query_id), ID tie-break, with no quality/timing inspection.",
+        "selection_seed": "latency-confirmation-20261003",
+        "uncertainty": "Paired source-stratified query bootstrap over each query's repetition mean, 10,000 draws and seed20261003; report differences and reductions vs always.",
+        "warmup": "One full request per policy on non-benchmark query 'weather forecast'; all warmup excluded."
+      },
+      "limitations": [
+        "Positive tool-ID connected components are not verified API families; no API-family generalization claim.",
+        "The retrieval corpus contains held-out relevant tools; the holdout concerns supervised router query/tool-label exposure, not absent corpus tools.",
+        "Frozen public model checkpoints may have prior exposure to public benchmark content; project-level holdout does not establish pretraining independence.",
+        "Benchmark binary qrels may be incomplete. All-positive-label coverage is not a verified mandatory-tool set or task execution success.",
+        "Single-machine warm sequential CPU measurements do not establish GPU, remote serving, queueing, or concurrency performance.",
+        "No external faculty supervision, peer review, publication acceptance, new algorithm, or state-of-the-art claim is implied.",
+        "The declared 0.01 quality tolerance is an engineering choice; uncertainty and component dependence remain visible in all conclusions."
+      ],
+      "max_sequence_length": 256,
+      "noninferiority_margin": 0.01,
+      "oracle_diagnostic": "For each realized budget, use true confirmation nDCG(always)-nDCG(hybrid) to choose the highest-gain queries; oracle outcomes are an unattainable label-aware upper-bound diagnostic, never a deployable policy or primary finding.",
+      "partition": {
+        "api_family_holdout": false,
+        "assignment_algorithm": "Anchor every component containing an observed pilot query; order remaining whole components by ascending SHA256(selection_seed + NUL + component_id), ID tie-break; greedily admit whole components to calibration then confirmation if all remaining source quotas fit; reserve unused components.",
+        "component_definition": "Transitive connected components through any shared positive gold tool ID over the entire normalized-text-deduplicated eligible universe; component_id is its lexicographically minimum query ID.",
+        "eligible_queries": 3099,
+        "global_component_count": 2005,
+        "labels_used_for_structural_grouping": true,
+        "pilot_anchored_components": 252,
+        "pilot_anchored_queries": 929,
+        "quarantined_untrained_pilot_connected_queries": 629,
+        "required_invariants": [
+          "No query ID, normalized query text, or positive gold tool ID overlaps among supervised development, calibration, and confirmation.",
+          "All pilot-connected component members outside the original 300 pilot are quarantined rather than trained on or evaluated as fresh evidence.",
+          "Components are source-exclusive; fail validation if any component spans source domains.",
+          "Every positive gold tool ID exists in the fixed retrieval corpus."
+        ],
+        "reserve_queries": 370,
+        "retrieval_outcomes_used_for_partition": false
+      },
+      "primary_analysis": {
+        "comparison": "utility_75 minus always",
+        "compute_interpretation": "Full-cohort tables count deterministic policy-required CE calls/pairs. Execute the primary gate on all 1,500 cached first-stage query rankings to verify actual conditional CE calls and exact output equality. True end-to-end timing is measured separately on the 90-query subset. Other policies' full-cohort compute is offline accounting.",
+        "failure_rule": "If either lower bound is <= -0.01, call the quality criterion inconclusive or failed as appropriate; do not infer no difference from a confidence interval crossing zero. Report the fixed result without retuning.",
+        "population_estimator": "Equal-weight macro-average of the three source-domain query means.",
+        "success_rule": "Both source-stratified paired query-bootstrap and source-stratified paired gold-component-bootstrap two-sided 95% interval lower bounds must be strictly greater than -0.01, and utility_75 must require fewer CE calls than always on the full confirmation cohort.",
+        "tolerance_interpretation": "0.01 is a predeclared absolute nDCG engineering loss tolerance, not an externally established practical-equivalence threshold. No a priori power guarantee is claimed."
+      },
+      "primary_metric": "binary nDCG@10",
+      "primary_policy": "utility_75",
+      "prior_work": [
+        {
+          "role": "Dataset and tool-retrieval benchmark provenance.",
+          "title": "ToolRet: A Large-Scale Benchmark for Tool Retrieval",
+          "url": "https://aclanthology.org/2025.findings-acl.1258/"
+        },
+        {
+          "role": "Existing adaptive tool reranking through truncation and hierarchy; different setting, no numerical cross-paper SOTA comparison.",
+          "title": "ToolRerank: Adaptive and Hierarchy-Aware Reranking for Tool Retrieval",
+          "url": "https://aclanthology.org/2024.lrec-main.1413/"
+        },
+        {
+          "role": "Direct prior work on learned pre-reranker feature gating, held-out selection, matched random controls, and harmful-skip reporting; learned gating is not claimed as new here.",
+          "title": "Per-Query Gating of LLM Rerankers for Multi-Hop Retrieval",
+          "url": "https://arxiv.org/abs/2609.22880"
+        },
+        {
+          "role": "Existing budget-aware tool retrieval with execution-aware planning; not a same-configuration numerical baseline.",
+          "title": "Lookahead-R: Budget-Aware Tool Retrieval via Execution-Centric Planning",
+          "url": "https://arxiv.org/abs/2609.35811"
+        }
+      ],
+      "quality_metrics": [
+        "binary nDCG@10",
+        "binary MRR@10",
+        "binary Recall@10",
+        "all-positive-label coverage@10"
+      ],
+      "query_sources": [
+        "apigen",
+        "toolbench",
+        "toolace"
+      ],
+      "random_controls": {
+        "global": "For each utility budget and fixed_disagreement, select exactly its realized confirmation call count uniformly without replacement for each of the 20 seeds.",
+        "source_matched": "For utility_75 and fixed_disagreement additionally select exactly each policy's realized call count within every source for the same 20 seeds.",
+        "summary": "Report mean and full seed range, plus exploratory paired comparison to the per-query mean of random-policy outcomes; seed range is not a confidence interval for new-query performance."
+      },
+      "random_policy_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "reference_policy": "always",
+      "rerank_k": 20,
+      "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+      "reranking": "Score exactly the first 20 RRF candidates; score-descending, ID-ascending ties; preserve the remaining RRF tail unchanged.",
+      "retrieval_input": "Query field only; instructions, source IDs, split IDs, qrels, and cross-encoder outcomes are not retrieval inputs.",
+      "rrf_k": 60,
+      "rrf_weights": [
+        1.0,
+        1.0
+      ],
+      "scope": "confirmation_study",
+      "secondary_policies": [
+        "bm25",
+        "dense",
+        "hybrid",
+        "always",
+        "fixed_disagreement",
+        "cheap_jaccard",
+        "utility_25",
+        "utility_50",
+        "global_matched_random",
+        "source_matched_random",
+        "budget_oracle_diagnostic"
+      ],
+      "selection_seed": "confirmation-20261003",
+      "source_revisions": {
+        "mangopy/ToolRet-Queries": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+        "mangopy/ToolRet-Tools": "e06c38c75612b6536bd959e08cdd345894aba6a7"
+      },
+      "source_weights": {
+        "apigen": 0.3333333333333333,
+        "toolace": 0.3333333333333333,
+        "toolbench": 0.3333333333333333
+      },
+      "split_manifest": "results/research_confirmation_20261003/data_manifest.json",
+      "split_manifest_sha256": "45d68454ecc950c56b2ecf9fd436cb4a6dafc780e4e64d3e154ef81fc304b2ea",
+      "status": "prospectively frozen after observed pilot development and before new calibration or confirmation ranking generation",
+      "study_question": "Can a fixed learned first-stage utility router reduce required cross-encoder calls while limiting macro-average binary nDCG@10 loss to less than 0.01 versus always-on reranking on untouched positive-tool-component-disjoint queries?",
+      "threads": 4,
+      "utility_router": {
+        "alpha": 10.0,
+        "budget_fractions": [
+          0.25,
+          0.5,
+          0.75
+        ],
+        "calibration_query_count": 300,
+        "deployment_artifact": "Serialize weights, development standardization, calibration thresholds, input/source hashes, and frozen protocol commit before opening confirmation quality results.",
+        "feature_definitions": {
+          "query_token_count_log1p": "log1p(number of whitespace-delimited query tokens).",
+          "rrf_top2_normalized_margin": "(largest RRF score - second-largest RRF score)/largest score, using both full top100 lists, equal weights and k60; singleton margin is 1.",
+          "top10_jaccard": "Intersection size / union size of the first 10 BM25 and dense tool IDs.",
+          "top1_disagreement": "Indicator that BM25 and dense top-1 tool IDs differ.",
+          "top20_jaccard": "Intersection size / union size of the first 20 BM25 and dense tool IDs.",
+          "top20_rank_coherence": "1 minus mean absolute BM25/dense rank difference over the top20 union divided by 20; missing position is 21.",
+          "top20_reciprocal_weighted_jaccard": "Over the top20 union, sum min(1/rank_B,1/rank_D) / sum max(1/rank_B,1/rank_D); missing-list weight is zero."
+        },
+        "feature_order": [
+          "top1_disagreement",
+          "top10_jaccard",
+          "top20_jaccard",
+          "top20_reciprocal_weighted_jaccard",
+          "top20_rank_coherence",
+          "query_token_count_log1p",
+          "rrf_top2_normalized_margin"
+        ],
+        "feature_version": "cheap-first-stage-v1",
+        "forbidden_features": [
+          "Source domain",
+          "Query ID",
+          "Lexical tool ID content",
+          "Qrels or relevance labels",
+          "Cross-encoder scores or reranked positions",
+          "Confirmation feature means/stds"
+        ],
+        "model": "ridge_expected_ndcg_delta",
+        "primary_budget_fraction": 0.75,
+        "quantile": "For budget b use numpy.quantile(calibration_predictions, 1-b, method='linear'). Route iff predicted delta > threshold; all ties skip. Target call rates need not equal realized confirmation rates.",
+        "regression": "Unpenalized intercept equals development target mean; coefficients solve (Z^T Z + 10 I)^-1 Z^T (y - mean(y)). No hyperparameter search.",
+        "standardization": "Fit population mean/std (ddof=0) only on the 300 development feature rows; std <= 1e-12 becomes 1. Apply unchanged to calibration and confirmation.",
+        "threshold_calibration": "prediction_quantile_strict_greater_no_labels",
+        "training_query_count": 300,
+        "training_target": "Per-development-query binary nDCG@10(always) minus binary nDCG@10(hybrid)."
+      }
+    },
+    "queries": 300,
+    "script": "scripts/generate_confirmation_cache.py",
+    "source_sha256": {
+      "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/scripts/generate_confirmation_cache.py": "bf49f9ac3e7caaefdfa66e61f2f30530dbb289a89a478ece5ad5c40ebaed0a53",
+      "configs/confirmation_protocol_20261003.json": "d33ceee4741679c5027b7b55cc96f5535f98aef0c2160292d8e0c948abd076bc",
+      "data/research_confirmation_20261003/manifest.json": "45d68454ecc950c56b2ecf9fd436cb4a6dafc780e4e64d3e154ef81fc304b2ea",
+      "src/toolret_research/bm25.py": "2ea2de25924e2f740f0f6fe561643fc8dd4d68300d6492200780db6c70252377",
+      "src/toolret_research/fusion.py": "677d1e0a751813cfed9411c63a9ae421c3bd7c33e5e55bf4b34cdb0bbb162d54",
+      "src/toolret_research/text.py": "70bd54a54acf7da4c13d8a5c2e5b379f81b64f19f248681973951c79b99f0750"
+    }
+  },
+  "cache_sha256": "277ed892c4bbf714bf84a0f544bdd538192f533a325c4799c8ceb4346494b72a",
+  "corpus_sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f",
+  "data_preparation_manifest": {
+    "corpus_count": 37292,
+    "parent_manifest_sha256": "45d68454ecc950c56b2ecf9fd436cb4a6dafc780e4e64d3e154ef81fc304b2ea",
+    "pilot_domains": [
+      "apigen",
+      "toolbench",
+      "toolace"
+    ],
+    "prepared_files": {
+      "corpus.jsonl": {
+        "bytes": 30845903,
+        "path": "data/research_20261003/corpus.jsonl",
+        "sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f",
+        "tool_count": 37292
+      },
+      "queries.jsonl": {
+        "bytes": 541061,
+        "query_count": 300,
+        "sha256": "261f271ebd1e332de0488df722a80caee9dc5c241f40fdbe798f9f2d745462e4"
+      }
+    },
+    "queries_per_domain": 100,
+    "query_count": 300,
+    "scope": "Untouched positive-tool-ID-component-disjoint query holdout across source domains; not an API-family holdout",
+    "selection": "Anchor every component containing an observed pilot query; ascending SHA256(seed + NUL + component_id), ID tie-break; greedily admit whole components to calibration then confirmation only if source counts fit remaining fixed quotas; unused free components reserved",
+    "source_revisions": {
+      "mangopy/ToolRet-Queries": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+      "mangopy/ToolRet-Tools": "e06c38c75612b6536bd959e08cdd345894aba6a7"
+    },
+    "split": "calibration"
+  },
+  "dataset": {
+    "name": "ToolRet positive-tool-component-disjoint confirmation study",
+    "source": "https://huggingface.co/datasets/mangopy/ToolRet-Queries",
+    "version": {
+      "mangopy/ToolRet-Queries": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+      "mangopy/ToolRet-Tools": "e06c38c75612b6536bd959e08cdd345894aba6a7"
+    }
+  },
+  "embedding_cache": {
+    "identity": {
+      "corpus_sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f",
+      "document_ids_sha256": "1fad866af50d7531f9fd3dda694ede5d2333547c780060c55e5093243c6f5dad",
+      "dtype": "float32",
+      "max_sequence_length": 256,
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "normalized": true,
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "serialization": "flatten_tool(id,text) at script/source SHA256",
+      "shard_size": 1024,
+      "text_source_sha256": "70bd54a54acf7da4c13d8a5c2e5b379f81b64f19f248681973951c79b99f0750"
+    },
+    "reused": true,
+    "shard_sha256": {
+      "shard_000000.npy": "dda8f56ec57be61a56b1623c78cfeaf81dc2db633fdba20ef056afd1862583b6",
+      "shard_001024.npy": "bd452b7a9627aeaef01c9f818db4282809961d6f1c285084c7a8872fff745e40",
+      "shard_002048.npy": "cfd4eff72b0a05b1e98ea8b9878cac7287635e3af8251e36f3680382fb730ebe",
+      "shard_003072.npy": "afef5e805549c6e732c133f0c53b2e2774694413f2b86ef4675ff437a723707f",
+      "shard_004096.npy": "6732df99da556cbbabcefcdfbadf4457ef30531c9b5a0048b39907ed76da3d8c",
+      "shard_005120.npy": "a86002c79c3be6db210237541cfb518b8b65982b335e79e05e11f73f615e38df",
+      "shard_006144.npy": "1edca8b165d96a3e8b70d40aa487495c9ad8a134e6a8698675e133101fc72cb8",
+      "shard_007168.npy": "3c1056e9ac92dd9c3aaebd2acf7b6c5af3508853aacba70109d204a6854d1964",
+      "shard_008192.npy": "0712e3c75d4504488922d007fa4292186a80299acf95ed19522e9930e13f8bf2",
+      "shard_009216.npy": "20c78c10f73dd816e71b9bb1260e3946786cd913b14859a13eb929357c48bc43",
+      "shard_010240.npy": "8cbf059bea2d9eae828b0b1c1f74250f1a3887c7ee3c3cd798489fd217a6893b",
+      "shard_011264.npy": "2531ac6d340babc1eb1e2bea907854151130a0307c989512a008c7573c2b17ea",
+      "shard_012288.npy": "e0110914a44c68cceb3d711916f6856686397f5a42fbef55b54575038f162c24",
+      "shard_013312.npy": "e18d36b48770996de317bb8351d7e1af84c6c8c31e638e96f2711a48ebfbd6ea",
+      "shard_014336.npy": "340c137634375cc0121236f1be67e55d9ce47adfb001fb3ba864b55c8f0ea027",
+      "shard_015360.npy": "c523e70c525269c1baf84d374a0a3d4e844c49cfdcb69bdd921b98e46b63e796",
+      "shard_016384.npy": "63420862d55d0900ada2ff370cbb2b29cc33c06678b788d18db76905854866a6",
+      "shard_017408.npy": "8bb53f9176641fcfd2e56d101758784c1625cb740693b5c3c4a7bdf476a496a0",
+      "shard_018432.npy": "423d76dc32270f4a608e66a9e6f4d6fa2d5e4ee64206d9cd3ea7e57b61ff6600",
+      "shard_019456.npy": "4430712127fffd54adb067c4f35a9a25f43934aa9fe4cd358de295cf9da0a84d",
+      "shard_020480.npy": "cc73e221273a7d8f55be488e6a34da8c373c7bce32d189bf9b3b6a8540acdc23",
+      "shard_021504.npy": "4b515c7d459981e6401dbda27601ec6766f7c298f4396c673c9ed8a2def522c0",
+      "shard_022528.npy": "a5d21d8938cea2c4d2bd33f2902a7d7c7b9261e0a0f0fd155dc32d5599fd7b35",
+      "shard_023552.npy": "298573e5207c18587a9a956be6e5a321173052fa3217e8fb9144f246d0e47366",
+      "shard_024576.npy": "b0f62094c16860dd76d141c6bea00877645d8f9c80927ad29bd3a8c1de0a95d1",
+      "shard_025600.npy": "0eb0675075f34a7f9f3576d087f59dab780618b20a28113fede1ac4ff269d4bf",
+      "shard_026624.npy": "1a66f936ee2f2b7892e41c9efd09f43651a99108e0775f7567819720c3a9eba3",
+      "shard_027648.npy": "96eb73fcceb8885f98f082c8165a5b957248e7f06d214fc2705f4237050f2f97",
+      "shard_028672.npy": "7bb479814322c9a549d2856070054d16d9aa614129d8db245d471548bb4febee",
+      "shard_029696.npy": "f7952015267b59c7350bb607885e7890883ccdffc6fd4c6648cd180de7dd040c",
+      "shard_030720.npy": "51711f4c18b2aaf40cc1cbd883b569df90bc15167bf9d7013dd2e0d8a0f9a1de",
+      "shard_031744.npy": "e4666b69329e0aa75f7762516345a6c774c6787abbdc1ec26bffa284e0b08510",
+      "shard_032768.npy": "bec4f8476a820463cddf7183910dea5330eacb250ea151910b8691043380804e",
+      "shard_033792.npy": "536dbbc31f949c986a575c1a64a71fbffd84ee03fffbdce2f7006d128afcc7f6",
+      "shard_034816.npy": "7dc3815cda12c331cd9e79d1ccd28cb3435eb5810f359175a4b494d4cfa6da29",
+      "shard_035840.npy": "ee342c37af7f8dc8e88f9d08b7419e6260a4b186e68cc270b1e3210e429738c5",
+      "shard_036864.npy": "28580ecdfca40ca871f738756e28724c251c33570089bbc0d23a6fae7dfa2f00"
+    }
+  },
+  "full_data_preparation_manifest": {
+    "assignment_algorithm": "Anchor every component containing an observed pilot query; ascending SHA256(seed + NUL + component_id), ID tie-break; greedily admit whole components to calibration then confirmation only if source counts fit remaining fixed quotas; unused free components reserved",
+    "calibration_per_domain": 100,
+    "confirmation_per_domain": 500,
+    "corpus_count": 37292,
+    "created_at_utc": "2026-10-03T17:30:53.781909+00:00",
+    "development_source_sha256": "ff727e5ce10933e0332acd1ad18f0556a8c03353325ce7074ccd6fb11857e9bd",
+    "no_new_retrieval_rankings_or_quality_results_inspected": true,
+    "pilot_domains": [
+      "apigen",
+      "toolbench",
+      "toolace"
+    ],
+    "preparation_source_sha256": "07725000f1c679e8d9ab40dacb719c276fd1e6e9a53e3a5640d4adfa741b52f1",
+    "prepared_files": {
+      "calibration_queries.jsonl": {
+        "bytes": 541061,
+        "query_count": 300,
+        "sha256": "261f271ebd1e332de0488df722a80caee9dc5c241f40fdbe798f9f2d745462e4"
+      },
+      "confirmation_queries.jsonl": {
+        "bytes": 2765418,
+        "query_count": 1500,
+        "sha256": "0aa1f8921c13e44997f7b4018198db513a6d67a0258a550c6fafc16c705cc701"
+      },
+      "corpus.jsonl": {
+        "bytes": 30845903,
+        "path": "data/research_20261003/corpus.jsonl",
+        "sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f",
+        "tool_count": 37292
+      },
+      "development_queries.jsonl": {
+        "bytes": 558311,
+        "query_count": 300,
+        "sha256": "3916a8779cb182d3cd85b9312024a0592da2e90bdebed059e542ab018cc7c9ff"
+      },
+      "quarantined_pilot_connected_queries.jsonl": {
+        "bytes": 1426645,
+        "query_count": 629,
+        "sha256": "28c91f2b0c8ce5df71e35c1a6968f6b840524d056c95a1d0123e992990775b85"
+      },
+      "reserve_queries.jsonl": {
+        "bytes": 605745,
+        "query_count": 370,
+        "sha256": "600fa4d9712afa5bf37d11715598c448bee34692e2bdaf45c5ecf9feca51182b"
+      }
+    },
+    "relevance_policy": "binary relevance > 0; original graded labels retained",
+    "retrieval_input": "query field only; instruction and labels excluded",
+    "scope": "Untouched positive-tool-ID-component-disjoint query holdout across source domains; not an API-family holdout",
+    "seed": "confirmation-20261003",
+    "source_revisions": {
+      "mangopy/ToolRet-Queries": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+      "mangopy/ToolRet-Tools": "e06c38c75612b6536bd959e08cdd345894aba6a7"
+    },
+    "upstream_sources": [
+      {
+        "bytes": 45023,
+        "path": "apibank/queries-00000-of-00001.parquet",
+        "repository": "mangopy/ToolRet-Queries",
+        "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+        "sha256": "1e91b9c4f7e0b38946bf5c3272e15af73f0b446e4d546c52e09179b3a9709d3b",
+        "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/apibank/queries-00000-of-00001.parquet"
+      },
+      {
+        "bytes": 352171,
+        "path": "apigen/queries-00000-of-00001.parquet",
+        "repository": "mangopy/ToolRet-Queries",
+        "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+        "sha256": "7f6d6ee477ba98380816c418f51c445c937771ee557d73c0a575d0d30fd01a14",
+        "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/apigen/queries-00000-of-00001.parquet"
+      },
+      {
+        "bytes": 922485,
+        "path": "toolbench/queries-00000-of-00001.parquet",
+        "repository": "mangopy/ToolRet-Queries",
+        "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+        "sha256": "2bb32ea009d6ece37b1b785330247aacac037a20dd4522632cb3359809c8837d",
+        "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/toolbench/queries-00000-of-00001.parquet"
+      },
+      {
+        "bytes": 618326,
+        "path": "toolace/queries-00000-of-00001.parquet",
+        "repository": "mangopy/ToolRet-Queries",
+        "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+        "sha256": "49f7c861cec1799430680cea1df6cb98a10b33227f6cb183ac32375f396fcd5a",
+        "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/toolace/queries-00000-of-00001.parquet"
+      }
+    ]
+  },
+  "limitations": [
+    "Positive tool-ID connected components are not verified API families; no API-family generalization claim.",
+    "The retrieval corpus contains held-out relevant tools; the holdout concerns supervised router query/tool-label exposure, not absent corpus tools.",
+    "Frozen public model checkpoints may have prior exposure to public benchmark content; project-level holdout does not establish pretraining independence.",
+    "Benchmark binary qrels may be incomplete. All-positive-label coverage is not a verified mandatory-tool set or task execution success.",
+    "Single-machine warm sequential CPU measurements do not establish GPU, remote serving, queueing, or concurrency performance.",
+    "No external faculty supervision, peer review, publication acceptance, new algorithm, or state-of-the-art claim is implied.",
+    "The declared 0.01 quality tolerance is an engineering choice; uncertainty and component dependence remain visible in all conclusions."
+  ],
+  "models": {
+    "dense": {
+      "fine_tuned_here": false,
+      "name": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+    },
+    "reranker": {
+      "fine_tuned_here": false,
+      "name": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a"
+    }
+  },
+  "packages": {
+    "huggingface-hub": "1.33.0",
+    "numpy": "2.5.3",
+    "sentence-transformers": "6.1.0",
+    "torch": "2.14.1+cpu",
+    "transformers": "5.18.0"
+  },
+  "queries_sha256": "261f271ebd1e332de0488df722a80caee9dc5c241f40fdbe798f9f2d745462e4",
+  "rrf": {
+    "k": 60,
+    "weights": [
+      1.0,
+      1.0
+    ]
+  },
+  "schema_version": "toolret-selective-v1",
+  "scope": "confirmation_study",
+  "split": {
+    "name": "calibration",
+    "selection": "Anchor every component containing an observed pilot query; ascending SHA256(seed + NUL + component_id), ID tie-break; greedily admit whole components to calibration then confirmation only if source counts fit remaining fixed quotas; unused free components reserved"
+  },
+  "timing_provenance": {
+    "bm25_index_seconds": 1.165373036001256,
+    "boundary": "component wall time; bm25 search, dense encode+exact search+sort, rrf fusion, CE predict+prefix sort",
+    "device": "cpu",
+    "disjoint_components": true,
+    "excluded": "model download/load, corpus encoding, index build, service/network/concurrency",
+    "hardware": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "order": "bm25,dense,rrf,cross_encoder per query",
+    "policy_latency": "counterfactual offline component sums only; routing overhead not included",
+    "processor": "x86_64",
+    "repetitions": 1,
+    "torch_threads": 4,
+    "warm_models": true
+  }
+}

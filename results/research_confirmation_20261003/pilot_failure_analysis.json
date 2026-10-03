@@ -1,0 +1,1576 @@
+{
+  "cases": [
+    {
+      "candidate_label_recall20": 1.0,
+      "delta_ndcg10": -0.6459625079462685,
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 62,
+          "hybrid_rank": 5,
+          "name": "Ubidots_GET_datasources_datasource_id_variables",
+          "pair_tokenization": {
+            "document_tokens": 62,
+            "document_truncated": false,
+            "full_pair_tokens": 114,
+            "pair_truncated": false,
+            "query_tokens": 49,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 62,
+            "retained_query_tokens": 49
+          },
+          "reranked_rank": 7,
+          "tool_id": "toolbench_tool_4182",
+          "transition": "demoted_within_top10"
+        },
+        {
+          "document_tokens": 69,
+          "hybrid_rank": 1,
+          "name": "Ubidots_GET_variables_variable_id",
+          "pair_tokenization": {
+            "document_tokens": 69,
+            "document_truncated": false,
+            "full_pair_tokens": 121,
+            "pair_truncated": false,
+            "query_tokens": 49,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 69,
+            "retained_query_tokens": 49
+          },
+          "reranked_rank": 15,
+          "tool_id": "toolbench_tool_4183",
+          "transition": "left_top10"
+        }
+      ],
+      "gold_transitions": {
+        "demoted_within_top10": 1,
+        "left_top10": 1
+      },
+      "hybrid_ndcg10": 0.8503449055347546,
+      "manual_note": "The query names Ubidots and asks for two endpoints. CE promotes a general IoT sensor analyzer from another source; the labeled variable-details endpoint moves 1\u219215. This is a context-versus-endpoint-identity example, not proof of the model's reasoning.",
+      "mean_positive_document_tokens": 65.5,
+      "outcome": "loss",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 4,
+      "prefix_positive_count": 2,
+      "query_excerpt": "My company is developing an IoT application and needs to gather insights from the sensor data. Can you help us by providing the variables of a specified data source on Ubidots and their corresponding details, including the last value writte",
+      "query_id": "toolbench_query_944",
+      "query_tokens": 49,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.20438239758848611,
+      "reranked_top1": {
+        "hybrid_rank": 8,
+        "is_positive_label": false,
+        "name": "IoTDataAnalyzer.analyzeSensorData",
+        "pair_tokenization": {
+          "document_tokens": 165,
+          "document_truncated": false,
+          "full_pair_tokens": 217,
+          "pair_truncated": false,
+          "query_tokens": 49,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 165,
+          "retained_query_tokens": 49
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_8821"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "delta_ndcg10": -0.4903625081035077,
+      "gate_selected": false,
+      "gold_tools": [
+        {
+          "document_tokens": 127,
+          "hybrid_rank": 1,
+          "name": "Electricity_Carbon_Footprint_Germany_CO2_Emission",
+          "pair_tokenization": {
+            "document_tokens": 127,
+            "document_truncated": false,
+            "full_pair_tokens": 193,
+            "pair_truncated": false,
+            "query_tokens": 63,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 127,
+            "retained_query_tokens": 63
+          },
+          "reranked_rank": 2,
+          "tool_id": "toolbench_tool_10111",
+          "transition": "demoted_within_top10"
+        },
+        {
+          "document_tokens": 43,
+          "hybrid_rank": 4,
+          "name": "Europe_Fuel_Prices_Get_specific_country",
+          "pair_tokenization": {
+            "document_tokens": 43,
+            "document_truncated": false,
+            "full_pair_tokens": 109,
+            "pair_truncated": false,
+            "query_tokens": 63,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 43,
+            "retained_query_tokens": 63
+          },
+          "reranked_rank": 18,
+          "tool_id": "toolbench_tool_8051",
+          "transition": "left_top10"
+        }
+      ],
+      "gold_transitions": {
+        "demoted_within_top10": 1,
+        "left_top10": 1
+      },
+      "hybrid_ndcg10": 0.8772153153380493,
+      "manual_note": "The query requests electricity emissions and fuel prices. CE puts an unjudged carbon-footprint calculator first and moves the labeled fuel-price endpoint 4\u219218. One request component is retained while the other loses top-10 coverage.",
+      "mean_positive_document_tokens": 85.0,
+      "outcome": "loss",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 1,
+      "prefix_positive_count": 2,
+      "query_excerpt": "I'm planning a sustainable wedding and I want to calculate the carbon footprint of our energy usage. Can you provide me with the CO2 emissions per kilowatt-hour for electricity in Germany? Additionally, I would like to know the fuel prices ",
+      "query_id": "toolbench_query_588",
+      "query_tokens": 63,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.38685280723454163,
+      "reranked_top1": {
+        "hybrid_rank": 6,
+        "is_positive_label": false,
+        "name": "EcoDataAnalyzer.calculateCarbonFootprint",
+        "pair_tokenization": {
+          "document_tokens": 123,
+          "document_truncated": false,
+          "full_pair_tokens": 189,
+          "pair_truncated": false,
+          "query_tokens": 63,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 123,
+          "retained_query_tokens": 63
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_9352"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 0.5,
+      "delta_ndcg10": -0.38685280723454163,
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 67,
+          "hybrid_rank": 2,
+          "name": "Web_Capture_Take_Image_Screenshot",
+          "pair_tokenization": {
+            "document_tokens": 67,
+            "document_truncated": false,
+            "full_pair_tokens": 122,
+            "pair_truncated": false,
+            "query_tokens": 52,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 67,
+            "retained_query_tokens": 52
+          },
+          "reranked_rank": 13,
+          "tool_id": "toolbench_tool_10505",
+          "transition": "left_top10"
+        },
+        {
+          "document_tokens": 18,
+          "hybrid_rank": null,
+          "name": "Demo_Project_v2_Me",
+          "pair_tokenization": null,
+          "reranked_rank": null,
+          "tool_id": "toolbench_tool_824",
+          "transition": "absent_from_fused_candidates"
+        }
+      ],
+      "gold_transitions": {
+        "absent_from_fused_candidates": 1,
+        "left_top10": 1
+      },
+      "hybrid_ndcg10": 0.38685280723454163,
+      "manual_note": "CE places APIGen take_image_screenshot first; the labeled ToolBench Web_Capture_Take_Image_Screenshot moves 2\u219213. Their visible tool names and descriptions concern the same screenshot operation, but executable equivalence has not been checked. A second gold tool has an empty description and was already absent from fused candidates.",
+      "mean_positive_document_tokens": 42.5,
+      "outcome": "loss",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 7,
+      "prefix_positive_count": 1,
+      "query_excerpt": "Please fetch my personal information associated with my account. Can you retrieve my details? Also, I would like to take a screenshot of a specific website, 'https://example.com', with a width of 1200 and height of 800 pixels.",
+      "query_id": "toolbench_query_623",
+      "query_tokens": 52,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.0,
+      "reranked_top1": {
+        "hybrid_rank": 1,
+        "is_positive_label": false,
+        "name": "take_image_screenshot",
+        "pair_tokenization": {
+          "document_tokens": 104,
+          "document_truncated": false,
+          "full_pair_tokens": 159,
+          "pair_truncated": false,
+          "query_tokens": 52,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 104,
+          "retained_query_tokens": 52
+        },
+        "source_domain": "apigen",
+        "tool_id": "apigen_tool_1246"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [
+        "toolbench_tool_10505"
+      ],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "delta_ndcg10": -0.3477417464168455,
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 254,
+          "hybrid_rank": 3,
+          "name": "animes_Get_anime_detail",
+          "pair_tokenization": {
+            "document_tokens": 254,
+            "document_truncated": true,
+            "full_pair_tokens": 317,
+            "pair_truncated": true,
+            "query_tokens": 60,
+            "query_truncated": false,
+            "removed_document_tokens": 61,
+            "retained_document_tokens": 193,
+            "retained_query_tokens": 60
+          },
+          "reranked_rank": 10,
+          "tool_id": "toolbench_tool_4667",
+          "transition": "demoted_within_top10"
+        },
+        {
+          "document_tokens": 653,
+          "hybrid_rank": 6,
+          "name": "animes_Get_animes",
+          "pair_tokenization": {
+            "document_tokens": 653,
+            "document_truncated": true,
+            "full_pair_tokens": 716,
+            "pair_truncated": true,
+            "query_tokens": 60,
+            "query_truncated": false,
+            "removed_document_tokens": 460,
+            "retained_document_tokens": 193,
+            "retained_query_tokens": 60
+          },
+          "reranked_rank": 12,
+          "tool_id": "toolbench_tool_4668",
+          "transition": "left_top10"
+        }
+      ],
+      "gold_transitions": {
+        "demoted_within_top10": 1,
+        "left_top10": 1
+      },
+      "hybrid_ndcg10": 0.5249810332008933,
+      "manual_note": "CE puts an unjudged anime-ranking endpoint first. Both labeled anime-detail/filter endpoints are demoted; one crosses 6\u219212. The request mixes ranking, current-airing constraints, and detailed metadata. Truncation statistics are recorded separately and do not establish why the score changed.",
+      "mean_positive_document_tokens": 453.5,
+      "outcome": "loss",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 2,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 4,
+      "prefix_positive_count": 2,
+      "query_excerpt": "I'm planning a movie night with my friends and we want to watch an anime. Can you recommend an anime that has a high ranking, good reviews, and is currently airing? Also, provide us with the synopsis, number of episodes, and the main pictur",
+      "query_id": "toolbench_query_366",
+      "query_tokens": 60,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.17723928678404774,
+      "reranked_top1": {
+        "hybrid_rank": 1,
+        "is_positive_label": false,
+        "name": "get_one_anime_by_ranking",
+        "pair_tokenization": {
+          "document_tokens": 39,
+          "document_truncated": false,
+          "full_pair_tokens": 102,
+          "pair_truncated": false,
+          "query_tokens": 60,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 39,
+          "retained_query_tokens": 60
+        },
+        "source_domain": "apigen",
+        "tool_id": "apigen_tool_1183"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "delta_ndcg10": -0.3443473334244034,
+      "gate_selected": false,
+      "gold_tools": [
+        {
+          "document_tokens": 72,
+          "hybrid_rank": 4,
+          "name": "SteamGames_Special_offers_GamesList",
+          "pair_tokenization": {
+            "document_tokens": 72,
+            "document_truncated": false,
+            "full_pair_tokens": 139,
+            "pair_truncated": false,
+            "query_tokens": 64,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 72,
+            "retained_query_tokens": 64
+          },
+          "reranked_rank": 12,
+          "tool_id": "toolbench_tool_3604",
+          "transition": "left_top10"
+        },
+        {
+          "document_tokens": 128,
+          "hybrid_rank": 2,
+          "name": "Trivia_by_API_Ninjas_v1_trivia",
+          "pair_tokenization": {
+            "document_tokens": 128,
+            "document_truncated": false,
+            "full_pair_tokens": 195,
+            "pair_truncated": false,
+            "query_tokens": 64,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 128,
+            "retained_query_tokens": 64
+          },
+          "reranked_rank": 3,
+          "tool_id": "toolbench_tool_9731",
+          "transition": "demoted_within_top10"
+        }
+      ],
+      "gold_transitions": {
+        "demoted_within_top10": 1,
+        "left_top10": 1
+      },
+      "hybrid_ndcg10": 0.6509209298071326,
+      "manual_note": "CE places an unjudged APIGen trivia endpoint first. The labeled trivia endpoint remains at rank 3, while the independent Steam special-offers endpoint moves 4\u219212. This is a multi-request coverage loss with a possible cross-source counterpart.",
+      "mean_positive_document_tokens": 100.0,
+      "outcome": "loss",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 2,
+      "prefix_positive_count": 2,
+      "query_excerpt": "I'm organizing a pub quiz night and I need some challenging trivia questions to keep the participants engaged. Can you provide me with twenty trivia questions from the 'language' and 'geography' categories? Furthermore, I would like to expl",
+      "query_id": "toolbench_query_497",
+      "query_tokens": 64,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.3065735963827292,
+      "reranked_top1": {
+        "hybrid_rank": 1,
+        "is_positive_label": false,
+        "name": "v1_trivia",
+        "pair_tokenization": {
+          "document_tokens": 72,
+          "document_truncated": false,
+          "full_pair_tokens": 139,
+          "pair_truncated": false,
+          "query_tokens": 64,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 72,
+          "retained_query_tokens": 64
+        },
+        "source_domain": "apigen",
+        "tool_id": "apigen_tool_91"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "delta_ndcg10": 0.6469789328040543,
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 542,
+          "hybrid_rank": 9,
+          "name": "Trinidad_Covid_19_Statistics_getMostRecentDay",
+          "pair_tokenization": {
+            "document_tokens": 542,
+            "document_truncated": true,
+            "full_pair_tokens": 633,
+            "pair_truncated": true,
+            "query_tokens": 88,
+            "query_truncated": false,
+            "removed_document_tokens": 377,
+            "retained_document_tokens": 165,
+            "retained_query_tokens": 88
+          },
+          "reranked_rank": 1,
+          "tool_id": "toolbench_tool_273",
+          "transition": "promoted_within_top10"
+        },
+        {
+          "document_tokens": 622,
+          "hybrid_rank": 12,
+          "name": "Trinidad_Covid_19_Statistics_getStatsbyDay",
+          "pair_tokenization": {
+            "document_tokens": 622,
+            "document_truncated": true,
+            "full_pair_tokens": 713,
+            "pair_truncated": true,
+            "query_tokens": 88,
+            "query_truncated": false,
+            "removed_document_tokens": 457,
+            "retained_document_tokens": 165,
+            "retained_query_tokens": 88
+          },
+          "reranked_rank": 6,
+          "tool_id": "toolbench_tool_274",
+          "transition": "entered_top10"
+        }
+      ],
+      "gold_transitions": {
+        "entered_top10": 1,
+        "promoted_within_top10": 1
+      },
+      "hybrid_ndcg10": 0.18457569677956817,
+      "manual_note": "Both labeled Trinidad-and-Tobago COVID endpoints improve (9\u21921 and 12\u21926). This win is useful alongside loss cases because it prevents treating long-document truncation or multi-request queries as universally harmful.",
+      "mean_positive_document_tokens": 582.0,
+      "outcome": "win",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 2,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 6,
+      "prefix_positive_count": 2,
+      "query_excerpt": "My company is planning a business trip to Trinidad and Tobago, and we need to assess the Covid-19 situation there. Can you provide us with the most recent Covid-19 statistics for Trinidad and Tobago? Additionally, we also require the Covid-",
+      "query_id": "toolbench_query_154",
+      "query_tokens": 88,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.8315546295836225,
+      "reranked_top1": {
+        "hybrid_rank": 9,
+        "is_positive_label": true,
+        "name": "Trinidad_Covid_19_Statistics_getMostRecentDay",
+        "pair_tokenization": {
+          "document_tokens": 542,
+          "document_truncated": true,
+          "full_pair_tokens": 633,
+          "pair_truncated": true,
+          "query_tokens": 88,
+          "query_truncated": false,
+          "removed_document_tokens": 377,
+          "retained_document_tokens": 165,
+          "retained_query_tokens": 88
+        },
+        "source_domain": "toolbench",
+        "tool_id": "toolbench_tool_273"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 0.5,
+      "delta_ndcg10": 0.42857149598589017,
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 60,
+          "hybrid_rank": 88,
+          "name": "Email_Checkup_email_exist",
+          "pair_tokenization": null,
+          "reranked_rank": 88,
+          "tool_id": "toolbench_tool_2868",
+          "transition": "outside_top10"
+        },
+        {
+          "document_tokens": 45,
+          "hybrid_rank": 9,
+          "name": "Email_Checkup_email_format",
+          "pair_tokenization": {
+            "document_tokens": 45,
+            "document_truncated": false,
+            "full_pair_tokens": 89,
+            "pair_truncated": false,
+            "query_tokens": 41,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 45,
+            "retained_query_tokens": 41
+          },
+          "reranked_rank": 1,
+          "tool_id": "toolbench_tool_2869",
+          "transition": "promoted_within_top10"
+        }
+      ],
+      "gold_transitions": {
+        "outside_top10": 1,
+        "promoted_within_top10": 1
+      },
+      "hybrid_ndcg10": 0.18457569677956817,
+      "manual_note": "The labeled email-format checker improves 9\u21921. The distinct email-existence checker remains at rank 88, outside the reranked prefix. Reranking can fix ordering but cannot rescue candidates it never scores.",
+      "mean_positive_document_tokens": 52.5,
+      "outcome": "win",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 0,
+      "prefix_positive_count": 1,
+      "query_excerpt": "I need to ensure that the email 'jenny.smith@yahoo.com' exists. Additionally, I want to validate the format of the email 'john.doe@gmail.com'.",
+      "query_id": "toolbench_query_896",
+      "query_tokens": 41,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.6131471927654584,
+      "reranked_top1": {
+        "hybrid_rank": 9,
+        "is_positive_label": true,
+        "name": "Email_Checkup_email_format",
+        "pair_tokenization": {
+          "document_tokens": 45,
+          "document_truncated": false,
+          "full_pair_tokens": 89,
+          "pair_truncated": false,
+          "query_tokens": 41,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 45,
+          "retained_query_tokens": 41
+        },
+        "source_domain": "toolbench",
+        "tool_id": "toolbench_tool_2869"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "delta_ndcg10": 0.37592813984144174,
+      "gate_selected": false,
+      "gold_tools": [
+        {
+          "document_tokens": 31,
+          "hybrid_rank": 11,
+          "name": "OneLike_Social_Media_News_in_Russian",
+          "pair_tokenization": {
+            "document_tokens": 31,
+            "document_truncated": false,
+            "full_pair_tokens": 78,
+            "pair_truncated": false,
+            "query_tokens": 44,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 31,
+            "retained_query_tokens": 44
+          },
+          "reranked_rank": 6,
+          "tool_id": "toolbench_tool_3258",
+          "transition": "entered_top10"
+        },
+        {
+          "document_tokens": 31,
+          "hybrid_rank": 6,
+          "name": "OneLike_Social_Media_News_in_Portuguese",
+          "pair_tokenization": {
+            "document_tokens": 31,
+            "document_truncated": false,
+            "full_pair_tokens": 78,
+            "pair_truncated": false,
+            "query_tokens": 44,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 31,
+            "retained_query_tokens": 44
+          },
+          "reranked_rank": 3,
+          "tool_id": "toolbench_tool_3259",
+          "transition": "promoted_within_top10"
+        },
+        {
+          "document_tokens": 31,
+          "hybrid_rank": 12,
+          "name": "OneLike_Social_Media_News_in_Dutch",
+          "pair_tokenization": {
+            "document_tokens": 31,
+            "document_truncated": false,
+            "full_pair_tokens": 78,
+            "pair_truncated": false,
+            "query_tokens": 44,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 31,
+            "retained_query_tokens": 44
+          },
+          "reranked_rank": 7,
+          "tool_id": "toolbench_tool_3260",
+          "transition": "entered_top10"
+        },
+        {
+          "document_tokens": 31,
+          "hybrid_rank": 9,
+          "name": "OneLike_Social_Media_News_in_Italian",
+          "pair_tokenization": {
+            "document_tokens": 31,
+            "document_truncated": false,
+            "full_pair_tokens": 78,
+            "pair_truncated": false,
+            "query_tokens": 44,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 31,
+            "retained_query_tokens": 44
+          },
+          "reranked_rank": 4,
+          "tool_id": "toolbench_tool_3262",
+          "transition": "promoted_within_top10"
+        }
+      ],
+      "gold_transitions": {
+        "entered_top10": 2,
+        "promoted_within_top10": 2
+      },
+      "hybrid_ndcg10": 0.25657228426720274,
+      "manual_note": "Four language-specific social-news tools improve into or within the top 10, despite an unjudged French-news tool being ranked first. A wrong top-1 label can coexist with a strong multi-label nDCG improvement.",
+      "mean_positive_document_tokens": 31.0,
+      "outcome": "win",
+      "positive_count": 4,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 0,
+      "prefix_positive_count": 4,
+      "query_excerpt": "I'm working on a research project about social media trends in different countries. Could you fetch the social media news in Russian, Portuguese, Dutch, and Italian? I need the latest news articles to analyze the trends.",
+      "query_id": "toolbench_query_113",
+      "query_tokens": 44,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.6325004241086445,
+      "reranked_top1": {
+        "hybrid_rank": 5,
+        "is_positive_label": false,
+        "name": "Social Media News in French",
+        "pair_tokenization": {
+          "document_tokens": 35,
+          "document_truncated": false,
+          "full_pair_tokens": 82,
+          "pair_truncated": false,
+          "query_tokens": 44,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 35,
+          "retained_query_tokens": 44
+        },
+        "source_domain": "toolACE",
+        "tool_id": "toolACE_tool_483"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "delta_ndcg10": 0.3342307912448136,
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 47,
+          "hybrid_rank": 15,
+          "name": "SignNow_Get_field_and_field_invite_id",
+          "pair_tokenization": {
+            "document_tokens": 47,
+            "document_truncated": false,
+            "full_pair_tokens": 83,
+            "pair_truncated": false,
+            "query_tokens": 33,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 47,
+            "retained_query_tokens": 33
+          },
+          "reranked_rank": 9,
+          "tool_id": "toolbench_tool_5029",
+          "transition": "entered_top10"
+        },
+        {
+          "document_tokens": 359,
+          "hybrid_rank": 5,
+          "name": "SignNow_Get_role_ids",
+          "pair_tokenization": {
+            "document_tokens": 359,
+            "document_truncated": true,
+            "full_pair_tokens": 395,
+            "pair_truncated": true,
+            "query_tokens": 33,
+            "query_truncated": false,
+            "removed_document_tokens": 139,
+            "retained_document_tokens": 220,
+            "retained_query_tokens": 33
+          },
+          "reranked_rank": 2,
+          "tool_id": "toolbench_tool_5030",
+          "transition": "promoted_within_top10"
+        }
+      ],
+      "gold_transitions": {
+        "entered_top10": 1,
+        "promoted_within_top10": 1
+      },
+      "hybrid_ndcg10": 0.23719771276929622,
+      "manual_note": "The two labeled SignNow role/field tools improve (5\u21922 and 15\u21929), while an unjudged APIGen get_role_ids tool is first. This again separates exact-ID labels from possible cross-source endpoint counterparts.",
+      "mean_positive_document_tokens": 203.0,
+      "outcome": "win",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 1,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 5,
+      "prefix_positive_count": 2,
+      "query_excerpt": "I have a document with ID '123abc' and I need to get the role IDs and field IDs. Can you provide me with the details?",
+      "query_id": "toolbench_query_119",
+      "query_tokens": 33,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.5714285040141098,
+      "reranked_top1": {
+        "hybrid_rank": 1,
+        "is_positive_label": false,
+        "name": "get_role_ids",
+        "pair_tokenization": {
+          "document_tokens": 36,
+          "document_truncated": false,
+          "full_pair_tokens": 72,
+          "pair_truncated": false,
+          "query_tokens": 33,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 36,
+          "retained_query_tokens": 33
+        },
+        "source_domain": "apigen",
+        "tool_id": "apigen_tool_2279"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [
+        "toolbench_tool_5030"
+      ],
+      "top1_unjudged_cross_source": true
+    },
+    {
+      "candidate_label_recall20": 1.0,
+      "delta_ndcg10": 0.27006569468294217,
+      "gate_selected": true,
+      "gold_tools": [
+        {
+          "document_tokens": 57,
+          "hybrid_rank": 2,
+          "name": "fomoAPI_Get_Campaign_From_URL",
+          "pair_tokenization": {
+            "document_tokens": 57,
+            "document_truncated": false,
+            "full_pair_tokens": 126,
+            "pair_truncated": false,
+            "query_tokens": 66,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 57,
+            "retained_query_tokens": 66
+          },
+          "reranked_rank": 1,
+          "tool_id": "toolbench_tool_3419",
+          "transition": "promoted_within_top10"
+        },
+        {
+          "document_tokens": 46,
+          "hybrid_rank": 8,
+          "name": "fomoAPI_Get_Campaign_Lead_From_ID",
+          "pair_tokenization": {
+            "document_tokens": 46,
+            "document_truncated": false,
+            "full_pair_tokens": 115,
+            "pair_truncated": false,
+            "query_tokens": 66,
+            "query_truncated": false,
+            "removed_document_tokens": 0,
+            "retained_document_tokens": 46,
+            "retained_query_tokens": 66
+          },
+          "reranked_rank": 5,
+          "tool_id": "toolbench_tool_3420",
+          "transition": "promoted_within_top10"
+        }
+      ],
+      "gold_transitions": {
+        "promoted_within_top10": 2
+      },
+      "hybrid_ndcg10": 0.5802792108518124,
+      "manual_note": "Both labeled campaign-lead tools improve (2\u21921 and 8\u21925). This is a straightforward improvement in the ordering of existing prefix candidates, without adding a new candidate.",
+      "mean_positive_document_tokens": 51.5,
+      "outcome": "win",
+      "positive_count": 2,
+      "positive_prefix_pairs_truncated": 0,
+      "prefix_pairs": 20,
+      "prefix_pairs_truncated": 2,
+      "prefix_positive_count": 2,
+      "query_excerpt": "I run an e-commerce website and I want to track the leads generated from a specific campaign on my website. Can you provide me with the list of leads and their metadata for the campaign with the ID 'abc123'? Additionally, it would be helpfu",
+      "query_id": "toolbench_query_361",
+      "query_tokens": 66,
+      "query_truncated_pairs": 0,
+      "reranked_ndcg10": 0.8503449055347546,
+      "reranked_top1": {
+        "hybrid_rank": 2,
+        "is_positive_label": true,
+        "name": "fomoAPI_Get_Campaign_From_URL",
+        "pair_tokenization": {
+          "document_tokens": 57,
+          "document_truncated": false,
+          "full_pair_tokens": 126,
+          "pair_truncated": false,
+          "query_tokens": 66,
+          "query_truncated": false,
+          "removed_document_tokens": 0,
+          "retained_document_tokens": 57,
+          "retained_query_tokens": 66
+        },
+        "source_domain": "toolbench",
+        "tool_id": "toolbench_tool_3419"
+      },
+      "source_domain": "toolbench",
+      "top1_possible_name_counterparts": [],
+      "top1_unjudged_cross_source": false
+    }
+  ],
+  "groups": {
+    "by_any_positive_prefix_truncation": {
+      "no": {
+        "hybrid_ndcg10": 0.47327499078652074,
+        "mean_candidate_label_recall20": 0.6615621156211562,
+        "mean_delta_ndcg10": 0.011595407865358743,
+        "mean_positive_document_tokens": 85.47927429274293,
+        "mean_query_tokens": 51.95940959409594,
+        "outcomes": {
+          "loss": 64,
+          "unchanged": 138,
+          "win": 69
+        },
+        "positive_labels": 466,
+        "positive_labels_entered_top10": 16,
+        "positive_labels_in_prefix20": 261,
+        "positive_labels_left_top10": 24,
+        "positive_prefix_pairs_truncated": 0,
+        "prefix_pairs": 5420,
+        "prefix_pairs_truncated": 853,
+        "queries": 271,
+        "queries_with_all_labels_in_prefix20": 153,
+        "queries_with_query_truncation": 10,
+        "queries_without_positive_in_prefix20": 60,
+        "query_truncated_pairs": 131,
+        "reranked_ndcg10": 0.4848703986518795,
+        "top1_possible_name_counterpart_queries": 20,
+        "top1_unjudged_cross_source_queries": 120
+      },
+      "yes": {
+        "hybrid_ndcg10": 0.5716236128979647,
+        "mean_candidate_label_recall20": 0.8908045977011494,
+        "mean_delta_ndcg10": 0.055272255363860254,
+        "mean_positive_document_tokens": 263.7528735632184,
+        "mean_query_tokens": 104.48275862068965,
+        "outcomes": {
+          "loss": 8,
+          "unchanged": 7,
+          "win": 14
+        },
+        "positive_labels": 49,
+        "positive_labels_entered_top10": 5,
+        "positive_labels_in_prefix20": 42,
+        "positive_labels_left_top10": 6,
+        "positive_prefix_pairs_truncated": 37,
+        "prefix_pairs": 580,
+        "prefix_pairs_truncated": 276,
+        "queries": 29,
+        "queries_with_all_labels_in_prefix20": 23,
+        "queries_with_query_truncation": 8,
+        "queries_without_positive_in_prefix20": 0,
+        "query_truncated_pairs": 142,
+        "reranked_ndcg10": 0.626895868261825,
+        "top1_possible_name_counterpart_queries": 3,
+        "top1_unjudged_cross_source_queries": 9
+      }
+    },
+    "by_candidate_label_coverage20": {
+      "all": {
+        "hybrid_ndcg10": 0.715266643643657,
+        "mean_candidate_label_recall20": 1.0,
+        "mean_delta_ndcg10": 0.02691971604220629,
+        "mean_positive_document_tokens": 101.26609848484848,
+        "mean_query_tokens": 48.70454545454545,
+        "outcomes": {
+          "loss": 48,
+          "unchanged": 72,
+          "win": 56
+        },
+        "positive_labels": 232,
+        "positive_labels_entered_top10": 14,
+        "positive_labels_in_prefix20": 232,
+        "positive_labels_left_top10": 19,
+        "positive_prefix_pairs_truncated": 31,
+        "prefix_pairs": 3520,
+        "prefix_pairs_truncated": 572,
+        "queries": 176,
+        "queries_with_all_labels_in_prefix20": 176,
+        "queries_with_query_truncation": 8,
+        "queries_without_positive_in_prefix20": 0,
+        "query_truncated_pairs": 142,
+        "reranked_ndcg10": 0.7421863596858632,
+        "top1_possible_name_counterpart_queries": 9,
+        "top1_unjudged_cross_source_queries": 51
+      },
+      "none": {
+        "hybrid_ndcg10": 0.0,
+        "mean_candidate_label_recall20": 0.0,
+        "mean_delta_ndcg10": 0.0,
+        "mean_positive_document_tokens": 103.20611111111111,
+        "mean_query_tokens": 80.53333333333333,
+        "outcomes": {
+          "unchanged": 60
+        },
+        "positive_labels": 120,
+        "positive_labels_entered_top10": 0,
+        "positive_labels_in_prefix20": 0,
+        "positive_labels_left_top10": 0,
+        "positive_prefix_pairs_truncated": 0,
+        "prefix_pairs": 1200,
+        "prefix_pairs_truncated": 320,
+        "queries": 60,
+        "queries_with_all_labels_in_prefix20": 0,
+        "queries_with_query_truncation": 7,
+        "queries_without_positive_in_prefix20": 60,
+        "query_truncated_pairs": 102,
+        "reranked_ndcg10": 0.0,
+        "top1_possible_name_counterpart_queries": 2,
+        "top1_unjudged_cross_source_queries": 40
+      },
+      "partial": {
+        "hybrid_ndcg10": 0.2960574686860072,
+        "mean_candidate_label_recall20": 0.4549479166666667,
+        "mean_delta_ndcg10": 0.0001153267755602959,
+        "mean_positive_document_tokens": 106.22682291666666,
+        "mean_query_tokens": 57.921875,
+        "outcomes": {
+          "loss": 24,
+          "unchanged": 13,
+          "win": 27
+        },
+        "positive_labels": 163,
+        "positive_labels_entered_top10": 7,
+        "positive_labels_in_prefix20": 71,
+        "positive_labels_left_top10": 11,
+        "positive_prefix_pairs_truncated": 6,
+        "prefix_pairs": 1280,
+        "prefix_pairs_truncated": 237,
+        "queries": 64,
+        "queries_with_all_labels_in_prefix20": 0,
+        "queries_with_query_truncation": 3,
+        "queries_without_positive_in_prefix20": 0,
+        "query_truncated_pairs": 29,
+        "reranked_ndcg10": 0.2961727954615675,
+        "top1_possible_name_counterpart_queries": 12,
+        "top1_unjudged_cross_source_queries": 38
+      }
+    },
+    "by_gate_selection": {
+      "bypassed": {
+        "hybrid_ndcg10": 0.7742489433266456,
+        "mean_candidate_label_recall20": 0.8714859437751004,
+        "mean_delta_ndcg10": -0.011799606232243715,
+        "mean_positive_document_tokens": 86.69277108433735,
+        "mean_query_tokens": 65.81927710843374,
+        "outcomes": {
+          "loss": 12,
+          "unchanged": 61,
+          "win": 10
+        },
+        "positive_labels": 112,
+        "positive_labels_entered_top10": 5,
+        "positive_labels_in_prefix20": 91,
+        "positive_labels_left_top10": 4,
+        "positive_prefix_pairs_truncated": 11,
+        "prefix_pairs": 1660,
+        "prefix_pairs_truncated": 320,
+        "queries": 83,
+        "queries_with_all_labels_in_prefix20": 68,
+        "queries_with_query_truncation": 8,
+        "queries_without_positive_in_prefix20": 6,
+        "query_truncated_pairs": 140,
+        "reranked_ndcg10": 0.762449337094402,
+        "top1_possible_name_counterpart_queries": 2,
+        "top1_unjudged_cross_source_queries": 19
+      },
+      "selected": {
+        "hybrid_ndcg10": 0.37129928562708064,
+        "mean_candidate_label_recall20": 0.611904761904762,
+        "mean_delta_ndcg10": 0.026380729282674632,
+        "mean_positive_document_tokens": 108.83970814132104,
+        "mean_query_tokens": 53.67741935483871,
+        "outcomes": {
+          "loss": 60,
+          "unchanged": 84,
+          "win": 73
+        },
+        "positive_labels": 403,
+        "positive_labels_entered_top10": 16,
+        "positive_labels_in_prefix20": 212,
+        "positive_labels_left_top10": 26,
+        "positive_prefix_pairs_truncated": 26,
+        "prefix_pairs": 4340,
+        "prefix_pairs_truncated": 809,
+        "queries": 217,
+        "queries_with_all_labels_in_prefix20": 108,
+        "queries_with_query_truncation": 10,
+        "queries_without_positive_in_prefix20": 54,
+        "query_truncated_pairs": 133,
+        "reranked_ndcg10": 0.3976800149097553,
+        "top1_possible_name_counterpart_queries": 21,
+        "top1_unjudged_cross_source_queries": 110
+      }
+    },
+    "by_mean_positive_document_tokens": {
+      "0-127": {
+        "hybrid_ndcg10": 0.4904147557264584,
+        "mean_candidate_label_recall20": 0.6761087267525036,
+        "mean_delta_ndcg10": 0.006741488530790096,
+        "mean_positive_document_tokens": 66.20336194563663,
+        "mean_query_tokens": 52.98283261802575,
+        "outcomes": {
+          "loss": 58,
+          "unchanged": 116,
+          "win": 59
+        },
+        "positive_labels": 399,
+        "positive_labels_entered_top10": 14,
+        "positive_labels_in_prefix20": 232,
+        "positive_labels_left_top10": 22,
+        "positive_prefix_pairs_truncated": 3,
+        "prefix_pairs": 4660,
+        "prefix_pairs_truncated": 753,
+        "queries": 233,
+        "queries_with_all_labels_in_prefix20": 133,
+        "queries_with_query_truncation": 11,
+        "queries_without_positive_in_prefix20": 46,
+        "query_truncated_pairs": 148,
+        "reranked_ndcg10": 0.49715624425724847,
+        "top1_possible_name_counterpart_queries": 16,
+        "top1_unjudged_cross_source_queries": 100
+      },
+      "128-255": {
+        "hybrid_ndcg10": 0.49394577464418166,
+        "mean_candidate_label_recall20": 0.7227564102564104,
+        "mean_delta_ndcg10": 0.03169554128994694,
+        "mean_positive_document_tokens": 167.05128205128204,
+        "mean_query_tokens": 74.07692307692308,
+        "outcomes": {
+          "loss": 10,
+          "unchanged": 26,
+          "win": 16
+        },
+        "positive_labels": 83,
+        "positive_labels_entered_top10": 4,
+        "positive_labels_in_prefix20": 52,
+        "positive_labels_left_top10": 5,
+        "positive_prefix_pairs_truncated": 19,
+        "prefix_pairs": 1040,
+        "prefix_pairs_truncated": 304,
+        "queries": 52,
+        "queries_with_all_labels_in_prefix20": 35,
+        "queries_with_query_truncation": 7,
+        "queries_without_positive_in_prefix20": 12,
+        "query_truncated_pairs": 125,
+        "reranked_ndcg10": 0.5256413159341286,
+        "top1_possible_name_counterpart_queries": 6,
+        "top1_unjudged_cross_source_queries": 23
+      },
+      "256+": {
+        "hybrid_ndcg10": 0.32551926076172344,
+        "mean_candidate_label_recall20": 0.6666666666666666,
+        "mean_delta_ndcg10": 0.1017543974875222,
+        "mean_positive_document_tokens": 446.77777777777777,
+        "mean_query_tokens": 60.93333333333333,
+        "outcomes": {
+          "loss": 4,
+          "unchanged": 3,
+          "win": 8
+        },
+        "positive_labels": 33,
+        "positive_labels_entered_top10": 3,
+        "positive_labels_in_prefix20": 19,
+        "positive_labels_left_top10": 3,
+        "positive_prefix_pairs_truncated": 15,
+        "prefix_pairs": 300,
+        "prefix_pairs_truncated": 72,
+        "queries": 15,
+        "queries_with_all_labels_in_prefix20": 8,
+        "queries_with_query_truncation": 0,
+        "queries_without_positive_in_prefix20": 2,
+        "query_truncated_pairs": 0,
+        "reranked_ndcg10": 0.4272736582492456,
+        "top1_possible_name_counterpart_queries": 1,
+        "top1_unjudged_cross_source_queries": 6
+      }
+    },
+    "by_positive_count": {
+      "1": {
+        "hybrid_ndcg10": 0.6326081379762613,
+        "mean_candidate_label_recall20": 0.8571428571428571,
+        "mean_delta_ndcg10": 0.04495599753029681,
+        "mean_positive_document_tokens": 88.35374149659864,
+        "mean_query_tokens": 55.19047619047619,
+        "outcomes": {
+          "loss": 23,
+          "unchanged": 86,
+          "win": 38
+        },
+        "positive_labels": 147,
+        "positive_labels_entered_top10": 3,
+        "positive_labels_in_prefix20": 126,
+        "positive_labels_left_top10": 2,
+        "positive_prefix_pairs_truncated": 11,
+        "prefix_pairs": 2940,
+        "prefix_pairs_truncated": 530,
+        "queries": 147,
+        "queries_with_all_labels_in_prefix20": 126,
+        "queries_with_query_truncation": 10,
+        "queries_without_positive_in_prefix20": 21,
+        "query_truncated_pairs": 173,
+        "reranked_ndcg10": 0.677564135506558,
+        "top1_possible_name_counterpart_queries": 5,
+        "top1_unjudged_cross_source_queries": 40
+      },
+      "2": {
+        "hybrid_ndcg10": 0.38530406284152663,
+        "mean_candidate_label_recall20": 0.5934579439252337,
+        "mean_delta_ndcg10": -0.019122223383893994,
+        "mean_positive_document_tokens": 111.71495327102804,
+        "mean_query_tokens": 52.981308411214954,
+        "outcomes": {
+          "loss": 37,
+          "unchanged": 41,
+          "win": 29
+        },
+        "positive_labels": 214,
+        "positive_labels_entered_top10": 11,
+        "positive_labels_in_prefix20": 127,
+        "positive_labels_left_top10": 19,
+        "positive_prefix_pairs_truncated": 23,
+        "prefix_pairs": 2140,
+        "prefix_pairs_truncated": 376,
+        "queries": 107,
+        "queries_with_all_labels_in_prefix20": 45,
+        "queries_with_query_truncation": 2,
+        "queries_without_positive_in_prefix20": 25,
+        "query_truncated_pairs": 31,
+        "reranked_ndcg10": 0.3661818394576326,
+        "top1_possible_name_counterpart_queries": 10,
+        "top1_unjudged_cross_source_queries": 62
+      },
+      "3+": {
+        "hybrid_ndcg10": 0.230732092839877,
+        "mean_candidate_label_recall20": 0.33949275362318837,
+        "mean_delta_ndcg10": 0.003973852221460713,
+        "mean_positive_document_tokens": 127.65688405797103,
+        "mean_query_tokens": 72.3695652173913,
+        "outcomes": {
+          "loss": 12,
+          "unchanged": 18,
+          "win": 16
+        },
+        "positive_labels": 154,
+        "positive_labels_entered_top10": 7,
+        "positive_labels_in_prefix20": 50,
+        "positive_labels_left_top10": 9,
+        "positive_prefix_pairs_truncated": 3,
+        "prefix_pairs": 920,
+        "prefix_pairs_truncated": 223,
+        "queries": 46,
+        "queries_with_all_labels_in_prefix20": 5,
+        "queries_with_query_truncation": 6,
+        "queries_without_positive_in_prefix20": 14,
+        "query_truncated_pairs": 69,
+        "reranked_ndcg10": 0.23470594506133768,
+        "top1_possible_name_counterpart_queries": 8,
+        "top1_unjudged_cross_source_queries": 27
+      }
+    },
+    "by_query_tokens": {
+      "0-31": {
+        "hybrid_ndcg10": 0.6593892412587237,
+        "mean_candidate_label_recall20": 0.8863636363636364,
+        "mean_delta_ndcg10": 0.044923609753301036,
+        "mean_positive_document_tokens": 72.64204545454545,
+        "mean_query_tokens": 21.65909090909091,
+        "outcomes": {
+          "loss": 17,
+          "unchanged": 43,
+          "win": 28
+        },
+        "positive_labels": 103,
+        "positive_labels_entered_top10": 5,
+        "positive_labels_in_prefix20": 88,
+        "positive_labels_left_top10": 2,
+        "positive_prefix_pairs_truncated": 1,
+        "prefix_pairs": 1760,
+        "prefix_pairs_truncated": 140,
+        "queries": 88,
+        "queries_with_all_labels_in_prefix20": 75,
+        "queries_with_query_truncation": 0,
+        "queries_without_positive_in_prefix20": 7,
+        "query_truncated_pairs": 0,
+        "reranked_ndcg10": 0.7043128510120247,
+        "top1_possible_name_counterpart_queries": 5,
+        "top1_unjudged_cross_source_queries": 28
+      },
+      "32-63": {
+        "hybrid_ndcg10": 0.40968975523742196,
+        "mean_candidate_label_recall20": 0.6323456790123456,
+        "mean_delta_ndcg10": 0.0015281415395074368,
+        "mean_positive_document_tokens": 111.43037037037037,
+        "mean_query_tokens": 46.50370370370371,
+        "outcomes": {
+          "loss": 42,
+          "unchanged": 53,
+          "win": 40
+        },
+        "positive_labels": 260,
+        "positive_labels_entered_top10": 13,
+        "positive_labels_in_prefix20": 148,
+        "positive_labels_left_top10": 20,
+        "positive_prefix_pairs_truncated": 16,
+        "prefix_pairs": 2700,
+        "prefix_pairs_truncated": 430,
+        "queries": 135,
+        "queries_with_all_labels_in_prefix20": 67,
+        "queries_with_query_truncation": 0,
+        "queries_without_positive_in_prefix20": 28,
+        "query_truncated_pairs": 0,
+        "reranked_ndcg10": 0.4112178967769294,
+        "top1_possible_name_counterpart_queries": 14,
+        "top1_unjudged_cross_source_queries": 70
+      },
+      "64+": {
+        "hybrid_ndcg10": 0.4090939881736161,
+        "mean_candidate_label_recall20": 0.5422077922077922,
+        "mean_delta_ndcg10": 0.007606158064158076,
+        "mean_positive_document_tokens": 121.79372294372294,
+        "mean_query_tokens": 115.93506493506493,
+        "outcomes": {
+          "loss": 13,
+          "unchanged": 49,
+          "win": 15
+        },
+        "positive_labels": 152,
+        "positive_labels_entered_top10": 3,
+        "positive_labels_in_prefix20": 67,
+        "positive_labels_left_top10": 8,
+        "positive_prefix_pairs_truncated": 20,
+        "prefix_pairs": 1540,
+        "prefix_pairs_truncated": 559,
+        "queries": 77,
+        "queries_with_all_labels_in_prefix20": 34,
+        "queries_with_query_truncation": 18,
+        "queries_without_positive_in_prefix20": 25,
+        "query_truncated_pairs": 273,
+        "reranked_ndcg10": 0.4167001462377742,
+        "top1_possible_name_counterpart_queries": 4,
+        "top1_unjudged_cross_source_queries": 31
+      }
+    },
+    "by_source_domain": {
+      "apigen": {
+        "hybrid_ndcg10": 0.6119675889345167,
+        "mean_candidate_label_recall20": 0.83,
+        "mean_delta_ndcg10": 0.0748614318597228,
+        "mean_positive_document_tokens": 83.59666666666666,
+        "mean_query_tokens": 27.67,
+        "outcomes": {
+          "loss": 13,
+          "unchanged": 49,
+          "win": 38
+        },
+        "positive_labels": 138,
+        "positive_labels_entered_top10": 5,
+        "positive_labels_in_prefix20": 107,
+        "positive_labels_left_top10": 5,
+        "positive_prefix_pairs_truncated": 3,
+        "prefix_pairs": 2000,
+        "prefix_pairs_truncated": 196,
+        "queries": 100,
+        "queries_with_all_labels_in_prefix20": 76,
+        "queries_with_query_truncation": 0,
+        "queries_without_positive_in_prefix20": 10,
+        "query_truncated_pairs": 0,
+        "reranked_ndcg10": 0.6868290207942397,
+        "top1_possible_name_counterpart_queries": 6,
+        "top1_unjudged_cross_source_queries": 28
+      },
+      "toolace": {
+        "hybrid_ndcg10": 0.5588289490917756,
+        "mean_candidate_label_recall20": 0.7441666666666668,
+        "mean_delta_ndcg10": -0.0037445199877234625,
+        "mean_positive_document_tokens": 87.29283333333333,
+        "mean_query_tokens": 87.15,
+        "outcomes": {
+          "loss": 24,
+          "unchanged": 57,
+          "win": 19
+        },
+        "positive_labels": 142,
+        "positive_labels_entered_top10": 4,
+        "positive_labels_in_prefix20": 92,
+        "positive_labels_left_top10": 7,
+        "positive_prefix_pairs_truncated": 15,
+        "prefix_pairs": 2000,
+        "prefix_pairs_truncated": 559,
+        "queries": 100,
+        "queries_with_all_labels_in_prefix20": 71,
+        "queries_with_query_truncation": 17,
+        "queries_without_positive_in_prefix20": 21,
+        "query_truncated_pairs": 270,
+        "reranked_ndcg10": 0.5550844291040522,
+        "top1_possible_name_counterpart_queries": 3,
+        "top1_unjudged_cross_source_queries": 33
+      },
+      "toolbench": {
+        "hybrid_ndcg10": 0.27754953474558847,
+        "mean_candidate_label_recall20": 0.47700000000000004,
+        "mean_delta_ndcg10": -0.02366440250135768,
+        "mean_positive_document_tokens": 137.24766666666667,
+        "mean_query_tokens": 56.29,
+        "outcomes": {
+          "loss": 35,
+          "unchanged": 39,
+          "win": 26
+        },
+        "positive_labels": 235,
+        "positive_labels_entered_top10": 12,
+        "positive_labels_in_prefix20": 104,
+        "positive_labels_left_top10": 18,
+        "positive_prefix_pairs_truncated": 19,
+        "prefix_pairs": 2000,
+        "prefix_pairs_truncated": 374,
+        "queries": 100,
+        "queries_with_all_labels_in_prefix20": 29,
+        "queries_with_query_truncation": 1,
+        "queries_without_positive_in_prefix20": 29,
+        "query_truncated_pairs": 3,
+        "reranked_ndcg10": 0.25388513224423076,
+        "top1_possible_name_counterpart_queries": 14,
+        "top1_unjudged_cross_source_queries": 68
+      }
+    },
+    "toolbench_by_any_positive_prefix_truncation": {
+      "no": {
+        "hybrid_ndcg10": 0.26061107335124273,
+        "mean_candidate_label_recall20": 0.4286821705426357,
+        "mean_delta_ndcg10": -0.04462584069296723,
+        "mean_positive_document_tokens": 104.63100775193799,
+        "mean_query_tokens": 56.06976744186046,
+        "outcomes": {
+          "loss": 32,
+          "unchanged": 38,
+          "win": 16
+        },
+        "positive_labels": 206,
+        "positive_labels_entered_top10": 7,
+        "positive_labels_in_prefix20": 82,
+        "positive_labels_left_top10": 15,
+        "positive_prefix_pairs_truncated": 0,
+        "prefix_pairs": 1720,
+        "prefix_pairs_truncated": 290,
+        "queries": 86,
+        "queries_with_all_labels_in_prefix20": 21,
+        "queries_with_query_truncation": 1,
+        "queries_without_positive_in_prefix20": 29,
+        "query_truncated_pairs": 3,
+        "reranked_ndcg10": 0.2159852326582755,
+        "top1_possible_name_counterpart_queries": 11,
+        "top1_unjudged_cross_source_queries": 61
+      },
+      "yes": {
+        "hybrid_ndcg10": 0.38160008331085493,
+        "mean_candidate_label_recall20": 0.7738095238095238,
+        "mean_delta_ndcg10": 0.1050987178185296,
+        "mean_positive_document_tokens": 337.60714285714283,
+        "mean_query_tokens": 57.642857142857146,
+        "outcomes": {
+          "loss": 3,
+          "unchanged": 1,
+          "win": 10
+        },
+        "positive_labels": 29,
+        "positive_labels_entered_top10": 5,
+        "positive_labels_in_prefix20": 22,
+        "positive_labels_left_top10": 3,
+        "positive_prefix_pairs_truncated": 19,
+        "prefix_pairs": 280,
+        "prefix_pairs_truncated": 84,
+        "queries": 14,
+        "queries_with_all_labels_in_prefix20": 8,
+        "queries_with_query_truncation": 0,
+        "queries_without_positive_in_prefix20": 0,
+        "query_truncated_pairs": 0,
+        "reranked_ndcg10": 0.4866988011293846,
+        "top1_possible_name_counterpart_queries": 3,
+        "top1_unjudged_cross_source_queries": 7
+      }
+    },
+    "toolbench_by_outcome": {
+      "loss": {
+        "hybrid_ndcg10": 0.4774924831393613,
+        "mean_candidate_label_recall20": 0.738095238095238,
+        "mean_delta_ndcg10": -0.2029132541013783,
+        "mean_positive_document_tokens": 129.02380952380952,
+        "mean_query_tokens": 52.4,
+        "outcomes": {
+          "loss": 35
+        },
+        "positive_labels": 76,
+        "positive_labels_entered_top10": 2,
+        "positive_labels_in_prefix20": 53,
+        "positive_labels_left_top10": 17,
+        "positive_prefix_pairs_truncated": 5,
+        "prefix_pairs": 700,
+        "prefix_pairs_truncated": 114,
+        "queries": 35,
+        "queries_with_all_labels_in_prefix20": 18,
+        "queries_with_query_truncation": 0,
+        "queries_without_positive_in_prefix20": 0,
+        "query_truncated_pairs": 0,
+        "reranked_ndcg10": 0.274579229037983,
+        "top1_possible_name_counterpart_queries": 6,
+        "top1_unjudged_cross_source_queries": 27
+      },
+      "unchanged": {
+        "hybrid_ndcg10": 0.11136899447208173,
+        "mean_candidate_label_recall20": 0.14957264957264957,
+        "mean_delta_ndcg10": 0.0,
+        "mean_positive_document_tokens": 113.43162393162392,
+        "mean_query_tokens": 58.43589743589744,
+        "outcomes": {
+          "unchanged": 39
+        },
+        "positive_labels": 90,
+        "positive_labels_entered_top10": 0,
+        "positive_labels_in_prefix20": 12,
+        "positive_labels_left_top10": 0,
+        "positive_prefix_pairs_truncated": 1,
+        "prefix_pairs": 780,
+        "prefix_pairs_truncated": 152,
+        "queries": 39,
+        "queries_with_all_labels_in_prefix20": 2,
+        "queries_with_query_truncation": 0,
+        "queries_without_positive_in_prefix20": 29,
+        "query_truncated_pairs": 0,
+        "reranked_ndcg10": 0.11136899447208173,
+        "top1_possible_name_counterpart_queries": 2,
+        "top1_unjudged_cross_source_queries": 25
+      },
+      "win": {
+        "hybrid_ndcg10": 0.25766637616423116,
+        "mean_candidate_label_recall20": 0.6166666666666666,
+        "mean_delta_ndcg10": 0.18213552474663358,
+        "mean_positive_document_tokens": 184.0423076923077,
+        "mean_query_tokens": 58.30769230769231,
+        "outcomes": {
+          "win": 26
+        },
+        "positive_labels": 69,
+        "positive_labels_entered_top10": 10,
+        "positive_labels_in_prefix20": 39,
+        "positive_labels_left_top10": 1,
+        "positive_prefix_pairs_truncated": 13,
+        "prefix_pairs": 520,
+        "prefix_pairs_truncated": 108,
+        "queries": 26,
+        "queries_with_all_labels_in_prefix20": 9,
+        "queries_with_query_truncation": 1,
+        "queries_without_positive_in_prefix20": 0,
+        "query_truncated_pairs": 3,
+        "reranked_ndcg10": 0.4398019009108648,
+        "top1_possible_name_counterpart_queries": 6,
+        "top1_unjudged_cross_source_queries": 16
+      }
+    }
+  },
+  "limitations": [
+    "Post-outcome exploratory analysis, no causal identification.",
+    "Exact-ID judgments do not establish tool equivalence or task execution.",
+    "Manual notes only for predetermined largest ToolBench pilot deltas.",
+    "Binary labels; positive count is not a proof of mandatory tool requirements."
+  ],
+  "provenance": {
+    "analysis_modifies_rankings_or_router": false,
+    "cache_sha256": "a8d1bac8cf0b1afb734c43edff2438fc1d486b7536799192c321d70fe5683c81",
+    "corpus_sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f",
+    "labels_altered": false,
+    "manifest_sha256": "6c61a1f36bd54e7078f43c052169b27b38f5c57f8c12ed2a9a4f9dfae227eab1",
+    "queries_sha256": "ff727e5ce10933e0332acd1ad18f0556a8c03353325ce7074ccd6fb11857e9bd",
+    "script_sha256": "d5bbd736aa59c226832f427b34c3d3b2cb0741ac59dd58afeccbb69d8bf11688",
+    "text_serialization_sha256": "70bd54a54acf7da4c13d8a5c2e5b379f81b64f19f248681973951c79b99f0750"
+  },
+  "scope": "exploratory_original_pilot_failure_analysis",
+  "summary": {
+    "hybrid_ndcg10": 0.48278202425729366,
+    "mean_candidate_label_recall20": 0.6837222222222222,
+    "mean_delta_ndcg10": 0.015817503123547225,
+    "mean_positive_document_tokens": 102.7123888888889,
+    "mean_query_tokens": 57.03666666666667,
+    "outcomes": {
+      "loss": 72,
+      "unchanged": 145,
+      "win": 83
+    },
+    "positive_labels": 515,
+    "positive_labels_entered_top10": 21,
+    "positive_labels_in_prefix20": 303,
+    "positive_labels_left_top10": 30,
+    "positive_prefix_pairs_truncated": 37,
+    "prefix_pairs": 6000,
+    "prefix_pairs_truncated": 1129,
+    "queries": 300,
+    "queries_with_all_labels_in_prefix20": 176,
+    "queries_with_query_truncation": 18,
+    "queries_without_positive_in_prefix20": 60,
+    "query_truncated_pairs": 273,
+    "reranked_ndcg10": 0.49859952738084085,
+    "top1_possible_name_counterpart_queries": 23,
+    "top1_unjudged_cross_source_queries": 129
+  },
+  "tokenizer": {
+    "max_length": 256,
+    "model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+    "truncation": "longest_first",
+    "truncation_side": "right"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "schema_version": "toolret-confirmation-study-completion-v1",
+  "created_at_utc": "2026-10-03T18:36:43.027970+00:00",
+  "completed_scope": true,
+  "scope": "Frozen component-disjoint empirical retrieval study with actual conditional runtime, repeated warm CPU latency, failure diagnostics, and full independent evidence audit.",
+  "predeclared_primary_criterion_achieved": true,
+  "quality_and_required_call_criterion_met": true,
+  "actual_conditional_execution_verified": true,
+  "runtime_verification_pending": false,
+  "primary_interpretation": "The predeclared engineering noninferiority/compute criterion was achieved.",
+  "checks": {
+    "prospective_protocol_and_router_freeze": true,
+    "immutable_cross_file_input_hashes": true,
+    "full_confirmation_and_component_cohort": true,
+    "all1500_actual_runtime_decisions_and_rankings": true,
+    "required_and_actual_primary_calls_match": true,
+    "all1080_actual_latency_events_and_rankings": true,
+    "complete_confirmation_failure_diagnostics": true,
+    "full_independent_audit_without_pending_or_failed_checks": true,
+    "primary_result_matches_predeclared_rule": true
+  },
+  "headline": {
+    "confirmation_queries": 1500,
+    "development_queries": 300,
+    "calibration_queries": 300,
+    "positive_tool_components": 1174,
+    "corpus_tools": 37292,
+    "utility75_nDCG@10": 0.5272573922273732,
+    "always_nDCG@10": 0.5240560248606302,
+    "primary_nDCG_delta": 0.003201367366743033,
+    "primary_nDCG_query_CI95": [
+      -0.0015596148580852023,
+      0.007984496299407543
+    ],
+    "primary_nDCG_component_CI95": [
+      -0.0015579437645846777,
+      0.007930883442471667
+    ],
+    "actual_primary_CE_calls": 1149,
+    "actual_primary_CE_pairs": 22980,
+    "actual_skipped_CE_calls": 351,
+    "CE_call_reduction_fraction_vs_always": 0.234,
+    "latency_queries": 90,
+    "latency_repetitions": 3,
+    "latency_policies": 4,
+    "latency_events": 1080,
+    "latency_scope": "warm sequential CPU query-to-ranking; includes routing; excludes loading/network/queueing/concurrency",
+    "always_mean_latency_ms": 920.7220198592593,
+    "utility75_mean_latency_ms": 791.4369255444444,
+    "always_p50_query_mean_ms": 906.976667,
+    "utility75_p50_query_mean_ms": 850.8748493333333,
+    "always_p95_query_mean_ms": 1172.2824641333332,
+    "utility75_p95_query_mean_ms": 1083.6731336833334,
+    "mean_latency_reduction_fraction_vs_always": 0.1404170765184667,
+    "mean_latency_reduction_CI95_fraction": [
+      0.0823387232321717,
+      0.20035523842338743
+    ],
+    "mean_latency_delta_ms": -129.28509431481478,
+    "mean_latency_delta_CI95_ms": [
+      -189.38765680314813,
+      -73.89289526009259
+    ],
+    "independent_audit_passed_checks": 317
+  },
+  "evidence": {
+    "protocol": {
+      "path": "configs/confirmation_protocol_20261003.json",
+      "sha256": "d33ceee4741679c5027b7b55cc96f5535f98aef0c2160292d8e0c948abd076bc"
+    },
+    "router": {
+      "path": "results/research_confirmation_20261003/router/model.json",
+      "sha256": "f24613a552d36737f4a17797b94f0c9348a67072a97cfc3cb471ae4bd25c159c"
+    },
+    "cache": {
+      "path": "results/research_confirmation_20261003/confirmation_cache/rankings.jsonl",
+      "sha256": "e8eaab43968c191fa73ad50ea0b80b52ca64e9799e43fea1aed58fa89c4ef7ad"
+    },
+    "cache_manifest": {
+      "path": "results/research_confirmation_20261003/confirmation_cache/manifest.json",
+      "sha256": "cfadbc419a7fd84412e0d5f8fd9980c50c9c7c71a2b2490041a09913585c78a3"
+    },
+    "queries": {
+      "path": "data/research_confirmation_20261003/confirmation_queries.jsonl",
+      "sha256": "0aa1f8921c13e44997f7b4018198db513a6d67a0258a550c6fafc16c705cc701"
+    },
+    "corpus": {
+      "path": "data/research_20261003/corpus.jsonl",
+      "sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f"
+    },
+    "evaluation_summary": {
+      "path": "results/research_confirmation_20261003/confirmation_eval/summary.json",
+      "sha256": "fda5bd3e67a6990c2e95076779c4f3dedf8faaa9ab7a7325eb6dfc5fee6f55d3"
+    },
+    "frozen_predictions": {
+      "path": "results/research_confirmation_20261003/confirmation_eval/frozen_predictions.jsonl",
+      "sha256": "d2dd099e3db31009bc5de3f92e5b89445516bbd2d2972307679dce6fc55e37b2"
+    },
+    "frozen_prediction_provenance": {
+      "path": "results/research_confirmation_20261003/confirmation_eval/frozen_prediction_provenance.json",
+      "sha256": "84c8d52236daccb850d9cb125bf83db10f19d6c1f30343e9a24207a5f0beacae"
+    },
+    "evaluation_per_query": {
+      "path": "results/research_confirmation_20261003/confirmation_eval/per_query.jsonl",
+      "sha256": "36fc7c6e1671dbdd6ffe5fdd256e7ae88d6341a5c8cbc320609913e952069a0d"
+    },
+    "evaluation_decisions": {
+      "path": "results/research_confirmation_20261003/confirmation_eval/decisions.jsonl",
+      "sha256": "639aaf485ba80b4c6a8f74d6f46738912900b021b3797c37a29fbf5d5c65db72"
+    },
+    "runtime_verification": {
+      "path": "results/research_confirmation_20261003/runtime_verification.json",
+      "sha256": "72b10b04b6527f023637f70ca5fe49bab0f345b7a125c565296bd82b7fc22316"
+    },
+    "latency_summary": {
+      "path": "results/research_confirmation_20261003/latency/summary.json",
+      "sha256": "7ba78367007bc9ab3b5b7e72eb86abf2810b2e13e02fcf8093156b810682fb51"
+    },
+    "latency_events": {
+      "path": "results/research_confirmation_20261003/latency/events.jsonl",
+      "sha256": "17968b8fc184fe1830cea7c77679040f7dd04375a7e2e360c6d5248d0190d74c"
+    },
+    "latency_selection": {
+      "path": "results/research_confirmation_20261003/latency/selection.json",
+      "sha256": "a1907725b26380e2a0698763973360b7704b91214655b3e60c4711915cd21b8c"
+    },
+    "latency_per_query": {
+      "path": "results/research_confirmation_20261003/latency/per_query.jsonl",
+      "sha256": "ee20857aaee6408624aae5ec955eeaa10a6c6e8cf61ae0f638471b2791e47e0a"
+    },
+    "failure_summary": {
+      "path": "results/research_confirmation_20261003/confirmation_failure_analysis.json",
+      "sha256": "c00cc3e8355f1f6149dfba2790360c4124e965a907cabd92c462f713f226fa72"
+    },
+    "failure_per_query": {
+      "path": "results/research_confirmation_20261003/confirmation_failure_analysis_per_query.jsonl",
+      "sha256": "a9c73a05a14fb71f006a8a153e08777bdbbd0980b3efcc7ebd3d29d0d9c53697"
+    },
+    "independent_audit": {
+      "path": "results/research_confirmation_20261003/independent_audit.json",
+      "sha256": "3ca05098a331e9f06c1b6443eed9746bde826a39147b794f5f9ce16eaf5520ef"
+    },
+    "data_manifest": {
+      "path": "data/research_confirmation_20261003/manifest.json",
+      "sha256": "45d68454ecc950c56b2ecf9fd436cb4a6dafc780e4e64d3e154ef81fc304b2ea"
+    },
+    "data_audit": {
+      "path": "results/research_confirmation_20261003/data_audit.json",
+      "sha256": "d6bf7912574729924157266c37f859fad2709de146528160cf5b52d454350e97"
+    },
+    "component_assignments": {
+      "path": "results/research_confirmation_20261003/component_assignments.json",
+      "sha256": "b6bfd850e892f1e8cf8036d32d60c386e9bb475a44d3e612e3a8d897a6fa410e"
+    },
+    "protocol_freeze_receipt": {
+      "path": "results/research_confirmation_20261003/protocol_freeze_receipt.json",
+      "sha256": "e8e09e24a070b15e607e9c6fd2b1a8b021e4f9b35186677e6ff1b5adaaaa48cc"
+    },
+    "router_freeze_receipt": {
+      "path": "results/research_confirmation_20261003/router_freeze_receipt.json",
+      "sha256": "b11c8761e218eea5b6bf62b8e36da112acbaf162ea07102b24acd0cde954ad62"
+    }
+  },
+  "finalizer_source_sha256": "a5b62f97064d3979056bf82e8c6833bad1e16fbd1f138d1f9ee404e616d88979",
+  "claim_boundary": "Completion establishes the declared empirical scope; it does not establish publication acceptance, faculty supervision, a novel gating algorithm, unseen API-family transfer, or downstream agent task execution."
+}
