@@ -1,0 +1,50 @@
+{
+  "input_paths": {
+    "audit": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/independent_audit.json",
+    "completion": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/study_completion.json",
+    "data": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/data_manifest.json",
+    "evaluation": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/confirmation_eval/summary.json",
+    "failure": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/confirmation_failure_analysis.json",
+    "freeze": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/protocol_freeze_receipt.json",
+    "latency": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/latency/summary.json",
+    "protocol": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/configs/confirmation_protocol_20261003.json",
+    "reproduction": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/reproduction_validation.json",
+    "router": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/router/model.json",
+    "runtime": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/runtime_verification.json"
+  },
+  "input_sha256": {
+    "audit": "3ca05098a331e9f06c1b6443eed9746bde826a39147b794f5f9ce16eaf5520ef",
+    "completion": "e6522e27612d32ddffd806a061c04f1bbad0efc5a6a239f1d68bc551aa25e300",
+    "data": "45d68454ecc950c56b2ecf9fd436cb4a6dafc780e4e64d3e154ef81fc304b2ea",
+    "evaluation": "fda5bd3e67a6990c2e95076779c4f3dedf8faaa9ab7a7325eb6dfc5fee6f55d3",
+    "failure": "c00cc3e8355f1f6149dfba2790360c4124e965a907cabd92c462f713f226fa72",
+    "freeze": "e8e09e24a070b15e607e9c6fd2b1a8b021e4f9b35186677e6ff1b5adaaaa48cc",
+    "latency": "7ba78367007bc9ab3b5b7e72eb86abf2810b2e13e02fcf8093156b810682fb51",
+    "protocol": "d33ceee4741679c5027b7b55cc96f5535f98aef0c2160292d8e0c948abd076bc",
+    "reproduction": "528ad7fdf2035a55ccd075a81e9c6d072f99fe44a3b2b58931e24ac82397dc70",
+    "router": "f24613a552d36737f4a17797b94f0c9348a67072a97cfc3cb471ae4bd25c159c",
+    "runtime": "72b10b04b6527f023637f70ca5fe49bab0f345b7a125c565296bd82b7fc22316"
+  },
+  "outputs": {
+    "latency": {
+      "path": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/paper/figures/confirmation_latency.png",
+      "sha256": "33d3ae6601a3914ca610defe7ad3db77d87b41f859842a61bd0d0fa47ab1f670"
+    },
+    "markdown": {
+      "path": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/paper/tool_disjoint_reranking_study_20261003.md",
+      "sha256": "067f6abb6214b82d1ef117aa0ee8b275afc5a77abae5682a8610d3f105fcc9f0"
+    },
+    "pdf": {
+      "path": "/workspace/scratch/802e62522f6f/application_outputs/ToolRet_Selective_Retrieval_Research_Report_2026-10-03.pdf",
+      "sha256": "2b2eb02d6d300645096564e646243ad259fc74e2fedcfbbbd9d66866309cd9ea"
+    },
+    "quality": {
+      "path": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/paper/figures/confirmation_quality_compute.png",
+      "sha256": "74b2f706fa1816bc8341ec43b09bfb7e20ea8fd17790ec3f53b2524dbd3e3c33"
+    }
+  },
+  "primary_quality_and_verified_compute_criterion_met": true,
+  "protocol_sha256": "d33ceee4741679c5027b7b55cc96f5535f98aef0c2160292d8e0c948abd076bc",
+  "router_sha256": "f24613a552d36737f4a17797b94f0c9348a67072a97cfc3cb471ae4bd25c159c",
+  "scope": "completed_scoped_confirmation_study"
+}

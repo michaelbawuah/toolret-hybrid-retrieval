@@ -1,0 +1,1993 @@
+{
+  "schema_version": "toolret-independent-confirmation-audit-v1",
+  "created_at_utc": "2026-10-03T18:35:42.936296+00:00",
+  "audit_scope": "data/protocol/model/evaluation/runtime/latency as supplied",
+  "independent_implementation": true,
+  "imports_study_metric_router_or_evaluator_code": false,
+  "checks": [
+    {
+      "name": "corpus_identity",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "raw_source_apibank",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "raw_source_apigen",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "raw_source_toolbench",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "raw_source_toolace",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "deduplicated_raw_eligible_universe",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "eligible_gold_labels_and_corpus_membership",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "prepared_file_identity_development",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "prepared_file_identity_calibration",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "prepared_file_identity_confirmation",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "prepared_file_identity_quarantined_pilot_connected",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "prepared_file_identity_reserve",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "development_is_exact_observed_pilot",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "whole_component_assignment_development",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "whole_component_assignment_calibration",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "whole_component_assignment_confirmation",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "whole_component_assignment_quarantined_pilot_connected",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "whole_component_assignment_reserve",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "component_ids_are_global_lexical_minima",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "components_are_source_exclusive",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "split_disjointness_development_calibration",
+      "status": "pass",
+      "detail": {
+        "ids": 0,
+        "normalized_texts": 0,
+        "positive_tools": 0,
+        "components": 0
+      }
+    },
+    {
+      "name": "split_disjointness_development_confirmation",
+      "status": "pass",
+      "detail": {
+        "ids": 0,
+        "normalized_texts": 0,
+        "positive_tools": 0,
+        "components": 0
+      }
+    },
+    {
+      "name": "split_disjointness_calibration_confirmation",
+      "status": "pass",
+      "detail": {
+        "ids": 0,
+        "normalized_texts": 0,
+        "positive_tools": 0,
+        "components": 0
+      }
+    },
+    {
+      "name": "all_nontraining_pilot_connected_queries_quarantined",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_full_component_inventory",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "preparation_source_hash",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "protocol_linked_split_manifest_hash",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "protocol_linked_data_audit_hash",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "protocol_linked_component_assignments_hash",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "protocol_primary_is_prespecified",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "protocol_cohort_development",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "protocol_cohort_calibration",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "protocol_cohort_confirmation",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "protocol_feature_order_and_fit",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_hash_pilot_cache",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_cohort_pilot_cache",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_ranks_qrels_and_rrf_pilot_cache",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_pinned_models_pilot_cache",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_hash_calibration_cache",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_cohort_calibration_cache",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_ranks_qrels_and_rrf_calibration_cache",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_pinned_models_calibration_cache",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_protocol_calibration_cache",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_source_hash_calibration_cache_/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/scripts/generate_confirmation_cache.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_source_hash_calibration_cache_configs/confirmation_protocol_20261003.json",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_source_hash_calibration_cache_data/research_confirmation_20261003/manifest.json",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_source_hash_calibration_cache_src/toolret_research/bm25.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_source_hash_calibration_cache_src/toolret_research/fusion.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_source_hash_calibration_cache_src/toolret_research/text.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "router_input_hash_training_cache_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "router_input_hash_training_manifest_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "router_input_hash_training_queries_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "router_input_hash_calibration_cache_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "router_input_hash_calibration_manifest_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "router_input_hash_calibration_queries_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "router_schema_and_fixed_fit",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_router_means",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_router_scales",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_router_coefficients",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_router_intercept",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "label_free_threshold_0.25",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "label_free_threshold_0.5",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "label_free_threshold_0.75",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "router_protocol_frozen_commit",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "public_protocol_committed_split_manifest",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "public_protocol_committed_data_audit",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "public_protocol_committed_component_assignments",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "public_protocol_tree_receipt",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "router_source_hash_scripts/fit_utility_router.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "router_source_hash_src/toolret_research/utility_router.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "router_freeze_receipt_hash",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "public_committed_router_bytes_and_protocol_ancestry",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "public_router_tree_receipt",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_hash_confirmation_cache",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_cohort_confirmation_cache",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_ranks_qrels_and_rrf_confirmation_cache",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_pinned_models_confirmation_cache",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_protocol_confirmation_cache",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_source_hash_confirmation_cache_/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/scripts/generate_confirmation_cache.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_source_hash_confirmation_cache_configs/confirmation_protocol_20261003.json",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_source_hash_confirmation_cache_data/research_confirmation_20261003/manifest.json",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_source_hash_confirmation_cache_src/toolret_research/bm25.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_source_hash_confirmation_cache_src/toolret_research/fusion.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "cache_source_hash_confirmation_cache_src/toolret_research/text.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "evaluation_input_router_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "evaluation_input_protocol_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "evaluation_input_predictions_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "evaluation_input_cache_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "evaluation_input_queries_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "evaluation_input_corpus_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "evaluation_input_data_manifest_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "evaluation_input_cache_manifest_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "evaluation_source_scripts/evaluate_confirmation_study.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "evaluation_source_src/toolret_research/confirmation.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "evaluation_source_src/toolret_research/selective.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "evaluation_source_src/toolret_research/metrics.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "evaluation_source_src/toolret_research/utility_router.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "evaluation_source_src/toolret_research/fusion.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "evaluation_router_and_frozen_provenance",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "frozen_predictions_exact_cohort",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_frozen_pointwise_predictions",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_all_policy_decision_sets",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_fixed_disagreement",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_cheap_jaccard",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_utility_25",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_utility_50",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_utility_75",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_0",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_1",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_2",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_3",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_4",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_5",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_6",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_7",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_8",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_9",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_10",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_11",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_12",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_13",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_14",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_15",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_16",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_17",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_18",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_fixed_disagreement_seed_19",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_0",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_1",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_2",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_3",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_4",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_5",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_6",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_7",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_8",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_9",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_10",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_11",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_12",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_13",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_14",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_15",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_16",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_17",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_18",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_fixed_disagreement_seed_19",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_0",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_1",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_2",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_3",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_4",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_5",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_6",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_7",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_8",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_9",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_10",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_11",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_12",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_13",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_14",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_15",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_16",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_17",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_18",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_25_seed_19",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_0",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_1",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_2",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_3",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_4",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_5",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_6",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_7",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_8",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_9",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_10",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_11",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_12",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_13",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_14",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_15",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_16",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_17",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_18",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_50_seed_19",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_0",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_1",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_2",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_3",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_4",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_5",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_6",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_7",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_8",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_9",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_10",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_11",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_12",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_13",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_14",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_15",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_16",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_17",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_18",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_global_utility_75_seed_19",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_0",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_1",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_2",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_3",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_4",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_5",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_6",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_7",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_8",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_9",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_10",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_11",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_12",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_13",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_14",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_15",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_16",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_17",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_18",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_random_source_matched_utility_75_seed_19",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_always",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_bm25",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_dense",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_policy_metrics_and_compute_hybrid",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_raw_per_query_metrics",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_random_control_summary_global_fixed_disagreement",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_random_control_summary_global_utility_25",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_random_control_summary_global_utility_50",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_random_control_summary_global_utility_75",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_random_control_summary_source_matched_fixed_disagreement",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_random_control_summary_source_matched_utility_75",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_source_breakdown_apigen",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_source_breakdown_toolbench",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_source_breakdown_toolace",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_routing_effects_fixed_disagreement",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_routing_effects_cheap_jaccard",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_routing_effects_utility_25",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_routing_effects_utility_50",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_routing_effects_utility_75",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_label_aware_oracle_fixed_disagreement",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_label_aware_oracle_utility_25",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_label_aware_oracle_utility_50",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_label_aware_oracle_utility_75",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_paired_intervals_utility_75_minus_always",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_paired_intervals_fixed_disagreement_minus_always",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_paired_intervals_hybrid_minus_always",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_paired_intervals_utility_75_minus_fixed_disagreement",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_paired_intervals_utility_75_minus_random_global_mean",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_paired_intervals_utility_75_minus_random_source_matched_mean",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_paired_intervals_fixed_disagreement_minus_random_global_mean",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_paired_intervals_fixed_disagreement_minus_random_source_matched_mean",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "primary_noninferiority_conclusion",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "independent_full_cohort_conditional_runtime_accounting",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "primary_runtime_input_router_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "primary_runtime_input_protocol_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "primary_runtime_input_predictions_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "primary_runtime_input_cache_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "primary_runtime_input_queries_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "primary_runtime_input_corpus_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "primary_runtime_input_evaluation_summary_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "primary_runtime_source_scripts/verify_confirmation_runtime.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "primary_runtime_source_src/toolret_research/utility_runtime.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "primary_runtime_source_src/toolret_research/utility_router.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_predefined_balanced_selection",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_exact_counterbalanced_schedule",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_raw_event_counts_timings_routes_and_rank_hashes",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_independent_aggregate_hybrid",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_independent_aggregate_always",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_independent_aggregate_fixed_disagreement",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_independent_aggregate_utility_75",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_saved_per_query_repetition_means",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_independent_paired_intervals_hybrid",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_independent_paired_intervals_fixed_disagreement",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_independent_paired_intervals_utility_75",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_raw_events_hash",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_input_hash_cache",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_input_hash_manifest",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_input_hash_corpus",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_input_hash_queries",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_input_hash_protocol",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_input_hash_router_model",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_model_configuration_and_threads",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_exact_corpus_embedding_shards",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_source_/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/scripts/benchmark_selective_latency.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_source_src/toolret_research/bm25.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_source_src/toolret_research/fusion.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_source_src/toolret_research/text.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "latency_source_src/toolret_research/utility_router.py",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_exact_confirmation_cohort",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_input_cache_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_input_cache_manifest_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_input_queries_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_input_corpus_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_input_predictions_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_input_router_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_input_prediction_provenance_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_input_evaluation_summary_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_input_protocol_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_input_data_manifest_sha256",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_source_hashes",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_exploratory_scope",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_independent_binary_metrics",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_independent_candidate_coverage_and_transitions",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_independent_summary",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_independent_routed_policy_cheap_jaccard",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_independent_routed_policy_fixed_disagreement",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_independent_routed_policy_utility_25",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_independent_routed_policy_utility_50",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_independent_routed_policy_utility_75",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "failure_analysis_deterministic_case_selection",
+      "status": "pass",
+      "detail": null
+    }
+  ],
+  "counts": {
+    "pass": 317
+  },
+  "all_executed_checks_pass": true,
+  "details": {
+    "data": {
+      "eligible_queries": 3099,
+      "components": 2005,
+      "removed_query_ids": [
+        "toolbench_query_738"
+      ],
+      "counts": {
+        "development": 300,
+        "calibration": 300,
+        "confirmation": 1500,
+        "quarantined_pilot_connected": 629,
+        "reserve": 370
+      },
+      "components_per_split": {
+        "development": 252,
+        "calibration": 249,
+        "confirmation": 1174,
+        "quarantined_pilot_connected": 78,
+        "reserve": 330
+      },
+      "domains_per_split": {
+        "development": {
+          "apigen": 100,
+          "toolace": 100,
+          "toolbench": 100
+        },
+        "calibration": {
+          "apigen": 100,
+          "toolace": 100,
+          "toolbench": 100
+        },
+        "confirmation": {
+          "apigen": 500,
+          "toolace": 500,
+          "toolbench": 500
+        },
+        "quarantined_pilot_connected": {
+          "apigen": 243,
+          "toolace": 3,
+          "toolbench": 383
+        },
+        "reserve": {
+          "apigen": 57,
+          "toolace": 297,
+          "toolbench": 16
+        }
+      }
+    },
+    "protocol_sha256": "d33ceee4741679c5027b7b55cc96f5535f98aef0c2160292d8e0c948abd076bc",
+    "cache_inputs": {
+      "training": {
+        "cache_sha256": "a8d1bac8cf0b1afb734c43edff2438fc1d486b7536799192c321d70fe5683c81",
+        "manifest_sha256": "6c61a1f36bd54e7078f43c052169b27b38f5c57f8c12ed2a9a4f9dfae227eab1",
+        "queries_sha256": "ff727e5ce10933e0332acd1ad18f0556a8c03353325ce7074ccd6fb11857e9bd"
+      },
+      "calibration": {
+        "cache_sha256": "277ed892c4bbf714bf84a0f544bdd538192f533a325c4799c8ceb4346494b72a",
+        "manifest_sha256": "1a2916101ac89352b959ad824a4338965030278a60afd7165353aeaf249ffb83",
+        "queries_sha256": "261f271ebd1e332de0488df722a80caee9dc5c241f40fdbe798f9f2d745462e4"
+      },
+      "confirmation": {
+        "cache_sha256": "e8eaab43968c191fa73ad50ea0b80b52ca64e9799e43fea1aed58fa89c4ef7ad",
+        "manifest_sha256": "cfadbc419a7fd84412e0d5f8fd9980c50c9c7c71a2b2490041a09913585c78a3",
+        "queries_sha256": "0aa1f8921c13e44997f7b4018198db513a6d67a0258a550c6fafc16c705cc701"
+      }
+    },
+    "router": {
+      "model_sha256": "f24613a552d36737f4a17797b94f0c9348a67072a97cfc3cb471ae4bd25c159c",
+      "protocol_frozen_commit": "3e813e1af650104f33aaf77febce5a8c1a3f1213",
+      "coefficients": [
+        0.03217284658827833,
+        -0.016737271835451064,
+        0.007997653786804122,
+        0.02150994825051744,
+        0.013301482739327047,
+        -0.028462413716425588,
+        0.003969206636099657
+      ],
+      "thresholds": {
+        "0.25": {
+          "threshold": 0.04356274839116504,
+          "nominal_budget_fraction": 0.25,
+          "primary": false,
+          "calibration_invocations": 75,
+          "calibration_observed_call_fraction": 0.25,
+          "calibration_threshold_ties_skipped": 0,
+          "decision_rule": "predicted_ndcg_delta > threshold"
+        },
+        "0.5": {
+          "threshold": 0.010931372232104553,
+          "nominal_budget_fraction": 0.5,
+          "primary": false,
+          "calibration_invocations": 150,
+          "calibration_observed_call_fraction": 0.5,
+          "calibration_threshold_ties_skipped": 0,
+          "decision_rule": "predicted_ndcg_delta > threshold"
+        },
+        "0.75": {
+          "threshold": -0.01178292867029655,
+          "nominal_budget_fraction": 0.75,
+          "primary": true,
+          "calibration_invocations": 225,
+          "calibration_observed_call_fraction": 0.75,
+          "calibration_threshold_ties_skipped": 0,
+          "decision_rule": "predicted_ndcg_delta > threshold"
+        }
+      },
+      "public_router_commit": "9a34862b31881545a266145b2096c0673b449182"
+    },
+    "evaluation": {
+      "policies": {
+        "fixed_disagreement": {
+          "nDCG@10": 0.5313717702896233,
+          "calls": 1077
+        },
+        "cheap_jaccard": {
+          "nDCG@10": 0.5239298433555747,
+          "calls": 1391
+        },
+        "utility_25": {
+          "nDCG@10": 0.5269012275819526,
+          "calls": 409
+        },
+        "utility_50": {
+          "nDCG@10": 0.5305250944074182,
+          "calls": 829
+        },
+        "utility_75": {
+          "nDCG@10": 0.5272573922273732,
+          "calls": 1149
+        },
+        "always": {
+          "nDCG@10": 0.5240560248606302,
+          "calls": 1500
+        },
+        "bm25": {
+          "nDCG@10": 0.468859759170504,
+          "calls": 0
+        },
+        "dense": {
+          "nDCG@10": 0.46023294987276375,
+          "calls": 0
+        },
+        "hybrid": {
+          "nDCG@10": 0.5208206739909893,
+          "calls": 0
+        }
+      },
+      "primary_paired_intervals": {
+        "delta_mean": 0.003201367366743033,
+        "query_ci95": [
+          -0.0015596148580852023,
+          0.007984496299407543
+        ],
+        "component_ci95": [
+          -0.0015579437645846777,
+          0.007930883442471667
+        ]
+      },
+      "quality_and_required_call_criterion_met": true
+    },
+    "runtime": {
+      "actual_calls": 1149,
+      "actual_pairs": 22980,
+      "queries": 1500
+    },
+    "latency": {
+      "queries": 90,
+      "events": 1080,
+      "policies": {
+        "always": {
+          "actual_cross_encoder_calls": 270,
+          "actual_cross_encoder_pairs": 5400,
+          "component_means_ms": {
+            "bm25": 244.4639479851852,
+            "cross_encoder": 648.073906711111,
+            "dense": 27.97060282962963,
+            "routing": 0.0031736333333333335,
+            "rrf": 0.21038869999999998
+          },
+          "mean_ms": 920.7220198592593,
+          "p50_event_ms": 892.7384669999999,
+          "p50_query_mean_ms": 906.976667,
+          "p95_event_ms": 1236.4456402499998,
+          "p95_query_mean_ms": 1172.2824641333332,
+          "requests": 270
+        },
+        "fixed_disagreement": {
+          "actual_cross_encoder_calls": 210,
+          "actual_cross_encoder_pairs": 4200,
+          "component_means_ms": {
+            "bm25": 245.4917283222222,
+            "cross_encoder": 499.44948423333335,
+            "dense": 27.355213055555556,
+            "routing": 0.004184848148148147,
+            "rrf": 0.2150557148148148
+          },
+          "mean_ms": 772.515666174074,
+          "p50_event_ms": 839.3579245000001,
+          "p50_query_mean_ms": 847.6812523333333,
+          "p95_event_ms": 1188.7539811499987,
+          "p95_query_mean_ms": 1137.2873768166664,
+          "requests": 270
+        },
+        "hybrid": {
+          "actual_cross_encoder_calls": 0,
+          "actual_cross_encoder_pairs": 0,
+          "component_means_ms": {
+            "bm25": 243.9433129740741,
+            "cross_encoder": 0.0,
+            "dense": 26.989601166666663,
+            "routing": 0.004517525925925926,
+            "rrf": 0.2097116111111111
+          },
+          "mean_ms": 271.1471432777778,
+          "p50_event_ms": 239.3729635,
+          "p50_query_mean_ms": 242.08122133333336,
+          "p95_event_ms": 403.45872829999985,
+          "p95_query_mean_ms": 378.3779861333333,
+          "requests": 270
+        },
+        "utility_75": {
+          "actual_cross_encoder_calls": 219,
+          "actual_cross_encoder_pairs": 4380,
+          "component_means_ms": {
+            "bm25": 244.7314052925926,
+            "cross_encoder": 518.3774351074075,
+            "dense": 27.884993714814815,
+            "routing": 0.23268275185185186,
+            "rrf": 0.2104086777777778
+          },
+          "mean_ms": 791.4369255444444,
+          "p50_event_ms": 837.2295215,
+          "p50_query_mean_ms": 850.8748493333333,
+          "p95_event_ms": 1151.5033655,
+          "p95_query_mean_ms": 1083.6731336833334,
+          "requests": 270
+        }
+      },
+      "paired_comparisons": {
+        "fixed_disagreement_vs_always": {
+          "delta_ci95_ms": [
+            -207.79232205027782,
+            -89.64402638305559
+          ],
+          "mean_delta_ms": -148.2063536851852,
+          "mean_latency_reduction_fraction": 0.16096753470481784,
+          "reduction_ci95_fraction": [
+            0.0981402414398238,
+            0.22518770997445914
+          ]
+        },
+        "hybrid_vs_always": {
+          "delta_ci95_ms": [
+            -671.4740490737963,
+            -626.0830954041667
+          ],
+          "mean_delta_ms": -649.5748765814815,
+          "mean_latency_reduction_fraction": 0.7055059644177674,
+          "reduction_ci95_fraction": [
+            0.6698604437981427,
+            0.7317228218366022
+          ]
+        },
+        "utility_75_vs_always": {
+          "delta_ci95_ms": [
+            -189.38765680314813,
+            -73.89289526009259
+          ],
+          "mean_delta_ms": -129.28509431481478,
+          "mean_latency_reduction_fraction": 0.1404170765184667,
+          "reduction_ci95_fraction": [
+            0.0823387232321717,
+            0.20035523842338743
+          ]
+        }
+      }
+    },
+    "failure_analysis": {
+      "scope": "exploratory_confirmation_failure_analysis_after_frozen_predictions",
+      "queries": 1500,
+      "summary": {
+        "hybrid_ndcg10": 0.5208206739909893,
+        "mean_candidate_label_recall20": 0.7187555555555556,
+        "mean_delta_ndcg10": 0.003235350869640854,
+        "mean_positive_document_tokens": 103.66196031746031,
+        "mean_query_tokens": 56.92733333333333,
+        "outcomes": {
+          "loss": 397,
+          "unchanged": 739,
+          "win": 364
+        },
+        "positive_labels": 2498,
+        "positive_labels_entered_top10": 107,
+        "positive_labels_in_prefix20": 1607,
+        "positive_labels_left_top10": 136,
+        "positive_prefix_pairs_truncated": 174,
+        "prefix_pairs": 30000,
+        "prefix_pairs_truncated": 5477,
+        "queries": 1500,
+        "queries_with_all_labels_in_prefix20": 948,
+        "queries_with_query_truncation": 89,
+        "queries_without_positive_in_prefix20": 282,
+        "query_truncated_pairs": 1421,
+        "reranked_ndcg10": 0.5240560248606302,
+        "top1_possible_name_counterpart_queries": 112,
+        "top1_unjudged_cross_source_queries": 640
+      },
+      "audit_limitation": "Tokenization clipping statistics and qualitative causal interpretations are not independently recomputed by this audit."
+    }
+  },
+  "all_required_stages_complete": true,
+  "input_evidence_sha256": {
+    "configs/confirmation_protocol_20261003.json": "d33ceee4741679c5027b7b55cc96f5535f98aef0c2160292d8e0c948abd076bc",
+    "configs/selective_pilot_20261003.json": "86bb0fe03c1209a5953fcc736dfe0daa7941a1c149894b7083a52819eeb8a6ff",
+    "data/research_20261003/corpus.jsonl": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f",
+    "data/research_20261003/queries.jsonl": "ff727e5ce10933e0332acd1ad18f0556a8c03353325ce7074ccd6fb11857e9bd",
+    "data/research_confirmation_20261003/calibration_queries.jsonl": "261f271ebd1e332de0488df722a80caee9dc5c241f40fdbe798f9f2d745462e4",
+    "data/research_confirmation_20261003/confirmation_queries.jsonl": "0aa1f8921c13e44997f7b4018198db513a6d67a0258a550c6fafc16c705cc701",
+    "data/research_confirmation_20261003/development_queries.jsonl": "3916a8779cb182d3cd85b9312024a0592da2e90bdebed059e542ab018cc7c9ff",
+    "data/research_confirmation_20261003/manifest.json": "45d68454ecc950c56b2ecf9fd436cb4a6dafc780e4e64d3e154ef81fc304b2ea",
+    "data/research_confirmation_20261003/quarantined_pilot_connected_queries.jsonl": "28c91f2b0c8ce5df71e35c1a6968f6b840524d056c95a1d0123e992990775b85",
+    "data/research_confirmation_20261003/raw/apibank.parquet": "1e91b9c4f7e0b38946bf5c3272e15af73f0b446e4d546c52e09179b3a9709d3b",
+    "data/research_confirmation_20261003/raw/apigen.parquet": "7f6d6ee477ba98380816c418f51c445c937771ee557d73c0a575d0d30fd01a14",
+    "data/research_confirmation_20261003/raw/sources.json": "8df9cb39159af3da4a38f61619a7b5e51fcf1ce0725c99c76b72fe0e046c3af6",
+    "data/research_confirmation_20261003/raw/toolace.parquet": "49f7c861cec1799430680cea1df6cb98a10b33227f6cb183ac32375f396fcd5a",
+    "data/research_confirmation_20261003/raw/toolbench.parquet": "2bb32ea009d6ece37b1b785330247aacac037a20dd4522632cb3359809c8837d",
+    "data/research_confirmation_20261003/reserve_queries.jsonl": "600fa4d9712afa5bf37d11715598c448bee34692e2bdaf45c5ecf9feca51182b",
+    "results/research_20261003/pilot_cache/manifest.json": "6c61a1f36bd54e7078f43c052169b27b38f5c57f8c12ed2a9a4f9dfae227eab1",
+    "results/research_20261003/pilot_cache/rankings.jsonl": "a8d1bac8cf0b1afb734c43edff2438fc1d486b7536799192c321d70fe5683c81",
+    "results/research_confirmation_20261003/calibration_cache/manifest.json": "1a2916101ac89352b959ad824a4338965030278a60afd7165353aeaf249ffb83",
+    "results/research_confirmation_20261003/calibration_cache/rankings.jsonl": "277ed892c4bbf714bf84a0f544bdd538192f533a325c4799c8ceb4346494b72a",
+    "results/research_confirmation_20261003/component_assignments.json": "b6bfd850e892f1e8cf8036d32d60c386e9bb475a44d3e612e3a8d897a6fa410e",
+    "results/research_confirmation_20261003/confirmation_cache/manifest.json": "cfadbc419a7fd84412e0d5f8fd9980c50c9c7c71a2b2490041a09913585c78a3",
+    "results/research_confirmation_20261003/confirmation_cache/rankings.jsonl": "e8eaab43968c191fa73ad50ea0b80b52ca64e9799e43fea1aed58fa89c4ef7ad",
+    "results/research_confirmation_20261003/confirmation_eval/decisions.jsonl": "639aaf485ba80b4c6a8f74d6f46738912900b021b3797c37a29fbf5d5c65db72",
+    "results/research_confirmation_20261003/confirmation_eval/frozen_prediction_provenance.json": "84c8d52236daccb850d9cb125bf83db10f19d6c1f30343e9a24207a5f0beacae",
+    "results/research_confirmation_20261003/confirmation_eval/frozen_predictions.jsonl": "d2dd099e3db31009bc5de3f92e5b89445516bbd2d2972307679dce6fc55e37b2",
+    "results/research_confirmation_20261003/confirmation_eval/per_query.jsonl": "36fc7c6e1671dbdd6ffe5fdd256e7ae88d6341a5c8cbc320609913e952069a0d",
+    "results/research_confirmation_20261003/confirmation_eval/report.md": "997558faaad575f2c28cdf03c25e7d26e58bb45c61d5000935c377ec64d12601",
+    "results/research_confirmation_20261003/confirmation_eval/summary.json": "fda5bd3e67a6990c2e95076779c4f3dedf8faaa9ab7a7325eb6dfc5fee6f55d3",
+    "results/research_confirmation_20261003/confirmation_failure_analysis.json": "c00cc3e8355f1f6149dfba2790360c4124e965a907cabd92c462f713f226fa72",
+    "results/research_confirmation_20261003/confirmation_failure_analysis.md": "a246700de71d9d3eb2f75509f616e805c834c5ed28446ec31529abe663abd945",
+    "results/research_confirmation_20261003/confirmation_failure_analysis_per_query.jsonl": "a9c73a05a14fb71f006a8a153e08777bdbbd0980b3efcc7ebd3d29d0d9c53697",
+    "results/research_confirmation_20261003/data_audit.json": "d6bf7912574729924157266c37f859fad2709de146528160cf5b52d454350e97",
+    "results/research_confirmation_20261003/data_manifest.json": "45d68454ecc950c56b2ecf9fd436cb4a6dafc780e4e64d3e154ef81fc304b2ea",
+    "results/research_confirmation_20261003/latency/events.jsonl": "17968b8fc184fe1830cea7c77679040f7dd04375a7e2e360c6d5248d0190d74c",
+    "results/research_confirmation_20261003/latency/per_query.jsonl": "ee20857aaee6408624aae5ec955eeaa10a6c6e8cf61ae0f638471b2791e47e0a",
+    "results/research_confirmation_20261003/latency/report.md": "2831c5ce63ecce1cbcc6072455f19caa72f8009c3efca513c0d29020114b78df",
+    "results/research_confirmation_20261003/latency/selection.json": "a1907725b26380e2a0698763973360b7704b91214655b3e60c4711915cd21b8c",
+    "results/research_confirmation_20261003/latency/summary.json": "7ba78367007bc9ab3b5b7e72eb86abf2810b2e13e02fcf8093156b810682fb51",
+    "results/research_confirmation_20261003/protocol_freeze_receipt.json": "e8e09e24a070b15e607e9c6fd2b1a8b021e4f9b35186677e6ff1b5adaaaa48cc",
+    "results/research_confirmation_20261003/router/calibration_predictions.jsonl": "f20e4abd6d05ea909588ae7561a6111373cbce0980d7881b2006d2bd41933216",
+    "results/research_confirmation_20261003/router/development_predictions.jsonl": "1caf2af53a494133e55ed1271e5708fd32cd0e7b77d2a9939f0f3de8b8841141",
+    "results/research_confirmation_20261003/router/model.json": "f24613a552d36737f4a17797b94f0c9348a67072a97cfc3cb471ae4bd25c159c",
+    "results/research_confirmation_20261003/router_freeze_receipt.json": "b11c8761e218eea5b6bf62b8e36da112acbaf162ea07102b24acd0cde954ad62",
+    "results/research_confirmation_20261003/runtime_verification.json": "72b10b04b6527f023637f70ca5fe49bab0f345b7a125c565296bd82b7fc22316",
+    "results/research_confirmation_20261003/selected_query_ids.json": "0decd91a3b788645b2acdd35cd6b84a07554978184517781dbffa9273634a732",
+    "scripts/analyze_confirmation_failures.py": "430532f568238c915aa335e1ea31edad47dd3d25a751c2687d73d0e7d9ceb513",
+    "scripts/analyze_tool_retrieval_failures.py": "d5bbd736aa59c226832f427b34c3d3b2cb0741ac59dd58afeccbb69d8bf11688",
+    "scripts/audit_confirmation_study.py": "b5c537cc3cd81321935343b5ef6d545a62888fcfcc052df52d018b5c884d4235",
+    "scripts/benchmark_selective_latency.py": "760d87f2825083dd2fb8994e730c4f7d736e008d2b02814a84e78c6e2825779b",
+    "scripts/evaluate_confirmation_study.py": "493395c68dc45e83c7425d99667d18ec164a531fa96060b22ada0785cbd3fa9f",
+    "scripts/fit_utility_router.py": "d4d4a5185ff6d71e0059491d31afb7187bd986a1a2d098755a0ff92dc2613431",
+    "scripts/generate_confirmation_cache.py": "bf49f9ac3e7caaefdfa66e61f2f30530dbb289a89a478ece5ad5c40ebaed0a53",
+    "scripts/generate_research_cache.py": "68cb4fdf953d62fe7e0299fd1775f28be1525935a8f06012ab236839c78190b2",
+    "scripts/prepare_confirmation_study.py": "07725000f1c679e8d9ab40dacb719c276fd1e6e9a53e3a5640d4adfa741b52f1",
+    "scripts/prepare_research_pilot.py": "ba2314b294248fc6b29b175b6868b9ff3e362c6afff63862911067a5c2b35f47",
+    "scripts/verify_confirmation_runtime.py": "30eaf0efa96f717a9119009946969e37a73e5fcf5cd78c223ea0210d56c4b658",
+    "src/toolret_research/bm25.py": "2ea2de25924e2f740f0f6fe561643fc8dd4d68300d6492200780db6c70252377",
+    "src/toolret_research/confirmation.py": "768ae8c24cdf657c1158d7b1438dc253b474ada9d38c77136f2202b2a8a15899",
+    "src/toolret_research/fusion.py": "677d1e0a751813cfed9411c63a9ae421c3bd7c33e5e55bf4b34cdb0bbb162d54",
+    "src/toolret_research/metrics.py": "255039320bb6f23e10c826057b5ace949f49069df56884a0f30e2aa96ed3028d",
+    "src/toolret_research/selective.py": "34dfc5e27a398026e88d226d0fdf0cec1195e2a283c7047063e1197a36be2636",
+    "src/toolret_research/text.py": "70bd54a54acf7da4c13d8a5c2e5b379f81b64f19f248681973951c79b99f0750",
+    "src/toolret_research/utility_router.py": "2075d901571a5692e4297f3e998a867fd9fc67776ade5440a7ed422c36797ad2",
+    "src/toolret_research/utility_runtime.py": "880268a7c59d8da6b7544082821ca4607b9cdfdafdee442b59e460db167e51a7"
+  },
+  "auditor_source_sha256": "b5c537cc3cd81321935343b5ef6d545a62888fcfcc052df52d018b5c884d4235"
+}

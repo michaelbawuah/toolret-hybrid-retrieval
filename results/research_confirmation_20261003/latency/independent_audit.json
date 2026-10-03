@@ -1,0 +1,31 @@
+{
+  "all_final_ranking_hashes_match": true,
+  "all_frozen_decisions_match": true,
+  "all_summary_means_percentiles_and_bootstrap_exact_within_1e_minus_10": true,
+  "events": 1080,
+  "latency_events_sha256": "17968b8fc184fe1830cea7c77679040f7dd04375a7e2e360c6d5248d0190d74c",
+  "latency_summary_sha256": "7ba78367007bc9ab3b5b7e72eb86abf2810b2e13e02fcf8093156b810682fb51",
+  "limitations": [
+    "Model inference equality relies on logged exact checks in the hashed benchmark implementation; reconstruction verifies the final cached ranking hash and frozen decision for every logged event.",
+    "Single-machine sequential CPU benchmark; query-cluster bootstrap addresses sampled query composition, not between-machine or deployment variance."
+  ],
+  "method": "Independent inline Python reconstruction without importing benchmark module: exact event schedule, query repetitions, policy decisions vs frozen quality predictions, invocation/pair counts, cached final ranking hashes, component sums, zero skipped CE timing, router artifact SHA agreement, per-query latency means and percentiles, and paired source-stratified query-cluster bootstrap using NumPy seed20261003",
+  "primary_comparison": {
+    "delta_ci95_ms": [
+      -189.38765680314813,
+      -73.89289526009259
+    ],
+    "mean_delta_ms": -129.28509431481478,
+    "mean_latency_reduction_fraction": 0.1404170765184667,
+    "reduction_ci95_fraction": [
+      0.0823387232321717,
+      0.20035523842338743
+    ]
+  },
+  "quality_router_sha256": "f24613a552d36737f4a17797b94f0c9348a67072a97cfc3cb471ae4bd25c159c",
+  "queries": 90,
+  "repetitions_per_query_policy": 3,
+  "requests_per_policy": 270,
+  "scope": "Independent reconstruction of completed repeated warm CPU latency benchmark; does not rerun model inference",
+  "status": "PASS"
+}

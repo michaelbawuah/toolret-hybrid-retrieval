@@ -1,0 +1,8 @@
+{
+  "public_router_commit": "9a34862b31881545a266145b2096c0673b449182",
+  "public_protocol_commit": "3e813e1af650104f33aaf77febce5a8c1a3f1213",
+  "local_router_commit": "14e48c4",
+  "router_sha256": "f24613a552d36737f4a17797b94f0c9348a67072a97cfc3cb471ae4bd25c159c",
+  "public_git_tree": "a9ec987bec904eea27fb5e5c3bc35367d5f11322",
+  "published_before_confirmation_rank_generation": true
+}

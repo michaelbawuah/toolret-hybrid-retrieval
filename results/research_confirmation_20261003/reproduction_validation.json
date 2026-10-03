@@ -1,0 +1,141 @@
+{
+  "artifact_comparisons": {
+    "decisions.jsonl": {
+      "identical_bytes": true,
+      "sha256": "639aaf485ba80b4c6a8f74d6f46738912900b021b3797c37a29fbf5d5c65db72"
+    },
+    "frozen_predictions.jsonl": {
+      "identical_bytes": true,
+      "sha256": "d2dd099e3db31009bc5de3f92e5b89445516bbd2d2972307679dce6fc55e37b2"
+    },
+    "per_query.jsonl": {
+      "identical_bytes": true,
+      "sha256": "36fc7c6e1671dbdd6ffe5fdd256e7ae88d6341a5c8cbc320609913e952069a0d"
+    },
+    "report.md": {
+      "identical_bytes": true,
+      "sha256": "997558faaad575f2c28cdf03c25e7d26e58bb45c61d5000935c377ec64d12601"
+    }
+  },
+  "command": ".venv/bin/python scripts/run_confirmation_study.py --output-dir data/research_reproduction_runner_smoke_20261003",
+  "created_at_utc": "2026-10-03T18:11:31.508543+00:00",
+  "default_runner_exit_code": 0,
+  "live_pinned_source_reconstruction": {
+    "all_five_public_parquets_downloaded_and_sha_verified": true,
+    "all_grouped_cohort_files": {
+      "calibration": {
+        "matches_frozen_sha256": true,
+        "sha256": "261f271ebd1e332de0488df722a80caee9dc5c241f40fdbe798f9f2d745462e4"
+      },
+      "confirmation": {
+        "matches_frozen_sha256": true,
+        "sha256": "0aa1f8921c13e44997f7b4018198db513a6d67a0258a550c6fafc16c705cc701"
+      },
+      "development": {
+        "matches_frozen_sha256": true,
+        "sha256": "3916a8779cb182d3cd85b9312024a0592da2e90bdebed059e542ab018cc7c9ff"
+      },
+      "quarantined_pilot_connected": {
+        "matches_frozen_sha256": true,
+        "sha256": "28c91f2b0c8ce5df71e35c1a6968f6b840524d056c95a1d0123e992990775b85"
+      },
+      "reserve": {
+        "matches_frozen_sha256": true,
+        "sha256": "600fa4d9712afa5bf37d11715598c448bee34692e2bdaf45c5ecf9feca51182b"
+      }
+    },
+    "metadata": {
+      "provenance_note": "Original published study provenance remains canonical; this record describes later reconstruction of its verified source-data bytes.",
+      "reconstructed_at_utc": "2026-10-03T18:10:29.240628+00:00",
+      "reconstructed_files": [
+        "calibration_queries",
+        "confirmation_queries",
+        "corpus",
+        "development_queries",
+        "training_queries"
+      ],
+      "upstream_downloads": [
+        {
+          "bytes": 8143446,
+          "path": "web/tools-00000-of-00001.parquet",
+          "repository": "mangopy/ToolRet-Tools",
+          "revision": "e06c38c75612b6536bd959e08cdd345894aba6a7",
+          "sha256": "57faceebd778b2cb74571dca0e71e8bc8078c11ba05dce0efc562e818d3950e6",
+          "url": "https://huggingface.co/datasets/mangopy/ToolRet-Tools/resolve/e06c38c75612b6536bd959e08cdd345894aba6a7/web/tools-00000-of-00001.parquet"
+        },
+        {
+          "bytes": 45023,
+          "path": "apibank/queries-00000-of-00001.parquet",
+          "repository": "mangopy/ToolRet-Queries",
+          "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+          "sha256": "1e91b9c4f7e0b38946bf5c3272e15af73f0b446e4d546c52e09179b3a9709d3b",
+          "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/apibank/queries-00000-of-00001.parquet"
+        },
+        {
+          "bytes": 352171,
+          "path": "apigen/queries-00000-of-00001.parquet",
+          "repository": "mangopy/ToolRet-Queries",
+          "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+          "sha256": "7f6d6ee477ba98380816c418f51c445c937771ee557d73c0a575d0d30fd01a14",
+          "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/apigen/queries-00000-of-00001.parquet"
+        },
+        {
+          "bytes": 922485,
+          "path": "toolbench/queries-00000-of-00001.parquet",
+          "repository": "mangopy/ToolRet-Queries",
+          "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+          "sha256": "2bb32ea009d6ece37b1b785330247aacac037a20dd4522632cb3359809c8837d",
+          "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/toolbench/queries-00000-of-00001.parquet"
+        },
+        {
+          "bytes": 618326,
+          "path": "toolace/queries-00000-of-00001.parquet",
+          "repository": "mangopy/ToolRet-Queries",
+          "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+          "sha256": "49f7c861cec1799430680cea1df6cb98a10b33227f6cb183ac32375f396fcd5a",
+          "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/toolace/queries-00000-of-00001.parquet"
+        }
+      ]
+    },
+    "original_manifest_copy_identical": true,
+    "original_manifest_role": "Copied original published provenance; later reconstruction metadata kept separately",
+    "required_data_files": {
+      "calibration_queries": {
+        "path": "data/research_reproduction_fresh_source_smoke_20261003/data/research_confirmation_20261003/calibration_queries.jsonl",
+        "sha256": "261f271ebd1e332de0488df722a80caee9dc5c241f40fdbe798f9f2d745462e4"
+      },
+      "confirmation_queries": {
+        "path": "data/research_reproduction_fresh_source_smoke_20261003/data/research_confirmation_20261003/confirmation_queries.jsonl",
+        "sha256": "0aa1f8921c13e44997f7b4018198db513a6d67a0258a550c6fafc16c705cc701"
+      },
+      "corpus": {
+        "path": "data/research_reproduction_fresh_source_smoke_20261003/data/research_20261003/corpus.jsonl",
+        "sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f"
+      },
+      "development_queries": {
+        "path": "data/research_reproduction_fresh_source_smoke_20261003/data/research_confirmation_20261003/development_queries.jsonl",
+        "sha256": "3916a8779cb182d3cd85b9312024a0592da2e90bdebed059e542ab018cc7c9ff"
+      },
+      "training_queries": {
+        "path": "data/research_reproduction_fresh_source_smoke_20261003/data/research_20261003/queries.jsonl",
+        "sha256": "ff727e5ce10933e0332acd1ad18f0556a8c03353325ce7074ccd6fb11857e9bd"
+      }
+    },
+    "source_revision_reused": {
+      "mangopy/ToolRet-Queries": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+      "mangopy/ToolRet-Tools": "e06c38c75612b6536bd959e08cdd345894aba6a7"
+    }
+  },
+  "mode_scope": "Default published-cache evaluation and live absent-data reconstruction verified. Neural cache recomputation and measured-runtime options were not executed by this runner smoke; original study runtime is verified separately.",
+  "schema_version": "toolret-reproduction-validation-v1",
+  "source_sha256": {
+    "docs/confirmation_reproduction.md": "08df21102ea156dcec67d7d38d0d14584382e24f1e1d6399e4514b27720f2816",
+    "scripts/run_confirmation_study.py": "48ced74c3c083124ebb55b5df708be2ed481343b560bdc7feb8c8cb043d58a0f",
+    "tests/test_reproduction_runner.py": "0e99128cbad9824ff8d8fa9f883a4a586aa747b3997da6060e504622080baabf"
+  },
+  "summary_numeric_results_and_all_other_fields_identical_except_evaluation_created_at_utc": true,
+  "tests": {
+    "command": ".venv/bin/python -m pytest -q tests/test_confirmation_data.py tests/test_reproduction_runner.py",
+    "passed": 18
+  }
+}
