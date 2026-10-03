@@ -1,0 +1,217 @@
+{
+  "cache_provenance": {
+    "base_commit": "f1e591f594712d213b7283c875b9212e474244ce",
+    "corpus_documents": 37292,
+    "protocol": {
+      "batch_size": 64,
+      "candidate_k": 100,
+      "compute_metric": "cross-encoder query and pair invocation counts",
+      "corpus_config": "web",
+      "dense_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "dense_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "excluded_source": "apibank",
+      "experiment": "selective-reranking-pilot-20261003",
+      "gate": "rerank iff BM25 top-1 differs from dense top-1",
+      "limitations": [
+        "Historical fine-tuned dense and reranker checkpoints are not available in this checkout.",
+        "Source domains do not establish API-family generalization.",
+        "All positive benchmark relevance labels are treated as relevant; complete tool sets needed for execution are not independently verified.",
+        "Models may have prior exposure to public benchmark content; project-level query freshness does not establish pretraining independence."
+      ],
+      "max_sequence_length": 256,
+      "no_tuning": true,
+      "pre_evaluation_amendment": "Metatool replaced by ToolACE after strict gold-ID validation found customized tools absent from the web corpus. Selection changed for category compatibility before generating any pilot rankings.",
+      "primary_metric": "binary nDCG@10",
+      "quality_metrics": [
+        "binary MRR@10",
+        "binary Recall@10",
+        "all-positive-label coverage@10"
+      ],
+      "queries_per_source": 100,
+      "query_sources": [
+        "apigen",
+        "toolbench",
+        "toolace"
+      ],
+      "random_policy_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "rerank_k": 20,
+      "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+      "rrf_k": 60,
+      "rrf_weights": [
+        1.0,
+        1.0
+      ],
+      "scope": "preliminary source-domain pilot with frozen off-the-shelf models; no trained-family holdout claim",
+      "selection_seed": "research-20261003",
+      "status": "fixed before pilot rankings were generated",
+      "threads": 4,
+      "timing_scope": "single-pass warm-model sequential component timing; offline counterfactual policy estimates, not deployed adaptive latency"
+    },
+    "queries": 300,
+    "script": "scripts/generate_research_cache.py",
+    "source_sha256": {
+      "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/scripts/generate_research_cache.py": "68cb4fdf953d62fe7e0299fd1775f28be1525935a8f06012ab236839c78190b2",
+      "configs/selective_pilot_20261003.json": "86bb0fe03c1209a5953fcc736dfe0daa7941a1c149894b7083a52819eeb8a6ff",
+      "src/toolret_research/bm25.py": "2ea2de25924e2f740f0f6fe561643fc8dd4d68300d6492200780db6c70252377",
+      "src/toolret_research/fusion.py": "677d1e0a751813cfed9411c63a9ae421c3bd7c33e5e55bf4b34cdb0bbb162d54",
+      "src/toolret_research/text.py": "70bd54a54acf7da4c13d8a5c2e5b379f81b64f19f248681973951c79b99f0750"
+    }
+  },
+  "cache_sha256": "a8d1bac8cf0b1afb734c43edff2438fc1d486b7536799192c321d70fe5683c81",
+  "corpus_sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f",
+  "data_preparation_manifest": {
+    "corpus_count": 37292,
+    "created_at_utc": "2026-10-03T16:25:41.559544+00:00",
+    "frozen_apibank_data_modified": false,
+    "pilot_domains": [
+      "apigen",
+      "toolbench",
+      "toolace"
+    ],
+    "prepared_files": {
+      "corpus.jsonl": {
+        "bytes": 30845903,
+        "sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f"
+      },
+      "queries.jsonl": {
+        "bytes": 539918,
+        "sha256": "ff727e5ce10933e0332acd1ad18f0556a8c03353325ce7074ccd6fb11857e9bd"
+      }
+    },
+    "queries_per_domain": 100,
+    "query_count": 300,
+    "relevance_policy": "binary relevance > 0; original graded labels retained",
+    "retrieval_input": "query field only; instruction and labels excluded",
+    "scope": "zero-training source-domain pilot; not API-family-held-out evaluation",
+    "seed": "research-20261003",
+    "source_revisions": {
+      "mangopy/ToolRet-Queries": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+      "mangopy/ToolRet-Tools": "e06c38c75612b6536bd959e08cdd345894aba6a7"
+    },
+    "upstream_sources": [
+      {
+        "bytes": 45023,
+        "path": "apibank/queries-00000-of-00001.parquet",
+        "repository": "mangopy/ToolRet-Queries",
+        "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+        "sha256": "1e91b9c4f7e0b38946bf5c3272e15af73f0b446e4d546c52e09179b3a9709d3b",
+        "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/apibank/queries-00000-of-00001.parquet"
+      },
+      {
+        "bytes": 352171,
+        "path": "apigen/queries-00000-of-00001.parquet",
+        "repository": "mangopy/ToolRet-Queries",
+        "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+        "sha256": "7f6d6ee477ba98380816c418f51c445c937771ee557d73c0a575d0d30fd01a14",
+        "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/apigen/queries-00000-of-00001.parquet"
+      },
+      {
+        "bytes": 922485,
+        "path": "toolbench/queries-00000-of-00001.parquet",
+        "repository": "mangopy/ToolRet-Queries",
+        "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+        "sha256": "2bb32ea009d6ece37b1b785330247aacac037a20dd4522632cb3359809c8837d",
+        "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/toolbench/queries-00000-of-00001.parquet"
+      },
+      {
+        "bytes": 618326,
+        "path": "toolace/queries-00000-of-00001.parquet",
+        "repository": "mangopy/ToolRet-Queries",
+        "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+        "sha256": "49f7c861cec1799430680cea1df6cb98a10b33227f6cb183ac32375f396fcd5a",
+        "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/toolace/queries-00000-of-00001.parquet"
+      },
+      {
+        "bytes": 8143446,
+        "path": "web/tools-00000-of-00001.parquet",
+        "repository": "mangopy/ToolRet-Tools",
+        "revision": "e06c38c75612b6536bd959e08cdd345894aba6a7",
+        "sha256": "57faceebd778b2cb74571dca0e71e8bc8078c11ba05dce0efc562e818d3950e6",
+        "url": "https://huggingface.co/datasets/mangopy/ToolRet-Tools/resolve/e06c38c75612b6536bd959e08cdd345894aba6a7/web/tools-00000-of-00001.parquet"
+      }
+    ]
+  },
+  "dataset": {
+    "name": "ToolRet source-domain pilot",
+    "source": "https://huggingface.co/datasets/mangopy/ToolRet-Queries",
+    "version": {
+      "mangopy/ToolRet-Queries": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+      "mangopy/ToolRet-Tools": "e06c38c75612b6536bd959e08cdd345894aba6a7"
+    }
+  },
+  "limitations": [
+    "Historical fine-tuned dense and reranker checkpoints are not available in this checkout.",
+    "Source domains do not establish API-family generalization.",
+    "All positive benchmark relevance labels are treated as relevant; complete tool sets needed for execution are not independently verified.",
+    "Models may have prior exposure to public benchmark content; project-level query freshness does not establish pretraining independence."
+  ],
+  "models": {
+    "dense": {
+      "fine_tuned_here": false,
+      "name": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+    },
+    "reranker": {
+      "fine_tuned_here": false,
+      "name": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a"
+    }
+  },
+  "packages": {
+    "huggingface-hub": "1.33.0",
+    "numpy": "2.5.3",
+    "sentence-transformers": "6.1.0",
+    "torch": "2.14.1+cpu",
+    "transformers": "5.18.0"
+  },
+  "queries_sha256": "ff727e5ce10933e0332acd1ad18f0556a8c03353325ce7074ccd6fb11857e9bd",
+  "rrf": {
+    "k": 60,
+    "weights": [
+      1.0,
+      1.0
+    ]
+  },
+  "schema_version": "toolret-selective-v1",
+  "scope": "preliminary_fresh_pilot",
+  "split": {
+    "name": "fresh-source-domain-pilot",
+    "selection": "100 hash-selected queries per source, no apibank; normalized text deduplication"
+  },
+  "timing_provenance": {
+    "bm25_index_seconds": 1.4103085889992144,
+    "boundary": "component wall time; bm25 search, dense encode+exact search+sort, rrf fusion, CE predict+prefix sort",
+    "device": "cpu",
+    "disjoint_components": true,
+    "excluded": "model download/load, corpus encoding, index build, service/network/concurrency",
+    "hardware": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "order": "bm25,dense,rrf,cross_encoder per query",
+    "policy_latency": "counterfactual offline component sums only; routing overhead not included",
+    "processor": "x86_64",
+    "repetitions": 1,
+    "torch_threads": 4,
+    "warm_models": true
+  }
+}

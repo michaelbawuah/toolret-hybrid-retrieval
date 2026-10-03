@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "evidence_type": "exploratory_historical_rank_reanalysis",
+  "not_a_new_model_evaluation": true,
+  "sources": {
+    "csv": {
+      "path": "results/test_failure_analysis.csv",
+      "sha256": "4b81c678a902d6bbca29493ac8923d4027579c5ad2df7eb13bd3e0c30050f5f4",
+      "bytes": 2949
+    },
+    "readme": {
+      "path": "results/research_20261003/historical_README.md",
+      "sha256": "e76dcd7d327f966d024b450e13d98862b0c4c91e86c41f513d47501932b90eac",
+      "bytes": 18060
+    }
+  },
+  "row_audit": {
+    "n_queries": 16,
+    "unique_query_ids": 16,
+    "duplicate_query_ids": [],
+    "rank_rr_inconsistencies": [],
+    "effect_label_inconsistencies": [],
+    "query_id_prefix_counts": {
+      "apibank": 16
+    },
+    "hybrid_vs_dense_counts": {
+      "unchanged": 6,
+      "improved": 4,
+      "hurt": 6
+    },
+    "reranker_effect_counts": {
+      "hurt": 3,
+      "improved": 2,
+      "unchanged": 11
+    }
+  },
+  "aggregates": {
+    "bm25": {
+      "label": "BM25",
+      "mrr": 0.14606468459073735,
+      "bootstrap_ci": {
+        "delta_mean": 0.14606468459073735,
+        "low": 0.02944424457923866,
+        "high": 0.29597901919749603,
+        "confidence": 0.95,
+        "resamples": 20000,
+        "seed": 20261003,
+        "n": 16,
+        "sample_unit": "query",
+        "method": "paired_percentile_bootstrap_linear_quantiles"
+      },
+      "readme_mrr": 0.132,
+      "matches_readme_to_three_decimals": false
+    },
+    "dense": {
+      "label": "Hard-negative MiniLM",
+      "mrr": 0.5212053571428571,
+      "bootstrap_ci": {
+        "delta_mean": 0.5212053571428571,
+        "low": 0.30710410466269844,
+        "high": 0.7365451388888888,
+        "confidence": 0.95,
+        "resamples": 20000,
+        "seed": 20261003,
+        "n": 16,
+        "sample_unit": "query",
+        "method": "paired_percentile_bootstrap_linear_quantiles"
+      },
+      "readme_mrr": 0.499,
+      "matches_readme_to_three_decimals": false
+    },
+    "hybrid": {
+      "label": "Hybrid retrieval",
+      "mrr": 0.5146668563821577,
+      "bootstrap_ci": {
+        "delta_mean": 0.5146668563821577,
+        "low": 0.31551454900769155,
+        "high": 0.7161580141129023,
+        "confidence": 0.95,
+        "resamples": 20000,
+        "seed": 20261003,
+        "n": 16,
+        "sample_unit": "query",
+        "method": "paired_percentile_bootstrap_linear_quantiles"
+      },
+      "readme_mrr": 0.515,
+      "matches_readme_to_three_decimals": true
+    },
+    "reranked": {
+      "label": "Hybrid + reranker",
+      "mrr": 0.47300018971549107,
+      "bootstrap_ci": {
+        "delta_mean": 0.47300018971549107,
+        "low": 0.2882566734031744,
+        "high": 0.6659231186011214,
+        "confidence": 0.95,
+        "resamples": 20000,
+        "seed": 20261003,
+        "n": 16,
+        "sample_unit": "query",
+        "method": "paired_percentile_bootstrap_linear_quantiles"
+      },
+      "readme_mrr": 0.473,
+      "matches_readme_to_three_decimals": true
+    }
+  },
+  "paired_comparisons": {
+    "dense_minus_bm25": {
+      "before": "bm25",
+      "after": "dense",
+      "bootstrap": {
+        "delta_mean": 0.3751406725521198,
+        "low": 0.15985052810874958,
+        "high": 0.5947281430929755,
+        "confidence": 0.95,
+        "resamples": 20000,
+        "seed": 20261003,
+        "n": 16,
+        "sample_unit": "query",
+        "method": "paired_percentile_bootstrap_linear_quantiles"
+      },
+      "sign_test": {
+        "wins": 14,
+        "losses": 1,
+        "ties": 1,
+        "n_nonzero": 15,
+        "two_sided_pvalue": 0.0009765625,
+        "method": "exact_two_sided_binomial_sign_test_ties_dropped"
+      }
+    },
+    "hybrid_minus_bm25": {
+      "before": "bm25",
+      "after": "hybrid",
+      "bootstrap": {
+        "delta_mean": 0.3686021717914204,
+        "low": 0.2088801939607386,
+        "high": 0.5412545362234406,
+        "confidence": 0.95,
+        "resamples": 20000,
+        "seed": 20261003,
+        "n": 16,
+        "sample_unit": "query",
+        "method": "paired_percentile_bootstrap_linear_quantiles"
+      },
+      "sign_test": {
+        "wins": 15,
+        "losses": 0,
+        "ties": 1,
+        "n_nonzero": 15,
+        "two_sided_pvalue": 6.103515625e-05,
+        "method": "exact_two_sided_binomial_sign_test_ties_dropped"
+      }
+    },
+    "hybrid_minus_dense": {
+      "before": "dense",
+      "after": "hybrid",
+      "bootstrap": {
+        "delta_mean": -0.006538500760699405,
+        "low": -0.15572162824162375,
+        "high": 0.15425352677116774,
+        "confidence": 0.95,
+        "resamples": 20000,
+        "seed": 20261003,
+        "n": 16,
+        "sample_unit": "query",
+        "method": "paired_percentile_bootstrap_linear_quantiles"
+      },
+      "sign_test": {
+        "wins": 4,
+        "losses": 6,
+        "ties": 6,
+        "n_nonzero": 10,
+        "two_sided_pvalue": 0.75390625,
+        "method": "exact_two_sided_binomial_sign_test_ties_dropped"
+      }
+    },
+    "reranked_minus_hybrid": {
+      "before": "hybrid",
+      "after": "reranked",
+      "bootstrap": {
+        "delta_mean": -0.04166666666666667,
+        "low": -0.1875,
+        "high": 0.09375,
+        "confidence": 0.95,
+        "resamples": 20000,
+        "seed": 20261003,
+        "n": 16,
+        "sample_unit": "query",
+        "method": "paired_percentile_bootstrap_linear_quantiles"
+      },
+      "sign_test": {
+        "wins": 2,
+        "losses": 3,
+        "ties": 11,
+        "n_nonzero": 5,
+        "two_sided_pvalue": 1.0,
+        "method": "exact_two_sided_binomial_sign_test_ties_dropped"
+      }
+    },
+    "reranked_minus_dense": {
+      "before": "dense",
+      "after": "reranked",
+      "bootstrap": {
+        "delta_mean": -0.04820516742736607,
+        "low": -0.25919398683621003,
+        "high": 0.17515372299616638,
+        "confidence": 0.95,
+        "resamples": 20000,
+        "seed": 20261003,
+        "n": 16,
+        "sample_unit": "query",
+        "method": "paired_percentile_bootstrap_linear_quantiles"
+      },
+      "sign_test": {
+        "wins": 5,
+        "losses": 9,
+        "ties": 2,
+        "n_nonzero": 14,
+        "two_sided_pvalue": 0.4239501953125,
+        "method": "exact_two_sided_binomial_sign_test_ties_dropped"
+      }
+    }
+  },
+  "readme_discrepancies": [
+    {
+      "system": "bm25",
+      "csv_mrr": 0.14606468459073735,
+      "readme_mrr": 0.132
+    },
+    {
+      "system": "dense",
+      "csv_mrr": 0.5212053571428571,
+      "readme_mrr": 0.499
+    }
+  ],
+  "unverifiable_base_minilm_readme_mrr": 0.135,
+  "limitations": [
+    "This is a descriptive reanalysis of 16 saved historical queries, not a new held-out test or benchmark-wide reproduction.",
+    "All saved query IDs use the apibank prefix; these rows do not demonstrate cross-domain or unseen-API-family generalization.",
+    "The CSV stores only first-relevant ranks. It cannot independently recover Recall@K, nDCG@K, full candidate rankings, or downstream agent success.",
+    "The CSV does not contain base MiniLM per-query ranks; README's base MiniLM MRR cannot be recomputed from it.",
+    "The full processed corpus, original split files, trained checkpoints, training logs, and raw full-ranking evaluation JSON are not committed in this checkout. The claimed 37,292-tool run and validation-selected configuration are historical README/script claims, not newly verified artifacts.",
+    "Blank positions mean missing from the saved candidate ranking; they do not prove that no relevant tool exists in the full catalog.",
+    "The new CSV audit verifies internal consistency, not the origin or correctness of historical relevance labels, model outputs, train/test isolation, or latency measurements.",
+    "Bootstrap intervals resample query rows, assume exchangeable query observations, and remain exploratory for this small and potentially correlated sample. They cannot correct selection bias or data leakage.",
+    "Exact sign-test p-values concern win/loss balance and ignore magnitude. They are unadjusted across comparisons and do not establish mean-MRR significance.",
+    "Do not train, choose a threshold, or change retrieval settings using these frozen historical test rows; future experiments need separate development and fresh evaluation data."
+  ]
+}
