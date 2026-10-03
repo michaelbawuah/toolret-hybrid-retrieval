@@ -1,0 +1,116 @@
+{
+  "schema_version": "toolret-frozen-utility-router-v1",
+  "model": {
+    "schema_version": "toolret-utility-ridge-v1",
+    "feature_version": "cheap-first-stage-v1",
+    "feature_names": [
+      "top1_disagreement",
+      "top10_jaccard",
+      "top20_jaccard",
+      "top20_reciprocal_weighted_jaccard",
+      "top20_rank_coherence",
+      "query_token_count_log1p",
+      "rrf_top2_normalized_margin"
+    ],
+    "standardization": "training_population_mean_and_std; constant_feature_scale=1",
+    "means": [
+      0.7233333333333334,
+      0.17455083616074404,
+      0.15648568826096998,
+      0.17296583628083034,
+      0.5638050844305434,
+      3.491505508892485,
+      0.0544823800558758
+    ],
+    "scales": [
+      0.4473502232280897,
+      0.16446614926757744,
+      0.13511600985619635,
+      0.14284382718927002,
+      0.07827859901113421,
+      0.6343628659567867,
+      0.07018145210253492
+    ],
+    "coefficients": [
+      0.0321728465882785,
+      -0.016737271835451793,
+      0.007997653786804212,
+      0.02150994825051749,
+      0.01330148273932769,
+      -0.02846241371642559,
+      0.003969206636099704
+    ],
+    "intercept": 0.01581750312354722,
+    "alpha": 10.0,
+    "training_rows": 300,
+    "target": "binary_nDCG@10(always_reranked)-binary_nDCG@10(hybrid)"
+  },
+  "thresholds": {
+    "0.25": {
+      "threshold": 0.04356274839116504,
+      "nominal_budget_fraction": 0.25,
+      "primary": false,
+      "calibration_invocations": 75,
+      "calibration_observed_call_fraction": 0.25,
+      "calibration_threshold_ties_skipped": 0,
+      "decision_rule": "predicted_ndcg_delta > threshold"
+    },
+    "0.5": {
+      "threshold": 0.010931372232104553,
+      "nominal_budget_fraction": 0.5,
+      "primary": false,
+      "calibration_invocations": 150,
+      "calibration_observed_call_fraction": 0.5,
+      "calibration_threshold_ties_skipped": 0,
+      "decision_rule": "predicted_ndcg_delta > threshold"
+    },
+    "0.75": {
+      "threshold": -0.01178292867029655,
+      "nominal_budget_fraction": 0.75,
+      "primary": true,
+      "calibration_invocations": 225,
+      "calibration_observed_call_fraction": 0.75,
+      "calibration_threshold_ties_skipped": 0,
+      "decision_rule": "predicted_ndcg_delta > threshold"
+    }
+  },
+  "input_integrity": {
+    "training": {
+      "cache_sha256": "a8d1bac8cf0b1afb734c43edff2438fc1d486b7536799192c321d70fe5683c81",
+      "queries_sha256": "ff727e5ce10933e0332acd1ad18f0556a8c03353325ce7074ccd6fb11857e9bd",
+      "manifest_sha256": "6c61a1f36bd54e7078f43c052169b27b38f5c57f8c12ed2a9a4f9dfae227eab1",
+      "queries": 300
+    },
+    "calibration": {
+      "cache_sha256": "277ed892c4bbf714bf84a0f544bdd538192f533a325c4799c8ceb4346494b72a",
+      "queries_sha256": "261f271ebd1e332de0488df722a80caee9dc5c241f40fdbe798f9f2d745462e4",
+      "manifest_sha256": "1a2916101ac89352b959ad824a4338965030278a60afd7165353aeaf249ffb83",
+      "queries": 300
+    },
+    "corpus_sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f",
+    "protocol_sha256": "d33ceee4741679c5027b7b55cc96f5535f98aef0c2160292d8e0c948abd076bc",
+    "protocol_frozen_commit": "3e813e1af650104f33aaf77febce5a8c1a3f1213",
+    "training_calibration_shared_query_ids": 0,
+    "training_calibration_shared_normalized_query_texts": 0,
+    "training_calibration_shared_positive_gold_tool_ids": 0
+  },
+  "source_sha256": {
+    "scripts/fit_utility_router.py": "d4d4a5185ff6d71e0059491d31afb7187bd986a1a2d098755a0ff92dc2613431",
+    "src/toolret_research/utility_router.py": "2075d901571a5692e4297f3e998a867fd9fc67776ade5440a7ed422c36797ad2"
+  },
+  "numpy_version": "2.5.3",
+  "training_labels_used": true,
+  "calibration_labels_used_for_fit_or_thresholds": false,
+  "confirmation_inputs_accessed": false,
+  "training_target_counts": {
+    "positive": 83,
+    "zero": 145,
+    "negative": 72
+  },
+  "feature_inputs": "query whitespace-token count and first-stage BM25/dense positions only; tool ID values serve equality/position lookup only",
+  "limitations": [
+    "A model fit to the observed pilot is exploratory until the frozen confirmation evaluation.",
+    "Budget is calibrated pointwise; future invocation fraction is not forced to the nominal budget.",
+    "Threshold ties are skipped; no query/tool/source ID tie breaker is used."
+  ]
+}
