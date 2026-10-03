@@ -1,4 +1,4 @@
-# ToolRet: When to Rerank Tool Retrieval
+# ToolRet: When Is Tool Reranking Worth the Cost?
 
 Completed independent undergraduate empirical research on routing cross-encoder work over **37,292 tools**. The study uses **300 development, 300 calibration, and 1,500 untouched confirmation queries** across APIGen, ToolACE, and ToolBench. Protocol and model checkpoints were public before confirmation inference. Completed October 3, 2026.
 
@@ -8,9 +8,10 @@ Completed independent undergraduate empirical research on routing cross-encoder 
 
 An important finding is that **the simple disagreement gate has a stronger observed quality/compute tradeoff than the learned primary router**. The report retains the learned router as the prospectively declared primary and shows the competing baseline openly. Added complexity is not demonstrated to be better here.
 
-- [Eight-page completed technical report](paper/tool_disjoint_reranking_study_20261003.pdf) · [Markdown source](paper/tool_disjoint_reranking_study_20261003.md)
+- [Research paper: When Is Tool Reranking Worth the Cost?](paper/tool_disjoint_reranking_study_20261003.pdf) · [Readable Markdown edition](paper/tool_disjoint_reranking_study_20261003.md)
 - [Completion manifest](results/research_confirmation_20261003/study_completion.json) · [Independent audit](results/research_confirmation_20261003/independent_audit.json)
 - [Reproduction instructions](docs/confirmation_reproduction.md) · [Technical interview walkthrough](docs/interview_walkthrough.md)
+- [Report writing and design references](docs/report_design_notes.md)
 
 ## What this study contributes
 

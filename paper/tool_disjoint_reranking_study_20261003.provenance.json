@@ -1,16 +1,18 @@
 {
+  "audited_evidence_files_verified": 64,
   "input_paths": {
-    "audit": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/independent_audit.json",
-    "completion": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/study_completion.json",
-    "data": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/data_manifest.json",
-    "evaluation": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/confirmation_eval/summary.json",
-    "failure": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/confirmation_failure_analysis.json",
-    "freeze": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/protocol_freeze_receipt.json",
-    "latency": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/latency/summary.json",
-    "protocol": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/configs/confirmation_protocol_20261003.json",
-    "reproduction": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/reproduction_validation.json",
-    "router": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/router/model.json",
-    "runtime": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/results/research_confirmation_20261003/runtime_verification.json"
+    "audit": "results/research_confirmation_20261003/independent_audit.json",
+    "completion": "results/research_confirmation_20261003/study_completion.json",
+    "data": "results/research_confirmation_20261003/data_manifest.json",
+    "evaluation": "results/research_confirmation_20261003/confirmation_eval/summary.json",
+    "failure": "results/research_confirmation_20261003/confirmation_failure_analysis.json",
+    "freeze": "results/research_confirmation_20261003/protocol_freeze_receipt.json",
+    "latency": "results/research_confirmation_20261003/latency/summary.json",
+    "latency_per_query": "results/research_confirmation_20261003/latency/per_query.jsonl",
+    "protocol": "configs/confirmation_protocol_20261003.json",
+    "reproduction": "results/research_confirmation_20261003/reproduction_validation.json",
+    "router": "results/research_confirmation_20261003/router/model.json",
+    "runtime": "results/research_confirmation_20261003/runtime_verification.json"
   },
   "input_sha256": {
     "audit": "3ca05098a331e9f06c1b6443eed9746bde826a39147b794f5f9ce16eaf5520ef",
@@ -20,6 +22,7 @@
     "failure": "c00cc3e8355f1f6149dfba2790360c4124e965a907cabd92c462f713f226fa72",
     "freeze": "e8e09e24a070b15e607e9c6fd2b1a8b021e4f9b35186677e6ff1b5adaaaa48cc",
     "latency": "7ba78367007bc9ab3b5b7e72eb86abf2810b2e13e02fcf8093156b810682fb51",
+    "latency_per_query": "ee20857aaee6408624aae5ec955eeaa10a6c6e8cf61ae0f638471b2791e47e0a",
     "protocol": "d33ceee4741679c5027b7b55cc96f5535f98aef0c2160292d8e0c948abd076bc",
     "reproduction": "528ad7fdf2035a55ccd075a81e9c6d072f99fe44a3b2b58931e24ac82397dc70",
     "router": "f24613a552d36737f4a17797b94f0c9348a67072a97cfc3cb471ae4bd25c159c",
@@ -27,24 +30,43 @@
   },
   "outputs": {
     "latency": {
-      "path": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/paper/figures/confirmation_latency.png",
-      "sha256": "33d3ae6601a3914ca610defe7ad3db77d87b41f859842a61bd0d0fa47ab1f670"
+      "path": "paper/figures/confirmation_latency.png",
+      "sha256": "a33a8d5443b4cf2ac398e37dd236c18ce9f99d9072e4fe6126121334f0d7be90"
+    },
+    "latency_vector": {
+      "path": "paper/figures/confirmation_latency.pdf",
+      "sha256": "83a020e1776395206ac9220e89b2975e554622c956eeb087e10ddc9edfa59511"
     },
     "markdown": {
-      "path": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/paper/tool_disjoint_reranking_study_20261003.md",
-      "sha256": "067f6abb6214b82d1ef117aa0ee8b275afc5a77abae5682a8610d3f105fcc9f0"
+      "path": "paper/tool_disjoint_reranking_study_20261003.md",
+      "sha256": "b0c37fc9e39cbac25eb3083f91761fd79fba60520fdf0bda5e46dbbadcc9211f"
     },
     "pdf": {
-      "path": "/workspace/scratch/802e62522f6f/application_outputs/ToolRet_Selective_Retrieval_Research_Report_2026-10-03.pdf",
-      "sha256": "2b2eb02d6d300645096564e646243ad259fc74e2fedcfbbbd9d66866309cd9ea"
+      "path": "paper/tool_disjoint_reranking_study_20261003.pdf",
+      "sha256": "afc60de5e58c94918efc7941fab11db28a02c9f42f7848aa32c201b753eb5c5e"
     },
     "quality": {
-      "path": "/workspace/scratch/802e62522f6f/toolret-hybrid-retrieval/paper/figures/confirmation_quality_compute.png",
-      "sha256": "74b2f706fa1816bc8341ec43b09bfb7e20ea8fd17790ec3f53b2524dbd3e3c33"
+      "path": "paper/figures/confirmation_quality_compute.png",
+      "sha256": "4a493b3ae867a97b3c51bb4f14a6ccc216a6f288f9dd9f6b850a8b16681603b2"
+    },
+    "quality_vector": {
+      "path": "paper/figures/confirmation_quality_compute.pdf",
+      "sha256": "503b39cefae67941e1464c928fd0a477e2fe53e44471b3394a9a72f3d8d05df7"
+    },
+    "sources": {
+      "path": "paper/figures/confirmation_source_effects.png",
+      "sha256": "a177da935fbf928873e9cbf31dbfbd5b22a08dc38ca8776980d7c5914363b4ee"
+    },
+    "sources_vector": {
+      "path": "paper/figures/confirmation_source_effects.pdf",
+      "sha256": "8e81d7cd1e053c9a212a1fea66d5aceed67247afdf68914b0f49a10dc0a47176"
     }
   },
   "primary_quality_and_verified_compute_criterion_met": true,
   "protocol_sha256": "d33ceee4741679c5027b7b55cc96f5535f98aef0c2160292d8e0c948abd076bc",
+  "report_exporter_sha256": "837fc887c83a1703f83d3c965f97f098d8408504f94b39d276d88a7d84a0e15f",
+  "report_revision": "editorial-redesign-20261003",
   "router_sha256": "f24613a552d36737f4a17797b94f0c9348a67072a97cfc3cb471ae4bd25c159c",
-  "scope": "completed_scoped_confirmation_study"
+  "scope": "completed_scoped_confirmation_study",
+  "unavailable_untracked_source_inputs_not_used_for_rendering": []
 }

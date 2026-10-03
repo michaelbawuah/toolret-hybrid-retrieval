@@ -1,225 +1,243 @@
-# When to rerank tool retrieval: a component-disjoint empirical study
+# When Is Tool Reranking Worth the Cost?
+
+Selective cross-encoder inference on a tool-disjoint ToolRet holdout
 
 Michael Baffour Awuah | Independent undergraduate research | October 3, 2026
 
-## Abstract
+### Abstract
 
-The primary utility router meets the predeclared 0.01 absolute nDCG engineering noninferiority criterion. Its nDCG@10 is 0.5273, versus 0.5241 for always-on reranking (difference +0.0032; query 95% CI [-0.0016, +0.0080]; component 95% CI [-0.0016, +0.0079]). Real conditional execution verified 1,149 CE calls and 22,980 scored pairs across all 1,500 queries, a 23.4% call reduction.
+A cross-encoder can refine a retrieved tool list, but it adds inference time and can also demote a useful endpoint. This study asks whether inexpensive signals from lexical and dense retrieval can identify queries worth reranking. A ridge router is fitted on 300 development queries, calibrated on 300 separate queries, and tested on 1,500 queries with no shared positively labeled tool IDs across the three sets. The searchable catalog contains 37,292 tools. The preselected router makes 1,149 cross-encoder calls, 23.4% fewer than always-on reranking, with nDCG@10 of 0.5273 versus 0.5241. Both paired 95% intervals satisfy the predefined 0.01 loss tolerance. Mean warm CPU retrieval time falls by 14.0% on a separate 90-query, three-repetition benchmark. A simple top-result disagreement gate has higher observed nDCG and fewer calls than the learned router. The results support selective inference in this configuration, while leaving the value of learned allocation unresolved.
 
-The simpler disagreement gate has a stronger observed quality point estimate: nDCG@10 0.5314 with 1,077 required calls, versus 0.5273 with 1,149 for the primary router. Exploratory learned-minus-disagreement and learned-minus-source-matched-random component intervals both include zero; learned allocation superiority is not established.
+## 1  Introduction
 
-On 90 source-balanced confirmation queries with three repetitions per policy, measured warm sequential CPU mean retrieval time is 791.4 ms for the primary router and 920.7 ms for always-on reranking. The observed mean-time reduction is 14.0% (paired query-bootstrap 95% CI [8.2%, 20.0%]). Initialization, network, queueing, and concurrent serving are excluded.
+Consider a request for both transaction history and the current month's usage quota. A retriever must return endpoints for both operations. A model that moves a plausible transaction endpoint to the top can still make the list worse if it pushes the quota endpoint out of the first ten results. This occurs in the held-out example examined in Section 6. Tool retrieval therefore depends on coverage of a request as well as similarity to its wording.
 
-The contribution is a reproducible transfer/evaluation of known pre-reranker gating to tool retrieval, with strict supervised-router holdout, deployment-path verification, source-level diagnostics, and honest uncertainty. Learned gating itself is not a new algorithm. This is a completed empirical study under a declared scope, not an accepted publication or state-of-the-art claim.
+The usual retrieve-then-rerank pipeline pays for the second model on every query. That is reasonable when reranking helps consistently. When its benefit varies, a cheaper first-stage signal may be enough to choose between the original list and the reranked list. The question here is whether such a choice can save actual inference work while keeping a declared level of ranking quality.
 
-## Prospective design
+The study combines a frozen learned router, simple gates, and random allocations at matched call budgets. It separates ranking evaluation from conditional execution and measured elapsed time, then examines why the aggregate result differs across data sources. This is an empirical extension of existing gating methods to tool retrieval; the contribution is the controlled comparison and its reproducible evidence.
 
-The fixed web corpus contains 37,292 tools. Among 3,099 deduplicated eligible APIGen, ToolBench, and ToolACE queries, all 252 connected components touched by the previously observed pilot are anchored; they contain 929 queries. The original 300 pilot queries train the router; 629 additional pilot-connected queries are quarantined. Fresh calibration contains 300 queries (100/source, 249 components), and untouched confirmation contains 1,500 (500/source, 1,174 components). A further 370 free queries are reserved.
+## 2  Related work
 
-Components are formed transitively from shared positive gold tool IDs over the full eligible universe, with minimum query ID as component ID. Labels are used for structural grouping, but retrieval results are not. Entire groups are assigned by a deterministic hash and quota-fitting rule. Development, calibration, and confirmation share no query IDs, normalized query texts, positive tool IDs, or components. These are tool-ID components, not verified API families; the relevant held-out tools remain available in the retrieval corpus.
+ToolRet [1] provides heterogeneous tool-retrieval tasks and documents. ToolRerank [2] studies adaptive truncation and hierarchy-aware reranking, including the different needs of single-tool and multi-tool requests. Bacellar [3] investigates pre-reranker feature gating for multi-hop retrieval and reports harmful skips alongside aggregate performance. Lookahead-R [4] addresses budget-aware tool retrieval through execution-centric planning. The present study uses a smaller decision: rerank a fixed candidate prefix or return the fused first-stage list. The systems and evaluation scopes differ, so their reported scores are not used as directly comparable baselines.
 
-The protocol and linked data manifests were publicly frozen before fresh rankings were generated. The old pilot is development data and is never counted as confirmation evidence.
+## 3  Experimental design
 
-### Fixed retrieval and router
+### 3.1  Data and separation
 
-BM25 and normalized off-the-shelf MiniLM each retrieve 100 candidates. Equal-weight reciprocal-rank fusion uses k=60. A pinned MS-MARCO MiniLM cross-encoder scores only the first 20 fused candidates at maximum pair length 256; the tail is unchanged. Ranking ties use tool IDs deterministically. Models run on CPU with four Torch threads, one interop thread, and batch size 64.
+The corpus is the pinned ToolRet web-tool subset. The query universe contains 3,099 deduplicated APIGen, ToolBench, and ToolACE queries; APIBank queries are excluded. Queries that share a positive tool label are joined into connected components before partitioning. Keeping each component intact prevents the router from learning from a labeled endpoint that appears again in calibration or confirmation.
 
-Ridge regression (fixed alpha=10) predicts development-query nDCG@10(always)-nDCG@10(hybrid). Seven features use rank equality/overlap/positions and whitespace query length only; source IDs, lexical tool-ID content, qrels, and CE outcomes are excluded from inference features. Feature means/stds are fit only on the 300 development rows. Calibration is used only for label-free prediction quantiles; strict prediction > threshold routes a query, and ties skip. Target fractions are 25%, 50%, and 75%; realized held-out call fractions may differ.
+**Table 1. Study cohorts. Each active cohort is balanced across the three sources.**
 
-| Feature | Frozen definition |
-|---|---|
-| top1_disagreement | Indicator that BM25 and dense top-1 tool IDs differ. |
-| top10_jaccard | Intersection size / union size of the first 10 BM25 and dense tool IDs. |
-| top20_jaccard | Intersection size / union size of the first 20 BM25 and dense tool IDs. |
-| top20_reciprocal_weighted_jaccard | Over the top20 union, sum min(1/rank_B,1/rank_D) / sum max(1/rank_B,1/rank_D); missing-list weight is zero. |
-| top20_rank_coherence | 1 minus mean absolute BM25/dense rank difference over the top20 union divided by 20; missing position is 21. |
-| query_token_count_log1p | log1p(number of whitespace-delimited query tokens). |
-| rrf_top2_normalized_margin | (largest RRF score - second-largest RRF score)/largest score, using both full top100 lists, equal weights and k60; singleton margin is 1. |
+| Cohort | Queries | Components | Use |
+| --- | --- | --- | --- |
+| Development | 300 | 252 | Fit and standardize the router |
+| Calibration | 300 | 249 | Set score thresholds without labels |
+| Confirmation | 1,500 | 1,174 | Evaluate the frozen policies |
 
-### Primary and secondary analyses
+The previously observed pilot supplies development data. Its components contain another 629 queries, which are quarantined. Whole remaining components are assigned by a deterministic hash order and quota-fitting rule; 370 queries remain in reserve. The active sets share no query IDs, normalized query texts, positive tool IDs, or components. All tools remain searchable: the separation concerns supervised router exposure, not removal of held-out tools from the catalog. These components are not verified API families.
 
-The sole primary policy is the 75% calibration-target utility router versus always-on reranking. The predeclared engineering tolerance is 0.01 absolute binary nDCG@10: both paired source-stratified query and gold-component two-sided 95% interval lower bounds must exceed -0.01, with fewer CE calls. This tolerance is a design choice, not an externally accepted equivalence threshold or a power guarantee.
+### 3.2  Retrieval and the routing decision
 
-Both intervals use 10,000 paired bootstrap draws, seed 20261003, and equal 1/3 source weights. The component estimator samples groups within each source and uses the ratio of sampled query-score sums to sampled query counts, retaining the query-macro target. Other budgets, metrics, baselines, domains, and diagnostics are exploratory.
+BM25 and normalized all-MiniLM-L6-v2 embeddings each retrieve 100 tools. Equal-weight reciprocal-rank fusion uses a constant of 60. The cross-encoder, ms-marco-MiniLM-L-6-v2, scores the first 20 fused candidates and reorders that prefix; the tail is retained. Both neural models are used off the shelf. Inference uses a maximum pair length of 256, batch size 64, four Torch threads, and one interop thread on CPU.
 
-## Untouched confirmation results
+The router predicts the development-query change in nDCG@10 from reranking. Ridge regularization is fixed at 10; feature standardization uses development data only. Seven scalar features describe first-stage disagreement, overlap, rank coherence, query length, and the fused top-score margin (Appendix A). At inference, they require neither relevance labels nor cross-encoder scores. Tool IDs are used only for rank and equality comparisons.
 
-| Policy | nDCG@10 | MRR@10 | Recall@10 | All-label coverage@10 | Required CE calls | Required CE pairs |
-|---|---:|---:|---:|---:|---:|---:|
-| BM25 | 0.4689 | 0.4725 | 0.5840 | 0.4887 | 0 | 0 |
-| Base MiniLM | 0.4602 | 0.4583 | 0.5911 | 0.5027 | 0 | 0 |
-| Hybrid RRF | 0.5208 | 0.5196 | 0.6522 | 0.5620 | 0 | 0 |
-| Always rerank | 0.5241 | 0.5301 | 0.6499 | 0.5480 | 1,500 | 30,000 |
-| Disagreement gate | 0.5314 | 0.5388 | 0.6538 | 0.5553 | 1,077 | 21,540 |
-| Jaccard gate | 0.5239 | 0.5276 | 0.6513 | 0.5520 | 1,391 | 27,820 |
-| Utility 25% target | 0.5269 | 0.5272 | 0.6549 | 0.5633 | 409 | 8,180 |
-| Utility 50% target | 0.5305 | 0.5339 | 0.6569 | 0.5620 | 829 | 16,580 |
-| Utility 75% target | 0.5273 | 0.5327 | 0.6520 | 0.5527 | 1,149 | 22,980 |
+Predicted gain = ridge(first-stage features); rerank if predicted gain > frozen threshold.
 
-All-label coverage means all positive benchmark relevance labels retrieved, not a verified mandatory execution-tool set.
+Prediction quantiles on calibration set nominal call targets of 25%, 50%, and 75%. Ties skip. The 75% target is the sole primary policy; the other targets and simple gates are exploratory. Targets are calibration settings rather than exact quotas on new queries. The protocol was public before fresh rankings were generated, and the fitted router and thresholds were frozen before confirmation quality was evaluated.
 
-![Confirmation quality and compute](figures/confirmation_quality_compute.png)
+### 3.3  Metrics and the primary criterion
 
-### Primary result
+Positive relevance grades are binarized. The primary metric is nDCG@10, with source means weighted equally. The router must use fewer cross-encoder calls and place both paired 95% interval lower bounds for its nDCG difference from always-on reranking above -0.01. The margin is a chosen engineering tolerance. The two bootstrap analyses resample queries and positive-tool components within source, respectively, using 10,000 draws. Component resampling retains a query-macro estimand through score-sum/query-count ratios.
 
-The primary utility router meets the predeclared 0.01 absolute nDCG engineering noninferiority criterion. Its nDCG@10 is 0.5273, versus 0.5241 for always-on reranking (difference +0.0032; query 95% CI [-0.0016, +0.0080]; component 95% CI [-0.0016, +0.0079]). Real conditional execution verified 1,149 CE calls and 22,980 scored pairs across all 1,500 queries, a 23.4% call reduction.
+## 4  Ranking quality and inference work
 
-| Paired interval | Mean nDCG difference | 95% interval | Lower bound > -0.01? |
-|---|---:|---|---|
-| Source-stratified query | +0.003201 | [-0.001560, +0.007984] | True |
-| Source-stratified component | +0.003201 | [-0.001558, +0.007931] | True |
+**Table 2. Confirmation results on 1,500 queries. Each cross-encoder call scores 20 pairs. Only learned 75% versus always is the primary comparison.**
 
-### Equal-compute random controls
+| Policy | nDCG@10 | MRR@10 | Recall@10 | Required CE calls | Calls saved |
+| --- | --- | --- | --- | --- | --- |
+| BM25 | 0.4689 | 0.4725 | 0.5840 | 0 | 100.0% |
+| Base MiniLM | 0.4602 | 0.4583 | 0.5911 | 0 | 100.0% |
+| Hybrid RRF | 0.5208 | 0.5196 | 0.6522 | 0 | 100.0% |
+| Always rerank | 0.5241 | 0.5301 | 0.6499 | 1,500 | 0.0% |
+| Disagreement gate | 0.5314 | 0.5388 | 0.6538 | 1,077 | 28.2% |
+| Jaccard gate | 0.5239 | 0.5276 | 0.6513 | 1,391 | 7.3% |
+| Learned 25% | 0.5269 | 0.5272 | 0.6549 | 409 | 72.7% |
+| Learned 50% | 0.5305 | 0.5339 | 0.6569 | 829 | 44.7% |
+| Learned 75% | 0.5273 | 0.5327 | 0.6520 | 1,149 | 23.4% |
 
-Twenty seeds 0-19 select exact realized full-cohort call counts. Global controls exist for each utility budget and the disagreement gate; additional controls match per-source counts for the primary router and disagreement gate. The per-query mean random result is used for exploratory paired comparisons. Seed ranges describe random-allocation variation, not confidence intervals.
+![Figure 1. (a) Measured ranking quality against required call fraction. Learned-budget points other than the primary, and simple gates, are exploratory; the primary router is green. (b) Primary nDCG difference from always-on reranking. Both 95% intervals lie above the predefined loss tolerance and include zero.](figures/confirmation_quality_compute.png)
 
-| Control | Calls/seed | Mean nDCG | Full seed range |
-|---|---:|---:|---|
-| global_fixed_disagreement | 1077 | 0.522524 | [0.517310, 0.527781] |
-| global_utility_25 | 409 | 0.521395 | [0.513734, 0.527221] |
-| global_utility_50 | 829 | 0.521643 | [0.516458, 0.527598] |
-| global_utility_75 | 1149 | 0.522497 | [0.518231, 0.528291] |
-| source_matched_fixed_disagreement | 1077 | 0.520577 | [0.512594, 0.527697] |
-| source_matched_utility_75 | 1149 | 0.524202 | [0.518584, 0.527429] |
+Figure 1. (a) Measured ranking quality against required call fraction. Learned-budget points other than the primary, and simple gates, are exploratory; the primary router is green. (b) Primary nDCG difference from always-on reranking. Both 95% intervals lie above the predefined loss tolerance and include zero.
 
-### Exploratory paired allocation comparisons
+### 4.1  The predefined tradeoff is achieved
 
-| Comparison | Mean nDCG difference | Query 95% CI | Component 95% CI |
-|---|---:|---|---|
-| fixed_disagreement_minus_always | +0.007316 | [+0.002293, +0.012378] | [+0.002147, +0.012458] |
-| hybrid_minus_always | -0.003235 | [-0.015542, +0.008995] | [-0.015779, +0.009131] |
-| utility_75_minus_fixed_disagreement | -0.004114 | [-0.009234, +0.001147] | [-0.009354, +0.000967] |
-| utility_75_minus_random_global_mean | +0.004761 | [+0.000032, +0.009600] | [+0.000197, +0.009326] |
-| utility_75_minus_random_source_matched_mean | +0.003056 | [-0.001503, +0.007786] | [-0.001379, +0.007557] |
-| fixed_disagreement_minus_random_global_mean | +0.008847 | [+0.004042, +0.013781] | [+0.003842, +0.013733] |
-| fixed_disagreement_minus_random_source_matched_mean | +0.010795 | [+0.005759, +0.015963] | [+0.005520, +0.015959] |
+The primary difference is +0.0032 nDCG@10: the query interval is [-0.0016, +0.0080] and the component interval is [-0.0016, +0.0079]. Both lower bounds exceed -0.01. Conditional execution over every confirmation query verifies 1,149 actual calls, 22,980 scored pairs, and 351 skipped calls. Every routing decision and final ranking matches frozen evaluation. The result meets the stated quality-and-work criterion; the intervals do not establish a quality improvement.
 
-These comparisons are exploratory, without a new primary-policy selection or a multiple-testing superiority claim. A label-aware matched-budget oracle is retained as an unattainable diagnostic, never a deployed result.
+### 4.2  Learning is not the clear winner
 
-| Matched policy budget | Oracle calls | Oracle nDCG@10 (test-label-aware) |
-|---|---:|---:|
-| fixed_disagreement | 1077 | 0.592876 |
-| utility_25 | 409 | 0.592876 |
-| utility_50 | 829 | 0.592876 |
-| utility_75 | 1149 | 0.591808 |
+The disagreement gate reranks when BM25 and dense retrieval choose different top results. Its nDCG@10 is 0.5314 with 1,077 calls, giving a better observed quality/cost point than the primary router. The learned-minus-disagreement component interval is [-0.0094, +0.0010]. The primary policy remains fixed after evaluation.
 
-## Real conditional execution and measured runtime
+## 5  From avoided calls to elapsed time
 
-The primary router was executed across all 1,500 cached first-stage rankings. Every decision matched the frozen prediction, and every actual CE/hybrid output matched the evaluated ranking. These requests verify conditional CE work, not end-to-end first-stage time.
+Call counts do not measure user-visible delay. Skipping the cross-encoder still leaves BM25, dense encoding and search, fusion, and routing to run. A separate benchmark therefore recomputes the full query-to-ranking path for four policies, using 90 confirmation queries selected by hash, 30 per source. Each query is measured three times under each policy, for 1,080 requests in total.
 
-On 90 source-balanced confirmation queries with three repetitions per policy, measured warm sequential CPU mean retrieval time is 791.4 ms for the primary router and 920.7 ms for always-on reranking. The observed mean-time reduction is 14.0% (paired query-bootstrap 95% CI [8.2%, 20.0%]). Initialization, network, queueing, and concurrent serving are excluded.
+![Figure 2. Warm sequential CPU retrieval on 90 queries, averaging three repetitions per query and policy. (a) Policy means. (b) Each point compares the same query under always and learned 75%. The dashed line marks equal time. Most savings occur on the skipped branch; reranked queries still incur cross-encoder inference.](figures/confirmation_latency.png)
 
-![Actual repeated CPU retrieval timing](figures/confirmation_latency.png)
+Figure 2. Warm sequential CPU retrieval on 90 queries, averaging three repetitions per query and policy. (a) Policy means. (b) Each point compares the same query under always and learned 75%. The dashed line marks equal time. Most savings occur on the skipped branch; reranked queries still incur cross-encoder inference.
 
-| Policy | Mean ms | p50 query-mean ms | p95 query-mean ms | Actual CE calls / measured requests |
-|---|---:|---:|---:|---|
-| Hybrid RRF | 271.15 | 242.08 | 378.38 | 0 / 270 |
-| Always rerank | 920.72 | 906.98 | 1172.28 | 270 / 270 |
-| Disagreement gate | 772.52 | 847.68 | 1137.29 | 210 / 270 |
-| Utility 75% target | 791.44 | 850.87 | 1083.67 | 219 / 270 |
+**Table 3. Measured elapsed time. Percentiles describe query means over three repetitions, rather than individual request tail latency.**
 
-Latency queries are selected independently by hash, 30/source, with three repetitions of each of four policies. Query and policy order are randomized and cyclically balanced. Timers cover BM25, dense query encoding, exact dense search/sort, RRF, router feature/prediction overhead, and conditional CE/prefix sorting. Every actual ranking is checked after timing. Models/index/embeddings remain loaded. Initialization, validation, warmup, network, queueing, and concurrent load are excluded. Repetitions are averaged within query before uncertainty calculations; all-event percentiles are separately recorded.
+| Policy | Mean ms | p50 ms | p95 ms | CE calls / requests |
+| --- | --- | --- | --- | --- |
+| Hybrid RRF | 271.1 | 242.1 | 378.4 | 0 / 270 |
+| Always rerank | 920.7 | 907.0 | 1172.3 | 270 / 270 |
+| Disagreement gate | 772.5 | 847.7 | 1137.3 | 210 / 270 |
+| Learned 75% | 791.4 | 850.9 | 1083.7 | 219 / 270 |
 
-## Source-level and failure diagnostics
+### 5.1  Measured speedup
 
-| Source | Components | Hybrid nDCG | Always nDCG | Disagreement nDCG | Primary nDCG | Primary calls |
-|---|---:|---:|---:|---:|---:|---:|
-| APIGen | 353 | 0.5851 | 0.6145 | 0.6225 | 0.6169 | 472 |
-| ToolBench | 341 | 0.3588 | 0.3204 | 0.3333 | 0.3301 | 374 |
-| ToolACE | 480 | 0.6186 | 0.6372 | 0.6383 | 0.6348 | 303 |
+Mean time decreases from 920.7 ms to 791.4 ms, a 14.0% reduction (paired 95% interval [8.2%, 20.0%]). This benchmark sends 219 of 270 primary-policy requests to the cross-encoder, saving 18.9% of calls. The 23.4% call saving in Section 4 describes the larger 1,500-query cohort. The different fractions reflect the benchmark subset and should not be treated as the same measurement.
 
-### Candidate scope and tokenization
+### 5.2  Measurement boundaries
 
-| Source | Candidate-label recall@20 | No positive in prefix | CE wins / losses / same | Truncated positive pairs / positive prefix pairs | Unjudged cross-source top1 |
-|---|---:|---:|---|---|---:|
-| APIGen | 0.8010 | 65 | 130 / 106 / 264 | 17 / 481 | 187 |
-| ToolBench | 0.5671 | 132 | 116 / 184 / 200 | 70 / 637 | 330 |
-| ToolACE | 0.7882 | 85 | 118 / 107 / 275 | 87 / 489 | 123 |
+Models, the index, and corpus embeddings are already loaded. Timers include BM25, dense query encoding, exact corpus search and sorting, fusion, feature calculation, the routing decision, and conditional cross-encoder scoring and prefix sorting. Query and policy order are randomized and cyclically balanced. Every live ranking is checked against the frozen cache after timing.
 
-ToolBench always-minus-hybrid nDCG changes by -0.0384; 184 of 500 queries worsen. Of those losses, 152 have no truncated labeled pair. Clipping a positive is therefore not necessary for every loss; this does not identify a cause or rule out clipped distractors. Exact-ID judgment risk and multi-request coverage remain distinct hypotheses.
+The machine reports an AMD EPYC 9V74 CPU with nine logical CPUs available; Torch uses four threads and one interop thread. Loading, warmup, validation, networking, queueing, and concurrent serving are outside the measured interval. These results characterize warm sequential CPU retrieval on this machine. They leave production serving behavior and GPU performance open.
 
-A prefix permutation cannot recover relevant tools outside the scored 20. Candidate misses and within-prefix ordering changes have different causes/remedies. The exact pinned pair tokenizer is replayed with longest-first truncation; associations with losses are descriptive, not causal. An unjudged cross-source tool may be relevant: original exact-ID qrels remain unchanged. Name similarity is a textual hint, not verified tool equivalence or grounds for changing labels.
+## 6  Where reranking helps and hurts
 
-### Primary skipped-query effects
+The small aggregate gain from always-on reranking conceals a source-level reversal. It improves mean nDCG on APIGen and ToolACE while reducing it on ToolBench. The primary router sends 472, 303, and 374 queries from those sources to the cross-encoder, respectively. Source-matched controls matter because changing the allocation across these sources can change the overall score without better decisions within a source.
 
-The primary router skips 351 queries: 60 harmful, 87 beneficial, and 204 unchanged under binary qrels (numerical tolerance 1e-12). Summed nDCG gain forgone is 15.7402; summed harm avoided is 20.5423. These are ranking-label effects, not demonstrated tool-execution failures.
+![Figure 3. Exploratory always-versus-hybrid diagnostics. Each source contributes 500 queries. The aggregate change (a) and per-query outcomes (b) reveal different reranking behavior across sources. Outcomes use binary-label nDCG@10, with a numerical equality tolerance of 1e-12.](figures/confirmation_source_effects.png)
 
-### Deterministically selected examples
+Figure 3. Exploratory always-versus-hybrid diagnostics. Each source contributes 500 queries. The aggregate change (a) and per-query outcomes (b) reveal different reranking behavior across sources. Outcomes use binary-label nDCG@10, with a numerical equality tolerance of 1e-12.
 
-Cases are deliberately selected by outcome size with query-ID tie breaks and cannot estimate prevalence.
+### 6.1  Candidate coverage and request coverage
 
-- **toolbench_query_81**: always-minus-hybrid nDCG change -0.7359. Transactions and current-month quota are requested. CE promotes an unjudged ToolACE transaction tool; the labeled quota endpoint moves rank 2 to 15. Neither labeled pair is clipped. The primary router skips this rerank. Equivalence and execution are unverified.
-- **toolbench_query_716**: always-minus-hybrid nDCG change +0.7654. Two labeled Nexweave template tools move from ranks 15 and 13 to 1 and 2. A third positive, the icon-search endpoint, is absent from fused candidates. Ordering improves, while a candidate miss remains outside the reranker's reach.
+On ToolBench, 184 queries lose nDCG under reranking and 116 improve. For 132 queries, none of the positive labels is in the scored prefix. A reranker cannot repair that candidate miss. For other queries, positively labeled candidates are present but their ordering deteriorates. These are different problems: improving candidate retrieval does not by itself solve the ordering of multiple requested operations.
 
-## Integrity and reproducibility
+**Table 4. Two outcome-selected ToolBench cases. Names are shortened for readability; full IDs, query text, and tokenization are in the case artifacts. A dash indicates absence from fused candidates.**
 
-Independent audit: **317 checks passed, zero pending/failed**. The audit independently reconstructs data components, router fit/thresholds, metrics/random decisions/intervals, and runtime evidence without importing study metric/router/evaluator implementations.
+| Query / labeled endpoint | Hybrid rank | CE rank | Primary action |
+| --- | --- | --- | --- |
+| 81 / transaction history | 1 | 4 | Skip reranking |
+| 81 / monthly usage quota | 2 | 15 | Skip reranking |
+| 716 / all Nexweave templates | 15 | 1 | Rerank |
+| 716 / template details | 13 | 2 | Rerank |
+| 716 / icon search | - | - | Rerank |
 
-Public protocol freeze: `3e813e1af650104f33aaf77febce5a8c1a3f1213`. Router thresholds and model were frozen before confirmation quality. Data/model/source fingerprints accompany all results.
+In query 81, the cross-encoder promotes a transaction endpoint from another corpus source that has no positive label for the query. Meanwhile, the labeled quota tool falls from rank 2 to rank 15, reducing nDCG by 0.7359. Neither positive pair is truncated. Skipping preserves both labeled endpoints at the top. Query 716 shows the converse: two template tools move into the first two positions, raising nDCG by 0.7654, but the missing icon-search endpoint remains unrecovered.
 
-| Evidence | SHA-256 |
-|---|---|
-| protocol | `d33ceee4741679c5027b7b55cc96f5535f98aef0c2160292d8e0c948abd076bc` |
-| data | `45d68454ecc950c56b2ecf9fd436cb4a6dafc780e4e64d3e154ef81fc304b2ea` |
-| router | `f24613a552d36737f4a17797b94f0c9348a67072a97cfc3cb471ae4bd25c159c` |
-| evaluation | `fda5bd3e67a6990c2e95076779c4f3dedf8faaa9ab7a7325eb6dfc5fee6f55d3` |
-| runtime | `72b10b04b6527f023637f70ca5fe49bab0f345b7a125c565296bd82b7fc22316` |
-| latency | `7ba78367007bc9ab3b5b7e72eb86abf2810b2e13e02fcf8093156b810682fb51` |
-| failure | `c00cc3e8355f1f6149dfba2790360c4124e965a907cabd92c462f713f226fa72` |
-| audit | `3ca05098a331e9f06c1b6443eed9746bde826a39147b794f5f9ce16eaf5520ef` |
-| completion | `e6522e27612d32ddffd806a061c04f1bbad0efc5a6a239f1d68bc551aa25e300` |
-| reproduction | `528ad7fdf2035a55ccd075a81e9c6d072f99fe44a3b2b58931e24ac82397dc70` |
+Of the 184 ToolBench losses, 152 have no truncated positive pair, so clipping a labeled tool cannot explain every loss. The cases illustrate ordering changes, rather than establish their cause or prevalence. They were selected by outcome size with query-ID tie breaks.
 
-### Reproduction entry points
+## 7  Discussion
 
-Install the recorded research environment and CPU Torch build, then run from the repository root:
+### 7.1  The useful result is a deployment tradeoff
 
-```bash
+For this frozen retrieval configuration, a gate can avoid real cross-encoder inference and meet a predefined ranking-loss tolerance. Conditional execution and elapsed-time measurement make the cost claim concrete. The result is narrower than saying reranking is unnecessary: some requests benefit substantially, and the router skips 60 queries whose nDCG would have improved. It also avoids 87 damaging reranks; the remaining 204 skipped queries are unchanged.
+
+The simple disagreement rule is a consequential baseline, rather than a formality. It has the stronger observed quality/cost point and a lower measured mean time. The learned router's confidence intervals against disagreement and source-matched random allocation include zero. More model complexity is therefore not justified by this experiment alone. A new study should compare simple gating against learned allocation under another frozen cohort or retrieval configuration.
+
+### 7.2  Limits and next experiments
+
+The component split limits reuse of positive labels in supervised router fitting. It does not establish API-family separation or clean pretraining of the public neural models. Whole-component allocation and pilot quarantine also produce a particular benchmark cohort rather than a sample of live user traffic. Component bootstrap captures observed label sharing, while other semantic dependencies may remain.
+
+Binary relevance judgments can omit interchangeable endpoints. Unjudged tools may be useful alternatives, but name similarity does not establish equivalence, and the original labels are retained. Recall and all-label coverage describe benchmark labels, and this study does not run the retrieved tools to completion. Controlled changes to document serialization and the sequence limit could help distinguish truncation from request-coverage effects. Independently judging candidate equivalence and testing downstream execution would address the larger question of whether a ranking improvement makes the agent more useful.
+
+## 8  Conclusion
+
+The frozen learned router reduces actual cross-encoder calls by 23.4% across 1,500 held-out queries and meets the declared 0.01 nDCG loss tolerance. A separate repeated CPU benchmark measures 14.0% lower mean retrieval time. The simpler disagreement gate has the better observed quality/cost point, and learned allocation superiority remains unresolved. The practical finding is that reranking should be evaluated as a query-dependent tradeoff, with simple controls and actual execution alongside aggregate ranking scores.
+
+### References
+
+[1] Shi et al. (2025). Retrieval Models Aren't Tool-Savvy: Benchmarking Tool Retrieval for Large Language Models. Findings of ACL 2025. https://aclanthology.org/2025.findings-acl.1258/
+
+[2] Zheng et al. (2024). ToolRerank: Adaptive and Hierarchy-Aware Reranking for Tool Retrieval. LREC-COLING 2024. https://aclanthology.org/2024.lrec-main.1413/
+
+[3] Bacellar (2026). Per-Query Gating of LLM Rerankers for Multi-Hop Retrieval. arXiv preprint 2609.22880. https://arxiv.org/abs/2609.22880
+
+[4] Wu, Guo and Li (2026). Lookahead-R: Budget-Aware Tool Retrieval via Execution-Centric Planning. ICMR 2026; arXiv 2609.35811. https://arxiv.org/abs/2609.35811
+
+## Appendix A  Router details and allocation controls
+
+The following definitions are frozen in the protocol. Ranks are one-based; top-k lists contain unique tool IDs. Feature standardization is fitted on the 300 development rows. The ridge intercept is unpenalized, and the deployment decision uses a strict greater-than comparison with the threshold.
+
+**Table A1. Seven inference-time features. Two Jaccard cutoffs yield two separate features.**
+
+| Feature | Definition |
+| --- | --- |
+| Top-1 disagreement | 1 if BM25 and dense top-1 IDs differ; otherwise 0. |
+| Top-10 Jaccard | Intersection size divided by union size over the two top-10 lists. |
+| Top-20 Jaccard | The same overlap measure at cutoff 20. |
+| Weighted top-20 overlap | Sum of minimum reciprocal-rank weights divided by sum of maximum weights over the union; missing-list weight is 0. |
+| Top-20 rank coherence | 1 minus the mean absolute rank difference over the union, divided by 20. A missing rank is 21. |
+| Log query length | log1p of the whitespace-delimited query token count. |
+| Normalized RRF margin | (largest minus second-largest fused score) / largest score, using both top-100 lists. A singleton has margin 1. |
+
+**Table A2. Calibration targets and realized confirmation work. Thresholds are set from label-free calibration predictions.**
+
+| Call target | Frozen threshold | Test calls | Realized call fraction |
+| --- | --- | --- | --- |
+| 25% | 0.04356275 | 409 | 27.3% |
+| 50% | 0.01093137 | 829 | 55.3% |
+| 75% | -0.01178293 | 1,149 | 76.6% |
+
+The cheap Jaccard gate reranks when top-10 BM25/dense Jaccard overlap is below 0.5, a fixed rule without tuning. All secondary budget, gate, and allocation comparisons are exploratory. Global random controls sample the exact call count for each policy; source-matched controls additionally preserve calls per source. The range below describes variability across 20 seeds, rather than a confidence interval.
+
+**Table A3. Random allocation controls, seeds 0-19.**
+
+| Control | Calls | Mean nDCG | Seed range |
+| --- | --- | --- | --- |
+| Global / disagreement | 1077 | 0.5225 | [0.5173, 0.5278] |
+| Global / learned 25% | 409 | 0.5214 | [0.5137, 0.5272] |
+| Global / learned 50% | 829 | 0.5216 | [0.5165, 0.5276] |
+| Global / learned 75% | 1149 | 0.5225 | [0.5182, 0.5283] |
+| Source-matched / disagreement | 1077 | 0.5206 | [0.5126, 0.5277] |
+| Source-matched / learned 75% | 1149 | 0.5242 | [0.5186, 0.5274] |
+
+A test-label-aware oracle at the primary call budget reaches nDCG@10 of 0.5918. It selects queries using their true reranking gains and is only a diagnostic ceiling. It is unavailable to a deployed router.
+
+## Appendix B  Additional results and reproduction
+
+**Table B1. Exploratory paired nDCG comparisons. Intervals use 10,000 paired source-stratified bootstrap draws, seed 20261003; no multiple-testing correction is applied.**
+
+| Difference | Mean | Query 95% CI | Component 95% CI |
+| --- | --- | --- | --- |
+| Disagreement - always | +0.0073 | [+0.0023, +0.0124] | [+0.0021, +0.0125] |
+| Hybrid - always | -0.0032 | [-0.0155, +0.0090] | [-0.0158, +0.0091] |
+| Learned 75% - disagreement | -0.0041 | [-0.0092, +0.0011] | [-0.0094, +0.0010] |
+| Learned 75% - global random | +0.0048 | [+0.00003, +0.0096] | [+0.0002, +0.0093] |
+| Learned 75% - source random | +0.0031 | [-0.0015, +0.0078] | [-0.0014, +0.0076] |
+| Disagreement - global random | +0.0088 | [+0.0040, +0.0138] | [+0.0038, +0.0137] |
+| Disagreement - source random | +0.0108 | [+0.0058, +0.0160] | [+0.0055, +0.0160] |
+
+**Table B2. Source-level confirmation scores. Each source has 500 queries; these comparisons are exploratory.**
+
+| Source | Hybrid | Always | Disagreement | Learned 75% |
+| --- | --- | --- | --- | --- |
+| APIGen | 0.5851 | 0.6145 | 0.6225 | 0.6169 |
+| ToolBench | 0.3588 | 0.3204 | 0.3333 | 0.3301 |
+| ToolACE | 0.6186 | 0.6372 | 0.6383 | 0.6348 |
+
+### B.1  Reproduction and verification
+
+An independent numerical implementation reconstructs components, router fitting and thresholds, policy metrics, random allocations, bootstrap intervals, and runtime evidence. All 317 checks pass. The default reproduction runner was also executed: numerical results match, and frozen predictions, decisions, per-query metrics, and evaluation Markdown are byte-identical. Five live pinned parquet downloads reconstruct the canonical corpus and cohort fingerprints.
+
+```text
 .venv/bin/python scripts/run_confirmation_study.py \
   --output-dir data/research_reproduction_run1
 ```
 
-The default reconstructs missing source data from pinned parquets, verifies frozen file fingerprints, and freshly evaluates published ranking caches and the frozen router. Add `--recompute` to regenerate calibration/ridge fitting/confirmation rankings; add `--measure-runtime` to execute full-cohort conditional CE calls and the 90-query repeated latency benchmark. Missing corpus embeddings are regenerated for real timing. Full prerequisites and argument examples are maintained in docs/confirmation_reproduction.md and the README. Generated stages refuse unintended overwrite. GPU results are not interchangeable with the recorded CPU experiment.
+Install the recorded environment using docs/confirmation_reproduction.md. The default runner freshly evaluates published caches. --recompute regenerates rankings and the fit; --measure-runtime executes conditional inference and timing. These flags were not run in the default smoke test; the original study's inference and runtime are separate completed evidence.
 
-The default runner was actually executed: all numerical summary fields matched except provenance creation time; frozen predictions, decisions, per-query metrics, and evaluation Markdown were byte-identical. Five live pinned parquet downloads reconstructed the complete corpus, original pilot, and all five grouped cohort files at their canonical fingerprints. The runner's neural-recomputation and runtime flags were not executed in that smoke test; original-study inference and actual runtime are separate measured evidence.
+### B.2  Evidence and pinned inputs
 
-| Stage | Script / evidence |
-|---|---|
-| Run ordered full evidence workflow | `scripts/run_confirmation_study.py` |
-| Prepare exact grouped splits | `scripts/prepare_confirmation_study.py` |
-| Generate pinned first-stage and CE rankings | `scripts/generate_confirmation_cache.py` |
-| Fit development-only router | `scripts/fit_utility_router.py` |
-| Apply frozen confirmation policies | `scripts/evaluate_confirmation_study.py` |
-| Analyze ordering/tokenization/judgments | `scripts/analyze_confirmation_failures.py` |
-| Verify all primary conditional CE calls | `scripts/verify_confirmation_runtime.py` |
-| Measure repeated actual latency | `scripts/benchmark_selective_latency.py` |
-| Independently audit / finalize evidence | `scripts/audit_confirmation_study.py / scripts/finalize_confirmation_study.py` |
-| Regenerate this report | `scripts/export_confirmation_report.py` |
+The repository includes per-query metrics and decisions, raw latency events, failure cases, freeze receipts, source fingerprints, and the independent audit. The report sidecar binds its PDF, Markdown, and figures to the same measured inputs. Full hashes and model/data revisions are kept in the machine-readable artifacts rather than reproduced in the main paper. Exact model revisions and package versions are recorded in the protocol and research requirements.
 
-### Pinned models and runtime
+```text
+Protocol freeze: 3e813e1af650104f33aaf77febce5a8c1a3f1213
+Router SHA-256: f24613a552d36737f4a17797b94f0c9348a67072a97cfc3cb471ae4bd25c159c
+```
 
-- Dense: `sentence-transformers/all-MiniLM-L6-v2` at `1110a243fdf4706b3f48f1d95db1a4f5529b4d41`.
-- CE: `cross-encoder/ms-marco-MiniLM-L-6-v2` at `233902d25c440f23af6f7d6e94d2946bac0bee0a`.
-- Runtime: `{'cpu_model': 'AMD EPYC 9V74 80-Core Processor', 'device': 'cpu', 'logical_cpus': 9, 'platform': 'Linux-6.18.44-x86_64-with-glibc2.39', 'processor': 'x86_64', 'python': '3.12.14', 'torch_interop_threads': 1, 'torch_threads': 4}`.
-- Packages: `{'numpy': '2.5.3', 'sentence-transformers': '6.1.0', 'torch': '2.14.1+cpu', 'transformers': '5.18.0'}`.
-
-## Discussion and limitations
-
-The result evaluates a fixed routing decision under one tool-retrieval configuration, not a universal replacement for reranking. The primary model remains selected even if a secondary policy has a better observed point estimate. A failure to meet the tolerance is a completed negative/inconclusive empirical finding, not permission to retune on the confirmation set.
-
-Gold-tool grouping limits direct supervised-router label overlap, but does not identify API providers or prove model pretraining independence. Public models may have encountered related benchmarks. Deterministic whole-group quota assignment and pilot-component quarantine define a particular benchmark cohort; it is not sampled live-user traffic or a representative census of APIs. Binary qrels can omit interchangeable tools; all-label coverage does not establish mandatory tools, functional equivalence, or successful agent execution. Component resampling covers observed positive-tool sharing but cannot account for every semantic dependency. Source-specific results and outcome-selected cases are exploratory. The tolerance is a declared engineering tradeoff rather than a universally justified equivalence margin. CPU timing describes a single warm sequential machine and excludes deployment/network/concurrency costs. No faculty supervision, peer review, publication acceptance, new algorithm, or cross-paper state of the art is claimed.
-
-## Conclusion
-
-The primary utility router meets the predeclared 0.01 absolute nDCG engineering noninferiority criterion. Its nDCG@10 is 0.5273, versus 0.5241 for always-on reranking (difference +0.0032; query 95% CI [-0.0016, +0.0080]; component 95% CI [-0.0016, +0.0079]). Real conditional execution verified 1,149 CE calls and 22,980 scored pairs across all 1,500 queries, a 23.4% call reduction.
-
-The full protocol-to-runtime evidence chain closes this scoped empirical study. Future independently frozen work can test additional retriever/reranker families, controlled truncation/serialization ablations, independently judged tool equivalence, and downstream execution success.
-
-## References
-
-- Shi et al. (2025). [Retrieval Models Aren't Tool-Savvy: Benchmarking Tool Retrieval for Large Language Models](https://aclanthology.org/2025.findings-acl.1258/). Findings of ACL 2025.
-- Zheng et al. (2024). [ToolRerank: Adaptive and Hierarchy-Aware Reranking for Tool Retrieval](https://aclanthology.org/2024.lrec-main.1413/). LREC-COLING 2024.
-- Bacellar (2026). [Per-Query Gating of LLM Rerankers for Multi-Hop Retrieval](https://arxiv.org/abs/2609.22880). arXiv preprint 2609.22880.
-- Wu, Guo and Li (2026). [Lookahead-R: Budget-Aware Tool Retrieval via Execution-Centric Planning](https://arxiv.org/abs/2609.35811). ICMR 2026; arXiv 2609.35811.
-
-Code and measured artifacts: https://github.com/michaelbawuah/toolret-hybrid-retrieval
+[Code, measured evidence, and reproduction instructions](https://github.com/michaelbawuah/toolret-hybrid-retrieval)

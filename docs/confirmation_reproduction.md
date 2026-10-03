@@ -102,7 +102,7 @@ changed method requires a separately scoped experiment.
 
 The published report is rendered from the completed measured artifacts and
 refuses incomplete audits or mismatched evidence hashes. To regenerate its
-PDF, Markdown and figures from the published completed study:
+eight-page PDF, Markdown, and three measured figures from the published completed study:
 
 ```bash
 .venv/bin/python -m pip install -e '.[report]'
@@ -112,3 +112,7 @@ PDF, Markdown and figures from the published completed study:
 This authoring step does not rerun inference, alter results, or establish a
 new experiment. The report's fingerprint sidecar records its input and output
 hashes; document-rendering details can vary across environments.
+The figures are exported as 300-dpi PNGs for Markdown and vector PDFs for reuse.
+The PDF and Markdown share one editorial source in the exporter. The exporter
+checks the audit's published evidence files and any locally present source data;
+absent untracked raw data is not needed to render the report.
