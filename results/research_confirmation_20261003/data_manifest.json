@@ -1,0 +1,90 @@
+{
+  "assignment_algorithm": "Anchor every component containing an observed pilot query; ascending SHA256(seed + NUL + component_id), ID tie-break; greedily admit whole components to calibration then confirmation only if source counts fit remaining fixed quotas; unused free components reserved",
+  "calibration_per_domain": 100,
+  "confirmation_per_domain": 500,
+  "corpus_count": 37292,
+  "created_at_utc": "2026-10-03T17:30:53.781909+00:00",
+  "development_source_sha256": "ff727e5ce10933e0332acd1ad18f0556a8c03353325ce7074ccd6fb11857e9bd",
+  "no_new_retrieval_rankings_or_quality_results_inspected": true,
+  "pilot_domains": [
+    "apigen",
+    "toolbench",
+    "toolace"
+  ],
+  "preparation_source_sha256": "07725000f1c679e8d9ab40dacb719c276fd1e6e9a53e3a5640d4adfa741b52f1",
+  "prepared_files": {
+    "calibration_queries.jsonl": {
+      "bytes": 541061,
+      "query_count": 300,
+      "sha256": "261f271ebd1e332de0488df722a80caee9dc5c241f40fdbe798f9f2d745462e4"
+    },
+    "confirmation_queries.jsonl": {
+      "bytes": 2765418,
+      "query_count": 1500,
+      "sha256": "0aa1f8921c13e44997f7b4018198db513a6d67a0258a550c6fafc16c705cc701"
+    },
+    "corpus.jsonl": {
+      "bytes": 30845903,
+      "path": "data/research_20261003/corpus.jsonl",
+      "sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f",
+      "tool_count": 37292
+    },
+    "development_queries.jsonl": {
+      "bytes": 558311,
+      "query_count": 300,
+      "sha256": "3916a8779cb182d3cd85b9312024a0592da2e90bdebed059e542ab018cc7c9ff"
+    },
+    "quarantined_pilot_connected_queries.jsonl": {
+      "bytes": 1426645,
+      "query_count": 629,
+      "sha256": "28c91f2b0c8ce5df71e35c1a6968f6b840524d056c95a1d0123e992990775b85"
+    },
+    "reserve_queries.jsonl": {
+      "bytes": 605745,
+      "query_count": 370,
+      "sha256": "600fa4d9712afa5bf37d11715598c448bee34692e2bdaf45c5ecf9feca51182b"
+    }
+  },
+  "relevance_policy": "binary relevance > 0; original graded labels retained",
+  "retrieval_input": "query field only; instruction and labels excluded",
+  "scope": "Untouched positive-tool-ID-component-disjoint query holdout across source domains; not an API-family holdout",
+  "seed": "confirmation-20261003",
+  "source_revisions": {
+    "mangopy/ToolRet-Queries": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+    "mangopy/ToolRet-Tools": "e06c38c75612b6536bd959e08cdd345894aba6a7"
+  },
+  "upstream_sources": [
+    {
+      "bytes": 45023,
+      "path": "apibank/queries-00000-of-00001.parquet",
+      "repository": "mangopy/ToolRet-Queries",
+      "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+      "sha256": "1e91b9c4f7e0b38946bf5c3272e15af73f0b446e4d546c52e09179b3a9709d3b",
+      "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/apibank/queries-00000-of-00001.parquet"
+    },
+    {
+      "bytes": 352171,
+      "path": "apigen/queries-00000-of-00001.parquet",
+      "repository": "mangopy/ToolRet-Queries",
+      "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+      "sha256": "7f6d6ee477ba98380816c418f51c445c937771ee557d73c0a575d0d30fd01a14",
+      "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/apigen/queries-00000-of-00001.parquet"
+    },
+    {
+      "bytes": 922485,
+      "path": "toolbench/queries-00000-of-00001.parquet",
+      "repository": "mangopy/ToolRet-Queries",
+      "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+      "sha256": "2bb32ea009d6ece37b1b785330247aacac037a20dd4522632cb3359809c8837d",
+      "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/toolbench/queries-00000-of-00001.parquet"
+    },
+    {
+      "bytes": 618326,
+      "path": "toolace/queries-00000-of-00001.parquet",
+      "repository": "mangopy/ToolRet-Queries",
+      "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+      "sha256": "49f7c861cec1799430680cea1df6cb98a10b33227f6cb183ac32375f396fcd5a",
+      "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/toolace/queries-00000-of-00001.parquet"
+    }
+  ]
+}
