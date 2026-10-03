@@ -1,0 +1,1812 @@
+{
+  "scope": "actual selective reranker calls over cached first-stage rankings; not end-to-end latency measurement",
+  "queries": 300,
+  "backend_calls": 217,
+  "backend_pairs": 4340,
+  "skipped_calls": 83,
+  "all_rankings_match_cache": true,
+  "cache_sha256": "a8d1bac8cf0b1afb734c43edff2438fc1d486b7536799192c321d70fe5683c81",
+  "script_sha256": "627cd7ebee59b073757b450f092e83ec7b45fc58fd1dff8d2bda32812b526126",
+  "per_query": [
+    {
+      "query_id": "apigen_query_959",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_720",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_120",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_803",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_267",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_735",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_263",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_862",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_257",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_725",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_464",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_407",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_807",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_75",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_513",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_506",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_74",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_432",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_50",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_931",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_990",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_98",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_644",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_158",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_271",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_670",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_450",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_145",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_867",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_830",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_544",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_310",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_842",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_747",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_817",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_418",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_912",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_187",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_238",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_496",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_785",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_755",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_918",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_490",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_412",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_908",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_433",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_191",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_660",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_166",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_732",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_991",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_268",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_773",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_213",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_355",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_397",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_17",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_993",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_999",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_793",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_469",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_260",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_876",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_601",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_428",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_59",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_922",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_751",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_625",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_60",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_585",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_326",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_148",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_477",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_18",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_564",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_851",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_100",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_395",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_38",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_318",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_879",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_633",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_314",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_471",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_503",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_530",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_962",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_71",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_977",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_307",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_134",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_211",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_574",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_576",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_811",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_961",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_180",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "apigen_query_666",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_92",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_374",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_866",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_994",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_861",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_273",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_427",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_965",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_916",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_766",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_981",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_937",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_318",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_538",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_169",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_154",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_122",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_954",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_783",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_200",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_603",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_522",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_323",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_386",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_964",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_396",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_470",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_447",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_750",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_402",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_460",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_830",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_770",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_290",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_490",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_117",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_717",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_727",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_664",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_41",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_520",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_969",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_930",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_141",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_710",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_334",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_730",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_732",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_591",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_307",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_652",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_62",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_42",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_819",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_202",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_212",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_567",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_707",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_320",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_719",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_270",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_714",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_756",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_115",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_481",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_734",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_599",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_535",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_899",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_189",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_344",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_524",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_595",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_132",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_58",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_231",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_798",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_790",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_953",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_972",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_867",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_765",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_177",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_187",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_349",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_784",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_636",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_82",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_795",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_326",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_887",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_414",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_248",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_745",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_706",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_112",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_308",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_111",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_44",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolACE_query_670",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_338",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_451",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_497",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_535",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_604",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_1087",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_745",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_26",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_405",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_746",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_247",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_561",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_1085",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_668",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_485",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_1051",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_214",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_361",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_794",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_30",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_494",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_418",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_530",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_213",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_178",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_391",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_988",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_277",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_119",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_145",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_510",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_329",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_1071",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_41",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_66",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_841",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_670",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_154",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_1038",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_113",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_6",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_107",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_881",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_366",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_896",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_390",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_1063",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_406",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_52",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_415",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_73",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_1084",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_210",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_75",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_472",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_729",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_310",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_103",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_953",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_616",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_1090",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_905",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_588",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_435",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_536",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_796",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_837",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_591",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_478",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_795",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_221",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_43",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_486",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_623",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_749",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_200",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_785",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_734",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_678",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_747",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_767",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_756",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_428",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_826",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_757",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_978",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_340",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_444",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_944",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_18",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_248",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_703",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_728",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_187",
+      "reranked": false,
+      "scored_pairs": 0,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_1033",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_181",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_380",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_222",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_487",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    },
+    {
+      "query_id": "toolbench_query_12",
+      "reranked": true,
+      "scored_pairs": 20,
+      "matches_cache": true
+    }
+  ]
+}

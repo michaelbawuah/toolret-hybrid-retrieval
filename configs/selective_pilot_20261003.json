@@ -1,0 +1,67 @@
+{
+  "experiment": "selective-reranking-pilot-20261003",
+  "status": "fixed before pilot rankings were generated",
+  "selection_seed": "research-20261003",
+  "queries_per_source": 100,
+  "query_sources": [
+    "apigen",
+    "toolbench",
+    "toolace"
+  ],
+  "excluded_source": "apibank",
+  "gate": "rerank iff BM25 top-1 differs from dense top-1",
+  "dense_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "dense_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+  "candidate_k": 100,
+  "rerank_k": 20,
+  "rrf_k": 60,
+  "rrf_weights": [
+    1.0,
+    1.0
+  ],
+  "max_sequence_length": 256,
+  "threads": 4,
+  "batch_size": 64,
+  "scope": "preliminary source-domain pilot with frozen off-the-shelf models; no trained-family holdout claim",
+  "primary_metric": "binary nDCG@10",
+  "quality_metrics": [
+    "binary MRR@10",
+    "binary Recall@10",
+    "all-positive-label coverage@10"
+  ],
+  "compute_metric": "cross-encoder query and pair invocation counts",
+  "timing_scope": "single-pass warm-model sequential component timing; offline counterfactual policy estimates, not deployed adaptive latency",
+  "random_policy_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "no_tuning": true,
+  "limitations": [
+    "Historical fine-tuned dense and reranker checkpoints are not available in this checkout.",
+    "Source domains do not establish API-family generalization.",
+    "All positive benchmark relevance labels are treated as relevant; complete tool sets needed for execution are not independently verified.",
+    "Models may have prior exposure to public benchmark content; project-level query freshness does not establish pretraining independence."
+  ],
+  "corpus_config": "web",
+  "pre_evaluation_amendment": "Metatool replaced by ToolACE after strict gold-ID validation found customized tools absent from the web corpus. Selection changed for category compatibility before generating any pilot rankings."
+}

@@ -1,0 +1,72 @@
+{
+  "corpus_count": 37292,
+  "created_at_utc": "2026-10-03T16:25:41.559544+00:00",
+  "frozen_apibank_data_modified": false,
+  "pilot_domains": [
+    "apigen",
+    "toolbench",
+    "toolace"
+  ],
+  "prepared_files": {
+    "corpus.jsonl": {
+      "bytes": 30845903,
+      "sha256": "ac192e7a6d2b1930f3f61544748ce81741c372a104674a3520f8214b2ac3c09f"
+    },
+    "queries.jsonl": {
+      "bytes": 539918,
+      "sha256": "ff727e5ce10933e0332acd1ad18f0556a8c03353325ce7074ccd6fb11857e9bd"
+    }
+  },
+  "queries_per_domain": 100,
+  "query_count": 300,
+  "relevance_policy": "binary relevance > 0; original graded labels retained",
+  "retrieval_input": "query field only; instruction and labels excluded",
+  "scope": "zero-training source-domain pilot; not API-family-held-out evaluation",
+  "seed": "research-20261003",
+  "source_revisions": {
+    "mangopy/ToolRet-Queries": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+    "mangopy/ToolRet-Tools": "e06c38c75612b6536bd959e08cdd345894aba6a7"
+  },
+  "upstream_sources": [
+    {
+      "bytes": 45023,
+      "path": "apibank/queries-00000-of-00001.parquet",
+      "repository": "mangopy/ToolRet-Queries",
+      "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+      "sha256": "1e91b9c4f7e0b38946bf5c3272e15af73f0b446e4d546c52e09179b3a9709d3b",
+      "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/apibank/queries-00000-of-00001.parquet"
+    },
+    {
+      "bytes": 352171,
+      "path": "apigen/queries-00000-of-00001.parquet",
+      "repository": "mangopy/ToolRet-Queries",
+      "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+      "sha256": "7f6d6ee477ba98380816c418f51c445c937771ee557d73c0a575d0d30fd01a14",
+      "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/apigen/queries-00000-of-00001.parquet"
+    },
+    {
+      "bytes": 922485,
+      "path": "toolbench/queries-00000-of-00001.parquet",
+      "repository": "mangopy/ToolRet-Queries",
+      "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+      "sha256": "2bb32ea009d6ece37b1b785330247aacac037a20dd4522632cb3359809c8837d",
+      "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/toolbench/queries-00000-of-00001.parquet"
+    },
+    {
+      "bytes": 618326,
+      "path": "toolace/queries-00000-of-00001.parquet",
+      "repository": "mangopy/ToolRet-Queries",
+      "revision": "b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445",
+      "sha256": "49f7c861cec1799430680cea1df6cb98a10b33227f6cb183ac32375f396fcd5a",
+      "url": "https://huggingface.co/datasets/mangopy/ToolRet-Queries/resolve/b8c76ad3349ff17497b6bdb28bb5b8f61a0f6445/toolace/queries-00000-of-00001.parquet"
+    },
+    {
+      "bytes": 8143446,
+      "path": "web/tools-00000-of-00001.parquet",
+      "repository": "mangopy/ToolRet-Tools",
+      "revision": "e06c38c75612b6536bd959e08cdd345894aba6a7",
+      "sha256": "57faceebd778b2cb74571dca0e71e8bc8078c11ba05dce0efc562e818d3950e6",
+      "url": "https://huggingface.co/datasets/mangopy/ToolRet-Tools/resolve/e06c38c75612b6536bd959e08cdd345894aba6a7/web/tools-00000-of-00001.parquet"
+    }
+  ]
+}

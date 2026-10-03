@@ -1,506 +1,158 @@
-# Efficient Tool Retrieval for LLM Agents
+# ToolRet: Selective Tool Retrieval
 
-Independent reproduction and extension of **ToolRet (ACL 2025)** exploring whether a lightweight multi-stage retrieval pipeline can improve tool retrieval for LLM agents.
+Independent undergraduate research on **when to rerank tools for LLM agents**. This project builds on the [ToolRet benchmark](https://aclanthology.org/2025.findings-acl.1258/), with a new, fixed-protocol pilot completed on October 3, 2026.
 
-The system combines **BM25 sparse retrieval, dense retrieval, hard-negative fine-tuning, weighted Reciprocal Rank Fusion (RRF), and compact cross-encoder reranking**. Experiments measure both retrieval quality and computational cost on a ToolRet subset containing **37,292 candidate tools**.
+**Measured result:** reranking only when BM25 and MiniLM disagree on their first result used **217 instead of 300 cross-encoder calls (27.7% fewer)**. Observed binary nDCG@10 was **0.5019**, compared with **0.4986** for always-on reranking. The paired 95% bootstrap interval for the difference is **[-0.0058, +0.0128]**; this pilot does not establish superiority or formal noninferiority.
 
-> **Status:** End-to-end experimental pipeline complete, including frozen held-out test evaluation.
+The completed checkpoint includes real model inference, a callable selective reranker, saved per-query rankings, input/model fingerprints, matched-budget random controls, uncertainty estimates, and an independent recomputation audit. This is independent research, with no claimed faculty appointment or publication acceptance.
 
----
+## Research question and implementation
 
-## Research Question
+Can disagreement between two cheap first-stage rankings identify queries worth spending cross-encoder compute on?
 
-Can a lightweight multi-stage retrieval pipeline combining sparse retrieval, dense retrieval, hard-negative training, and compact reranking substantially improve tool retrieval quality while keeping inference costs practical?
+1. BM25 retrieves 100 tools; a frozen MiniLM encoder performs exact dense search over all 37,292 tools and retrieves 100.
+2. Equal-weight reciprocal rank fusion combines these rankings, with RRF constant 60.
+3. The **fixed gate reranks the first 20 fused tools if and only if BM25 top-1 differs from dense top-1**. Otherwise it returns the fused ranking without calling the cross-encoder. The remaining ranking stays unchanged.
 
-This repository investigates that question through controlled retrieval experiments rather than treating the original ToolRet implementation as a black box.
+The gate uses first-stage predictions only. Relevance labels are used for integrity checks and evaluation; they are never routing inputs. The protocol was committed before pilot rankings were generated and was not tuned to these results.
 
----
+`src/toolret_research/selective_runtime.py` implements the runtime gate. A separate real-model verification replayed all 300 queries through it: **217 backend calls, 4,340 query/tool pairs, 83 skipped calls, and all rankings identical to the evaluated policy**. First-stage rankings were cached for this verification; it is not an end-to-end service latency benchmark.
 
-## Motivation
+## Pilot design
 
-LLM agents increasingly rely on external tools and APIs. Before an agent can call the correct tool, however, it must first retrieve that tool from a potentially large catalog.
-
-Tool retrieval is therefore an information-retrieval problem:
-
-```text
-Natural-language query
-        |
-        v
-Large tool catalog
-        |
-        v
-Retrieve relevant tools
-        |
-        v
-LLM / agent tool selection
-```
-
-Poor retrieval can prevent an otherwise capable language model from ever seeing the correct tool.
-
-This project studies whether relatively small retrieval models can be made substantially stronger through better training and multi-stage retrieval.
-
----
-
-## System Architecture
-
-The final experimental pipeline is:
-
-```text
-                         User Query
-                             |
-                 +-----------+-----------+
-                 |                       |
-                 v                       v
-          BM25 Retrieval         Fine-tuned MiniLM
-          Sparse Ranking          Dense Retrieval
-                 |                       |
-                 +-----------+-----------+
-                             |
-                             v
-                    Weighted RRF Fusion
-                  BM25 = 1.0
-                  Dense = 1.25
-                  RRF k = 10
-                             |
-                             v
-                    Top-500 Candidates
-                             |
-                             v
-                 Cross-Encoder Reranker
-                     Rerank Top 3
-                             |
-                             v
-                    Final Ranked Tools
-                             |
-                             v
-                MRR / Recall@K / nDCG@K
-```
-
-The dense retriever is fine-tuned using mined hard negatives. Sparse and dense rankings are then combined with weighted Reciprocal Rank Fusion. A compact cross-encoder reranks only the highest-ranked candidates.
-
----
-
-## Experimental Setup
-
-The experiments use a processed subset of the ToolRet benchmark.
-
-| Component | Configuration |
+| Setting | Fixed value |
 |---|---|
-| Candidate tools | 37,292 |
-| Validation queries | 15 |
-| Frozen test queries | 16 |
-| Base dense model | `sentence-transformers/all-MiniLM-L6-v2` |
-| Fine-tuned retriever | MiniLM + hard-negative training |
-| Sparse retriever | BM25 |
-| Fusion | Weighted Reciprocal Rank Fusion |
-| BM25 weight | 1.0 |
-| Dense weight | 1.25 |
-| RRF k | 10 |
-| Candidate pool | 500 |
-| Reranker | Compact cross-encoder |
-| Final rerank depth | 3 |
-| Evaluation | MRR, Recall@K, nDCG@K |
+| Catalog | 37,292 ToolRet web tools |
+| Queries | 300: 100 each from APIGen, ToolBench, ToolACE |
+| Selection | SHA256 of fixed seed + query ID after normalized-text deduplication |
+| Exclusions | All APIBank query texts; original 16 frozen-test IDs checked separately |
+| Dense encoder | `sentence-transformers/all-MiniLM-L6-v2`, pinned revision |
+| Reranker | `cross-encoder/ms-marco-MiniLM-L-6-v2`, pinned revision |
+| Training | None for this pilot; off-the-shelf public models |
+| Candidate / rerank depth | 100 per first-stage retriever / 20 fused tools |
+| RRF / max sequence length | Equal weights, k=60 / 256 tokens |
+| Hardware | CPU, 4 PyTorch threads, batch size 64 |
+| Primary metric | Binary nDCG@10, macro-average over queries |
+| Controls | BM25, dense, hybrid, always-rerank, fixed gate; 20 matched-budget random policies |
+| Uncertainty | 20,000 paired query bootstrap resamples, 95% percentile intervals |
 
-Hyperparameters were selected using the validation split before the final test evaluation.
+The initial proposed third source, MetaTool, contained customized-tool gold IDs absent from the web catalog. It was replaced by ToolACE after data validation and **before any pilot ranking generation**. The amendment is recorded in the fixed protocol. All selected positive gold IDs are present in the catalog.
 
-The **16-query test split was treated as frozen** during final evaluation and was not used for subsequent hyperparameter tuning.
+This is a zero-training **source-domain pilot**. It does not establish generalization to unseen API families, independence from model pretraining data, or agent execution success.
 
----
+## Results
 
-# Results
-
-## Validation Ablation
-
-The validation experiments show how retrieval quality changed as components were introduced.
-
-| System | MRR | nDCG@10 |
-|---|---:|---:|
-| BM25 | 0.337 | 0.328 |
-| Base MiniLM | 0.274 | 0.272 |
-| Hard-negative MiniLM | 0.522 | 0.544 |
-| Hybrid retrieval | 0.667 | 0.648 |
-| Hybrid + reranker | **0.711** | **0.677** |
-
-![Validation ablation](assets/validation_ablation.png)
-
-### Validation Findings
-
-The largest dense-retrieval improvement came from **hard-negative fine-tuning**.
-
-MRR increased from approximately:
-
-```text
-0.274 -> 0.522
-```
-
-after fine-tuning MiniLM on mined difficult negatives.
-
-Combining sparse and dense retrieval produced another substantial improvement:
-
-```text
-0.522 -> 0.667 MRR
-```
-
-The compact cross-encoder then improved validation MRR further:
-
-```text
-0.667 -> 0.711
-```
-
-The validation experiments therefore support a multi-stage design in which sparse lexical matching and learned semantic retrieval contribute complementary signals.
-
----
-
-## Frozen Test Results
-
-After selecting the pipeline using validation experiments, the configuration was evaluated on the held-out test split.
-
-| System | MRR | Recall@1 | Recall@3 | Recall@5 | Recall@10 | nDCG@10 |
+| Policy | nDCG@10 | MRR@10 | Recall@10 | All positive labels covered@10 | CE calls | CE pairs |
 |---|---:|---:|---:|---:|---:|---:|
-| BM25 | 0.132 | 0.063 | 0.188 | 0.188 | 0.208 | 0.150 |
-| Base MiniLM | 0.135 | 0.083 | 0.083 | 0.083 | 0.146 | 0.114 |
-| Hard-negative MiniLM | 0.499 | 0.313 | 0.427 | 0.448 | 0.552 | 0.469 |
-| Hybrid retrieval | **0.515** | **0.313** | **0.458** | **0.490** | **0.604** | **0.490** |
-| Hybrid + reranker | 0.473 | 0.271 | 0.458 | 0.490 | 0.604 | 0.468 |
+| BM25 | 0.4553 | 0.4715 | 0.5614 | 0.4567 | 0 | 0 |
+| Dense | 0.4210 | 0.4387 | 0.5330 | 0.4267 | 0 | 0 |
+| Hybrid RRF | 0.4828 | 0.4785 | 0.6323 | 0.5267 | 0 | 0 |
+| Always rerank | 0.4986 | 0.5113 | 0.6196 | 0.5100 | 300 | 6,000 |
+| Selective gate | 0.5019 | 0.5180 | 0.6173 | 0.5100 | 217 | 4,340 |
 
-![Frozen test performance](assets/test_results.png)
+All positive relevance grades are converted to binary relevance. Recall is the fraction of positive labels retrieved; all-positive coverage is the fraction of queries whose complete positive-label set is retrieved. These labels are not independently verified as the mandatory tool set for successful execution.
 
----
+The 20 random policies rerank exactly 217 queries each (4,340 pairs). Their mean nDCG@10 is **0.4932**, with a seed range of **0.4816–0.5018**. This range describes random-control variation, not uncertainty on new queries.
 
-## Main Findings
+| Primary nDCG@10 difference | Point estimate | Paired 95% interval |
+|---|---:|---:|
+| Always minus hybrid | +0.0158 | [-0.0090, +0.0410] |
+| Gate minus hybrid | +0.0191 | [-0.0041, +0.0423] |
+| Gate minus always | +0.0033 | [-0.0058, +0.0128] |
 
-### 1. Hard-negative training was the largest single improvement
+The practical finding is a **measured reduction in reranker invocations with a similar observed aggregate primary score**. It is not a blanket quality-preservation claim: selective Recall@10 is lower than hybrid Recall@10, and behavior differs by source.
 
-The base MiniLM retriever achieved only **0.135 test MRR**.
+| Source (100 queries each) | Hybrid nDCG@10 | Always nDCG@10 | Gate nDCG@10 | Gate calls |
+|---|---:|---:|---:|---:|
+| APIGen | 0.6120 | 0.6868 | 0.6818 | 69 |
+| ToolACE | 0.5588 | 0.5551 | 0.5597 | 62 |
+| ToolBench | 0.2775 | 0.2539 | 0.2642 | 86 |
 
-After hard-negative fine-tuning, test MRR increased to approximately **0.499**.
+**Failure finding:** reranking hurts ToolBench relative to hybrid retrieval. The fixed gate recovers part of that loss but still underperforms hybrid on that source. No configuration was changed after inspecting this result.
 
-This suggests that training on difficult, retrieval-specific negatives was considerably more important than simply using an off-the-shelf embedding model.
+Component wall times were recorded once per query with warm models. Any policy sums are offline counterfactual estimates. **27.7% fewer calls/pairs is a compute-count result, not a measured 27.7% latency speedup.** Model loading, corpus encoding, routing overhead, network, concurrency, and deployment behavior are outside these measurements.
 
-### 2. Sparse and dense retrieval were complementary
+## Reproduce and inspect
 
-The weighted hybrid system increased test MRR from approximately:
+The complete ranking cache is committed. Evaluation can be repeated without rerunning model inference after reconstructing the pinned input files.
 
-```text
-0.499 -> 0.515
+```bash
+python3.12 -m venv .venv
+.venv/bin/python -m pip install 'torch==2.14.1+cpu' --index-url https://download.pytorch.org/whl/cpu
+.venv/bin/python -m pip install -r requirements-research-20261003.txt
+export PYTHONPATH=src
+export HF_HUB_DISABLE_XET=1
+D=data/research_20261003
+R=results/research_20261003
+
+.venv/bin/python scripts/prepare_research_pilot.py --output-dir "$D"
+
+.venv/bin/python scripts/evaluate_selective_reranking.py \
+  --cache "$R/pilot_cache/rankings.jsonl" \
+  --corpus "$D/corpus.jsonl" --queries "$D/queries.jsonl" \
+  --manifest "$R/pilot_cache/manifest.json" \
+  --exclude-queries results/test_failure_analysis.csv \
+  --output-dir results/research_reproduced --bootstrap-resamples 20000
+
+.venv/bin/python -m pytest -q
 ```
 
-and Recall@10 from:
+The evaluator refuses mismatched corpus, query, and cache hashes; checks exact query/qrel/source alignment, declared cohort sizes, exact RRF reconstruction, and reranker-prefix/tail integrity. The source selection script refuses to overwrite a prepared directory.
 
-```text
-0.552 -> 0.604
+To rerun model inference into new output/checkpoint directories:
+
+```bash
+.venv/bin/python scripts/generate_research_cache.py \
+  --corpus "$D/corpus.jsonl" --queries "$D/queries.jsonl" \
+  --data-manifest "$D/manifest.json" \
+  --protocol configs/selective_pilot_20261003.json \
+  --output-dir results/research_rerun/pilot_cache \
+  --embedding-dir checkpoints/research_rerun
+
+.venv/bin/python scripts/verify_selective_runtime.py \
+  --cache "$R/pilot_cache/rankings.jsonl" \
+  --manifest "$R/pilot_cache/manifest.json" \
+  --corpus "$D/corpus.jsonl" --queries "$D/queries.jsonl" \
+  --output results/research_runtime_reproduced.json
 ```
 
-relative to the fine-tuned dense retriever alone.
+Data/model revisions and package versions appear in the manifest. CPU floating-point and timing behavior may differ across machines. Raw upstream data and downloaded models are reconstructed from pinned public sources instead of being redistributed here.
 
-This supports the hypothesis that lexical BM25 evidence and dense semantic similarity capture different useful signals.
+## Evidence and report
 
-### 3. Reranking improved validation performance but did not generalize to test MRR
+![Measured retrieval quality and cross-encoder calls](assets/selective_retrieval_quality_compute_20261003.png)
 
-The cross-encoder increased validation MRR:
+- [Four-page research report (PDF)](paper/selective_reranking_pilot_20261003.pdf) and [technical report source](paper/selective_reranking_pilot_20261003.md)
+- [Fixed protocol](configs/selective_pilot_20261003.json)
+- [Archived local protocol-freeze commit](results/research_20261003/protocol_freeze.bundle) (Git bundle; prerequisite original commit `7ff0807`)
+- [Pilot results and paired intervals](results/research_20261003/pilot_eval/summary.json)
+- [Per-query rankings](results/research_20261003/pilot_cache/rankings.jsonl), [decisions](results/research_20261003/pilot_eval/decisions.jsonl), and [metrics](results/research_20261003/pilot_eval/per_query.jsonl)
+- [Pinned data/model/cache provenance](results/research_20261003/pilot_cache/manifest.json)
+- [Independent recomputation audit](results/research_20261003/independent_audit.json)
+- [Real selective-call verification](results/research_20261003/runtime_verification.json)
+- [Historical result audit](results/research_20261003/historical_audit.md)
 
-```text
-0.667 -> 0.711
-```
+## Historical experiments and corrections
 
-but decreased frozen-test MRR:
+The original project included hard-negative training, weighted fusion, and top-3 reranking on a 16-query APIBank test subset. Its trained checkpoints are not available in this checkout. The new pilot uses separately pinned off-the-shelf models and different source queries; its scores must not be interpreted as a rerun of those models.
 
-```text
-0.515 -> 0.473
-```
+An audit of the committed original per-query CSV reconstructs uncut MRR as follows:
 
-while Recall@10 remained approximately **0.604**.
-
-This is an important negative result: adding a learned reranker did not automatically improve held-out retrieval performance.
-
-One plausible explanation is sensitivity to the small training/validation sample, but the present experiment is not large enough to establish the cause.
-
-### 4. Validation and test performance differed substantially
-
-The final reranked system achieved approximately **0.711 validation MRR** but **0.473 test MRR**.
-
-Because the current validation and test subsets contain only 15 and 16 queries respectively, these estimates have high variance.
-
-The project therefore reports both validation and held-out results rather than presenting the best validation score as final performance.
-
----
-
-## Latency
-
-The frozen reranked pipeline recorded approximately:
-
-| Stage | Mean query latency |
+| Historical method | CSV-derived MRR |
 |---|---:|
-| BM25 retrieval | 34.6 ms |
-| Dense retrieval | 212.2 ms |
-| RRF fusion | 0.18 ms |
-| Cross-encoder reranking | 14.6 ms |
+| BM25 | 0.146065 |
+| Fine-tuned dense | 0.521205 |
+| Hybrid | 0.514667 |
+| Reranked hybrid | 0.473000 |
 
-The dense retrieval stage dominates query-time cost in the current implementation.
+The former README's BM25 0.132 and dense 0.499 values do not match the committed rows. Those claims are corrected here. The audited rows also do not support the former claim that hybrid has higher test MRR than fine-tuned dense. Base-model scores, other historical metrics, training outcomes, and latency claims cannot be independently reconstructed from that CSV and are not current verified results. The [original README snapshot](results/research_20261003/historical_README.md) is preserved for traceability.
 
-The reranker operates only on the top three fused candidates, limiting its additional latency.
+## Limits and next research
 
-These measurements reflect the current experimental implementation and local hardware rather than an optimized production retrieval service.
+The next substantive experiment should use an explicitly mapped API-family holdout, a larger untouched query cohort, and a preregistered noninferiority margin for nDCG. API-family clustering should also inform uncertainty estimation. Additional work includes candidate-recall diagnostics, repeated end-to-end latency measurement, and approximate dense indexing with recall checks.
 
----
-
-## Why This Repository Is Independent
-
-The official ToolRet implementation is treated as a benchmark reference.
-
-This repository independently implements the core experimental components so that individual design decisions can be inspected and modified:
-
-- ToolRet data processing
-- BM25 retrieval
-- dense embedding retrieval
-- retrieval metrics
-- reciprocal-rank fusion
-- weighted RRF
-- hard-negative mining
-- dense retriever fine-tuning
-- cross-encoder training
-- reranking
-- validation ablations
-- latency measurement
-- frozen test evaluation
-- result visualization
-
-The objective is not simply to reproduce a reported number, but to understand **which retrieval components help, when they help, and what they cost**.
-
----
-
-## Evaluation Metrics
-
-### Mean Reciprocal Rank (MRR)
-
-MRR measures how highly the first relevant tool appears in the ranking.
-
-Higher is better.
-
-### Recall@K
-
-Recall@K measures how much of the relevant tool set appears within the first `K` retrieved results.
-
-The experiments report:
-
-```text
-Recall@1
-Recall@3
-Recall@5
-Recall@10
-```
-
-### nDCG@K
-
-Normalized Discounted Cumulative Gain rewards systems that place relevant tools nearer the top of the ranking while accounting for ranking position.
-
----
-
-## Repository Structure
-
-```text
-toolret-research/
-├── README.md
-├── pyproject.toml
-├── assets/
-│   ├── test_results.png
-│   └── validation_ablation.png
-├── checkpoints/
-├── data/
-│   ├── sample/
-│   └── toolret/
-│       ├── corpus.jsonl
-│       ├── queries.jsonl
-│       └── splits/
-├── models/
-├── paper/
-│   └── notes.md
-├── results/
-├── scripts/
-│   ├── create_query_splits.py
-│   ├── evaluate_dense_models.py
-│   ├── evaluate_hybrid_finetuned.py
-│   ├── evaluate_hybrid_reranker.py
-│   ├── mine_hard_negatives.py
-│   ├── plot_results.py
-│   ├── prepare_toolret.py
-│   ├── run_bm25.py
-│   ├── run_candidate_ablation.py
-│   ├── run_dense.py
-│   ├── run_hybrid.py
-│   ├── run_rrf_ablation.py
-│   ├── train_dense_hard_negatives.py
-│   └── train_toolret_reranker.py
-├── src/toolret_research/
-│   ├── bm25.py
-│   ├── data.py
-│   ├── dense.py
-│   ├── fusion.py
-│   ├── hard_negatives.py
-│   ├── hybrid.py
-│   ├── metrics.py
-│   ├── reranker.py
-│   └── text.py
-└── tests/
-    └── run_tests.py
-```
-
----
-
-## Reproducing the Core Experiments
-
-Create and activate a Python environment, install the project dependencies, and run commands from the repository root.
-
-For scripts executed directly from `scripts/`, expose the source package with:
-
-```bash
-PYTHONPATH=src
-```
-
-For example, the BM25 evaluation interface can be inspected with:
-
-```bash
-PYTHONPATH=src python scripts/run_bm25.py --help
-```
-
-The dense-model comparison can be inspected with:
-
-```bash
-PYTHONPATH=src python scripts/evaluate_dense_models.py --help
-```
-
-The hybrid retrieval experiment can be inspected with:
-
-```bash
-PYTHONPATH=src python scripts/evaluate_hybrid_finetuned.py --help
-```
-
-Figures are generated with:
-
-```bash
-PYTHONPATH=src python scripts/plot_results.py
-```
-
----
-
-## Research Integrity
-
-Results in this repository are separated conceptually into:
-
-1. **Paper-reported results** — values reported by the ToolRet authors.
-2. **Reproduced results** — results generated by independent baseline experiments in this repository.
-3. **Extension results** — results produced by the hard-negative, hybrid retrieval, and reranking experiments developed here.
-
-No metric should be presented as a paper result unless it was actually reported by the original authors.
-
-No metric should be presented as a project result unless it was generated by a reproducible experiment in this repository.
-
-The frozen test set is not used for post-hoc hyperparameter selection.
-
----
-
-## Limitations
-## Limitations and Failure Analysis
-
-Although the experiments show substantial improvements over the original sparse and dense baselines, several limitations are important when interpreting the results.
-
-### Small Evaluation Sets
-
-The validation and frozen test subsets contain only **15 and 16 queries**, respectively. Because these evaluation sets are small, individual queries can have a large effect on aggregate metrics such as MRR and nDCG.
-
-The reported results should therefore be interpreted as evidence about the behavior of the proposed retrieval pipeline rather than definitive benchmark-wide performance estimates. A larger evaluation would provide more stable estimates and stronger statistical confidence.
-
-### Hybrid Retrieval Is Not Universally Better
-
-The weighted BM25 + fine-tuned dense retrieval system achieved the strongest frozen-test performance before reranking, increasing MRR from **0.499 to 0.515** and Recall@10 from **0.552 to 0.604** relative to the hard-negative dense retriever.
-
-However, per-query analysis shows that fusion does not improve every query. Relative to the fine-tuned dense retriever, hybrid fusion improved the rank of the first relevant tool on **4 test queries** while hurting it on **6**.
-
-This apparent discrepancy is possible because MRR is sensitive not only to how many queries improve, but also to the magnitude and location of those rank changes. A small number of improvements near the top of the ranking can outweigh several smaller regressions.
-
-### Reranker Generalization
-
-The cross-encoder produced the strongest validation result, improving hybrid validation MRR from **0.667 to 0.711**. This improvement did not generalize to the frozen test set, where MRR decreased from **0.515 to 0.473**.
-
-A descriptive analysis of the 16 frozen test queries showed:
-
-| Reranker effect | Number of queries |
-|---|---:|
-| Improved relevant-tool rank | 2 |
-| Hurt relevant-tool rank | 3 |
-| Unchanged | 11 |
-
-The two successful cases promoted a relevant tool from **rank 2 to rank 1**.
-
-In contrast, the reranker made several costly top-rank mistakes. For one reservation query, a relevant tool moved from **rank 1 to rank 3**. For two additional queries, the first relevant result moved from **rank 1 to rank 2**.
-
-These errors were sufficient to outweigh the two successful promotions and explain the reduction in test MRR.
-
-### Candidate Recall vs. Ranking Quality
-
-The reranker operates only on the **top 3 candidates** returned by the hybrid retriever. It reorders those candidates and then preserves the remainder of the fused ranking.
-
-Consequently, test Recall@10 remained unchanged at **0.604** before and after reranking even though MRR decreased.
-
-This distinction is important: the reranker's test regression is primarily a **ranking-quality failure**, not a candidate-recall failure. The relevant tools were already being retrieved; the cross-encoder sometimes placed them in worse positions.
-
-### Experimental Retrieval Efficiency
-
-The current dense retrieval implementation performs exact similarity search across the corpus of **37,292 tools**. This design is useful for controlled experimentation and keeps the implementation transparent, but it is not intended to represent a production-scale retrieval architecture.
-
-A deployed system would likely use an approximate nearest-neighbor index such as HNSW or another vector-search backend to reduce retrieval latency as the corpus grows.
-
-### Limited Reranker Supervision
-
-The reranker was trained using a relatively small hard-negative training set. The difference between its validation and frozen-test behavior suggests that the cross-encoder may be more sensitive to the limited supervision than the first-stage dense retriever.
-
-In contrast, hard-negative fine-tuning of the dense retriever produced the most consistent improvement in the project, substantially outperforming the base MiniLM model on both validation and test data.
-
-This makes hard-negative dense training the strongest robust result of the current experiments, while the reranker should be considered a promising but less stable component.
-
-### Test-Set Integrity
-
-All model choices and retrieval hyperparameters were selected using the validation split before final test evaluation.
-
-The test set was then frozen. The per-query failure analysis reported above was performed **only after the final test results were obtained** and is strictly descriptive.
-
-No model, fusion weight, candidate depth, RRF constant, reranking depth, or other configuration was changed in response to test-set performance.
-
-This separation is important for preventing test-set leakage and preserving the validity of the held-out evaluation.
-
-### Future Work
-
-Several extensions could strengthen the conclusions of this project:
-
-- evaluate on substantially larger query sets and additional ToolRet domains;
-- repeat experiments across multiple random seeds or cross-validation folds;
-- investigate stronger hard-negative mining strategies;
-- evaluate approximate nearest-neighbor indexing for production-scale retrieval;
-- train the reranker with substantially more diverse supervision;
-- analyze query categories to determine when sparse, dense, or hybrid retrieval is most effective;
-- evaluate statistical uncertainty and significance of differences between retrieval stages.
-
-These extensions are intentionally left as future work rather than being optimized against the current frozen test set.
-
----
-
-## Next Steps
-
-Planned extensions include:
-
-- larger-scale evaluation across additional ToolRet domains
-- query-category breakdowns
-- confidence intervals and repeated evaluation splits
-- approximate nearest-neighbor indexing
-- memory and index-size measurements
-- additional hard-negative mining strategies
-- more diverse reranker training data
-- full technical report
-
----
+The current pilot is small relative to the complete benchmark. Positive labels may be incomplete; related queries may make query-level bootstrap intervals optimistic. Sign tests are exploratory and uncorrected for multiple comparisons. Public model pretraining exposure is unknown. No benchmark-wide, state-of-the-art, publication, or production-scale claim is made.
 
 ## Acknowledgment
 
-This project is inspired by **ToolRet: Retrieval Models Aren't Tool-Savvy: Benchmarking Tool Retrieval for Large Language Models (ACL 2025)**.
-
-The original work provides the benchmark and motivation; the retrieval pipeline, experiments, extensions, analysis, and visualizations in this repository are developed as an independent research reproduction and extension.
+Benchmark credit belongs to the authors of [Retrieval Models Aren't Tool-Savvy: Benchmarking Tool Retrieval for Large Language Models (Findings of ACL 2025)](https://aclanthology.org/2025.findings-acl.1258/). This repository's selective-routing implementation, pilot, analysis, and audit are an independent extension.

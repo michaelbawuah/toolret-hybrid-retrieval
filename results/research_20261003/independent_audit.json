@@ -1,0 +1,459 @@
+{
+  "audit_method": "Independent stdlib recomputation; imports no project evaluator, fusion, or metrics code.",
+  "cache_sha256": "a8d1bac8cf0b1afb734c43edff2438fc1d486b7536799192c321d70fe5683c81",
+  "manifest_sha256": "6c61a1f36bd54e7078f43c052169b27b38f5c57f8c12ed2a9a4f9dfae227eab1",
+  "checks": {
+    "cache_sha256_matches_manifest": true,
+    "corpus_sha256_matches_manifest": true,
+    "queries_sha256_matches_manifest": true,
+    "query_ids_match_exactly": true,
+    "corpus_unique": true,
+    "qrels_match_original_positive_labels": true,
+    "source_domains_match_prepared": true,
+    "no_apibank_queries": true,
+    "all_gold_and_ranking_ids_known": true,
+    "unique_ranking_ids": true,
+    "declared_counts_match": true,
+    "protocol_identical": true,
+    "source_file_hashes_match": true,
+    "all_ce_prefix_tail_permutations_valid": true,
+    "fixed_depth20": true,
+    "first_stage_length100": true,
+    "rrf_recomputed_exactly": true,
+    "random_seeds_match_fixed_0_to19": true,
+    "primary_metric_bootstrap_and_sign_recomputed": true,
+    "offline_component_sum_means_recomputed": true,
+    "adaptive_end_to_end_latency_not_claimed": true
+  },
+  "num_queries": 300,
+  "num_tools": 37292,
+  "source_counts": {
+    "apigen": 100,
+    "toolace": 100,
+    "toolbench": 100
+  },
+  "policies": {
+    "bm25": {
+      "metrics": {
+        "Recall@10": 0.5613888888888889,
+        "MRR@10": 0.47150925925925924,
+        "nDCG@10": 0.4552883524935174,
+        "All-positive-label coverage@10": 0.45666666666666667
+      },
+      "reranker_invocations": 0,
+      "reranker_candidate_pairs": 0
+    },
+    "dense": {
+      "metrics": {
+        "Recall@10": 0.533,
+        "MRR@10": 0.4387208994708995,
+        "nDCG@10": 0.42099386911577175,
+        "All-positive-label coverage@10": 0.4266666666666667
+      },
+      "reranker_invocations": 0,
+      "reranker_candidate_pairs": 0
+    },
+    "hybrid": {
+      "metrics": {
+        "Recall@10": 0.6323333333333333,
+        "MRR@10": 0.478473544973545,
+        "nDCG@10": 0.48278202425729366,
+        "All-positive-label coverage@10": 0.5266666666666666
+      },
+      "reranker_invocations": 0,
+      "reranker_candidate_pairs": 0
+    },
+    "always": {
+      "metrics": {
+        "Recall@10": 0.6195555555555555,
+        "MRR@10": 0.5113148148148148,
+        "nDCG@10": 0.49859952738084085,
+        "All-positive-label coverage@10": 0.51
+      },
+      "reranker_invocations": 300,
+      "reranker_candidate_pairs": 6000
+    },
+    "gated": {
+      "metrics": {
+        "Recall@10": 0.6173333333333333,
+        "MRR@10": 0.517994708994709,
+        "nDCG@10": 0.501864085105095,
+        "All-positive-label coverage@10": 0.51
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_0": {
+      "metrics": {
+        "Recall@10": 0.6134444444444445,
+        "MRR@10": 0.4853373015873016,
+        "nDCG@10": 0.48164562528162524,
+        "All-positive-label coverage@10": 0.5033333333333333
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_1": {
+      "metrics": {
+        "Recall@10": 0.6223333333333333,
+        "MRR@10": 0.5137275132275132,
+        "nDCG@10": 0.5011000278798458,
+        "All-positive-label coverage@10": 0.51
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_2": {
+      "metrics": {
+        "Recall@10": 0.619,
+        "MRR@10": 0.5070462962962963,
+        "nDCG@10": 0.4960479512248673,
+        "All-positive-label coverage@10": 0.51
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_3": {
+      "metrics": {
+        "Recall@10": 0.6134444444444445,
+        "MRR@10": 0.508170634920635,
+        "nDCG@10": 0.4934778039949959,
+        "All-positive-label coverage@10": 0.5066666666666667
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_4": {
+      "metrics": {
+        "Recall@10": 0.614,
+        "MRR@10": 0.5039272486772487,
+        "nDCG@10": 0.49292152395954975,
+        "All-positive-label coverage@10": 0.5
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_5": {
+      "metrics": {
+        "Recall@10": 0.6256666666666667,
+        "MRR@10": 0.4990542328042328,
+        "nDCG@10": 0.4928326497863253,
+        "All-positive-label coverage@10": 0.52
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_6": {
+      "metrics": {
+        "Recall@10": 0.6162222222222222,
+        "MRR@10": 0.4943068783068783,
+        "nDCG@10": 0.487083708201491,
+        "All-positive-label coverage@10": 0.51
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_7": {
+      "metrics": {
+        "Recall@10": 0.6162222222222222,
+        "MRR@10": 0.5068478835978836,
+        "nDCG@10": 0.494868479016652,
+        "All-positive-label coverage@10": 0.51
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_8": {
+      "metrics": {
+        "Recall@10": 0.629,
+        "MRR@10": 0.5079603174603174,
+        "nDCG@10": 0.5018384537024788,
+        "All-positive-label coverage@10": 0.52
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_9": {
+      "metrics": {
+        "Recall@10": 0.6245555555555555,
+        "MRR@10": 0.5103095238095238,
+        "nDCG@10": 0.4973197754697256,
+        "All-positive-label coverage@10": 0.5133333333333333
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_10": {
+      "metrics": {
+        "Recall@10": 0.6312222222222222,
+        "MRR@10": 0.4969100529100529,
+        "nDCG@10": 0.4927679286746859,
+        "All-positive-label coverage@10": 0.5233333333333333
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_11": {
+      "metrics": {
+        "Recall@10": 0.6128888888888889,
+        "MRR@10": 0.49814285714285716,
+        "nDCG@10": 0.486670714119251,
+        "All-positive-label coverage@10": 0.5033333333333333
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_12": {
+      "metrics": {
+        "Recall@10": 0.624,
+        "MRR@10": 0.5075185185185185,
+        "nDCG@10": 0.49889239134835467,
+        "All-positive-label coverage@10": 0.52
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_13": {
+      "metrics": {
+        "Recall@10": 0.624,
+        "MRR@10": 0.4924537037037037,
+        "nDCG@10": 0.4881597427003187,
+        "All-positive-label coverage@10": 0.51
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_14": {
+      "metrics": {
+        "Recall@10": 0.629,
+        "MRR@10": 0.5061388888888889,
+        "nDCG@10": 0.5001430892553785,
+        "All-positive-label coverage@10": 0.5233333333333333
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_15": {
+      "metrics": {
+        "Recall@10": 0.6206666666666667,
+        "MRR@10": 0.4979272486772487,
+        "nDCG@10": 0.49086709716077576,
+        "All-positive-label coverage@10": 0.5133333333333333
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_16": {
+      "metrics": {
+        "Recall@10": 0.6245555555555555,
+        "MRR@10": 0.500255291005291,
+        "nDCG@10": 0.4950216547257075,
+        "All-positive-label coverage@10": 0.5233333333333333
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_17": {
+      "metrics": {
+        "Recall@10": 0.6245555555555555,
+        "MRR@10": 0.49527777777777776,
+        "nDCG@10": 0.489296921267411,
+        "All-positive-label coverage@10": 0.5166666666666667
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_18": {
+      "metrics": {
+        "Recall@10": 0.6167777777777778,
+        "MRR@10": 0.5009126984126984,
+        "nDCG@10": 0.4925387739069105,
+        "All-positive-label coverage@10": 0.5033333333333333
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    },
+    "random_seed_19": {
+      "metrics": {
+        "Recall@10": 0.6273333333333333,
+        "MRR@10": 0.4897685185185185,
+        "nDCG@10": 0.49030298149352236,
+        "All-positive-label coverage@10": 0.5166666666666667
+      },
+      "reranker_invocations": 217,
+      "reranker_candidate_pairs": 4340
+    }
+  },
+  "source_domain_breakdown": {
+    "apigen": {
+      "num_queries": 100,
+      "gate_invocations": 69,
+      "metrics": {
+        "bm25": {
+          "Recall@10": 0.75,
+          "MRR@10": 0.6187619047619047,
+          "nDCG@10": 0.6152253855914318,
+          "All-positive-label coverage@10": 0.65
+        },
+        "dense": {
+          "Recall@10": 0.625,
+          "MRR@10": 0.5018611111111111,
+          "nDCG@10": 0.505309168352482,
+          "All-positive-label coverage@10": 0.56
+        },
+        "hybrid": {
+          "Recall@10": 0.8033333333333333,
+          "MRR@10": 0.5878531746031747,
+          "nDCG@10": 0.6119675889345169,
+          "All-positive-label coverage@10": 0.73
+        },
+        "always": {
+          "Recall@10": 0.8,
+          "MRR@10": 0.7022619047619048,
+          "nDCG@10": 0.6868290207942397,
+          "All-positive-label coverage@10": 0.74
+        },
+        "gated": {
+          "Recall@10": 0.7983333333333333,
+          "MRR@10": 0.6936904761904762,
+          "nDCG@10": 0.6817661029919388,
+          "All-positive-label coverage@10": 0.74
+        }
+      }
+    },
+    "toolace": {
+      "num_queries": 100,
+      "gate_invocations": 62,
+      "metrics": {
+        "bm25": {
+          "Recall@10": 0.6416666666666667,
+          "MRR@10": 0.5205515873015873,
+          "nDCG@10": 0.521641606958138,
+          "All-positive-label coverage@10": 0.6
+        },
+        "dense": {
+          "Recall@10": 0.6225,
+          "MRR@10": 0.47647222222222224,
+          "nDCG@10": 0.4943837835892715,
+          "All-positive-label coverage@10": 0.59
+        },
+        "hybrid": {
+          "Recall@10": 0.6841666666666667,
+          "MRR@10": 0.5481230158730158,
+          "nDCG@10": 0.5588289490917756,
+          "All-positive-label coverage@10": 0.64
+        },
+        "always": {
+          "Recall@10": 0.6858333333333333,
+          "MRR@10": 0.5431746031746032,
+          "nDCG@10": 0.5550844291040522,
+          "All-positive-label coverage@10": 0.64
+        },
+        "gated": {
+          "Recall@10": 0.6758333333333333,
+          "MRR@10": 0.5551190476190476,
+          "nDCG@10": 0.5596728174638764,
+          "All-positive-label coverage@10": 0.63
+        }
+      }
+    },
+    "toolbench": {
+      "num_queries": 100,
+      "gate_invocations": 86,
+      "metrics": {
+        "bm25": {
+          "Recall@10": 0.2925,
+          "MRR@10": 0.2752142857142857,
+          "nDCG@10": 0.2289980649309825,
+          "All-positive-label coverage@10": 0.12
+        },
+        "dense": {
+          "Recall@10": 0.3515,
+          "MRR@10": 0.33782936507936506,
+          "nDCG@10": 0.2632886554055618,
+          "All-positive-label coverage@10": 0.13
+        },
+        "hybrid": {
+          "Recall@10": 0.4095,
+          "MRR@10": 0.29944444444444446,
+          "nDCG@10": 0.27754953474558847,
+          "All-positive-label coverage@10": 0.21
+        },
+        "always": {
+          "Recall@10": 0.37283333333333335,
+          "MRR@10": 0.2885079365079365,
+          "nDCG@10": 0.25388513224423076,
+          "All-positive-label coverage@10": 0.15
+        },
+        "gated": {
+          "Recall@10": 0.37783333333333335,
+          "MRR@10": 0.30517460317460315,
+          "nDCG@10": 0.26415333485946957,
+          "All-positive-label coverage@10": 0.16
+        }
+      }
+    }
+  },
+  "random_policy_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "gated_candidate_pair_reduction_fraction_vs_always": 0.2766666666666666,
+  "summary_comparison": {
+    "summary_sha256": "104c7829cd020f97e7d526a8502b972992c68a596dc8327097c1c57e53f7eaae",
+    "mismatches": [],
+    "all_checked_values_match": true
+  },
+  "independent_primary_metric_bootstrap": {
+    "gated_minus_hybrid": {
+      "delta_mean": 0.019082060847801317,
+      "low": -0.004080891819488275,
+      "high": 0.042259933950295904,
+      "n": 300,
+      "resamples": 20000,
+      "seed": 20261003,
+      "sample_unit": "query",
+      "matches_summary": true,
+      "sign_test_matches": true
+    },
+    "gated_minus_always": {
+      "delta_mean": 0.003264557724254094,
+      "low": -0.005828595079248073,
+      "high": 0.01283043460059896,
+      "n": 300,
+      "resamples": 20000,
+      "seed": 20261003,
+      "sample_unit": "query",
+      "matches_summary": true,
+      "sign_test_matches": true
+    }
+  },
+  "conclusion_review": {
+    "recommended_wording": "Across this exploratory 300-query source-domain pilot, a fixed top-1 disagreement gate skipped 83 of 300 cross-encoder invocations (27.7%) and scored 4,340 rather than 6,000 candidate pairs. nDCG@10 point estimates were 0.5019 gated versus 0.4986 always-on; the paired 95% query-bootstrap difference interval [-0.00583, 0.01283] includes zero. Recall@10 fell from 0.6323 hybrid to 0.6173 gated. These are observed pilot tradeoffs, not proof of improved primary-metric performance, statistical equivalence, unseen-family generalization, or deployed latency gains.",
+    "unsupported_claims": [
+      "statistically significant nDCG improvement",
+      "statistical equivalence or proven quality preservation",
+      "measured adaptive end-to-end speedup",
+      "unseen API-family generalization",
+      "novel trained adaptive gate"
+    ]
+  }
+}
